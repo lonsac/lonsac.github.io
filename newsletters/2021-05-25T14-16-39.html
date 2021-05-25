@@ -1,0 +1,398 @@
+<html><head><title>The latest Week in Ethereum News! :: Reader View</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+html {
+  overflow: overlay;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 30px auto 0 auto;
+  padding: 10px;
+}
+body[data-mode="light"] {
+  color:  #222;
+  background-color:  whitesmoke;
+}
+body[data-mode="dark"] {
+  color:  #eee;
+  background-color:  #333;
+}
+body[data-mode="sepia"] {
+  color:  #5b4636;
+  background-color:  #f4ecd8;
+}
+body[data-mode="solarized-light"] {
+  color:  #586e75;
+  background-color:  #fdf6e3;
+}
+body[data-mode="nord-light"] {
+  color:  #2e3440;
+  background-color:  #e5e9f0;
+}
+body[data-mode="groove-dark"] {
+  color:  #cec4ac;
+  background-color:  #282828;
+}
+body[data-mode="solarized-dark"] {
+  color:  #93a1a1;
+  background-color:  #002b36;
+}
+body[data-mode="nord-dark"] {
+  color:  #e5e9f0;
+  background-color:  #2e3440;
+}
+@media print {
+  body[data-mode="light"],
+  body[data-mode="dark"],
+  body[data-mode="sepia"],
+  body[data-mode="solarized-light"],
+  body[data-mode="nord-light"],
+  body[data-mode="groove-dark"],
+  body[data-mode="solarized-dark"],
+  body[data-mode="nord-dark"] {
+    color: #000;
+    background-color: #fff;
+  }
+}
+body[data-loaded=true] {
+  
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+img:not([width])[src$=".svg"] {
+  max-width: 100px;
+}
+body[data-images=false] canvas,
+body[data-images=false] svg,
+body[data-images=false] img {
+  display: none;
+}
+a {
+  color: #0095dd;
+  text-decoration: none;
+}
+#reader-domain {
+  font-family: Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  border-bottom-color: currentcolor;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: inline-block;
+  direction: ltr;
+}
+#reader-domain > span:first-child {
+  font-size: 1.1em;
+}
+#reader-domain > span:last-child {
+  font-size: 0.8em;
+}
+#reader-title {
+  font-size: 1.6em;
+  line-height: 1.25em;
+  width: 100%;
+  margin: 20px 0;
+  padding: 0;
+}
+#reader-credits,
+#doi,
+#published-time,
+#reader-estimated-time {
+  font-size: 0.85em;
+  line-height: 1.48em;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+#reader-credits:not(:empty)::after {
+  content: ' ⋮ ';
+}
+#published-time:not(:empty)::before {
+  content: ' ⋮ ';
+}
+#doi-json {
+  overflow: hidden;
+}
+#doi-json code {
+  overflow: auto;
+  max-height: 400px;
+}
+#published-time:empty,
+#reader-credits:empty {
+  display: none;
+}
+body[data-speech="true"] .tts-box {
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  height: 32px;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: 0 0 0 1000vw rgba(128, 128, 128, 0.2);
+}
+body[data-speech="true"] .tts-word {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  background-color: red;
+  height: 2px;
+}
+.tts-word.hidden,
+.tts-box.hidden {
+  display: none;
+}
+body[data-speech="false"] .tts-speaking::after {
+  display: none;
+}
+mark.hghlght {
+  background-color: #ffff81;
+}
+.hidden {
+  display: none;
+}
+</style>
+  <style id="user-css">body {
+  padding-bottom: 64px;
+}
+a:visited {
+  color: #d33bf0;
+}
+a:link, a:link:hover, a:link:active {
+  color: #0095dd;
+}
+a:link {
+  text-decoration: none;
+  font-weight: normal;
+}
+pre {
+  white-space: pre-wrap;
+}
+pre code {
+  background-color: #eff0f1;
+  color: #393318;
+  font-family: monospace;
+  display: block;
+  padding: 5px 10px;
+}
+body[data-mode="dark"] pre code {
+  background-color: #585858;
+  color: #e8e8e8;
+}
+
+/* CSS for sans-serif fonts */
+body[data-font=sans-serif] {}
+/* CSS for serif fonts */
+body[data-font=serif] {}
+
+/* CSS for "sepia" theme */
+body[data-mode=sepia] {
+}
+/* CSS for "light" theme */
+body[data-mode=light] {}
+/* CSS for "dark" theme */
+body[data-mode=dark] {}</style>
+</head>
+<body data-images="true" data-mode="light" data-font="sans-serif" data-loaded="true">
+  <span></span> <!-- for IntersectionObserver -->
+  <a id="reader-domain" href="https://weekinethereumnews.com/week-in-ethereum-news-may-23-2021/">
+    <span>weekinethereumnews.com</span>
+    <span>/week-in-ethereum-news-may-23-2021/</span>
+  </a>
+  <h1 dir="auto" id="reader-title">The latest Week in Ethereum News!</h1>
+  <span dir="auto" id="reader-credits"></span>
+  <span dir="auto" id="reader-estimated-time">7-9 minutes</span>
+  <span dir="auto" id="published-time"></span>
+  <hr>
+  <div id="readability-page-1" class="page"><div>
+		
+<h6><strong>Eth News and Links</strong></h6>
+
+
+
+<p><strong>Mainnet execution layer</strong></p>
+
+
+
+<ul><li>Why we <a href="https://blog.ethereum.org/2021/05/18/eth_state_problems/">needed to increase gas for state access opcodes</a>.&nbsp; Hubert Ritzdorf, Matthias Egli and Daniel Perez had found a cheap way to spam attack the network.&nbsp; Dynamic state snapshots in Geth as mitigation in combination with EIP2929 and EIP2930.</li><li><a href="https://hackmd.io/@q8X_WM2nTfu6nuvAzqXiTQ/1559-wallets">EIP1559 cheatsheet</a> for wallet devs &amp; users</li><li>London testnet Baikal shows <a href="https://twitter.com/timbeiko/status/1395416223395975169">EIP1559 transaction data in block explorer</a></li><li>Beiko’s <a href="https://hackmd.io/@timbeiko/acd/https%3A%2F%2Fhackmd.io%2F%40timbeiko%2Facd-update-003">core devs update</a>: an overview of progress on London and turning off PoW</li><li><a href="https://twitter.com/ErigonEth/status/1394273529613389825">Turbo-Geth renaming to Erigon</a>, also reimplementing Erigon into C++ and Rust clients named Silkworm and Akula respectively</li><li>Vitalik’s <a href="https://ethereum-magicians.org/t/some-medium-term-dust-cleanup-ideas/6287">dust cleanup ideas</a></li></ul>
+
+
+
+<p><strong>EIPs/Standards</strong></p>
+
+
+
+<ul><li><a href="https://eips.ethereum.org/EIPS/eip-3584">EIP3584</a>: Block Access List</li></ul>
+
+
+
+<p><strong>Proof of stake consensus layer</strong></p>
+
+
+
+<ul><li>Latest <a href="https://youtu.be/A1L7wLYAqnM?t=145">PoS implementers call</a>.&nbsp; Notes from <a href="https://hackmd.io/@benjaminion/r1-aSk4tu">Ben Edgington</a> and <a href="https://twitter.com/ralexstokes/status/1395419727875379200">Alex Stokes</a>.&nbsp; Client improvements and getting ready for Altair upgrade&nbsp;</li><li><a href="https://consensys.net/blog/teku/teku-and-infura-team-up-to-make-the-fastest-ethereum-2-0-client-sync">Teku speeds up syncing</a> with weak subjectivity checkpoints and Infura</li><li><a href="https://github.com/status-im/nimbus-eth2/releases/tag/v1.3.0">Nimbus v1.3.0</a>: safer and easier options to migrate from other clients</li><li>Latest <a href="https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_210522">what’s new in PoS</a>. Ben’s view is that PoW switch off is more likely to happen in Q1 2022 than this year</li></ul>
+
+
+
+<p><strong>Layer2</strong></p>
+
+
+
+<ul><li>Kris Kaczor’s tweetstorm <a href="https://twitter.com/krzKaczor/status/1395812308451004419">comparing Arbitrum and Optimism</a>’s optimistic rollups</li><li>Etherscan now provides a <a href="https://optimismpbc.medium.com/integrating-etherscan-24a3811a765c">block explorer for Optimism</a></li><li><a href="https://medium.com/onther-tech/optimistic-rollup-is-not-secure-enough-than-you-think-cb23e6e6f11c">The Verifier’s Dilemma in-depth</a> for fraud proof systems</li><li><a href="https://medium.com/connext/solving-the-liquidity-problem-88bde201501">Connext’s virtual AMMs and liquidity auctions</a> for load balancing in cross-chain swaps</li><li>An overview of the <a href="https://insights.deribit.com/market-research/making-sense-of-rollups-part-one-optimistic-vs-zero-knowledge/">differences between optimistic rollups and zk rollups</a></li><li>Patrick McCorry: <a href="https://stonecoldpat.medium.com/a-note-on-bridges-layer-2-protocols-b01f8fc22324">the bridge determines what is Layer 2</a></li></ul>
+
+
+
+<hr>
+
+
+
+<h3><strong>This newsletter is made possible thanks to <a href="https://www.celer.network/">Celer</a>!</strong></h3>
+
+
+
+<div><figure><img loading="lazy" src="https://weekinethereumnews.com/wp-content/uploads/2020/11/Screenshot-from-2020-11-22-15-36-32.png" alt="" srcset="https://weekinethereumnews.com/wp-content/uploads/2020/11/Screenshot-from-2020-11-22-15-36-32.png 498w, https://weekinethereumnews.com/wp-content/uploads/2020/11/Screenshot-from-2020-11-22-15-36-32-300x109.png 300w" sizes="(max-width: 498px) 100vw, 498px" width="498" height="181"></figure></div>
+
+
+
+<p><a href="http://celer.network/">Celer</a> is a coherent layer-2 scaling platform on Ethereum powered by <a href="https://www.celer.network/docs/celercore/index.html">Generalized State Channel Network</a> and <a href="https://medium.com/celer-network/adding-hybrid-pos-rollup-sidechain-to-celers-coherent-layer-2-platform-d1d3067fe593">Rollup</a> technology.&nbsp;</p>
+
+
+
+<p>Celer recently launched <a href="https://layer2.finance/">Layer2.finance</a>, a layer-2 rollup-based DeFi aggregator that acts as a low-cost and trust-free gateway for the users to explore and benefit from the existing DeFi ecosystem with 100X lower cost. Layer2.finance achieves scalability “in-place” with no protocol migration needed and therefore, does not cause liquidity fragmentation or break composability. You can use the app here: <a href="http://app.l2.finance/">app.l2.finance</a>.&nbsp;</p>
+
+
+
+<p>Follow Celer on <a href="https://twitter.com/CelerNetwork">twitter</a>, <a href="https://blog.celer.network/">blog</a>, <a href="https://discord.com/invite/Trhab5w">discord</a> and <a href="https://t.me/celernetwork">telegram</a>.</p>
+
+
+
+<hr>
+
+
+
+<p><strong>Stuff for developers</strong></p>
+
+
+
+<ul><li><a href="https://blog.ricmoo.com/highlights-ethers-js-may-2021-2826e858277d">Ethers v5.2.0</a>, custom contract errors, detect replacement transactions</li><li><a href="https://github.com/EYBlockchain/starlight">Starlight</a>: EY’s prototype transpiler to write ZKapps in Solidity</li><li>The most popular secp256k1 library (elliptic) for node &amp; browsers is lightly maintained.&nbsp; Consider <a href="https://twitter.com/paulmillr/status/1393193702542254081">switching to noble</a></li><li><a href="https://github.com/fxfactorial/run-evm-code">EVM tool to run ABI encoded data</a> for a receiver, sender and block</li><li><a href="https://github.com/paulrberg/evm-fp">evm-fp</a>: multiplies by 1e18 to make tests more declarative</li><li><a href="https://blog.opengsn.org/whats-technically-new-in-gsn-v2-68ab9ad0cc1">GSN v2</a>’s decentralized meta transaction relayers launches with better relay routing and anti-griefing protections: allow users to pay gas in any token/fiat</li><li>Wallet devs join the <a href="https://github.com/ethereum/pm/issues/323">London Infrastructure Readiness</a> call, includes what <a href="https://twitter.com/timbeiko/status/1395478940186071040">naming to expose to users</a></li><li>A tutorial on using <a href="https://medium.com/splunk-dlt/geth-hosting-with-splunk-62045c615ab4">Splunk to analyze Geth metrics, logs and ledger data</a></li><li>Share with web devs – we need them: <a href="https://twitter.com/austingriffith/status/1394656757721403400">Austin Griffith scaffold-eth onboarding video for web2 devs</a></li><li>freeCodeCamp’s <a href="https://www.freecodecamp.org/news/what-is-web3/">intro to web3</a></li></ul>
+
+
+
+<p><strong>Security</strong></p>
+
+
+
+<ul><li>Binance’s chain suffers multiple attacks:&nbsp;<ul><li>Bunny Finance <a href="https://twitter.com/FrankResearcher/status/1395196961108774915">~$45m lost in economic exploit</a> by manipulating the BUNNY mint price</li><li>Venus’s $100m+ in <a href="https://twitter.com/FrankResearcher/status/1394900186435096578">cascading liquidations</a> from manipulating price reported by a Chainlink oracle</li><li>bEarn $11m lost due to <a href="https://peckshield.medium.com/bearn-fi-incident-inconsistent-asset-denomination-between-vault-strategy-9b24b68ab1c0">bug in internal withdraw logic</a></li></ul></li><li>Analysis of <a href="https://iphelix.medium.com/meebit-nft-exploit-analysis-c9417b804f89">Meebit NFT rare mint claim exploit</a></li><li>yEarn finds <a href="https://github.com/yearn/yearn-security/blob/master/disclosures/2021-05-20.md">flaw in yvWETH MakerDAO strategy accounting logic</a>; no funds lost</li></ul>
+
+
+
+<p><strong>Ecosystem</strong></p>
+
+
+
+<ul><li>Ethereum will use <a href="https://blog.ethereum.org/2021/05/18/country-power-no-more/">~99.95% less energy when we switch off</a> proof of work</li><li><a href="https://etherscan.io/tx/0x7a69f558bdc4aaf1e6bab9473c84cb2fddbd1e419c44d5c22eb88bedeb09657c">Vitalik burns 90% of their remaining dog meme tokens</a> with message: plans to donate 10% and asks projects not to give him tokens/power without consent</li><li>Out: “seed phrase.”  In: “<a href="https://twitter.com/pedrouid/status/1393974705162440705">secret recovery phrase</a>”</li><li><a href="https://www.reddit.com/r/ethereum/comments/najp2c/addressing_common_criticisms_about_ethereum/">Addressing common criticisms about Ethereum</a></li><li><a href="https://blog.coinbase.com/coinbase-wallet-introduces-new-browser-extension-dd067403b86">Coinbase Wallet browser extension</a>: confirm transactions on mobile app</li></ul>
+
+
+
+<p><strong>Enterprise</strong></p>
+
+
+
+<ul><li>Birra Peroni goes <a href="https://www.ey.com/en_gl/news/2021/05/birra-peroni-is-the-first-industrial-organization-to-mint-unique-non-fungible-tokens-using-ey-opschain-traceability">live on mainnet using EY OpsChain Traceability</a> to notarize information and tokenize goods as NFTs</li></ul>
+
+
+
+<p><strong>Application layer</strong></p>
+
+
+
+<ul><li><a href="https://twitter.com/jack_clancy93/status/1395399566644682757">DeFi performance</a> during ETH price drop: DEX $10B volume day</li><li><a href="https://twitter.com/RyanWatkins_/status/1395775319936806914">Uniswap V3 flipped V2</a> to be number one DEX</li><li>The Wharton School: <a href="https://wifpr.wharton.upenn.edu/wp-content/uploads/2021/05/DeFi-Beyond-the-Hype.pdf">DeFi Beyond the Hype</a></li><li><a href="https://blog.zkga.me/announcing-v6">Dark Forest v0.6</a> game is live: series of rounds over 2-3 months</li><li>Rick and Morty co-creator Dan Harmon’s new <a href="https://www.hollywoodreporter.com/tv/tv-news/dan-harmon-blockchain-nft-crypto-series-fox-1234954403">animated series Krapoplis</a> to use NFT marketplace</li><li><a href="https://medium.com/originprotocol/charlie-bit-my-finger-makes-internet-history-again-1e4a3c54db65">Charlie Bit My Finger video to be deleted from YouTube</a> after being auctioned as NFT</li></ul>
+
+
+
+<p><strong>Regulation/business/tokens</strong></p>
+
+
+
+<ul><li><a href="https://www.federalreserve.gov/newsevents/pressreleases/other20210520b.htm">US Federal Reserve to release discussion paper in summer (US)</a> on digital payments and establishing a CBDC</li><li>US proposal for businesses to <a href="https://www.cnbc.com/2021/05/20/us-treasury-calls-for-stricter-cryptocurrency-compliance-with-irs.html">report $10k+ crypto transactions to IRS</a></li><li>Three Chinese financial industry groups announced member <a href="https://www.forbes.com/sites/jonathanponciano/2021/05/18/china-bans-banks-from-crypto-business-saying-speculative-trading-seriously-infringing-on-financial-order/?sh=160a9d277898">institutions shall not conduct business related to virtual currency</a></li><li>Placeholder VC: <a href="https://www.placeholder.vc/blog/2021/5/20/isomorphism-in-dao-governance">Isomorphism in DAO governance</a></li><li>Proposed roadmap for <a href="https://blog.synthetix.io/a-little-dash-of-hopium/">Synthetix</a>: 4 subprojects will get their own token for coordinating micro-incentives within the projects&nbsp;</li><li>UK Conservative MP mentions ETH <a href="https://twitter.com/TomTugendhat/status/1395472853991051265">flipping BTC in parliament</a> speech</li><li>If Ethereum was a public company: <a href="https://draecomino.substack.com/p/ethereum-q1-2021-results">Ethereum Q1 results</a> – transaction fees up 200x to $1.7 billion compared to $8 million in Q1 2020</li></ul>
+
+
+
+<p><strong>General</strong></p>
+
+
+
+<ul><li>Dankrad Feist explains <a href="https://dankradfeist.de/ethereum/2021/05/20/what-everyone-gets-wrong-about-51percent-attacks.html">what a 51% attack can and can’t do</a></li><li>Vitalik: <a href="https://vitalik.ca/general/2021/05/23/scaling.html">Limits to blockchain scalability</a></li><li><a href="https://www.buildblockchain.tech/blog/code-law-and-the-nature-of-consensus">Social consensus is Layer 0</a> of blockchains</li><li><a href="https://blog.stackblitz.com/posts/introducing-webcontainers/">Run Node.js natively in the browser</a>, with <a href="https://twitter.com/ericsimons40/status/1395905320564629508">plans to get Hardhat working in a WebContainer</a></li><li>Wired’s account of <a href="https://www.wired.com/story/the-full-story-of-the-stunning-rsa-hack-can-finally-be-told/">RSA getting cracked in 2011</a></li><li>If you run Windows, <a href="https://krebsonsecurity.com/2021/05/try-this-one-weird-trick-russian-hackers-hate/">installing a CIS language keyboard</a> can help keep your machine malware-free</li></ul>
+
+
+
+<hr>
+
+
+
+<h6><strong>Job Listings</strong></h6>
+
+
+
+<ul><li>Quant (options trading) is <a href="https://jobs.lever.co/QuantLabs">hiring</a> for Solidity, full stack, &amp; designers</li><li>Very large game company <a href="https://twitter.com/finestonematt/status/1395051881844592641">looking for devs/marketing</a> for NFT product</li><li>WalletConnect: <a href="https://angel.co/company/walletconnect/jobs/1384299-technical-product-manager">Tech Product Manager</a> and <a href="https://angel.co/company/walletconnect/jobs/1384334-devops-backend-engineer">DevOps/Backend Engineer</a></li><li>Trail of Bits’ <a href="https://jobs.lever.co/trailofbits/b2d6ce87-6b01-462f-965a-597a273ce26f">Blockchain Security Analyst Apprenticeship</a> program</li><li>Synthetix: <a href="https://jobs.defialliance.co/companies/synthetix/jobs/4454460-growth-marketer">Growth Marketer</a>, <a href="https://jobs.defialliance.co/companies/synthetix/jobs/4538964-senior-designer">Designer</a>, <a href="https://jobs.defialliance.co/companies/synthetix/jobs/4136036-front-end-engineer">Front End Eng</a> and <a href="https://jobs.defialliance.co/companies/synthetix/jobs/4136037-senior-blockchain-engineer">Blockchain Eng</a></li></ul>
+
+
+
+<p><strong>Want your job listing here</strong>? $345 per line (~75 character limit including spaces), payable in ETH (or 345 DAI or 345 USDC) to abcoathup.eth. Questions? abcoathup at-gmail</p>
+
+
+
+<hr>
+
+
+
+<p>If you’re wondering “<a href="https://www.evanvanness.com/post/179914035841/why-didnt-my-post-make-the-newsletter">why didn’t my post make it into Week in Ethereum News</a>,” then please put it on an Ethereum subreddit; emails/DMs are not part of the workflow.</p>
+
+
+
+<p>Follow <a href="https://twitter.com/WeekInEthNews">@WeekinEthNews</a> to find out what the most clicked are. Follow <a href="https://twitter.com/evan_van_ness">@evan_van_ness</a> and <a href="https://twitter.com/abcoathup">@abcoathup</a> to get most of the week’s news in real time.</p>
+
+
+
+<p>Permalink for this week’s issue: <a href="https://weekinethereumnews.com/week-in-ethereum-news-may-23-2021/">https://weekinethereumnews.com/week-in-ethereum-news-may-23-2021/</a></p>
+
+
+
+<hr>
+
+
+
+<h6><strong>Dates of Note</strong></h6>
+
+
+
+<p>Upcoming dates of note <em>(new/changes in <strong>bold</strong>)</em><strong>:</strong></p>
+
+
+
+<ul><li><strong>May 26 – <a href="https://github.com/ethereum/pm/issues/323">London Infrastructure Readiness</a> call</strong></li><li>May 28 – optimistic rollup <a href="https://medium.com/offchainlabs/wen-arbitrum-634969c14713">Arbitrum launches</a></li><li>May 28-30 – ETHGlobal’s <a href="https://web3.ethglobal.co/">Web3 Weekend</a></li><li><strong>May 29 – Road to Devcon Quest: <a href="https://ethstaker.cc/road-to-devcon/">EthStaker Painting Party</a></strong></li><li>May 31 – deadline to apply for <a href="https://blog.ethereum.org/2021/05/13/core-dev-apprenticeship/">Eth core dev apprenticeship</a></li><li>June 18 – July 9 – <a href="https://hackmoney.ethglobal.co/">ETHGlobal – Hack Money 2021</a></li><li>June 25-27 – <a href="https://www.edcon.io/">Edcon</a> (Shenzhen/online)</li><li><strong>July 10 – Road to Devcon Quest: <a href="https://ethstaker.cc/road-to-devcon/">Devcon Trivia Game</a></strong></li><li>July 14 – <a href="https://docs.google.com/spreadsheets/d/1Y3yyTqeqRO1O2UFVkNkHK_V5oRulZd6y-JJbSnKYrb4/edit#gid=0">tentative date for London hard fork</a> (Ropsten June 9, Goerli June 16, Rinkeby June 23)</li><li>July 20-22 – <a href="https://ethcc.io/">EthCC4</a> (Paris)</li></ul>
+
+
+
+<p><strong>Did you get forwarded this newsletter? </strong><em><a href="https://weekinethereum.substack.com/subscribe#about">Sign up</a> <strong>to receive it weekly</strong></em></p>
+	</div></div>
+  <span></span> <!-- for IntersectionObserver -->
+  
+  
+  
+  
+
+
+</body><style>body {
+      font-size:  17px;
+      font-family: Helvetica, Arial, sans-serif;
+      width: 900px;
+    }
+    .page {
+      line-height: 25.5px;
+    }
+    h1, h2, h3 {
+      line-height: initial;
+    }</style></html>
