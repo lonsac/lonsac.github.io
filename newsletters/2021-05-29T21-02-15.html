@@ -1,0 +1,257 @@
+<html><head><title>The History of Lab Leaks Has Lots of Entries :: Reader View</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+html {
+  overflow: overlay;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 30px auto 0 auto;
+  padding: 10px;
+}
+body[data-mode="light"] {
+  color:  #222;
+  border-color: %light-color%;
+  background-color:  whitesmoke;
+}
+body[data-mode="dark"] {
+  color:  #eee;
+  border-color: %dark-color%;
+  background-color:  #333;
+}
+body[data-mode="sepia"] {
+  color:  #5b4636;
+  border-color: %sepia-color%;
+  background-color:  #f4ecd8;
+}
+body[data-mode="solarized-light"] {
+  color:  #586e75;
+  border-color: %solarized-light-color%;
+  background-color:  #fdf6e3;
+}
+body[data-mode="nord-light"] {
+  color:  #2e3440;
+  border-color: %nord-light-color%;
+  background-color:  #e5e9f0;
+}
+body[data-mode="groove-dark"] {
+  color:  #cec4ac;
+  border-color: %groove-dark-color%;
+  background-color:  #282828;
+}
+body[data-mode="solarized-dark"] {
+  color:  #93a1a1;
+  border-color: %solarized-dark-color%;
+  background-color:  #002b36;
+}
+body[data-mode="nord-dark"] {
+  color:  #e5e9f0;
+  border-color: %nord-dark-color%;
+  background-color:  #2e3440;
+}
+@media print {
+  body[data-mode="light"],
+  body[data-mode="dark"],
+  body[data-mode="sepia"],
+  body[data-mode="solarized-light"],
+  body[data-mode="nord-light"],
+  body[data-mode="groove-dark"],
+  body[data-mode="solarized-dark"],
+  body[data-mode="nord-dark"] {
+    color: #000;
+    border-color: #000;
+    background-color: #fff;
+  }
+}
+body[data-loaded=true] {
+  
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+img:not([width])[src$=".svg"] {
+  max-width: 100px;
+}
+body[data-images=false] canvas,
+body[data-images=false] svg,
+body[data-images=false] img {
+  display: none;
+}
+a {
+  color: #0095dd;
+  text-decoration: none;
+}
+#reader-domain {
+  font-family: Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  border-bottom-color: currentcolor;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: inline-block;
+  direction: ltr;
+}
+#reader-domain > span:first-child {
+  font-size: 1.1em;
+}
+#reader-domain > span:last-child {
+  font-size: 0.8em;
+}
+#reader-title {
+  font-size: 1.6em;
+  line-height: 1.25em;
+  width: 100%;
+  margin: 20px 0;
+  padding: 0;
+}
+#reader-credits,
+#doi,
+#published-time,
+#reader-estimated-time {
+  font-size: 0.85em;
+  line-height: 1.48em;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+#reader-credits:not(:empty)::after {
+  content: ' ⋮ ';
+}
+#published-time:not(:empty)::before {
+  content: ' ⋮ ';
+}
+#doi-json {
+  overflow: hidden;
+}
+#doi-json code {
+  overflow: auto;
+  max-height: 400px;
+}
+#published-time:empty,
+#reader-credits:empty {
+  display: none;
+}
+body[data-speech="true"] .tts-box {
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  height: 32px;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: 0 0 0 1000vw rgba(128, 128, 128, 0.2);
+}
+body[data-speech="true"] .tts-word {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  background-color: red;
+  height: 2px;
+}
+.tts-word.hidden,
+.tts-box.hidden {
+  display: none;
+}
+body[data-speech="false"] .tts-speaking::after {
+  display: none;
+}
+mark.hghlght {
+  background-color: #ffff81;
+}
+.hidden {
+  display: none;
+}
+</style>
+  <style id="user-css">body {
+  padding-bottom: 64px;
+}
+a:visited {
+  color: #d33bf0;
+}
+a:link, a:link:hover, a:link:active, a:link * {
+  color: #0095dd;
+}
+a:link {
+  text-decoration: none;
+  font-weight: normal;
+}
+pre {
+  white-space: pre-wrap;
+}
+pre code {
+  background-color: #eff0f1;
+  color: #393318;
+  font-family: monospace;
+  display: block;
+  padding: 5px 10px;
+}
+body[data-mode="dark"] pre code {
+  background-color: #585858;
+  color: #e8e8e8;
+}
+
+/* CSS for sans-serif fonts */
+body[data-font=sans-serif] {}
+/* CSS for serif fonts */
+body[data-font=serif] {}
+
+/* CSS for "sepia" theme */
+body[data-mode=sepia] {
+}
+/* CSS for "light" theme */
+body[data-mode=light] {}
+/* CSS for "dark" theme */
+body[data-mode=dark] {}</style>
+</head>
+<body data-images="false" data-mode="light" data-font="sans-serif" data-loaded="true">
+  <span></span> <!-- for IntersectionObserver -->
+  <a id="reader-domain" href="https://www.bloomberg.com/opinion/articles/2021-05-27/covid-19-and-lab-leak-history-smallpox-h1n1-sars?sref=nXmOg68r">
+    <span>www.bloomberg.com</span>
+    <span>/opinion/articles/2021-05-27/covid-19-and-lab-leak-history-smallpox-h1n1-sars</span>
+  </a>
+  <h1 dir="auto" id="reader-title">The History of Lab Leaks Has Lots of Entries</h1>
+  <span dir="auto" id="reader-credits">Stephen Mihm</span>
+  <span dir="auto" id="reader-estimated-time">9-11 minutes</span>
+  <span dir="auto" id="published-time">5/27/2021</span>
+  <hr>
+  <div id="readability-page-1" class="page"><div data-component-root="ArticleBody"><p>President Joe Biden announced this week that <span>the intelligence community saw two possible origins of the Covid-19 outbreak: “Human contact with an infected animal or from a laboratory accident.” He also ordered a new investigation to “bring us closer to a definitive conclusion.”</span></p><p>No matter where the inquiry leads, the history of lab safety shows, at the very least, that leaks of pathogens have happened in the past — sometimes with deadly consequences. It also shows that even transparent, thorough investigations into the origins of an outbreak can end in&nbsp;uncertainty. &nbsp;</p>
+        
+        
+        
+        <p>By the late 1970s, smallpox had been eradicated in nature, but work on it continued in a handful of labs around the world, including a facility in Birmingham, England, which had access to a particularly virulent strain. In the summer of 1978, a medical photographer working there named <a href="https://www.amazon.com/Last-Days-Smallpox-Tragedy-Birmingham/dp/1980455228" target="_blank" rel="nofollow noopener">Janet Parker</a> fell ill. When pustules spread across her upper body, a local doctor diagnosed it as a bad case of chickenpox.</p>
+        
+        <p>It was the third leak of smallpox that decade from a British lab. The British government moved aggressively to contain the outbreak, quarantining hundreds of people and vaccinating many more. Thanks to their efforts, only one other&nbsp;person — Parker’s mother — developed the disease. But Parker died an excruciating, lonely death in an isolation ward — the last known victim of smallpox.</p>
+        
+    <p>But there were other victims. At the time, the newspapers covering the episode fixated on the director of the laboratory, an expert on pox viruses named Henry Bedson. Despite an absence of evidence, the press blamed him for the outbreak. Quarantined at home and despondent, Bedson went out to his garden shed and slit his own throat; he died soon afterward.</p>
+        
+        <p>The British government commissioned a thorough <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/228654/0668.pdf.pdf" target="_blank" rel="nofollow noopener">investigation</a> into the outbreak. It turned up evidence that Bedson may not have observed sufficient safety protocols and speculated that Parker must have somehow contracted smallpox through contamination in the air ducts. Later, a lawsuit effectively refuted this explanation, leading to the unsettling possibility that Parker herself may have entered one of the work spaces without proper protection. The debate continues to this day.</p><p>When lab leaks take place in a secretive society, the difficult job of confirming the source of an outbreak gets much harder. A good case in point was the infamous anthrax outbreak in Sverdlovsk, an isolated city in the Soviet Union.</p><p>In 1979, <a href="https://nsarchive2.gwu.edu/NSAEBB/NSAEBB61/" target="_blank" rel="nofollow noopener">rumors</a> of anthrax killing dozens — or even thousands — began trickling out to the West. Later that year, Soviet journals confirmed some of these reports, noting that upward of a hundred people had contracted anthrax after ingesting contaminated meat; over 60 had died. A tragedy, yes, but perhaps inevitable: Anthrax was endemic in local animal populations.</p>
+        
+        <p>Intelligence officials in the U.S. weren’t convinced. Satellite imagery showed what looked like decontamination trucks around the city, with considerable activity focused on a mysterious military facility known as Compound 19. CIA analysts hypothesized that the Soviets had mistakenly released a weaponized form of anthrax.</p><p>The Soviets responded indignantly. In 1980, the official Russian news agency published a blistering rebuttal titled “A Germ of Lying,” which accused the U.S. of leveling false claims for geopolitical advantage. During the Ronald Reagan administration, the CIA sought to get a better handle on what happened. They asked Matthew Meselson, an eminent geneticist at Harvard who had worked to ban biological weapons, to assess the evidence.</p><p>Meselson was unconvinced by the intelligence findings. In the 1980s, he would debunk another related theory — that the Soviets had used some kind of fungal weapon in Laos — and he initially did the same with anthrax, effectively endorsing the official explanation, with one important caveat: Absent a thorough site investigation in Sverdlovsk, it would be impossible to know for sure what had happened.</p><p>Nonetheless, Meselson largely endorsed the contaminated meat explanation, judging it “completely plausible and consistent” given what was known about anthrax. He arranged meetings with Soviet scientists that gave additional credence to this narrative, with slides of pathology samples taken from victims purporting to show evidence that the anthrax had been ingested. The American intelligence community continued to harbor doubts.</p><p>In this case, the intelligence services, not the scientists, turned out to be correct.</p>
+        
+        <p>After the dissolution of the Soviet Union, Meselson and other researchers finally got access to the genuine pathology samples taken from the victims’ lungs, which showed that they had died from inhaling anthrax. Subsequent revelations filled out the picture of what had happened.</p><p>Compound 19, it turned out, was a bioweapons facility operating in violation of the ban on such research. It manufactured anthrax spores. According to the lab’s director at the time, a filter connected to the machines that dried the spores became clogged. This was a regular occurrence. The military officer in charge left a note for his replacement on the next shift&nbsp;but did not enter it in the log book, as was customary. When the next shift arrived, they glanced at the log book, saw nothing&nbsp;and restarted the machine — sans filter. A plume of anthrax spores swiftly spread over the neighborhood.</p><p>To his credit, Meselson eventually put all the pieces together, publishing an <a href="https://pubmed.ncbi.nlm.nih.gov/7973702/" target="_blank" rel="nofollow noopener">article</a> in Science in that combined wind data with interviews, pathology samples&nbsp;and other evidence to reconstruct how the deadly plume of anthrax had killed over 60 people and sickened many more. The year was 1994, 15 years after the initial outbreak.</p>
+        
+        <p>There is another incident that took place in the Soviet Union that remains a mystery. No clarifying evidence has ever materialized — and it’s unlikely that it ever will. The same decade that saw smallpox leaks in Britain and anthrax in the Soviet Union also gave rise to the release of an anomalous strain of influenza known as H1N1.</p><p>In 1977, an outbreak of H1N1 materialized in the border region between China and the Soviet Union. It eventually spread worldwide that year, afflicting a disproportionate number of younger patients. Mercifully, the fatality rate was relatively low compared to some strains of influenza. That wasn’t the problem.</p><p>The troubling aspect of this outbreak was that this particular strain of H1N1 hadn’t been seen since 1950, when it was supplanted by other strains. The sudden appearance of what one <a href="https://armscontrolcenter.org/wp-content/uploads/2016/02/Escaped-Viruses-final-2-17-14-copy.pdf" target="_blank" rel="nofollow noopener">account</a> has described as a “time-traveling throwback” was baffling. A handful of researchers speculated that it might have escaped from a lab in either the Soviet Union or China, but this possibility, which both countries denied, could not be verified. The desire to secure cooperation from both countries on fighting influenza likely played a role in the decision not to pursue the matter further.</p><p>But the incident remained a puzzle for virologists, who tried repeatedly to explain what had happened. Various theories came and went to explain what became known as “frozen evolution,” but over the past 20&nbsp;years, the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2887442/" target="_blank" rel="nofollow noopener">consensus</a> has moved toward the idea that this outbreak was most likely the result of some kind of leap to humans from an unknown lab. A related theory holds that it was the result of a botched vaccine trial associated with attempts to fight swine flu, which briefly became a concern in the 1970s.</p><p>Of course, all of these incidents took place in the 1970s. One would expect lab safety to have improved since then, but that isn’t necessarily the case. After the outbreak of SARS in 2003, labs around the world began studying the virus, which had come perilously close to causing a global pandemic. Since that time, there have been no less than six lab leaks of SARS. The first took place in at the National University of Singapore, where a graduate student contracted the disease from a contaminated sample.</p><p>This was followed by an incident in Taiwan, when a researcher contracted it, most likely during a botched decontamination of laboratory waste. Then several leaks took place at China’s National Institute of Virology. In one case, a researcher passed the infection to her mother, who died of SARS. In each case, human error, most likely exacerbated by inadequate safety protocols, accounted for the leaks.</p>
+        
+        <p>History lends credibility to the idea that our current disaster may not have a natural origin — that some as-of-yet undetermined combination of human error or reckless research may account for the spread of Covid.</p><p>But there’s something else that this history tells us, and it’s worth remembering now, as there’s a growing rush to judgment. When it comes to lab leaks, the truth is often a long time coming. And sometimes, the answers are profoundly unsatisfying and incomplete. In the case of Covid, we must prepare ourselves for the possibility that we may never know the precise origins of a pandemic that has killed millions.</p><ol></ol><div><p>This column does not necessarily reflect the opinion of the editorial board or Bloomberg LP and its owners.</p></div><p>To contact the author of this story:<br><span><meta content="bbg://people/profile/16724037"><span>Stephen Mihm</span></span> at <a href="mailto:smihm1@bloomberg.net">smihm1@bloomberg.net</a></p><p>To contact the editor responsible for this story:<br><span><meta content="bbg://people/profile/18838406"><span>Mike Nizza</span></span> at <a href="mailto:mnizza3@bloomberg.net">mnizza3@bloomberg.net</a></p>
+        
+        
+    </div></div>
+  <span></span> <!-- for IntersectionObserver -->
+  
+  
+  
+  
+
+
+</body><style>body {
+      font-size:  17px;
+      font-family: Helvetica, Arial, sans-serif;
+      width: 900px;
+    }
+    .page {
+      line-height: 25.5px;
+    }
+    h1, h2, h3 {
+      line-height: initial;
+    }</style></html>
