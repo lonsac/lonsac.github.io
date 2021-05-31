@@ -1,0 +1,312 @@
+<html><head><title>Economic Update :: Reader View</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+html {
+  overflow: overlay;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 30px auto 0 auto;
+  padding: 10px;
+}
+body[data-mode="light"] {
+  color:  #222;
+  border-color: %light-color%;
+  background-color:  whitesmoke;
+}
+body[data-mode="dark"] {
+  color:  #eee;
+  border-color: %dark-color%;
+  background-color:  #333;
+}
+body[data-mode="sepia"] {
+  color:  #5b4636;
+  border-color: %sepia-color%;
+  background-color:  #f4ecd8;
+}
+body[data-mode="solarized-light"] {
+  color:  #586e75;
+  border-color: %solarized-light-color%;
+  background-color:  #fdf6e3;
+}
+body[data-mode="nord-light"] {
+  color:  #2e3440;
+  border-color: %nord-light-color%;
+  background-color:  #e5e9f0;
+}
+body[data-mode="groove-dark"] {
+  color:  #cec4ac;
+  border-color: %groove-dark-color%;
+  background-color:  #282828;
+}
+body[data-mode="solarized-dark"] {
+  color:  #93a1a1;
+  border-color: %solarized-dark-color%;
+  background-color:  #002b36;
+}
+body[data-mode="nord-dark"] {
+  color:  #e5e9f0;
+  border-color: %nord-dark-color%;
+  background-color:  #2e3440;
+}
+@media print {
+  body[data-mode="light"],
+  body[data-mode="dark"],
+  body[data-mode="sepia"],
+  body[data-mode="solarized-light"],
+  body[data-mode="nord-light"],
+  body[data-mode="groove-dark"],
+  body[data-mode="solarized-dark"],
+  body[data-mode="nord-dark"] {
+    color: #000;
+    border-color: #000;
+    background-color: #fff;
+  }
+}
+body[data-loaded=true] {
+  
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+img:not([width])[src$=".svg"] {
+  max-width: 100px;
+}
+body[data-images=false] canvas,
+body[data-images=false] svg,
+body[data-images=false] img {
+  display: none;
+}
+a {
+  color: #0095dd;
+  text-decoration: none;
+}
+#reader-domain {
+  font-family: Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  border-bottom-color: currentcolor;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: inline-block;
+  direction: ltr;
+}
+#reader-domain > span:first-child {
+  font-size: 1.1em;
+}
+#reader-domain > span:last-child {
+  font-size: 0.8em;
+}
+#reader-title {
+  font-size: 1.6em;
+  line-height: 1.25em;
+  width: 100%;
+  margin: 20px 0;
+  padding: 0;
+}
+#reader-credits,
+#doi,
+#published-time,
+#reader-estimated-time {
+  font-size: 0.85em;
+  line-height: 1.48em;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+#reader-credits:not(:empty)::after {
+  content: ' ⋮ ';
+}
+#published-time:not(:empty)::before {
+  content: ' ⋮ ';
+}
+#doi-json {
+  overflow: hidden;
+}
+#doi-json code {
+  overflow: auto;
+  max-height: 400px;
+}
+#published-time:empty,
+#reader-credits:empty {
+  display: none;
+}
+body[data-speech="true"] .tts-box {
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  height: 32px;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: 0 0 0 1000vw rgba(128, 128, 128, 0.2);
+}
+body[data-speech="true"] .tts-word {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  background-color: red;
+  height: 2px;
+}
+.tts-word.hidden,
+.tts-box.hidden {
+  display: none;
+}
+body[data-speech="false"] .tts-speaking::after {
+  display: none;
+}
+mark.hghlght {
+  background-color: #ffff81;
+}
+.hidden {
+  display: none;
+}
+</style>
+  <style id="user-css">body {
+  padding-bottom: 64px;
+}
+a:visited {
+  color: #d33bf0;
+}
+a:link, a:link:hover, a:link:active, a:link * {
+  color: #0095dd;
+}
+a:link {
+  text-decoration: none;
+  font-weight: normal;
+}
+pre {
+  white-space: pre-wrap;
+}
+pre code {
+  background-color: #eff0f1;
+  color: #393318;
+  font-family: monospace;
+  display: block;
+  padding: 5px 10px;
+}
+body[data-mode="dark"] pre code {
+  background-color: #585858;
+  color: #e8e8e8;
+}
+
+/* CSS for sans-serif fonts */
+body[data-font=sans-serif] {}
+/* CSS for serif fonts */
+body[data-font=serif] {}
+
+/* CSS for "sepia" theme */
+body[data-mode=sepia] {
+}
+/* CSS for "light" theme */
+body[data-mode=light] {}
+/* CSS for "dark" theme */
+body[data-mode=dark] {}</style>
+</head>
+<body data-images="false" data-mode="light" data-font="sans-serif" data-loaded="true" style="user-select: initial;">
+  <span></span> <!-- for IntersectionObserver -->
+  <a id="reader-domain" href="https://www.lynalden.com/premium-2021-5-30/">
+    <span>www.lynalden.com</span>
+    <span>/premium-2021-5-30/</span>
+  </a>
+  <h1 dir="auto" id="reader-title">Economic Update</h1>
+  <span dir="auto" id="reader-credits"></span>
+  <span dir="auto" id="reader-estimated-time">12-15 minutes</span>
+  <span dir="auto" id="published-time"></span>
+  <hr>
+  <div id="readability-page-1" class="page"><div><main><article class="page" aria-label="Economic Update" itemscope="" itemtype="https://schema.org/CreativeWork"><div itemprop="text"><p><em>May 30, 2021</em></p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-feature.jpg" sizes="(max-width: 700px) 100vw, 700px" srcset="https://www.lynalden.com/wp-content/uploads/premium-feature.jpg 700w, https://www.lynalden.com/wp-content/uploads/premium-feature-300x129.jpg 300w" alt="Premium Feature Image" width="700" height="300"></p>
+<p>This is an extra note between normal research reports.</p>
+<p>Due to traveling next week, my premium report that would normally have come out on June 6th will instead come out on June 13th. This will be the first report that I’ve had to move in the past 18 months, although there may be another report this autumn that gets moved around a bit for travel as well.</p>
+<p>In the meantime, I’m providing an update here so that we can keep monitoring economic indicators in rate of change terms, so as not to have a three-week gap between reports. There are a small number of portfolio updates as well.</p>
+<p><strong>Personal Income Rolling Over</strong></p>
+<p>We’re at the stage of the cycle where we have to be careful about rate-of-change effects rolling over, like a sugar high coming off.</p>
+<p>The second quarter of this year that we are in, referring to April through June, has the easiest base effects. This means that the year-over-year comparisons are going up a lot from very low numbers at the weakest point of the economy last year.</p>
+<p>In addition, the third round of stimulus checks injected some fast-acting adrenaline into the economy a couple months ago, with no follow-up in the works other than a longer-term infrastructure plan that still remains unclear in terms of magnitude and timing.</p>
+<p>In the May 23rd deep dive report, I discussed this effect along with a chart:</p>
+<blockquote><p>Keep in mind, however, that the spike in US personal income from the third round of stimulus checks is wearing off. There are still stimulatory effects including expanded child tax credits and extended unemployment benefits that will continue for many months, but in rate of change terms, the fiscal shot of adrenaline into the market is more behind us than ahead of us. This chart of personal income only goes through the end of March, which was reported in late April. I added some lines:</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-5-23-personal-income.png" sizes="(max-width: 680px) 100vw, 680px" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-5-23-personal-income.png 680w, https://www.lynalden.com/wp-content/uploads/premium-2021-5-23-personal-income-300x199.png 300w" alt="Personal Income" width="680" height="450"></p>
+<p><em>Chart Source: St. Louis Fed</em></p></blockquote>
+<p>Well, on Friday we got the latest data point, and it’s playing out as expected (and even sharper):</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-5-30-personal-income.png" alt="Personal Income" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-5-30-personal-income.png 681w, https://www.lynalden.com/wp-content/uploads/premium-2021-5-30-personal-income-300x198.png 300w" sizes="(max-width: 681px) 100vw, 681px" width="681" height="450"></p>
+<p><em>Chart Source: St. Louis Fed</em></p>
+<p>The reflationary aspect of the economy is still intact for things like wage increases and energy demand, but the extra money that people have in their pockets to buy meme stocks or things like dogecoin, is waning.</p>
+<p>Speaking of energy, WTI crude has been touching new cycle price highs in recent days, testing to see if it can break out of this 3-month consolidation. I remain rather bullish on energy over the next few years.</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-5-30-wti-crude.png" alt="WTI Crude" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-5-30-wti-crude.png 746w, https://www.lynalden.com/wp-content/uploads/premium-2021-5-30-wti-crude-300x188.png 300w" sizes="(max-width: 746px) 100vw, 746px" width="746" height="468"></p>
+<p><em>Chart Source: Trading Economics</em></p>
+<p><strong>The US Business Cycle Heatmap</strong></p>
+<p>Here is my updated heatmap of various economic indicators for the U.S. economy over the past five years, measured in year-over-year percent change terms. This lets us see a broad spectrum of the economy rather than cherry pick good or bad data points to fit a narrative.</p>
+<p>There remain some divergences between economic indicators, but most of the year-over-year April 2021 data (reported in May) is extremely positive due to the very easy base effects from April 2020:</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-5-30-economic-heatmap.png" alt="Economic Heatmap" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-5-30-economic-heatmap.png 687w, https://www.lynalden.com/wp-content/uploads/premium-2021-5-30-economic-heatmap-300x259.png 300w" sizes="(max-width: 687px) 100vw, 687px" width="687" height="592"></p>
+<p>The chart starts from the bottom and goes up over five years, and each column represents one of the economic indicators.</p>
+<p>For most of the chart, I use a green/yellow/red color spectrum. Green indicates solid growth, yellow indicates medium, and orange/red indicate slow growth or contraction, relative to the rest of the 5-year period for that indicator. In other words, green is good and red is bad.</p>
+<p>For inflation CPI, there is a separate blue/white/red color scale, because high or low inflation is not necessarily “good” or “bad” in the same way as the rest of the heat map. Red indicates higher price inflation, white indicates medium, and blue is lower price inflation, relative to the 5-year period. Economic slowdowns tend to be dis-inflationary while economic booms tend to be pro-inflationary, but there are also some business cycles that slow down with high inflation, and thus become “stagflationary”. So, inflation gets its own color scheme.</p>
+<p><strong>Heat Map Indicators Referenced:</strong></p>
+<ul>
+<li>Real Gross Domestic Product</li>
+<li>Industrial Production</li>
+<li>Advance Retail Sales, Excluding Food Services</li>
+<li>Total Construction Spending</li>
+<li>Capital Goods Orders, Nondefense, Excluding Aircraft</li>
+<li>Exports of Goods and Services</li>
+<li>Imports of Goods and Services</li>
+<li>All Employees, Total Nonfarm</li>
+<li>10 Year Minus 3 Month Yield Curve</li>
+<li>Consumer Prices, All Urban Consumers, All Items in City Average</li>
+</ul>
+<p><strong>The Fed’s 2021/2022 Goals</strong></p>
+<p>The Fed’s dual mandate is for stable prices and maximum employment, and over time they’ve emphasized general financial stability as part of that as well (including protecting the Treasury and repo markets).</p>
+<p>Sometimes employment and stable prices are at direct odds with each other, so the Fed has to pick one over the other. Whichever one seems more critical at the moment.</p>
+<p>In 1979, for example, Chairman Paul Volcker picked stable prices over unemployment. He broke the back of the lengthy 1970s inflation problem by sharply increasing interest rates to all-time highs, but unemployment rose sharply from that point into 1982.</p>
+<p>Since 2020, Chairman Jerome Powell has firmly picked improving the employment situation over stable prices. Powell has specifically cited the broader measures of it that include folks who are marginally attached to the workforce, and has emphasized folks at the lower end of the income spectrum, along with a willingness to let price inflation run at an above-average rate for a period of time.</p>
+<p>This decision, albeit uncommon, is not unexpected at this point within the general theme of fiscal-driven inflation at the end of a long-term debt cycle. In other words, more importantly than almost everything else, the Fed wants this line to go down more:</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-5-30-unemployment-rate.png" alt="Unemployment Rate" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-5-30-unemployment-rate.png 681w, https://www.lynalden.com/wp-content/uploads/premium-2021-5-30-unemployment-rate-300x198.png 300w" sizes="(max-width: 681px) 100vw, 681px" width="681" height="450"></p>
+<p><em>Chart Source: St. Louis Fed</em></p>
+<p>Macro analyst Kevin Muir, CFA has referred to Powell’s 2020 shift towards average inflation targeting as being roughly as important as Volcker’s 1979 move. Volcker’s move ushered in a four-decade era of disinflation, while Muir suspects that Powell has started a rather significant pro-inflation trend going forward. It remains to be seen whether that’s the case or not, and it will largely depend on fiscal policy at this point.</p>
+<p>The price inflation of personal consumption expenditures excluding food and energy, or “core PCE”, is what the Federal Reserve has generally preferred to use as their inflation metric.</p>
+<p>This figure for April came out this past Friday, and it touched over 3% for the first time since 1992, partly from easy 2020 base effects and partly from true price inflation occurring here in 2021. The May numbers are likely going to be in the 3% to 3.5% range as well.</p>
+<p>Since 2012, the Fed has used 2% annual price inflation as their definition of stable prices. They used to treat it as an approximate ceiling, but since the Fed’s policy shift in 2020, they changed to “average inflation targeting” where they plan to start using 2% as an average. If they undershoot that average for a while, they then want to deliberately overshoot it for a period of time to balance that out.</p>
+<p>In other words, they want to look back several years from now and see about the same amount of red and green on this chart:</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-5-30-core-pce.png" alt="Core PCE Inflation" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-5-30-core-pce.png 681w, https://www.lynalden.com/wp-content/uploads/premium-2021-5-30-core-pce-300x198.png 300w" sizes="(max-width: 681px) 100vw, 681px" width="681" height="450"></p>
+<p><em>Chart Source: St. Louis Fed</em></p>
+<p>So, after this decade of red, they want to paint the next few years green. Given that they also want the unemployment rate to go down and are favoring that over stable prices, their current approach is pretty clear: keep the pedal pressed down for now.</p>
+<p>The Fed FOMC members know that stimulus effects and base effects are rolling off by July, so along with their new average inflation targeting approach, they’re willing to look out past the current quarter and let the chart paint itself green for a while, and would seemingly prefer to err on the side of hiking rates too late than pre-emptively hiking rates.</p>
+<p>So, this won’t look like the 1970s. They’re aiming more for a mild version of the 1940s:</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/newsletter-2021-5-policy-response.png" sizes="(max-width: 634px) 100vw, 634px" srcset="https://www.lynalden.com/wp-content/uploads/newsletter-2021-5-policy-response.png 634w, https://www.lynalden.com/wp-content/uploads/newsletter-2021-5-policy-response-226x300.png 226w" alt="Policy Response" width="634" height="840"><em>Chart Source: St. Louis Fed</em></p>
+<p>The key difference between the periods was that the 1940s inflation was driven almost entirely by massive fiscal deficits, while the 1970s inflation was driven by a big uptick in bank lending along with some degree of rising fiscal deficits as well. Both decades experienced commodity supply shocks.</p>
+<p>It remains to be seen to what degree wage increases, the tightening energy market, ongoing supply chain problems, and US infrastructure stimulus will have on inflation into 2022. My long-term base case is the 2020s will be a more inflationary environment than the 2010s, but it won’t be in a straight line and we’ll have to monitor policy and economic indicators as we go along.</p>
+<p>The total area of green and red on that PCE chart depends on both magnitude and duration. The Fed has stated that they want to see <em>persistent</em> inflation, according to the way they measure it, before they think about raising rates, although some of them have indicated that there are certain levels of magnitude for more than a quarter or two that would be concerning as well. Plus, prior to raising rates, they would most likely taper their rate of monthly asset purchases for a period of months, as they have discussed according to recent FOMC meeting minutes.</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/newsletter-2021-5-2020s-inflation.png" sizes="(max-width: 678px) 100vw, 678px" srcset="https://www.lynalden.com/wp-content/uploads/newsletter-2021-5-2020s-inflation.png 678w, https://www.lynalden.com/wp-content/uploads/newsletter-2021-5-2020s-inflation-300x181.png 300w" alt="2020s Inflation Response" width="678" height="409"></p>
+<p><em>Chart Source: St. Louis Fed</em></p>
+<p><strong>S&amp;P 500 Valuation Presentation</strong></p>
+<p>I’ve given a few presentations lately to institutional investors and accredited investors.</p>
+<p>Here is <a href="https://www.lynalden.com/wp-content/uploads/premium-2021-5-30-presentation.pdf" target="_blank" rel="noopener">one of my recent slide decks</a> that touches on the subject of whether the S&amp;P 500 is in a bubble or not.</p>
+<p>The content shouldn’t be surprising to folks that have been following my work. It includes some appendix slides on the <a href="https://www.lynalden.com/fiscal-and-monetary-policy/" target="_blank" rel="noopener">long-term debt cycle</a> and <a href="https://www.lynalden.com/may-2021-newsletter/" target="_blank" rel="noopener">fiscal-driven inflation</a>, for example.</p>
+<p>The general conclusion of the slide deck is that:</p>
+<ol>
+<li>The S&amp;P 500 is arguably the second most expensive it has ever been in absolute terms, which doesn’t bode well for long-term returns.</li>
+<li>And yet, the S&amp;P 500 is still priced in such a way that it has a decent shot to outperform 10-year Treasuries over the next decade.</li>
+<li>Many value stocks are reasonably-valued or undervalued, with relatively little investor interest despite a possible rotation underway.</li>
+</ol>
+<p>This is what provides investors a lot of challenge and opportunity during this 2020s decade: both stocks and bonds are broadly expensive, but not in every sector or global region. The key, of course, is avoiding value traps or fake-out factor rotations.</p>
+<p>Overall, as we monitor broad equity conditions and focus on high-quality assets at reasonable prices, we can mostly sidestep the question of S&amp;P 500 valuations, and pick from the broad array of assets that are available as part of a diversified portfolio.</p><p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/Lyn-Alden-Signature.png" alt="Lyn Alden Signature" width="204" height="126"></p>
+</div></article></main></div></div>
+  <span></span> <!-- for IntersectionObserver -->
+  
+  
+  
+  
+
+
+</body><style>body {
+      font-size:  17px;
+      font-family: Helvetica, Arial, sans-serif;
+      width: 900px;
+    }
+    .page {
+      line-height: 25.5px;
+    }
+    h1, h2, h3 {
+      line-height: initial;
+    }</style></html>
