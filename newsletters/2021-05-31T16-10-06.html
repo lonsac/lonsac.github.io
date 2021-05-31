@@ -1,0 +1,919 @@
+<html><head><title>#92 - AMA #12: Strategies for longevity (which don't require a doctor) - Peter Attia :: Reader View</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+html {
+  overflow: overlay;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 30px auto 0 auto;
+  padding: 10px;
+}
+body[data-mode="light"] {
+  color:  #222;
+  border-color: %light-color%;
+  background-color:  whitesmoke;
+}
+body[data-mode="dark"] {
+  color:  #eee;
+  border-color: %dark-color%;
+  background-color:  #333;
+}
+body[data-mode="sepia"] {
+  color:  #5b4636;
+  border-color: %sepia-color%;
+  background-color:  #f4ecd8;
+}
+body[data-mode="solarized-light"] {
+  color:  #586e75;
+  border-color: %solarized-light-color%;
+  background-color:  #fdf6e3;
+}
+body[data-mode="nord-light"] {
+  color:  #2e3440;
+  border-color: %nord-light-color%;
+  background-color:  #e5e9f0;
+}
+body[data-mode="groove-dark"] {
+  color:  #cec4ac;
+  border-color: %groove-dark-color%;
+  background-color:  #282828;
+}
+body[data-mode="solarized-dark"] {
+  color:  #93a1a1;
+  border-color: %solarized-dark-color%;
+  background-color:  #002b36;
+}
+body[data-mode="nord-dark"] {
+  color:  #e5e9f0;
+  border-color: %nord-dark-color%;
+  background-color:  #2e3440;
+}
+@media print {
+  body[data-mode="light"],
+  body[data-mode="dark"],
+  body[data-mode="sepia"],
+  body[data-mode="solarized-light"],
+  body[data-mode="nord-light"],
+  body[data-mode="groove-dark"],
+  body[data-mode="solarized-dark"],
+  body[data-mode="nord-dark"] {
+    color: #000;
+    border-color: #000;
+    background-color: #fff;
+  }
+}
+body[data-loaded=true] {
+  
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+img:not([width])[src$=".svg"] {
+  max-width: 100px;
+}
+body[data-images=false] canvas,
+body[data-images=false] svg,
+body[data-images=false] img {
+  display: none;
+}
+a {
+  color: #0095dd;
+  text-decoration: none;
+}
+#reader-domain {
+  font-family: Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  border-bottom-color: currentcolor;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: inline-block;
+  direction: ltr;
+}
+#reader-domain > span:first-child {
+  font-size: 1.1em;
+}
+#reader-domain > span:last-child {
+  font-size: 0.8em;
+}
+#reader-title {
+  font-size: 1.6em;
+  line-height: 1.25em;
+  width: 100%;
+  margin: 20px 0;
+  padding: 0;
+}
+#reader-credits,
+#doi,
+#published-time,
+#reader-estimated-time {
+  font-size: 0.85em;
+  line-height: 1.48em;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+#reader-credits:not(:empty)::after {
+  content: ' ⋮ ';
+}
+#published-time:not(:empty)::before {
+  content: ' ⋮ ';
+}
+#doi-json {
+  overflow: hidden;
+}
+#doi-json code {
+  overflow: auto;
+  max-height: 400px;
+}
+#published-time:empty,
+#reader-credits:empty {
+  display: none;
+}
+body[data-speech="true"] .tts-box {
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  height: 32px;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: 0 0 0 1000vw rgba(128, 128, 128, 0.2);
+}
+body[data-speech="true"] .tts-word {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  background-color: red;
+  height: 2px;
+}
+.tts-word.hidden,
+.tts-box.hidden {
+  display: none;
+}
+body[data-speech="false"] .tts-speaking::after {
+  display: none;
+}
+mark.hghlght {
+  background-color: #ffff81;
+}
+.hidden {
+  display: none;
+}
+</style>
+  <style id="user-css">body {
+  padding-bottom: 64px;
+}
+a:visited {
+  color: #d33bf0;
+}
+a:link, a:link:hover, a:link:active, a:link * {
+  color: #0095dd;
+}
+a:link {
+  text-decoration: none;
+  font-weight: normal;
+}
+pre {
+  white-space: pre-wrap;
+}
+pre code {
+  background-color: #eff0f1;
+  color: #393318;
+  font-family: monospace;
+  display: block;
+  padding: 5px 10px;
+}
+body[data-mode="dark"] pre code {
+  background-color: #585858;
+  color: #e8e8e8;
+}
+
+/* CSS for sans-serif fonts */
+body[data-font=sans-serif] {}
+/* CSS for serif fonts */
+body[data-font=serif] {}
+
+/* CSS for "sepia" theme */
+body[data-mode=sepia] {
+}
+/* CSS for "light" theme */
+body[data-mode=light] {}
+/* CSS for "dark" theme */
+body[data-mode=dark] {}</style>
+</head>
+<body data-images="false" data-mode="light" data-font="sans-serif" data-loaded="true">
+  <span></span> <!-- for IntersectionObserver -->
+  <a id="reader-domain" href="https://peterattiamd.com/ama12/">
+    <span>peterattiamd.com</span>
+    <span>/ama12/</span>
+  </a>
+  <h1 dir="auto" id="reader-title">#92 - AMA #12: Strategies for longevity (which don't require a doctor) - Peter Attia</h1>
+  <span dir="auto" id="reader-credits"></span>
+  <span dir="auto" id="reader-estimated-time">27-35 minutes</span>
+  <span dir="auto" id="published-time">2/10/2020</span>
+  <hr>
+  <div id="readability-page-1" class="page"><article>
+          <div>
+            
+            <p><span>In this “Ask Me Anything” (AMA) episode, Peter explains the various levers one can pull to affect longevity with a specific focus on the strategies and tactics one can implement that do not require the help of a physician. This episode heavily features insights into nutrition, exercise physiology, and sleep physiology. Once again, Bob Kaplan, Peter’s head of research, will be asking the questions. If you’re not a subscriber and listening on a podcast player, you’ll only be able to hear a preview of the AMA.&nbsp;</span><span>If you’re a subscriber, you can now listen to this full episode on your </span><a href="https://peterattiamd.com/members/private-podcast-feed/"><span>private RSS feed</span></a><span> or on our website at the </span><a href="https://peterattiamd.com/ama12/"><span>AMA #12 show notes page</span></a><span>. If you are not a subscriber, you can learn more about the subscriber benefits <a href="https://peterattiamd.com/subscribe/">here</a>.</span></p>
+
+<h2><span>We discuss:</span></h2>
+<ul>
+<li><span>The five levers you can pull to affect longevity [1:15];</span></li>
+<li><span>Nutritional biochemistry: Framework, 3 nutritional interventions, and how to approach your goals, and what you should be tracking [4:30];</span></li>
+<li><span>Exercise for brain health, and the 4 components of exercise [20:45];</span></li>
+<li><span>Exercise component—Stability [24:30];</span></li>
+<li><span>Exercise component—Strength [29:00];</span></li>
+<li><span>What is Peter optimizing for with his exercise? [30:30];</span></li>
+<li><span>Exercise components—Zone 2 and zone 5 training [33:15];</span></li>
+<li><span>More about DNS, and why we need to be careful with rushing kids through neuromuscular development stages [45:00];</span></li>
+<li><span>Sleep: How to improve quantity and quality [48:15]; and</span></li>
+<li><span>More.</span></li>
+</ul>
+<p>§</p>
+
+            
+            <div data-uid="78ffb6b8">
+	<p><img src="https://peterattiamd.com/wp-content/uploads/2020/02/stability-pic-of-peter-1x1-ama12-150x150.jpeg" alt="">
+	</p>
+
+
+
+
+<div>
+	
+	<p><img src="https://peterattiamd.com/wp-content/uploads/2020/02/stability-pic-of-peter-1x1-ama12-150x150.jpeg" alt="">
+		
+	</p>
+	<div>
+		<p>The Peter Attia Drive<span></span></p>
+		<p>#92 – AMA #12: Strategies for longevity (which don’t require a doctor)</p>
+		
+			<div><p><span>
+					<span>The Peter Attia Drive</span>
+					<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				</span>
+				<span>
+					<span>The Peter Attia Drive</span>
+					<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				</span>
+			</p></div>
+		
+		<div><p><span>
+				<span>#92 – AMA #12: Strategies for longevity (which don’t require a doctor)</span>
+				<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+			</span>
+			<span>
+				<span>#92 – AMA #12: Strategies for longevity (which don’t require a doctor)</span>
+				<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+			</span>
+		</p></div>
+		
+		
+			
+				<p>
+					<svg xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="spp-svg-title-more" role="img" viewBox="0 0 32 32">
+  <title id="spp-svg-title-more">More</title>
+  <path id="More" d="M216,128a16,16,0,1,1,16-16A16,16,0,0,1,216,128Zm0-29a13,13,0,1,0,13,13A13,13,0,0,0,216,99Zm6,15a2,2,0,1,1,2-2A2,2,0,0,1,222,114Zm-6,0a2,2,0,1,1,2-2A2,2,0,0,1,216,114Zm-6,0a2,2,0,1,1,2-2A2,2,0,0,1,210,114Z" transform="translate(-200 -96)"></path>
+</svg>
+
+				</p>
+			
+		
+	</div>
+	<div>
+				
+					
+						<p>
+							<svg xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="spp-svg-title-half-speed" role="img" viewBox="0 0 64 64">
+  <title id="spp-svg-title-half-speed">Speed: 50%</title>
+  <path id="_0.5" data-name="0.5" d="M64,224A32,32,0,1,1,8.42,202.42l4.243,4.243A25.988,25.988,0,1,0,34,198.1V208H28V192h6v0.1A31.974,31.974,0,0,1,64,224Zm-36.237.574a8.6,8.6,0,0,0-1.21-4.971,4.248,4.248,0,0,0-3.673-1.61,4.208,4.208,0,0,0-3.694,1.669,8.91,8.91,0,0,0-1.178,5.1v2.643a8.648,8.648,0,0,0,1.231,4.939A4.208,4.208,0,0,0,22.9,234a4.178,4.178,0,0,0,3.683-1.691,9.111,9.111,0,0,0,1.178-5.168v-2.568Zm-1.964,3.1a7.152,7.152,0,0,1-.738,3.574,2.369,2.369,0,0,1-2.16,1.134,2.4,2.4,0,0,1-2.2-1.2,7.416,7.416,0,0,1-.727-3.729v-3.167a7.132,7.132,0,0,1,.711-3.521,2.374,2.374,0,0,1,2.2-1.144,2.406,2.406,0,0,1,2.219,1.15,7.3,7.3,0,0,1,.7,3.665v3.242Zm4.1,5.9a1.168,1.168,0,0,0,.907.332,1.2,1.2,0,0,0,.918-0.332,1.155,1.155,0,0,0,.313-0.824,1.22,1.22,0,0,0-.313-0.856,1.183,1.183,0,0,0-.918-0.343,1.149,1.149,0,0,0-.907.343,1.244,1.244,0,0,0-.3.856A1.177,1.177,0,0,0,29.9,233.573Zm6.52-7.191,0.52-.428a3.219,3.219,0,0,1,2.017-.567,2.86,2.86,0,0,1,2.245.947,3.631,3.631,0,0,1,.844,2.509,3.955,3.955,0,0,1-.78,2.6,2.64,2.64,0,0,1-2.149.942,2.922,2.922,0,0,1-2.017-.679,3.155,3.155,0,0,1-.945-2.017H34.3a4.583,4.583,0,0,0,1.476,3.167A4.862,4.862,0,0,0,39.117,234a4.68,4.68,0,0,0,3.6-1.386,5.349,5.349,0,0,0,1.29-3.793,5.543,5.543,0,0,0-1.242-3.8,4.248,4.248,0,0,0-3.354-1.407,4.951,4.951,0,0,0-2.579.674l0.467-4.248h6.252v-1.83H35.635l-0.785,7.769Z" transform="translate(0 -192)"></path>
+</svg>
+
+							<svg xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="spp-svg-title-three-quarter-speed" role="img" viewBox="0 0 64 64">
+  <title id="spp-svg-title-three-quarter-speed">Speed: 75%</title>
+  <path id="_.75" data-name=".75" d="M64,304A32,32,0,1,1,8.42,282.42l4.243,4.243A25.988,25.988,0,1,0,34,278.1V288H28V272h6v0.1A31.974,31.974,0,0,1,64,304Zm-44.689,9.567a1.172,1.172,0,0,0,.914.336,1.208,1.208,0,0,0,.925-0.336,1.175,1.175,0,0,0,.315-0.835,1.241,1.241,0,0,0-.315-0.868,1.184,1.184,0,0,0-.925-0.347,1.15,1.15,0,0,0-.914.347,1.267,1.267,0,0,0-.3.868A1.2,1.2,0,0,0,19.312,313.567Zm13.577-15.578H22.371v1.649h8.423L24.37,313.784h2.074l6.445-14.667v-1.128Zm3.457,8.288,0.524-.434a3.227,3.227,0,0,1,2.031-.575,2.87,2.87,0,0,1,2.261.96,3.7,3.7,0,0,1,.85,2.544,4.031,4.031,0,0,1-.786,2.636,2.65,2.65,0,0,1-2.164.955,2.932,2.932,0,0,1-2.031-.689,3.206,3.206,0,0,1-.951-2.045h-1.87a4.66,4.66,0,0,0,1.486,3.211A4.873,4.873,0,0,0,39.06,314a4.7,4.7,0,0,0,3.629-1.4,5.444,5.444,0,0,0,1.3-3.846,5.643,5.643,0,0,0-1.251-3.856,4.264,4.264,0,0,0-3.378-1.427,4.962,4.962,0,0,0-2.6.684l0.47-4.307h6.3v-1.855H35.554l-0.791,7.876Z" transform="translate(0 -272)"></path>
+</svg>
+
+							<svg xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="spp-svg-title-normal-speed" role="img" viewBox="0 0 64 64">
+  <title id="spp-svg-title-normal-speed">Speed: Normal</title>
+  <path id="_1X" data-name="1X" d="M144,224a32,32,0,1,1-55.58-21.58l4.243,4.243A25.988,25.988,0,1,0,114,198.1V208h-6V192h6v0.1A31.974,31.974,0,0,1,144,224Zm-37.93-5.992h-0.314l-5.751,2.176v1.837l4.047-1.5v13.482h2.018v-16Zm5.772,0.076H109.4l5,7.9-5.121,8.026h2.463l3.906-6.211,3.884,6.211h2.474l-5.11-8.026,4.991-7.9h-2.452l-3.787,6.1Z" transform="translate(-80 -192)"></path>
+</svg>
+
+							<svg xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="spp-svg-title-125-speed" role="img" viewBox="0 0 64 64">
+  <title id="spp-svg-title-125-speed">Speed: 125%</title>
+  <path id="_1.25" data-name="1.25" d="M144,304a32,32,0,1,1-55.58-21.58l4.243,4.243A25.988,25.988,0,1,0,114,278.1V288h-6V272h6v0.1A31.974,31.974,0,0,1,144,304Zm-44.913-5.868H98.772l-5.766,2.13v1.8l4.058-1.466v13.194h2.024V298.132Zm4.427,15.441a1.216,1.216,0,0,0,.931.332,1.252,1.252,0,0,0,.941-0.332,1.138,1.138,0,0,0,.321-0.824,1.2,1.2,0,0,0-.321-0.856,1.23,1.23,0,0,0-.941-0.343,1.2,1.2,0,0,0-.931.343,1.229,1.229,0,0,0-.31.856A1.164,1.164,0,0,0,103.514,313.573Zm14.971-1.4h-7.953l4.243-4.526q2.98-3.178,2.981-5.479a3.855,3.855,0,0,0-1.284-3.033,5.071,5.071,0,0,0-3.492-1.14,5.273,5.273,0,0,0-3.77,1.327A4.555,4.555,0,0,0,107.8,302.8h2.013a3.176,3.176,0,0,1,.832-2.338,3.139,3.139,0,0,1,2.334-.84,2.648,2.648,0,0,1,2,.781,2.768,2.768,0,0,1,.75,2,3.642,3.642,0,0,1-.462,1.76,12.855,12.855,0,0,1-1.681,2.209l-5.484,5.993v1.423h10.38v-1.616Zm3.729-5.789,0.533-.428a3.362,3.362,0,0,1,2.068-.567,2.968,2.968,0,0,1,2.3.947,3.579,3.579,0,0,1,.865,2.509,3.891,3.891,0,0,1-.8,2.6,2.735,2.735,0,0,1-2.2.942,3.041,3.041,0,0,1-2.067-.679,3.126,3.126,0,0,1-.969-2.017h-1.9a4.543,4.543,0,0,0,1.513,3.167A5.061,5.061,0,0,0,124.978,314a4.863,4.863,0,0,0,3.694-1.386,5.27,5.27,0,0,0,1.322-3.793,5.46,5.46,0,0,0-1.273-3.8,4.407,4.407,0,0,0-3.438-1.407,5.172,5.172,0,0,0-2.644.674l0.478-4.248h6.409v-1.83h-8.117l-0.805,7.769Z" transform="translate(-80 -272)"></path>
+</svg>
+
+							<svg xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="spp-svg-title-150-speed" role="img" viewBox="0 0 64 64">
+  <title id="spp-svg-title-150-speed">Speed: 150%</title>
+  <path id="_1.5" data-name="1.5" d="M224,224a32,32,0,1,1-55.58-21.58l4.243,4.243A25.988,25.988,0,1,0,194,198.1V208h-6V192h6v0.1A31.974,31.974,0,0,1,224,224Zm-38.906-5.992h-0.316l-5.773,2.146v1.812l4.063-1.478v13.3h2.026V218.008Zm4.432,15.561a1.21,1.21,0,0,0,.931.335,1.246,1.246,0,0,0,.942-0.335,1.15,1.15,0,0,0,.322-0.83,1.151,1.151,0,0,0-1.264-1.208,1.189,1.189,0,0,0-.931.345,1.245,1.245,0,0,0-.311.863A1.171,1.171,0,0,0,189.526,233.569Zm6.69-7.247,0.534-.431a3.344,3.344,0,0,1,2.069-.572,2.962,2.962,0,0,1,2.3.955,3.62,3.62,0,0,1,.866,2.529,3.937,3.937,0,0,1-.8,2.62,2.731,2.731,0,0,1-2.206.949,3.036,3.036,0,0,1-2.069-.684,3.154,3.154,0,0,1-.969-2.033h-1.907a4.588,4.588,0,0,0,1.514,3.192A5.047,5.047,0,0,0,198.982,234a4.85,4.85,0,0,0,3.7-1.4A5.333,5.333,0,0,0,204,228.781a5.524,5.524,0,0,0-1.275-3.834,4.4,4.4,0,0,0-3.442-1.418,5.156,5.156,0,0,0-2.646.68l0.479-4.282h6.415v-1.844H195.41l-0.806,7.83Z" transform="translate(-160 -192)"></path>
+</svg>
+
+							<svg xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="spp-svg-title-175-speed" role="img" viewBox="0 0 64 64">
+  <title id="spp-svg-title-175-speed">Speed: 175%</title>
+  <path id="_1.75" data-name="1.75" d="M224,304a32,32,0,1,1-55.58-21.58l4.243,4.243A25.988,25.988,0,1,0,194,278.1V288h-6V272h6v0.1A31.974,31.974,0,0,1,224,304Zm-44.022-5.992h-0.31l-5.663,2.146v1.812l3.985-1.478v13.3h1.988V298.008Zm4.348,15.561a1.173,1.173,0,0,0,.913.335,1.213,1.213,0,0,0,.925-0.335,1.161,1.161,0,0,0,.315-0.83,1.234,1.234,0,0,0-.315-0.863,1.192,1.192,0,0,0-.925-0.345,1.154,1.154,0,0,0-.913.345,1.259,1.259,0,0,0-.305.863A1.184,1.184,0,0,0,184.326,313.569ZM197.9,298.083H187.384v1.639h8.42l-6.422,14.063h2.073l6.443-14.58v-1.122Zm3.456,8.239,0.523-.431a3.238,3.238,0,0,1,2.03-.572,2.878,2.878,0,0,1,2.26.955,3.663,3.663,0,0,1,.85,2.529,3.988,3.988,0,0,1-.786,2.62,2.655,2.655,0,0,1-2.164.949,2.943,2.943,0,0,1-2.03-.684,3.18,3.18,0,0,1-.951-2.033h-1.869a4.621,4.621,0,0,0,1.485,3.192A4.89,4.89,0,0,0,204.067,314a4.709,4.709,0,0,0,3.628-1.4,5.4,5.4,0,0,0,1.3-3.823,5.59,5.59,0,0,0-1.25-3.834,4.274,4.274,0,0,0-3.376-1.418,4.985,4.985,0,0,0-2.6.68l0.47-4.282h6.294v-1.844h-7.971l-0.791,7.83Z" transform="translate(-160 -272)"></path>
+</svg>
+
+							<svg xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="spp-svg-title-double-speed" role="img" viewBox="0 0 64 64">
+  <title id="spp-svg-title-double-speed">Speed: Double</title>
+  <path id="_2X" data-name="2X" d="M304,224a32,32,0,1,1-55.58-21.58l4.243,4.243A25.988,25.988,0,1,0,274,198.1V208h-6V192h6v0.1A31.974,31.974,0,0,1,304,224Zm-32.867,8.008H263.28l4.19-4.544q2.943-3.191,2.943-5.5a3.9,3.9,0,0,0-1.267-3.046,4.96,4.96,0,0,0-3.449-1.144,5.158,5.158,0,0,0-3.722,1.332,4.615,4.615,0,0,0-1.391,3.492h1.987a3.223,3.223,0,0,1,.822-2.348,3.07,3.07,0,0,1,2.3-.843,2.594,2.594,0,0,1,1.977.784,2.808,2.808,0,0,1,.741,2.009,3.7,3.7,0,0,1-.456,1.767,12.9,12.9,0,0,1-1.66,2.218l-5.414,6.016v1.429h10.248v-1.622Zm3.887-14.019H272.6l4.952,7.756-5.07,7.885h2.438l3.868-6.1,3.845,6.1h2.449l-5.059-7.885,4.941-7.756H282.54l-3.749,5.994Z" transform="translate(-240 -192)"></path>
+</svg>
+
+							<svg xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="spp-svg-title-triple-speed" role="img" viewBox="0 0 64 64">
+  <title id="spp-svg-title-triple-speed">Speed: Triple</title>
+  <path id="_3X" data-name="3X" d="M384,224a32,32,0,1,1-55.58-21.58l4.243,4.243A25.988,25.988,0,1,0,354,198.1V208h-6V192h6v0.1A31.974,31.974,0,0,1,384,224Zm-39.87,2.65H345.6a3.56,3.56,0,0,1,2.378.749,2.633,2.633,0,0,1,.825,2.086,2.622,2.622,0,0,1-2.918,2.9,2.991,2.991,0,0,1-2.124-.738,2.561,2.561,0,0,1-.793-1.969H341a3.963,3.963,0,0,0,1.358,3.135A5.161,5.161,0,0,0,345.884,234a5.026,5.026,0,0,0,3.52-1.231,4.274,4.274,0,0,0,1.353-3.328,3.6,3.6,0,0,0-2.653-3.648,3.93,3.93,0,0,0,1.77-1.423,3.447,3.447,0,0,0,.651-1.969,4.245,4.245,0,0,0-1.237-3.243,4.781,4.781,0,0,0-3.414-1.166,4.838,4.838,0,0,0-3.4,1.225,4,4,0,0,0-1.338,3.077h1.956a2.58,2.58,0,0,1,.756-1.942,2.78,2.78,0,0,1,2.024-.733,2.4,2.4,0,0,1,2.695,2.739,2.481,2.481,0,0,1-.793,1.937,3.2,3.2,0,0,1-2.177.738H344.13v1.616Zm9.965-8.443h-2.378l4.873,7.726-4.989,7.854H354l3.805-6.078,3.784,6.078H364l-4.978-7.854,4.862-7.726h-2.389l-3.689,5.971Z" transform="translate(-320 -192)"></path>
+</svg>
+
+						</p>
+					
+				
+				<p>
+					<svg xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="spp-svg-title-back-15" role="img" viewBox="0 0 76.344 44">
+  <title id="spp-svg-title-back-15">Back 15 seconds</title>
+  <path id="RW_15" d="M36.645,62.008H36.318L31,64.289v1.927l3.566-1.571V78.784h2.074V62.008Zm7.418,8.841,0.548-.539a2.444,2.444,0,0,1,1.643-.528,2.284,2.284,0,0,1,1.963,1.032,4.533,4.533,0,0,1,.728,2.672,4.978,4.978,0,0,1-.676,2.769,2.129,2.129,0,0,1-1.876,1.026,2.208,2.208,0,0,1-1.719-.728,3.854,3.854,0,0,1-.833-2.161H41.907a5.286,5.286,0,0,0,1.375,3.394,4.573,4.573,0,0,0,6.485-.252A6.182,6.182,0,0,0,51,73.463a6.653,6.653,0,0,0-1.13-4.071,3.669,3.669,0,0,0-3.111-1.514,3.908,3.908,0,0,0-2.261.722l0.4-4.552h5.64V62.088H43.153l-0.734,8.325ZM75,73A33,33,0,0,0,9,73h4.67l-6,8-6-8H6a36,36,0,0,1,72,0H75Z" transform="translate(-1.656 -37)"></path>
+</svg>
+
+				</p>
+				<p>
+					<svg xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="spp-svg-title-forward-60" role="img" viewBox="0 0 76.344 44">
+  <title id="spp-svg-title-forward-60">Forward 60 seconds</title>
+  <path id="FF-60" d="M185.75,62.229a6.816,6.816,0,0,0-3.714,1.017,6,6,0,0,0-2.261,3.006,15.677,15.677,0,0,0-.768,5.432V72.49a7.977,7.977,0,0,0,1.276,4.739,3.949,3.949,0,0,0,3.365,1.784,4.057,4.057,0,0,0,3.313-1.511,6.32,6.32,0,0,0,1.234-4.114,6.47,6.47,0,0,0-1.116-3.949,3.561,3.561,0,0,0-3.017-1.506,3.631,3.631,0,0,0-2.929,1.386,6.42,6.42,0,0,1,1.358-3.949,4.31,4.31,0,0,1,3.271-1.358H186.1V62.229H185.75Zm-0.271,8.517a5.133,5.133,0,0,1,.661,2.744,5.06,5.06,0,0,1-.661,2.744,2.063,2.063,0,0,1-1.831,1.04,2.121,2.121,0,0,1-1.812-1.267,6.448,6.448,0,0,1-.739-3.278V71.9a3.519,3.519,0,0,1,1.04-1.591,2.347,2.347,0,0,1,1.57-.625A2.01,2.01,0,0,1,185.479,70.746Zm15.53-1.915a9.746,9.746,0,0,0-1.175-5.125,4.313,4.313,0,0,0-6.92.091,10.389,10.389,0,0,0-1.116,5.409v2.841a9.939,9.939,0,0,0,1.18,5.227A4.261,4.261,0,0,0,199.9,77.2a10.684,10.684,0,0,0,1.11-5.472v-2.9Zm-2.09,3.443a9.267,9.267,0,0,1-.626,3.784,1.977,1.977,0,0,1-1.878,1.239,2.027,2.027,0,0,1-1.913-1.312,9.5,9.5,0,0,1-.626-3.926V68.649a8.876,8.876,0,0,1,.626-3.687,1.984,1.984,0,0,1,1.889-1.222,2.008,2.008,0,0,1,1.925,1.244,9.341,9.341,0,0,1,.6,3.869v3.42ZM157,73a33,33,0,0,1,66,0h-4.67l6,8,6-8H226a36,36,0,0,0-72,0h3Z" transform="translate(-154 -37)"></path>
+</svg>
+
+				</p>
+			</div>
+	
+</div>
+
+
+
+<p><span tabindex="0"><u>more</u></span>
+</p>
+
+
+	<ul></ul>
+
+
+<div>
+	<p>
+	
+		
+			<svg xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="spp-svg-title-half-speed" role="img" viewBox="0 0 64 64">
+  <title id="spp-svg-title-half-speed">Speed: 50%</title>
+  <path id="_0.5" data-name="0.5" d="M64,224A32,32,0,1,1,8.42,202.42l4.243,4.243A25.988,25.988,0,1,0,34,198.1V208H28V192h6v0.1A31.974,31.974,0,0,1,64,224Zm-36.237.574a8.6,8.6,0,0,0-1.21-4.971,4.248,4.248,0,0,0-3.673-1.61,4.208,4.208,0,0,0-3.694,1.669,8.91,8.91,0,0,0-1.178,5.1v2.643a8.648,8.648,0,0,0,1.231,4.939A4.208,4.208,0,0,0,22.9,234a4.178,4.178,0,0,0,3.683-1.691,9.111,9.111,0,0,0,1.178-5.168v-2.568Zm-1.964,3.1a7.152,7.152,0,0,1-.738,3.574,2.369,2.369,0,0,1-2.16,1.134,2.4,2.4,0,0,1-2.2-1.2,7.416,7.416,0,0,1-.727-3.729v-3.167a7.132,7.132,0,0,1,.711-3.521,2.374,2.374,0,0,1,2.2-1.144,2.406,2.406,0,0,1,2.219,1.15,7.3,7.3,0,0,1,.7,3.665v3.242Zm4.1,5.9a1.168,1.168,0,0,0,.907.332,1.2,1.2,0,0,0,.918-0.332,1.155,1.155,0,0,0,.313-0.824,1.22,1.22,0,0,0-.313-0.856,1.183,1.183,0,0,0-.918-0.343,1.149,1.149,0,0,0-.907.343,1.244,1.244,0,0,0-.3.856A1.177,1.177,0,0,0,29.9,233.573Zm6.52-7.191,0.52-.428a3.219,3.219,0,0,1,2.017-.567,2.86,2.86,0,0,1,2.245.947,3.631,3.631,0,0,1,.844,2.509,3.955,3.955,0,0,1-.78,2.6,2.64,2.64,0,0,1-2.149.942,2.922,2.922,0,0,1-2.017-.679,3.155,3.155,0,0,1-.945-2.017H34.3a4.583,4.583,0,0,0,1.476,3.167A4.862,4.862,0,0,0,39.117,234a4.68,4.68,0,0,0,3.6-1.386,5.349,5.349,0,0,0,1.29-3.793,5.543,5.543,0,0,0-1.242-3.8,4.248,4.248,0,0,0-3.354-1.407,4.951,4.951,0,0,0-2.579.674l0.467-4.248h6.252v-1.83H35.635l-0.785,7.769Z" transform="translate(0 -192)"></path>
+</svg>
+
+			<svg xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="spp-svg-title-three-quarter-speed" role="img" viewBox="0 0 64 64">
+  <title id="spp-svg-title-three-quarter-speed">Speed: 75%</title>
+  <path id="_.75" data-name=".75" d="M64,304A32,32,0,1,1,8.42,282.42l4.243,4.243A25.988,25.988,0,1,0,34,278.1V288H28V272h6v0.1A31.974,31.974,0,0,1,64,304Zm-44.689,9.567a1.172,1.172,0,0,0,.914.336,1.208,1.208,0,0,0,.925-0.336,1.175,1.175,0,0,0,.315-0.835,1.241,1.241,0,0,0-.315-0.868,1.184,1.184,0,0,0-.925-0.347,1.15,1.15,0,0,0-.914.347,1.267,1.267,0,0,0-.3.868A1.2,1.2,0,0,0,19.312,313.567Zm13.577-15.578H22.371v1.649h8.423L24.37,313.784h2.074l6.445-14.667v-1.128Zm3.457,8.288,0.524-.434a3.227,3.227,0,0,1,2.031-.575,2.87,2.87,0,0,1,2.261.96,3.7,3.7,0,0,1,.85,2.544,4.031,4.031,0,0,1-.786,2.636,2.65,2.65,0,0,1-2.164.955,2.932,2.932,0,0,1-2.031-.689,3.206,3.206,0,0,1-.951-2.045h-1.87a4.66,4.66,0,0,0,1.486,3.211A4.873,4.873,0,0,0,39.06,314a4.7,4.7,0,0,0,3.629-1.4,5.444,5.444,0,0,0,1.3-3.846,5.643,5.643,0,0,0-1.251-3.856,4.264,4.264,0,0,0-3.378-1.427,4.962,4.962,0,0,0-2.6.684l0.47-4.307h6.3v-1.855H35.554l-0.791,7.876Z" transform="translate(0 -272)"></path>
+</svg>
+
+			<svg xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="spp-svg-title-normal-speed" role="img" viewBox="0 0 64 64">
+  <title id="spp-svg-title-normal-speed">Speed: Normal</title>
+  <path id="_1X" data-name="1X" d="M144,224a32,32,0,1,1-55.58-21.58l4.243,4.243A25.988,25.988,0,1,0,114,198.1V208h-6V192h6v0.1A31.974,31.974,0,0,1,144,224Zm-37.93-5.992h-0.314l-5.751,2.176v1.837l4.047-1.5v13.482h2.018v-16Zm5.772,0.076H109.4l5,7.9-5.121,8.026h2.463l3.906-6.211,3.884,6.211h2.474l-5.11-8.026,4.991-7.9h-2.452l-3.787,6.1Z" transform="translate(-80 -192)"></path>
+</svg>
+
+			<svg xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="spp-svg-title-125-speed" role="img" viewBox="0 0 64 64">
+  <title id="spp-svg-title-125-speed">Speed: 125%</title>
+  <path id="_1.25" data-name="1.25" d="M144,304a32,32,0,1,1-55.58-21.58l4.243,4.243A25.988,25.988,0,1,0,114,278.1V288h-6V272h6v0.1A31.974,31.974,0,0,1,144,304Zm-44.913-5.868H98.772l-5.766,2.13v1.8l4.058-1.466v13.194h2.024V298.132Zm4.427,15.441a1.216,1.216,0,0,0,.931.332,1.252,1.252,0,0,0,.941-0.332,1.138,1.138,0,0,0,.321-0.824,1.2,1.2,0,0,0-.321-0.856,1.23,1.23,0,0,0-.941-0.343,1.2,1.2,0,0,0-.931.343,1.229,1.229,0,0,0-.31.856A1.164,1.164,0,0,0,103.514,313.573Zm14.971-1.4h-7.953l4.243-4.526q2.98-3.178,2.981-5.479a3.855,3.855,0,0,0-1.284-3.033,5.071,5.071,0,0,0-3.492-1.14,5.273,5.273,0,0,0-3.77,1.327A4.555,4.555,0,0,0,107.8,302.8h2.013a3.176,3.176,0,0,1,.832-2.338,3.139,3.139,0,0,1,2.334-.84,2.648,2.648,0,0,1,2,.781,2.768,2.768,0,0,1,.75,2,3.642,3.642,0,0,1-.462,1.76,12.855,12.855,0,0,1-1.681,2.209l-5.484,5.993v1.423h10.38v-1.616Zm3.729-5.789,0.533-.428a3.362,3.362,0,0,1,2.068-.567,2.968,2.968,0,0,1,2.3.947,3.579,3.579,0,0,1,.865,2.509,3.891,3.891,0,0,1-.8,2.6,2.735,2.735,0,0,1-2.2.942,3.041,3.041,0,0,1-2.067-.679,3.126,3.126,0,0,1-.969-2.017h-1.9a4.543,4.543,0,0,0,1.513,3.167A5.061,5.061,0,0,0,124.978,314a4.863,4.863,0,0,0,3.694-1.386,5.27,5.27,0,0,0,1.322-3.793,5.46,5.46,0,0,0-1.273-3.8,4.407,4.407,0,0,0-3.438-1.407,5.172,5.172,0,0,0-2.644.674l0.478-4.248h6.409v-1.83h-8.117l-0.805,7.769Z" transform="translate(-80 -272)"></path>
+</svg>
+
+			<svg xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="spp-svg-title-150-speed" role="img" viewBox="0 0 64 64">
+  <title id="spp-svg-title-150-speed">Speed: 150%</title>
+  <path id="_1.5" data-name="1.5" d="M224,224a32,32,0,1,1-55.58-21.58l4.243,4.243A25.988,25.988,0,1,0,194,198.1V208h-6V192h6v0.1A31.974,31.974,0,0,1,224,224Zm-38.906-5.992h-0.316l-5.773,2.146v1.812l4.063-1.478v13.3h2.026V218.008Zm4.432,15.561a1.21,1.21,0,0,0,.931.335,1.246,1.246,0,0,0,.942-0.335,1.15,1.15,0,0,0,.322-0.83,1.151,1.151,0,0,0-1.264-1.208,1.189,1.189,0,0,0-.931.345,1.245,1.245,0,0,0-.311.863A1.171,1.171,0,0,0,189.526,233.569Zm6.69-7.247,0.534-.431a3.344,3.344,0,0,1,2.069-.572,2.962,2.962,0,0,1,2.3.955,3.62,3.62,0,0,1,.866,2.529,3.937,3.937,0,0,1-.8,2.62,2.731,2.731,0,0,1-2.206.949,3.036,3.036,0,0,1-2.069-.684,3.154,3.154,0,0,1-.969-2.033h-1.907a4.588,4.588,0,0,0,1.514,3.192A5.047,5.047,0,0,0,198.982,234a4.85,4.85,0,0,0,3.7-1.4A5.333,5.333,0,0,0,204,228.781a5.524,5.524,0,0,0-1.275-3.834,4.4,4.4,0,0,0-3.442-1.418,5.156,5.156,0,0,0-2.646.68l0.479-4.282h6.415v-1.844H195.41l-0.806,7.83Z" transform="translate(-160 -192)"></path>
+</svg>
+
+			<svg xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="spp-svg-title-175-speed" role="img" viewBox="0 0 64 64">
+  <title id="spp-svg-title-175-speed">Speed: 175%</title>
+  <path id="_1.75" data-name="1.75" d="M224,304a32,32,0,1,1-55.58-21.58l4.243,4.243A25.988,25.988,0,1,0,194,278.1V288h-6V272h6v0.1A31.974,31.974,0,0,1,224,304Zm-44.022-5.992h-0.31l-5.663,2.146v1.812l3.985-1.478v13.3h1.988V298.008Zm4.348,15.561a1.173,1.173,0,0,0,.913.335,1.213,1.213,0,0,0,.925-0.335,1.161,1.161,0,0,0,.315-0.83,1.234,1.234,0,0,0-.315-0.863,1.192,1.192,0,0,0-.925-0.345,1.154,1.154,0,0,0-.913.345,1.259,1.259,0,0,0-.305.863A1.184,1.184,0,0,0,184.326,313.569ZM197.9,298.083H187.384v1.639h8.42l-6.422,14.063h2.073l6.443-14.58v-1.122Zm3.456,8.239,0.523-.431a3.238,3.238,0,0,1,2.03-.572,2.878,2.878,0,0,1,2.26.955,3.663,3.663,0,0,1,.85,2.529,3.988,3.988,0,0,1-.786,2.62,2.655,2.655,0,0,1-2.164.949,2.943,2.943,0,0,1-2.03-.684,3.18,3.18,0,0,1-.951-2.033h-1.869a4.621,4.621,0,0,0,1.485,3.192A4.89,4.89,0,0,0,204.067,314a4.709,4.709,0,0,0,3.628-1.4,5.4,5.4,0,0,0,1.3-3.823,5.59,5.59,0,0,0-1.25-3.834,4.274,4.274,0,0,0-3.376-1.418,4.985,4.985,0,0,0-2.6.68l0.47-4.282h6.294v-1.844h-7.971l-0.791,7.83Z" transform="translate(-160 -272)"></path>
+</svg>
+
+			<svg xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="spp-svg-title-double-speed" role="img" viewBox="0 0 64 64">
+  <title id="spp-svg-title-double-speed">Speed: Double</title>
+  <path id="_2X" data-name="2X" d="M304,224a32,32,0,1,1-55.58-21.58l4.243,4.243A25.988,25.988,0,1,0,274,198.1V208h-6V192h6v0.1A31.974,31.974,0,0,1,304,224Zm-32.867,8.008H263.28l4.19-4.544q2.943-3.191,2.943-5.5a3.9,3.9,0,0,0-1.267-3.046,4.96,4.96,0,0,0-3.449-1.144,5.158,5.158,0,0,0-3.722,1.332,4.615,4.615,0,0,0-1.391,3.492h1.987a3.223,3.223,0,0,1,.822-2.348,3.07,3.07,0,0,1,2.3-.843,2.594,2.594,0,0,1,1.977.784,2.808,2.808,0,0,1,.741,2.009,3.7,3.7,0,0,1-.456,1.767,12.9,12.9,0,0,1-1.66,2.218l-5.414,6.016v1.429h10.248v-1.622Zm3.887-14.019H272.6l4.952,7.756-5.07,7.885h2.438l3.868-6.1,3.845,6.1h2.449l-5.059-7.885,4.941-7.756H282.54l-3.749,5.994Z" transform="translate(-240 -192)"></path>
+</svg>
+
+			<svg xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="spp-svg-title-triple-speed" role="img" viewBox="0 0 64 64">
+  <title id="spp-svg-title-triple-speed">Speed: Triple</title>
+  <path id="_3X" data-name="3X" d="M384,224a32,32,0,1,1-55.58-21.58l4.243,4.243A25.988,25.988,0,1,0,354,198.1V208h-6V192h6v0.1A31.974,31.974,0,0,1,384,224Zm-39.87,2.65H345.6a3.56,3.56,0,0,1,2.378.749,2.633,2.633,0,0,1,.825,2.086,2.622,2.622,0,0,1-2.918,2.9,2.991,2.991,0,0,1-2.124-.738,2.561,2.561,0,0,1-.793-1.969H341a3.963,3.963,0,0,0,1.358,3.135A5.161,5.161,0,0,0,345.884,234a5.026,5.026,0,0,0,3.52-1.231,4.274,4.274,0,0,0,1.353-3.328,3.6,3.6,0,0,0-2.653-3.648,3.93,3.93,0,0,0,1.77-1.423,3.447,3.447,0,0,0,.651-1.969,4.245,4.245,0,0,0-1.237-3.243,4.781,4.781,0,0,0-3.414-1.166,4.838,4.838,0,0,0-3.4,1.225,4,4,0,0,0-1.338,3.077h1.956a2.58,2.58,0,0,1,.756-1.942,2.78,2.78,0,0,1,2.024-.733,2.4,2.4,0,0,1,2.695,2.739,2.481,2.481,0,0,1-.793,1.937,3.2,3.2,0,0,1-2.177.738H344.13v1.616Zm9.965-8.443h-2.378l4.873,7.726-4.989,7.854H354l3.805-6.078,3.784,6.078H364l-4.978-7.854,4.862-7.726h-2.389l-3.689,5.971Z" transform="translate(-320 -192)"></path>
+</svg>
+
+		
+	
+	</p>
+	<p>
+		<svg xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="spp-svg-title-back-15" role="img" viewBox="0 0 76.344 44">
+  <title id="spp-svg-title-back-15">Back 15 seconds</title>
+  <path id="RW_15" d="M36.645,62.008H36.318L31,64.289v1.927l3.566-1.571V78.784h2.074V62.008Zm7.418,8.841,0.548-.539a2.444,2.444,0,0,1,1.643-.528,2.284,2.284,0,0,1,1.963,1.032,4.533,4.533,0,0,1,.728,2.672,4.978,4.978,0,0,1-.676,2.769,2.129,2.129,0,0,1-1.876,1.026,2.208,2.208,0,0,1-1.719-.728,3.854,3.854,0,0,1-.833-2.161H41.907a5.286,5.286,0,0,0,1.375,3.394,4.573,4.573,0,0,0,6.485-.252A6.182,6.182,0,0,0,51,73.463a6.653,6.653,0,0,0-1.13-4.071,3.669,3.669,0,0,0-3.111-1.514,3.908,3.908,0,0,0-2.261.722l0.4-4.552h5.64V62.088H43.153l-0.734,8.325ZM75,73A33,33,0,0,0,9,73h4.67l-6,8-6-8H6a36,36,0,0,1,72,0H75Z" transform="translate(-1.656 -37)"></path>
+</svg>
+
+	</p>
+	
+	<p>
+		<svg xmlns="http://www.w3.org/2000/svg" tabindex="0" aria-labelledby="spp-svg-title-forward-60" role="img" viewBox="0 0 76.344 44">
+  <title id="spp-svg-title-forward-60">Forward 60 seconds</title>
+  <path id="FF-60" d="M185.75,62.229a6.816,6.816,0,0,0-3.714,1.017,6,6,0,0,0-2.261,3.006,15.677,15.677,0,0,0-.768,5.432V72.49a7.977,7.977,0,0,0,1.276,4.739,3.949,3.949,0,0,0,3.365,1.784,4.057,4.057,0,0,0,3.313-1.511,6.32,6.32,0,0,0,1.234-4.114,6.47,6.47,0,0,0-1.116-3.949,3.561,3.561,0,0,0-3.017-1.506,3.631,3.631,0,0,0-2.929,1.386,6.42,6.42,0,0,1,1.358-3.949,4.31,4.31,0,0,1,3.271-1.358H186.1V62.229H185.75Zm-0.271,8.517a5.133,5.133,0,0,1,.661,2.744,5.06,5.06,0,0,1-.661,2.744,2.063,2.063,0,0,1-1.831,1.04,2.121,2.121,0,0,1-1.812-1.267,6.448,6.448,0,0,1-.739-3.278V71.9a3.519,3.519,0,0,1,1.04-1.591,2.347,2.347,0,0,1,1.57-.625A2.01,2.01,0,0,1,185.479,70.746Zm15.53-1.915a9.746,9.746,0,0,0-1.175-5.125,4.313,4.313,0,0,0-6.92.091,10.389,10.389,0,0,0-1.116,5.409v2.841a9.939,9.939,0,0,0,1.18,5.227A4.261,4.261,0,0,0,199.9,77.2a10.684,10.684,0,0,0,1.11-5.472v-2.9Zm-2.09,3.443a9.267,9.267,0,0,1-.626,3.784,1.977,1.977,0,0,1-1.878,1.239,2.027,2.027,0,0,1-1.913-1.312,9.5,9.5,0,0,1-.626-3.926V68.649a8.876,8.876,0,0,1,.626-3.687,1.984,1.984,0,0,1,1.889-1.222,2.008,2.008,0,0,1,1.925,1.244,9.341,9.341,0,0,1,.6,3.869v3.42ZM157,73a33,33,0,0,1,66,0h-4.67l6,8,6-8H226a36,36,0,0,0-72,0h3Z" transform="translate(-154 -37)"></path>
+</svg>
+
+	</p>
+	
+		
+	
+</div>
+<p>Currently Playing</p>
+
+
+
+
+
+</div><p>§</p><h4 id="notes">Show Notes</h4><h2><span>The five levers you can pull to affect longevity [1:15]</span></h2>
+<ol>
+<li><span>Nutritional biochemistry</span></li>
+<li><span>Exercise physiology</span></li>
+<li><span>Sleep physiology</span></li>
+<li><span>Distress tolerance</span></li>
+<li><span>Exogenous molecules (drugs, hormones, supplements … and maybe telomeres)</span></li>
+</ol>
+<p><span>The podcast is going to focus today on </span><b>things that one can do that specifically does not require the help of a physician</b></p>
+<blockquote><p><span>“The good news is you can do more on your own than you require the help of a physician for.”</span></p></blockquote>
+
+<h2><span>Nutritional biochemistry: Framework, 3 nutritional interventions, and how to approach your goals, and what you should be tracking [4:30]</span></h2>
+<blockquote><p><span>“Nutrition…might be the most complicated because I think it has the most variable response for a given individual to a given stimulus.”</span></p></blockquote>
+<p><b>Variation in individuals</b></p>
+<ul>
+<li><span>The same dietary program may work for one person and not for another</span></li>
+<li><span>This is the source of a lot of frustration for people who are doing everything “right” but aren’t getting the results they expected</span></li>
+</ul>
+<p><span>“</span><i><span>The </span></i><b><i>overarching principle</i></b><i><span> of nutritional biochemistry is you have to be malleable, you have to be empirical, and you have to assume that if it doesn’t work and you’ve tried it correctly, that that’s okay. And that there’s another approach.</span></i><span>”</span></p>
+<p><b>Framework for nutrition</b></p>
+<p><span><span>⇒ See Peter’s </span><a href="https://peterattiamd.com/my-nutritional-framework/"><span>email newsletter</span></a><span> on this topic</span></span></p>
+<p><b>The 3 nutritional interventions/restrictions</b><span>:</span></p>
+<p><span>-1) </span><i><span>Dietary</span></i><span> restriction</span></p>
+<ul>
+<li><span>restricting some type of macromolecule</span></li>
+<li><span>Examples: restricting sugar, carbohydrates, restricting animal protein, fats, one type of fat like polyunsaturated fat</span></li>
+</ul>
+<p><span>-2) </span><i><span>Time</span></i><span> restriction</span></p>
+<ul>
+<li><span>This is limiting the window during which you eat</span></li>
+<li><span>This gets lumped into the broader terminology of </span><a href="https://peterattiamd.com/intermittent-fasting/"><span>intermittent fasting</span></a><span> but Peter prefers “time-restricted feeding”</span></li>
+<li><span>Example: 16:8 protocol is 16 hours of fasting and 8 hour window in which you can eat</span></li>
+</ul>
+<p><span>-3) </span><i><span>Caloric</span></i><span> restriction</span></p>
+<ul>
+<li><span>This is simply reducing the input but not restricting what or when you eat</span></li>
+</ul>
+<p><span>⇒ </span><b>Note</b><span>: These three approaches can be done separately or can be combined</span></p>
+<p><i><span>Peter’s current approach</span></i><span>:</span></p>
+<ul>
+<li><span>Dietary restriction alone</span></li>
+<li><span>When not doing a multi-day, water-only fast, Peter is engaging only in dietary restriction</span></li>
+<li><span>He is pretty much eating however much he wants, whenever he wants, but he is being “manically strict” on what he’s eating</span></li>
+<li><span>He’s completely restricting carbohydrates outside of vegetables – no starch whatsoever</span></li>
+<li><span>This dietary approach has worked really well for Peter when he wants to lose a few pounds</span></li>
+<li><span>As Peter <a href="https://peterattiamd.com/a-new-year/">wrote about previously</a>, one of his goals this year is to lose about seven pounds</span></li>
+</ul>
+<p><b>How to approach your nutritional goals</b><span>:</span></p>
+<ul>
+<li><span>But that same approach that Peter uses for weight loss (dietary restriction) won’t result in weight loss for many of Peter’s patients</span></li>
+<li><span>Some people, for example, only lose weight when condensing the eating window (time restriction)</span></li>
+<li><span>One particular approach isn’t necessarily better than another, says Peter&nbsp;</span></li>
+</ul>
+<p><span>—</span><i><span>Instead you should approach the problem in the following way</span></i><span>:</span></p>
+<ul>
+<li><span>A) Know what it is you’re trying to address</span></li>
+<li><span>B) Figuring out how to measure that when possible (in the case of something as trivial as weight, it’s very easy to measure, but for other things it’s potentially impossible to measure)</span></li>
+<li><span>C) Sticking with a plan long enough to assess it</span></li>
+<li><span>D) Being ready to abandon it if it doesn’t seem to work</span></li>
+</ul>
+<p><b>Why Peter pays attention to blood glucose</b><span>:</span></p>
+<ul>
+<li><span>The continuous glucose monitor (CGM) is the “single most important wearable that is at this moment in time”&nbsp;</span></li>
+<li><span>However… at the moment, you will likely need a doctor to prescribe one to you (at least the one that Peter favors the most ⇒ the </span><a href="https://www.dexcom.com/g6-cgm-system" target="_blank"><span>Dexcom G6</span></a><span>)</span></li>
+<li><span>Another way to access blood glucose numbers includes the finger stick ⇒ not continuous and is quite inconvenient relative to the CGM</span></li>
+<li><span>Peter is hopeful that the CGM is soon to be available to the public and will be part of the solution for anyone who’s in the “do it yourself” category</span></li>
+</ul>
+<p><span>-Peter’s current very strict modicum of dietary restriction in the form of carbohydrate restriction results in the following blood glucose characteristics:&nbsp;</span></p>
+<ul>
+<li><span>Blood glucose levels very flat</span></li>
+<li><span>Levels very low, and</span></li>
+<li><span>Very low variability</span></li>
+</ul>
+<blockquote><p><span>“</span><i><span>Those things speak to a metabolically healthy phenotype, which frankly is more important than the amount of weight that I may or may not lose in the process</span></i><span>.”</span></p></blockquote>
+<p><b>Subcutaneous fat vs. visceral fat (</b><a href="https://www.google.com/search?q=Subcutaneous+fat+vs.+visceral+fat&amp;sxsrf=ACYBGNRwQ_PCBtdpEnp61pT3wryLJVPcTw:1580750102998&amp;source=lnms&amp;tbm=isch&amp;sa=X&amp;ved=2ahUKEwj0o_iC8bXnAhVCU98KHSw5BhIQ_AUoAXoECA8QAw&amp;biw=886&amp;bih=695&amp;dpr=2#imgrc=-B5q3GintNBPtM:" target="_blank"><b>see this figure</b></a><b>)</b></p>
+<ul>
+<li><span>Much of the weight Peter may lose will come from subcutaneous fat, which actually doesn’t play an enormous role in our health&nbsp;</span></li>
+<li><span>It’s the </span><a href="https://en.wikipedia.org/wiki/Adipose_tissue#Visceral_fat" target="_blank"><span>visceral fat</span></a><span> that is by far the bigger predator</span></li>
+<li><span>Unfortunately, it’s very difficult to ascertain visceral fat loss</span></li>
+</ul>
+<p><i><span>Does Peter think there is a role for patients to be able to order their own </span></i><b><i>blood tests</i></b><i><span> without a physician?</span></i><span>&nbsp;</span></p>
+<ul>
+<li><span>I think the answer should be yes.&nbsp;</span></li>
+<li><span>At the same time, I think it opens up a can of worms and I think there is a benefit to having a physician being a person who can not only order it, but more importantly help you understand and interpret it, especially in the event that something is not optimal.&nbsp;</span></li>
+<li><span>Many blood test results come fully editorialized from the lab as “good, bad, or intermediate.”</span></li>
+<li><span>Peter has to tell patient that it is many times the “good” or “bad” results are out of context and to ignore it</span>
+<ul>
+<li><span>E.g., Uric acid is 6.6 and the test says that is in the “normal” range…and Peter might say that’s not good enough</span></li>
+</ul>
+</li>
+</ul>
+<p><b>Pay attention to how you FEEL</b></p>
+<ul>
+<li><span>How you feel can’t be overstated, says Peter</span></li>
+<li><span>Although it’s complicated because it includes the </span><a href="https://peterattiamd.com/the-placebo-effect/"><span>placebo effect</span></a></li>
+</ul>
+<p><span>–</span><i><span>All things considered, if a nutritional intervention results in things like</span></i><span>:</span></p>
+<ul>
+<li><span>More and stable energy</span></li>
+<li><span>Less GI distress</span></li>
+<li><span>Better sleep</span></li>
+<li><span>Less cravings</span></li>
+<li><span>More satiation with meals</span></li>
+</ul>
+<p><span>–These would be signs that the changes you’ve made have been in the right direction even if they aren’t accompanied by some of the more obvious things that we look at (such as a lower number on the scale)</span></p>
+<p><b>A lesson Peter learned when he transitioned to ketosis in 2011:</b></p>
+<ul>
+<li><span>When Peter switched to a ketogenic diet in 2011…</span></li>
+<li><span>It meant that he would be going from a very glycolytic athlete to someone whose muscles are going to have to learn to burn fatty acids and ketones at a much broader range of ATP requirement up until about VO2 max</span></li>
+<li><span>Peter was advised to back off the intensity and the volume of his workouts</span></li>
+<li><span>Instead, Peter ignored the advice</span></li>
+<li><span>“</span><i><span>The summer of 2011 was hell.</span></i><span>”</span></li>
+</ul>
+<p><span>–</span><i><span>Eventually, it sort of “clicked” in two phases:</span></i></p>
+<ul>
+<li><span>First, In August of 2011 he had an aerobic click (i.e., mitochondrial efficiency)</span>
+<ul>
+<li><span>All of a sudden everything started to feel really good up until about zone three</span></li>
+</ul>
+</li>
+<li><span>Secondly, he has an anaerobic click in November of 2012 (almost 1.5 years after going keto)</span>
+<ul>
+<li><span>So this was above FTP up until VO2 max</span></li>
+<li><span>“All of a sudden I just had sort of this surge of efficiency that kicked in.”</span></li>
+</ul>
+</li>
+<li><span>Peter has big regrets that he wasn’t taking periodic muscle biopsies during the 3+ years he was in ketosis to see how his muscles changed in terms of efficiency and fuel utilization</span></li>
+</ul>
+
+<h2><span>Exercise for brain health, and the 4 components of exercise [20:45]</span></h2>
+<blockquote><p><span>“Exercise and nutrition are really potent physiologic tools. In fact, I don’t know how you’d quantify it, dose for dose, but certainly exercise [and sleep] might be the most important tool we have with respect to brain health.”</span></p></blockquote>
+<p><b>Exercise and brain health</b></p>
+<ul>
+<li><span>Exercise and sleep are the two most potent nootropics we have available, says Peter</span></li>
+<li><span>Everybody seems to be searching for the latest and best supplement like mushroom, or the right dose of Adderall or Modafinil, etc.</span></li>
+</ul>
+<p><span>–</span><i><span>Here’s a tip from Peter</span></i><span>:&nbsp;</span></p>
+<ul>
+<li><span>Until you have your sleep fully optimized and you’re exercising every day and producing bucket loads of </span><a href="https://en.wikipedia.org/wiki/Brain-derived_neurotrophic_factor" target="_blank"><span>BDNF</span></a><span>, lay off the nootropics and get those two things tuned up</span></li>
+<li><span>You’re going to do more for your cognitive performance and for your long-term brain health by having these two pillars optimized than any stack of nootropics that has ever been concocted.</span></li>
+</ul>
+<p><b>The 4 components of exercise</b><span>:</span></p>
+<p><span>&nbsp;&nbsp;1 </span><b>| Stability</b><span> (the foundation)</span></p>
+<p><span>&nbsp;&nbsp;2 | </span><b>Strength</b></p>
+<p><span>&nbsp;&nbsp;3 | </span><b>Zone 2</b><span> aerobic training</span></p>
+<p><span>&nbsp;&nbsp;4 | </span><b>Zone 5</b><span> (high intensity, e.g., HIIT)</span></p>
+
+<h2><span>Exercise component—Stability [24:30]</span></h2>
+<blockquote><p><span>“[Stability] is the cornerstone upon which your strength is delivered, your aerobic performance is delivered and your anaerobic performance is delivered. And it’s the way that you do so safely.”</span></p></blockquote>
+<p><span>Stability is…</span></p>
+<ul>
+<li><span>a way that we </span><b>transmit force from the body</b><span> to the outside world…&nbsp;</span></li>
+<li><span>in the safest manner possible…</span></li>
+<li><span>across the muscles which are designed to carry that load…</span></li>
+<li><span>as opposed to seeing the dissipation of force across joints that are not fit to do so.</span></li>
+</ul>
+<p><span>–</span><i><span>For example</span></i><span>, when you pick up 60 pounds off the ground</span></p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Newton%27s_laws_of_motion" target="_blank"><span>Newton’s Law</span></a><span> says you have to exert 60 pounds of force on the world around you to move that thing</span></li>
+<li><span>The idea is you want all of that 60 pounds to be transmitted from your </span><b>muscles to the ground</b><span>&nbsp;</span></li>
+<li><span>And you DON’T want anything dissipating out your back, knees, or hips</span></li>
+</ul>
+<p><span>-Humans are born with this ability</span></p>
+<ul>
+<li><span>But we lose it over time because of our lack of activity and our abundance of sitting</span></li>
+<li><span>But it’s possible to reacquire this ability through deliberate practice of these movements</span></li>
+</ul>
+<p><img src="https://peterattiamd.com/wp-content/uploads/2020/02/squatting-clinic-ama12-1024x981.png" alt="" srcset="https://peterattiamd.com/wp-content/uploads/2020/02/squatting-clinic-ama12-1024x981.png 1024w, https://peterattiamd.com/wp-content/uploads/2020/02/squatting-clinic-ama12-300x287.png 300w, https://peterattiamd.com/wp-content/uploads/2020/02/squatting-clinic-ama12-768x736.png 768w, https://peterattiamd.com/wp-content/uploads/2020/02/squatting-clinic-ama12.png 1436w" sizes="(max-width: 1024px) 100vw, 1024px" width="1024" height="981"></p>
+<p><span><b>Figure 1. Ayrton Attia demonstrating a proper squat.</b><span> Image credit: </span><a href="https://www.instagram.com/p/Bp7Je3YgKYz/" target="_blank"><span>Peter Attia (Instagram)</span></a></span></p>
+<p><b>Dynamic neuromuscular stabilization (DNS)</b></p>
+<ul>
+<li><span>Peter is a big fan of DNS to train proper stabilization and movements</span></li>
+<li><span>Peter has a lot of inefficient movement patterns that results in force leakage around his scapula, elbow, knee, back, hips, etc.</span></li>
+<li><span>This “force leakage” is the root cause of a lot of the chronic injuries that people have</span></li>
+<li><span>“<em>Stability is probably what I think of as the foundation upon which everything should be done vis-a-vis exercise.</em>”</span></li>
+</ul>
+<p><i><span>Other ways to train stabilization</span></i><span>:</span></p>
+<ul>
+<li><a href="https://www.posturalrestoration.com/" target="_blank"><span>Postural Restoration Institute</span></a><span> (PRI)</span></li>
+<li><span>Pilates – while the vocabulary might be different than DNS or PRI, many of the principles are similar</span></li>
+<li><span>The particular teacher matters a lot</span></li>
+<li><span>“I think this is somewhat discipline agnostic, but it’s heavily dependent on the practitioner and the student.”</span></li>
+<li><span>“Of the four pieces of exercise we’re going to talk about, this is the one that probably will take the most tinkering for people to find the right type of practitioners.”</span></li>
+</ul>
+<p><span>Here are a few IG video post by Peter sharing insights about stability training:</span></p>
+<ol>
+<li><a href="https://www.instagram.com/p/B783YrVgfW7/" target="_blank"><span>Hip hinge (VMO)</span></a></li>
+<li><a href="https://www.instagram.com/p/B7RUUQugzFW/" target="_blank"><span>Deadlifts</span></a></li>
+<li><a href="https://www.instagram.com/p/B7JWOwJABSX/" target="_blank"><span>Scapulae</span></a></li>
+<li><a href="https://www.instagram.com/p/B3uJAXsAIk7/" target="_blank"><span>Concentric intra-abdominal pressure (to stabilize the ribs)</span></a></li>
+</ol>
+
+<h2><span>Exercise component—Strength [29:00]</span></h2>
+<ul>
+<li><span>Strength means basically utilizing the muscle to generate force</span></li>
+<li><span>So strength training with weights (or body weight) is a very important part of strength</span></li>
+<li><span>This is I think the most intimidating of the four types of exercise especially for people who have not done it before</span></li>
+</ul>
+<p><span>-Peter’s counter to that would be: “</span><i><span>If you are interested in longevity, if you are interested in playing with your great grandkids, you want to prioritize muscle mass. Never in the history of civilization has a 90 year old said, ‘I wish I had less muscle.’</span></i><span>”</span></p>
+<ul>
+<li><span>The same is true for bone density (which can be improved with lifting weights)</span></li>
+</ul>
+<p><span>-*To reiterate the importance of stability*: “</span><i><span>To train in the discipline of strength, absent a foundation of stability, can be a recipe for disaster. And so therefore I believe that those two have to go hand in hand.</span></i><span>”</span></p>
+
+<h2><span>What is Peter optimizing for with his exercise? [30:30]</span></h2>
+<ul>
+<li><span>Everything Peter is talking about in terms of exercise is about optimizing for </span><b>longevity</b></li>
+<li><span>That is much different that optimizing for </span><b>performance</b></li>
+<li><span>For instance, if someone were to want to run the fastest 10k possible…</span>
+<ul>
+<li><span>That means training at an energy system that is very demanding of the cardiovascular system.</span></li>
+<li><span>It is pretty much maximum cardiac output just beneath VO2 max above functional threshold which is past the point of optimizing longevity returns and it actually comes at some cost to longevity relative to something more at a slightly lower energy system</span></li>
+</ul>
+</li>
+<li><span>Instead, Peter thinks about training for the </span><a href="https://peterattiamd.com/ama05/"><span>Centenarian Olympics</span></a><span> ⇒ i.e., being a kickass 90 year old</span></li>
+</ul>
+<p><span>The main energy systems of life:</span></p>
+<ul>
+<li><span>Zone 1</span></li>
+<li><span>Zone 2</span></li>
+<li><span>Zone 5</span></li>
+</ul>
+<blockquote><p><span>“By training zone 2 and zone 5 . . . we’re really teeing ourselves up metabolically and also structurally to do these things.”</span></p></blockquote>
+
+<h2><span>Exercise components—Zone 2 and zone 5 training [33:15]</span></h2>
+<p><b>Zone 2 training</b></p>
+<p><span>Make sure to check out the </span><a href="https://peterattiamd.com/inigosanmillan/"><span><span>podcast with Iñigo San Millán</span></span></a></p>
+<ul>
+<li><span>Iñigo explains that zone 2 is basically the highest level of exertion that is effectively pure mitochondrial oxidative phosphorylation before you start to net accumulate lactate</span></li>
+</ul>
+<p><i><span>-How Peter does zone 2 training:</span></i></p>
+<ul>
+<li><span>Peter does zone 2 about four times per week&nbsp;</span></li>
+<li><span>He uses a lactate meter to make sure he is right on that limit of not going too far, not pushing too hard, but pushing hard enough</span></li>
+<li><span>Usually he does it on a stationary bike that’s hooked up to a power meter where he’s titrating watts and heart rate to get to a point where his finger stick </span><b>lactate level is 1.8 or 1.9 milliMole</b></li>
+<li><span>If done on a treadmill, he’s doing 15% incline at about 3.0 to 3.4 miles per hour to produce the same effect as the bike</span></li>
+<li><span>Can also be done on an elliptical</span></li>
+</ul>
+<p><i><span>-What is the right dose of zone 2?</span></i></p>
+<ul>
+<li><span>For a beginner: ~2 hours a week is a good place to start</span></li>
+<li><span>Ideally: 3-4 hours per week&nbsp;</span></li>
+<li><span>But you probably can’t do too much zone 2, says Peter, you’re mostly just limited by time and the ability to allocate it towards other forms of exercise</span></li>
+</ul>
+<p><b>Zone 5 training</b></p>
+<ul>
+<li><span>Zone 5 is high intensity zone (i.e., </span><a href="https://en.wikipedia.org/wiki/High-intensity_interval_training" target="_blank"><span>HIIT</span></a><span>) and the fourth and final piece of exercise</span></li>
+<li><span>You don’t need to be spending much time in zone 5, but to neglect it completely, you’ll probably pay a bit of a price, says Peter</span></li>
+<li><span>Peter describes this zone as a small part of life using the example of an escalator being broken and you have two pieces of luggage and your kid and you’re late for your flight</span></li>
+</ul>
+<p><i><span>-HIIT vs aerobic exercise</span></i><span>:</span></p>
+<ul>
+<li><span>Many of the studies on this focus on its comparability to aerobics exercise on a </span><i><span>minute per minute</span></i><span> or unit time basis.&nbsp;</span></li>
+<li><span>HIIT is more efficient when looking at it that way</span></li>
+<li><span>But Peter does not view it as an </span><i><span>either/or</span></i><span> situation</span></li>
+<li><span>Using both of these tools is optimal and especially when zone 5 training doesn’t require that much more time</span></li>
+</ul>
+<p><b>Peter summarizes his typical week of exercise</b><span>:</span></p>
+<ul>
+<li><span>3-5 bouts of strength training</span></li>
+<li><span>4 bouts of zone 2</span></li>
+<li><span>2 bouts of zone 5</span></li>
+<li><span>Stability is sprinkled into pretty much every day with maybe one day of a longer, more dedicated 60-minute session around stability</span></li>
+</ul>
+<p><span>Book rec: </span><a href="https://www.amazon.com/Secret-Race-Inside-Hidden-France/dp/034553042X" target="_blank"><span>The Secret Race</span></a><span> by Tyler Hamilton – “</span><i><span>What an unbelievably good book that was. That’s one of about three or four books in my life that I read in one sitting.”</span></i></p>
+<p><b>How to know if you are actually in zone 2?</b></p>
+<p><span>&nbsp;&nbsp;1 | Gold standard way = </span><b>Blood lactate</b></p>
+<ul>
+<li><span>The “gold standard” is measuring blood lactate concentrations</span></li>
+<li><span>Being at ~2.0 mM (or probably just below it at 1.8, 1.9) is the gold standard because that is the definition.&nbsp;</span></li>
+<li><span>That definition is the </span><b>highest generation of ATP that is coming through the mitochondria such that you are not net accumulating lactate</b><span>&nbsp;</span>
+<ul>
+<li><span>(which is well below lactate threshold)</span></li>
+</ul>
+</li>
+</ul>
+<p><span>⇒ Lactate meter that Peter recommends: </span><a href="http://www.novabio.us/lactate-plus/" target="_blank"><span><span>Lactate Plus Meter by Nova</span></span></a></p>
+<ul>
+<li><span>Heads up, it’s not cheap for the device or the strips&nbsp;</span></li>
+<li><span>TIP: You need to use very clean soapy water to wash your hands before doing a blood test. Alcohol is not sufficient because it does not remove lactate.</span></li>
+</ul>
+<p><span>&nbsp;&nbsp;2 | Simplest way = </span><b>rate of perceived exertion</b><span>&nbsp;</span></p>
+<ul>
+<li><span>RPE of 3 to 4 on a scale of 1-10 is generally where you should be&nbsp;</span></li>
+<li><span>However, Peter finds the idea of rating your exertion on a scale of 1-10 rather difficult</span></li>
+<li><span>Instead, Peter prefers to gauge it by your ability to hold a conversation: Once you’re at the point when it becomes </span><b>annoying to talk</b><span> during that form of exercise, you’ve hit that threshold.&nbsp;</span>
+<ul>
+<li><span>(i.e., you can talk, but you don’t want to)</span></li>
+</ul>
+</li>
+</ul>
+<p><span>&nbsp;&nbsp;3 | Maximum heart rate</span></p>
+<ul>
+<li><span>69% to 83% of your heart rate max should be zone 2</span></li>
+<li><span>Peter points out however that it varies quite widely from person to person</span></li>
+<li><span>You really need to know your <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3935487/" target="_blank">true max HR</a> (you can’t just use the 220-age formula)</span></li>
+<li><span>Once you know your true max HR, Peter suggests starting out at </span><b>75% of max HR</b></li>
+</ul>
+<p><span>*Peter recommends that most people use one of the 3 options above for assessing their zone 2, however, there are a couple more ways to do it. Such as…</span></p>
+<p><span>&nbsp;&nbsp;4 | Lactate threshold heart rate</span></p>
+<ul>
+<li><span>85% to 89% on a run (<a href="https://www.trainingpeaks.com/blog/joe-friel-s-quick-guide-to-setting-zones/" target="_blank">per Joe Friel</a>)</span></li>
+<li><span>81% to 89% on a bike</span></li>
+<li><span>Oftentimes, onset of blood lactate accumulation (OBLA) is confused with the lactate threshold (read the difference <a href="https://www.ncbi.nlm.nih.gov/pubmed/19453206" target="_blank">here</a>)</span></li>
+</ul>
+<p><span>&nbsp;&nbsp;5 | </span><a href="https://www.cyclingweekly.com/fitness/ftp-cycling-363865" target="_blank"><span>Functional threshold power</span></a><span> (FTP)</span></p>
+<ul>
+<li><span>FTP is the highest level of power you can hold for an hour</span></li>
+<li><span>56% to 75% of your FTP is zone 2</span></li>
+<li><i><span>Note about determining your FTP</span></i><span>: Rather than testing for a full 60 minutes, you can determine your FTP by doing 20 minutes of max effort and then take 90% of that max output as your FTP</span></li>
+</ul>
+
+<h2><span>More about DNS, and why we need to be careful with rushing kids through neuromuscular development stages [45:00]</span></h2>
+<ul>
+<li><span>Bob makes the analogy that zone two training is like you’re improving the </span><b>stability</b><span> of your mitochondria</span></li>
+<li><span>You might even be thinking of free radical production from “leakage” as your mitochondria become more efficient organelles in the context of training.</span></li>
+<li><span>And with Olympic lifting, which may seem like all about performance, a good coach should watching closely and correcting any efficient movement or “leakage”</span></li>
+<li><span>So in a way like that speaks to DNS being the foundation for all forms of exercise</span></li>
+</ul>
+<p><span>The origins of DNS</span></p>
+<ul>
+<li><span>It originated from at Prague school as a tool upon which one could study the developmental delay in children with cerebral palsy</span></li>
+<li><span>And it was through that that they realized that kids with CP had missed certain developmental milestones.&nbsp;</span></li>
+<li><span>And it was because they missed those developmental milestones very early in life that translated to difficulty with movement later on.</span></li>
+<li><span>The initial thrust of DNS was how can we go back and teach these kids early enough in life once they’re diagnosed to learn these movement patterns that they would otherwise miss and to save them some of the challenges later on.&nbsp;</span></li>
+</ul>
+<p><span>Be care about rushing kids through natural stages of neuromuscular development:</span></p>
+<ul>
+<li><span>It’s common for kids to have hip dysplasia being born breached and to then be put in a hip harness for 6+ months</span>
+<ul>
+<li><span>This is a really a horrible thing for a kid to be in because it really limits movement during a very critical period of development</span></li>
+</ul>
+</li>
+<li><span>Be careful with </span><a href="https://www.google.com/search?q=bumbo+seats&amp;sxsrf=ACYBGNQFoHwLumu_P62giRtzzCJOG7H8yw:1580828121260&amp;source=lnms&amp;tbm=isch&amp;sa=X&amp;ved=2ahUKEwjKk_nUk7jnAhVshq0KHX3ECOkQ_AUoAnoECA8QBA&amp;biw=776&amp;bih=695&amp;dpr=2" target="_blank"><span>bumbo seats</span></a><span> that put them up in a seated position prematurely before they have developed the truncal strength to support themselves or the stability</span>
+<ul>
+<li><span>You’re rushing through a stage and they tend to then not develop the right connections across their torso.&nbsp;</span></li>
+<li><span>Same goes with those bouncer walker things</span></li>
+<li><span>Or even putting shoes on kids too early</span></li>
+</ul>
+</li>
+</ul>
+<blockquote><p><span>“There’s a whole bunch of things that we do as parents obviously with the best of intentions that actually kind of work against a child’s correct neuromuscular development.”</span></p></blockquote>
+
+<h2><span>Sleep: How to improve quantity and quality [48:15]</span></h2>
+<p><span>==&gt; Here’s the <a href="https://peterattiamd.com/irisin-the-magic-exercise-hormone/comment-page-1/">blog post</a> by Peter defining “first-order terms” that resonated with Bob</span></p>
+<p><b>Improving your sleep</b></p>
+<p><i><span>The #1 tip from Peter</span></i><span>: </span><b>Consistently getting enough time in bed</b></p>
+<ul>
+<li><span>The goal should be to spend enough time in bed to give yourself an opportunity to sleep ~8 hours</span></li>
+<li><span>Given a reasonable sleep efficiency, if you got into bed and then got out of bed 8.5 hours later, for many people that’s going to produce a great sleep cycle.&nbsp;</span></li>
+</ul>
+<p><i><span>Secondly</span></i><span>, it’s ideal to get in bed and get out of bed at the same time every day</span></p>
+<ul>
+<li><span>The more consistent your wake up time can be, the better you are because circadian rhythm is not exactly 24 hours and so you like having that morning reset every day&nbsp;</span></li>
+<li><span>Keep that wake up time as consistent as possible even on the weekends</span></li>
+<li><span>For Peter, there’s probably less than a 60 minute variation from wake up time on any given day ⇒ “</span><i><span>If I could narrow that gap, I would do it even more.</span></i><span>”</span></li>
+</ul>
+<p><b>Peter’s routine</b><span>:</span></p>
+<ul>
+<li><span>He gets in bed before 9pm because his son wakes up at 5am</span></li>
+<li><span>In an ideal world, his nighttime routine begins at least an hour before bed</span></li>
+<li><span>Preferably, he doesn’t use electronics at night at all, but if he needs to he makes sure to wear blue light blockers (he uses </span><a href="https://shopfelixgray.com/" target="_blank"><span>Felix Gray</span></a><span>)</span></li>
+<li><span>NOTE: Not all electronics seemed to be created equal, computer is more stimulating and destructive to sleep than TV or a Kindle</span></li>
+</ul>
+<p><b>Sleep trackers</b></p>
+<ul>
+<li><span>Peter uses the </span><a href="https://ouraring.com/" target="_blank"><span>Oura ring</span></a><span> (full disclosure he’s an investor and advisor to Oura)</span></li>
+<li><span>Other trackers include Fitbit and Apple Watch</span></li>
+</ul>
+<p><i><span>What’s most important to track?</span></i></p>
+<ul>
+<li><span>First and foremost, just pay attention to your time in bed</span></li>
+<li><span>Don’t get too worked up about stages like how much deep sleep and REM sleep that your tracker says you are getting</span></li>
+<li><span>It still remains to be seen how accurate the staging data are on any of these devices.&nbsp;</span></li>
+<li><span>If you’re in bed for 8.5 hours, give or take, and you’re presumably getting 7.5-8 hours of sleep and you </span><b>feel and function great</b><span>, then there’s no need to stress out about the different stages</span></li>
+</ul>
+<p><b>Ways to improve your deep sleep</b><span>:</span></p>
+<p><span>&nbsp;&nbsp;1 | </span><b>Blue light blocking glasses</b><span> if you are going to look at electronics at night</span></p>
+<ul>
+<li><span>Peter’s first choice is </span><a href="https://shopfelixgray.com/" target="_blank"><span>Felix Gray glasses</span></a></li>
+</ul>
+<p><span>&nbsp;&nbsp;2 | A supplement called a </span><b>magnesium L-threonate</b></p>
+<ul>
+<li><span>L-threonate is a magnesium transporter</span></li>
+<li><span>It is sold under many different brand names, but it has to have something called </span><a href="https://magtein.com/" target="_blank"><span>Magtein</span></a><span>, in the actual ingredients</span>
+<ul>
+<li><span>Many companies will license Magtein to be able to put it in their product</span></li>
+</ul>
+</li>
+<li><span>Peter takes the L-threonate (Magtein) with additional slow absorbing form of magnesium</span></li>
+</ul>
+<p><span>&nbsp;&nbsp;3 | Keeping the </span><b>bed cool</b><span>&nbsp;</span></p>
+<ul>
+<li><span>Peter uses the </span><a href="https://www.chilitechnology.com/products/ooler-sleep-system?gclid=CjwKCAiAyeTxBRBvEiwAuM8dnT3gl5GO51yBHkd5arWEfLNqd1D05CA3FAn4zDHTON7yDziXuiucshoCW90QAvD_BwE" target="_blank"><span>Ooler</span></a></li>
+</ul>
+<p><b>Other measure you can take to improve sleep</b><span>:</span></p>
+<ul>
+<li><span>Don’t drink alcohol too close to bed (it’s harmful to sleep quality)</span></li>
+<li><span>Food intake too close to bed also has a negative impact (try to cut off food 3-4 hours before bed)</span></li>
+<li><span>Keep the room as dark as possible</span></li>
+<li><span>Keep the room temperature cold&nbsp;</span></li>
+<li><span>Going to bed earlier (try setting a “get in bed” alarm on your phone)</span></li>
+</ul>
+<p><b>3 sleep surveys you can take to assess your sleep proficiency</b><span>:</span></p>
+<ol>
+<li><span>The </span><a href="https://www.opapc.com/uploads/documents/PSQI.pdf" target="_blank"><span>Pittsburgh Sleep Quality Index (PSQI)</span></a></li>
+<li><a href="http://epworthsleepinessscale.com/" target="_blank"><span>Epworth Sleepiness Scale</span></a><span>&nbsp;</span></li>
+<li><a href="http://stopbang.ca/osa/screening.php" target="_blank"><span>Stop-Bang Questionnaire</span></a><span> for assessing risk of sleep apnea</span></li>
+</ol>
+<ul>
+<li><span>Peter has his patients take all three of these surveys</span></li>
+<li><span>Based on the results of those, he may recommend they go to a sleep lab</span></li>
+</ul>
+<blockquote><p><span>“For many people just getting this sleep hygiene dialed in with respect to electronics, blue light, temperature, a couple of supplements, timing of food, limiting alcohol, the discipline around the time in bed, darkness in the room, et cetera. I’m constantly amazed, Bob, at how many people want a single pill to solve this problem when in reality you have to take a broader approach to this and you’ll get much better results.”</span></p></blockquote>
+<p><span>⇒ For more on sleep, check out any of these podcast episodes with sleep expert, Matthew Walker:</span></p>
+<ol>
+<li><a href="https://peterattiamd.com/matthewwalker1/"><span>Matthew Walker, Ph.D., on sleep – Part I of III: Dangers of poor sleep, Alzheimer’s risk, mental health, memory consolidation, and more</span></a></li>
+<li><a href="https://peterattiamd.com/matthewwalker2/"><span>Matthew Walker, Ph.D., on sleep – Part II of III: Heart disease, cancer, sexual function, and the causes of sleep disruption (and tips to correct it)</span></a></li>
+<li><a href="https://peterattiamd.com/matthewwalker3/"><span>Matthew Walker, Ph.D., on sleep – Part III of III: The penetrating effects of poor sleep from metabolism to performance to genetics, and the impact of caffeine, alcohol, THC, and CBD on sleep</span></a></li>
+<li><a href="https://peterattiamd.com/matthewwalkerama/"><span>AMA with sleep expert, Matthew Walker, Ph.D.: Strategies for sleeping more, sleeping better, and avoiding things that are disrupting sleep</span></a></li>
+<li><a href="https://peterattiamd.com/matthewwalkerama2/"><span>AMA #2 with sleep expert, Matthew Walker, Ph.D.: short sleep mutants, optimal sleep environment, sleep apnea, &amp; rapid fire questions</span></a></li>
+</ol>
+<p>§</p><h4 id="notes">Selected Links / Related Material</h4><p><b>Peter’s email newsletter about his nutritional framework</b><span>: </span><a href="https://peterattiamd.com/my-nutritional-framework/"><span>My nutritional framework</span></a><span> | Peter Attia (peterattiamd.com) [6:00]</span></p>
+<p><b>Peter’s article about intermittent fasting and how it is a confusing term</b><span>: </span><a href="https://peterattiamd.com/intermittent-fasting/"><span>Intermittent fasting</span></a><span> | Peter Attia (peterattiamd.com) [6:45]</span></p>
+<p><b>Peter has previously written about how his goal is to lose about 7 pounds</b><span>: <a href="https://peterattiamd.com/a-new-year/">A new year</a> | Peter Attia (peterattiamd.com) [9:00]</span></p>
+<p><b>The continuous glucose monitor Peter wears</b><span>: </span><a href="https://www.dexcom.com/g6-cgm-system" target="_blank"><span>Dexcom G6</span></a><span> | (dexcom.com) [11:45]</span></p>
+<p><b>The importance of BDNF for brain health</b><span>: </span><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4697050/" target="_blank"><span>Brain-derived neurotrophic factor and its clinical implications</span></a><span> (Bathina and Das, 2015) [24:00]</span></p>
+<p><b>The stability program Peter currently follows</b><span>: </span><a href="https://www.rehabps.com/REHABILITATION/Home.html" target="_blank"><span>Dynamic Neuromuscular Stabilization</span></a><span> | (rehabps.com) [26:00]</span></p>
+<p><b>Podcast where Peter discusses his idea of the Centenarian Olympics</b><span>: </span><a href="https://peterattiamd.com/ama05/"><span>#50 – AMA #5: calcium scores, centenarian olympics, exercise, muscle glycogen, keto, and more</span></a><span> | Peter Attia (peterattiamd.com) [32:30]</span></p>
+<p><b>Podcast discussing zone 2 training with Iñigo San Millán</b><span>: </span><a href="https://peterattiamd.com/inigosanmillan/"><span>#85 – Iñigo San Millán, Ph.D.: Mitochondria, exercise, and metabolic health</span></a><span> | Peter Attia (peterattiamd.com)&nbsp; [33:30, 37:45]</span></p>
+<p><b>Book rec – “</b><b><i>What an unbelievably good book that was.”</i></b><span>: </span><a href="https://www.amazon.com/Secret-Race-Inside-Hidden-France/dp/034553042X" target="_blank"><span>The Secret Race: Inside the Hidden World of the Tour de France</span></a><span> by Tyler Hamilton | (amazon.com) [37:00]</span></p>
+<p><b>Article by Joe Friel (Bob accidentally said San Millan) about finding zones</b><span>: <a href="https://www.trainingpeaks.com/blog/joe-friel-s-quick-guide-to-setting-zones/" target="_blank">Joe Friel’s Quick Guide to Setting Zones</a> | Joe Friel ( [39:00]</span></p>
+<p><span><strong>Onset of blood lactate accumulation (OBLA) is confused with the lactate threshold—read the difference here</strong>: <a href="https://www.ncbi.nlm.nih.gov/pubmed/19453206" target="_blank">Lactate threshold concepts: how valid are they? </a>(</span>Faude et al., 2009) [39:00]</p>
+<p><b>The lactate meter Peter recommends to patients</b><span>: </span><a href="http://www.novabio.us/lactate-plus/" target="_blank"><span>Lactate Plus Meter by Nova</span></a><span> | (novabio.us) [40:30]</span></p>
+<p><b>Cycling app that uses a 20 minutes FTP test</b><span>: </span><a href="https://www.trainerroad.com/" target="_blank"><span>TrainerRoad</span></a><span> | (trainerroad.com) [44:30]</span></p>
+<p><b>Where Dynamic Neuromuscular Stabilization (DNS) originated</b><span>: </span><a href="https://www.rehabps.com/REHABILITATION/Home.html" target="_blank"><span>The Prague School and Dynamic Neuromuscular Stabilization</span></a><span> | (rehabps.com) [45:50]</span></p>
+<p><b>DNS started as a tool upon which one could study the developmental delay in children with cerebral palsy</b><span>: </span><a href="https://www.ncbi.nlm.nih.gov/pubmed/29254112" target="_blank"><span>Effects of dynamic neuromuscular stabilization on diaphragm movement, postural control, balance and gait performance in cerebral palsy.</span></a><span> (Son et al., 2017) [46:00] </span></p>
+<p><b>Peter’s blog posts that really resonated with Bob defining “first-order terms”</b><span>: </span><a href="https://peterattiamd.com/irisin-the-magic-exercise-hormone/comment-page-1/"><span>Irisin: The magic exercise hormone?</span></a><span> | Peter Attia (peterattiamd.com) [48:30]</span></p>
+<p><b>The Drive episodes with sleep expert Matthew Walker</b><span>: [49:45]&nbsp;</span></p>
+<ol>
+<li><a href="https://peterattiamd.com/matthewwalker1/"><span>Matthew Walker, Ph.D., on sleep – Part I of III: Dangers of poor sleep, Alzheimer’s risk, mental health, memory consolidation, and more</span></a></li>
+<li><a href="https://peterattiamd.com/matthewwalker2/"><span>Matthew Walker, Ph.D., on sleep – Part II of III: Heart disease, cancer, sexual function, and the causes of sleep disruption (and tips to correct it)</span></a></li>
+<li><a href="https://peterattiamd.com/matthewwalker3/"><span>Matthew Walker, Ph.D., on sleep – Part III of III: The penetrating effects of poor sleep from metabolism to performance to genetics, and the impact of caffeine, alcohol, THC, and CBD on sleep</span></a></li>
+<li><a href="https://peterattiamd.com/matthewwalkerama/"><span>AMA with sleep expert, Matthew Walker, Ph.D.: Strategies for sleeping more, sleeping better, and avoiding things that are disrupting sleep</span></a></li>
+<li><a href="https://peterattiamd.com/matthewwalkerama2/"><span>AMA #2 with sleep expert, Matthew Walker, Ph.D.: short sleep mutants, optimal sleep environment, sleep apnea, &amp; rapid fire questions</span></a></li>
+</ol>
+<p><b>Sleep tracker Peter uses (full disclosure: he is an investor and advisor)</b><span>: </span><a href="https://ouraring.com/" target="_blank"><span>Oura Ring</span></a><span> | (ouraring.com) [51:30]</span></p>
+<p><b>Blue light blocking glasses Peter prefers when using electronics at night</b><span>: </span><a href="https://shopfelixgray.com/" target="_blank"><span>Felix Gray</span></a><span> | (shopfelixgray.com) [53:30]</span></p>
+<p><b>Magnesium L-threonate product Peter prefers</b><span>: </span><a href="https://magtein.com/" target="_blank"><span>Magtein</span></a><span> | (magtein.com) [53:50]</span></p>
+<p><b>Bed cooling product Peter uses</b><span>: </span><a href="https://www.chilitechnology.com/products/ooler-sleep-system?gclid=CjwKCAiAyeTxBRBvEiwAuM8dnT3gl5GO51yBHkd5arWEfLNqd1D05CA3FAn4zDHTON7yDziXuiucshoCW90QAvD_BwE" target="_blank"><span>Ooler Sleep System</span></a><span> | (chilitechnology.com) [54:15]</span></p>
+<p><b>3 sleep surveys you can take to assess your sleep proficiency</b><span>: [55:45]</span></p>
+<ol>
+<li><a href="https://www.opapc.com/uploads/documents/PSQI.pdf" target="_blank"><span>Pittsburgh Sleep Quality Index (PSQI)</span></a><span> | (opapc.com)</span></li>
+<li><a href="http://epworthsleepinessscale.com/" target="_blank"><span>Epworth Sleepiness Scale</span></a><span> | (epworthsleepinessscale.com)</span></li>
+<li><i><span>Questionnaire to assess the likelihood that you have sleep apnea</span></i><span>: </span><a href="http://stopbang.ca/osa/screening.php" target="_blank"><span>Stop-Bang Questionnaire</span></a><span> | (stopbang.ca) </span></li>
+</ol>
+<p>§</p><h4 id="notes">People Mentioned</h4><ul>
+<li><a href="https://www.virtahealth.com/people/stephen-phinney" target="_blank"><span>Stephen Phinney</span></a><span> [17:15]</span></li>
+<li><a href="https://ehe.osu.edu/directory/?id=volek.1" target="_blank"><span>Jeff Volek</span></a><span> [17:15]</span></li>
+<li><a href="http://www.ucdenver.edu/academics/colleges/medicine/sportsmed/cusm_physicians/Pages/sanmillan.aspx" target="_blank"><span>Iñigo San Millán</span></a><span> [33:30]</span></li>
+<li><a href="https://en.wikipedia.org/wiki/Tyler_Hamilton" target="_blank"><span>Tyler Hamilton</span></a><span> [37:00]</span></li>
+<li><a href="https://en.wikipedia.org/wiki/Jonathan_Vaughters" target="_blank"><span>Jonathan Vaughters</span></a><span> [37:30]</span></li>
+<li><a href="https://psychology.berkeley.edu/people/matthew-p-walker" target="_blank"><span>Matthew Walker</span></a><span> [49:45]</span></li>
+<li><a href="https://en.wikipedia.org/wiki/Jocko_Willink" target="_blank"><span>Jocko Willink</span></a><span> [57:15]</span></li>
+</ul>
+<p>§</p>
+                      </div>
+                    
+        </article></div>
+  <span></span> <!-- for IntersectionObserver -->
+  
+  
+  
+  
+
+
+</body><style>body {
+      font-size:  17px;
+      font-family: Helvetica, Arial, sans-serif;
+      width: 900px;
+    }
+    .page {
+      line-height: 25.5px;
+    }
+    h1, h2, h3 {
+      line-height: initial;
+    }</style></html>
