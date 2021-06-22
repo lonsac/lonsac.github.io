@@ -1,0 +1,273 @@
+<html><head><title>Emotional Agility – Virta Resources :: Reader View</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+html {
+  overflow: overlay;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 30px auto 0 auto;
+  padding: 10px;
+}
+body[data-mode="light"] {
+  color:  #222;
+  border-color: %light-color%;
+  background-color:  whitesmoke;
+}
+body[data-mode="dark"] {
+  color:  #eee;
+  border-color: %dark-color%;
+  background-color:  #333;
+}
+body[data-mode="sepia"] {
+  color:  #5b4636;
+  border-color: %sepia-color%;
+  background-color:  #f4ecd8;
+}
+body[data-mode="solarized-light"] {
+  color:  #586e75;
+  border-color: %solarized-light-color%;
+  background-color:  #fdf6e3;
+}
+body[data-mode="nord-light"] {
+  color:  #2e3440;
+  border-color: %nord-light-color%;
+  background-color:  #e5e9f0;
+}
+body[data-mode="groove-dark"] {
+  color:  #cec4ac;
+  border-color: %groove-dark-color%;
+  background-color:  #282828;
+}
+body[data-mode="solarized-dark"] {
+  color:  #93a1a1;
+  border-color: %solarized-dark-color%;
+  background-color:  #002b36;
+}
+body[data-mode="nord-dark"] {
+  color:  #e5e9f0;
+  border-color: %nord-dark-color%;
+  background-color:  #2e3440;
+}
+@media print {
+  body[data-mode="light"],
+  body[data-mode="dark"],
+  body[data-mode="sepia"],
+  body[data-mode="solarized-light"],
+  body[data-mode="nord-light"],
+  body[data-mode="groove-dark"],
+  body[data-mode="solarized-dark"],
+  body[data-mode="nord-dark"] {
+    color: #000;
+    border-color: #000;
+    background-color: #fff;
+  }
+}
+body[data-loaded=true] {
+  
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+img:not([width])[src$=".svg"] {
+  max-width: 100px;
+}
+body[data-images=false] canvas,
+body[data-images=false] svg,
+body[data-images=false] img {
+  display: none;
+}
+a {
+  color: #0095dd;
+  text-decoration: none;
+}
+#reader-domain {
+  font-family: Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  border-bottom-color: currentcolor;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: inline-block;
+  direction: ltr;
+}
+#reader-domain > span:first-child {
+  font-size: 1.1em;
+}
+#reader-domain > span:last-child {
+  font-size: 0.8em;
+}
+#reader-title {
+  font-size: 1.6em;
+  line-height: 1.25em;
+  width: 100%;
+  margin: 20px 0;
+  padding: 0;
+}
+#reader-credits,
+#doi,
+#published-time,
+#reader-estimated-time {
+  font-size: 0.85em;
+  line-height: 1.48em;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+#reader-credits:not(:empty)::after {
+  content: ' ⋮ ';
+}
+#published-time:not(:empty)::before {
+  content: ' ⋮ ';
+}
+#doi-json {
+  overflow: hidden;
+}
+#doi-json code {
+  overflow: auto;
+  max-height: 400px;
+}
+#published-time:empty,
+#reader-credits:empty {
+  display: none;
+}
+body[data-speech="true"] .tts-box {
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  height: 32px;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: 0 0 0 1000vw rgba(128, 128, 128, 0.2);
+}
+body[data-speech="true"] .tts-word {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  background-color: red;
+  height: 2px;
+}
+.tts-word.hidden,
+.tts-box.hidden {
+  display: none;
+}
+body[data-speech="false"] .tts-speaking::after {
+  display: none;
+}
+mark.hghlght {
+  background-color: #ffff81;
+}
+.hidden {
+  display: none;
+}
+</style>
+  <style id="user-css">body {
+  padding-bottom: 64px;
+}
+a:visited {
+  color: #d33bf0;
+}
+a:link, a:link:hover, a:link:active, a:link * {
+  color: #0095dd;
+}
+a:link {
+  text-decoration: none;
+  font-weight: normal;
+}
+pre {
+  white-space: pre-wrap;
+}
+pre code {
+  background-color: #eff0f1;
+  color: #393318;
+  font-family: monospace;
+  display: block;
+  padding: 5px 10px;
+}
+body[data-mode="dark"] pre code {
+  background-color: #585858;
+  color: #e8e8e8;
+}
+
+/* CSS for sans-serif fonts */
+body[data-font=sans-serif] {}
+/* CSS for serif fonts */
+body[data-font=serif] {}
+
+/* CSS for "sepia" theme */
+body[data-mode=sepia] {
+}
+/* CSS for "light" theme */
+body[data-mode=light] {}
+/* CSS for "dark" theme */
+body[data-mode=dark] {}</style>
+</head>
+<body data-images="true" data-mode="light" data-font="sans-serif" data-loaded="true">
+  <span></span> <!-- for IntersectionObserver -->
+  <a id="reader-domain" href="https://my.virtahealth.com/resources/3709">
+    <span>my.virtahealth.com</span>
+    <span>/resources/3709</span>
+  </a>
+  <h1 dir="auto" id="reader-title">Emotional Agility – Virta Resources</h1>
+  <span dir="auto" id="reader-credits"></span>
+  <span dir="auto" id="reader-estimated-time">4-5 minutes</span>
+  <span dir="auto" id="published-time"></span>
+  <hr>
+  <div id="readability-page-1" class="page"><div id="content">
+		<main id="main" role="main">
+
+		
+<article id="post-3709">
+	<!-- .entry-header -->
+
+	<div>
+					<p><em>Want a quick introduction to the VirtaLife Mindset series? <strong><a href="https://my.virtahealth.com/resources/3708">Click here.</a></strong></em></p>
+<h4><span>Emotional Agility</span></h4>
+<p><span>Dr. Susan David, a Harvard Medical School Psychologist defines </span><b>emotional agility</b><span> as </span><i><span>an individual’s ability to experience their thoughts, emotions, and events in a way that doesn’t drive them in negative ways, but instead encourages them to reveal the best of themselves <sup>(1)</sup></span></i><span>.&nbsp;</span></p>
+<p><span>Working on your own emotional agility allows you to deal with the day-to-day punches, without letting them throw you out of your routine and off your game. You will learn how to recognize your emotions </span><i><span>before</span></i><span> reacting and give yourself the awareness to choose a response that aligns with your personal values and your own best interest. Becoming more emotionally agile can help you to </span><i><span>bend without breaking</span></i><span> when life happens, and help you “roll with the punches” without getting derailed.</span></p>
+<h4><span>Becoming More Agile</span></h4>
+<p><span>There are two main steps in becoming more emotionally agile. The first is </span><b>awareness</b><span>. We will first practice just being aware of your own thoughts and emotions as well as your typical reactions to them. Then, once you are aware, you can start </span><b>practicing strategies</b><span> to tap into that awareness and change your reactions to better support your goals.&nbsp;</span></p>
+<p><span>Remember, the typical reaction to an uncomfortable feeling is to do anything you can to get rid of that feeling, <em>as quickly as possible</em>. The human brain does not like discomfort, so we seek anything that will make us feel better, no matter what. Even if what we are reaching for is misaligned with our goals and intentions. Part of becoming more emotionally agile is to instead learn to sit with these emotions or uncomfortable feelings before you take any action. It sounds scary. But you will be amazed at what happens when instead of fighting your emotions, you just sit with them. </span></p>
+<blockquote><p><span>The great thing about emotions is they are fleeting. You may feel sad, angry, annoyed, frustrated, etc., but the one guarantee is that you will not ALWAYS feel that way. Instead of trying to get rid of the emotion, </span><i><span>lean into it. </span></i><span>Sit with it and let it teach you something while observing how long it sticks around.&nbsp;</span></p></blockquote>
+<p><span>Note: If you want to go even deeper, after practicing the skills in this section, we recommend you continue onto the <a href="https://my.virtahealth.com/resources/3474"><em>Creating Connections: Thoughts-Feelings-Body-Actions</em></a> series, that will teach you other simple tools to continue to build your own emotional agility.</span></p>
+<h4><span>Practice!</span></h4>
+<p><span>Now, it’s&nbsp; time to practice! As with any of the activities in the VirtaLife series, practice is what makes the difference in actually changing your behavior. Learning about a tool is only the first step. So, just like everything else in the VirtaLife series, becoming more emotionally agile takes practice. It is part of building your mental muscle and strengthening your mindset to help find your own success with Virta and beyond. While </span><span>we will give you the tools you need to practice strengthening your own emotional agility, keep in mind that doing these exercises once will likely lead to small changes. <strong>When you practice them consistently over time, you will find yourself actually </strong></span><strong><i>becoming</i> more emotionally agile and really notice the positive changes in your own life.&nbsp;</strong></p>
+<p>The practice skills are broken down into two sections. You will first start with bringing more <strong>awareness</strong> to your emotions (Practice Skill 1) and focus on this for the next couple weeks, then move on to practice <strong>strategies</strong> to build your agility (Practice Skill 2).</p>
+<div>
+<p>
+</p><h4>Next up! Practice Skill 1: Awareness.<em> This activity will be assigned on your Action List once you have marked this one as completed!</em></h4>
+<p></p>
+</div>
+<h4>References:</h4>
+<ol>
+<li><span>David, S. (2018). </span><i><span>Understanding Emotional Agility </span></i><span>[Slides]. https://www.bfm.bm/getmedia/b43e2291-84aa-42a4-a26d-650ba35ee71a/Understanding-emotional-agility.aspx</span></li>
+</ol>
+				</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
+		
+
+		
+		</main><!-- #main -->
+	</div></div>
+  <span></span> <!-- for IntersectionObserver -->
+  
+  
+  
+  
+
+
+</body><style>body {
+      font-size:  20px;
+      font-family: Helvetica, Arial, sans-serif;
+      width: 950px;
+    }
+    .page {
+      line-height: 30.0px;
+    }
+    h1, h2, h3 {
+      line-height: initial;
+    }</style></html>
