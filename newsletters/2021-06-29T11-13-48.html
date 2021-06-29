@@ -1,0 +1,509 @@
+<html><head><title>12min :: Reader View</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+html {
+  overflow: overlay;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 30px auto 0 auto;
+  padding: 10px;
+}
+body[data-mode="light"] {
+  color:  #222;
+  border-color: %light-color%;
+  background-color:  whitesmoke;
+}
+body[data-mode="dark"] {
+  color:  #eee;
+  border-color: %dark-color%;
+  background-color:  #333;
+}
+body[data-mode="sepia"] {
+  color:  #5b4636;
+  border-color: %sepia-color%;
+  background-color:  #f4ecd8;
+}
+body[data-mode="solarized-light"] {
+  color:  #586e75;
+  border-color: %solarized-light-color%;
+  background-color:  #fdf6e3;
+}
+body[data-mode="nord-light"] {
+  color:  #2e3440;
+  border-color: %nord-light-color%;
+  background-color:  #e5e9f0;
+}
+body[data-mode="groove-dark"] {
+  color:  #cec4ac;
+  border-color: %groove-dark-color%;
+  background-color:  #282828;
+}
+body[data-mode="solarized-dark"] {
+  color:  #93a1a1;
+  border-color: %solarized-dark-color%;
+  background-color:  #002b36;
+}
+body[data-mode="nord-dark"] {
+  color:  #e5e9f0;
+  border-color: %nord-dark-color%;
+  background-color:  #2e3440;
+}
+@media print {
+  body[data-mode="light"],
+  body[data-mode="dark"],
+  body[data-mode="sepia"],
+  body[data-mode="solarized-light"],
+  body[data-mode="nord-light"],
+  body[data-mode="groove-dark"],
+  body[data-mode="solarized-dark"],
+  body[data-mode="nord-dark"] {
+    color: #000;
+    border-color: #000;
+    background-color: #fff;
+  }
+}
+body[data-loaded=true] {
+  
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+img:not([width])[src$=".svg"] {
+  max-width: 100px;
+}
+body[data-images=false] canvas,
+body[data-images=false] svg,
+body[data-images=false] img {
+  display: none;
+}
+a {
+  color: #0095dd;
+  text-decoration: none;
+}
+#reader-domain {
+  font-family: Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  border-bottom-color: currentcolor;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: inline-block;
+  direction: ltr;
+}
+#reader-domain > span:first-child {
+  font-size: 1.1em;
+}
+#reader-domain > span:last-child {
+  font-size: 0.8em;
+}
+#reader-title {
+  font-size: 1.6em;
+  line-height: 1.25em;
+  width: 100%;
+  margin: 20px 0;
+  padding: 0;
+}
+#reader-credits,
+#doi,
+#published-time,
+#reader-estimated-time {
+  font-size: 0.85em;
+  line-height: 1.48em;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+#reader-credits:not(:empty)::after {
+  content: ' ⋮ ';
+}
+#published-time:not(:empty)::before {
+  content: ' ⋮ ';
+}
+#doi-json {
+  overflow: hidden;
+}
+#doi-json code {
+  overflow: auto;
+  max-height: 400px;
+}
+#published-time:empty,
+#reader-credits:empty {
+  display: none;
+}
+body[data-speech="true"] .tts-box {
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  height: 32px;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: 0 0 0 1000vw rgba(128, 128, 128, 0.2);
+}
+body[data-speech="true"] .tts-word {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  background-color: red;
+  height: 2px;
+}
+.tts-word.hidden,
+.tts-box.hidden {
+  display: none;
+}
+body[data-speech="false"] .tts-speaking::after {
+  display: none;
+}
+mark.hghlght {
+  background-color: #ffff81;
+}
+.hidden {
+  display: none;
+}
+</style>
+  <style id="user-css">body {
+  padding-bottom: 64px;
+}
+a:visited {
+  color: #d33bf0;
+}
+a:link, a:link:hover, a:link:active, a:link * {
+  color: #0095dd;
+}
+a:link {
+  text-decoration: none;
+  font-weight: normal;
+}
+pre {
+  white-space: pre-wrap;
+}
+pre code {
+  background-color: #eff0f1;
+  color: #393318;
+  font-family: monospace;
+  display: block;
+  padding: 5px 10px;
+}
+body[data-mode="dark"] pre code {
+  background-color: #585858;
+  color: #e8e8e8;
+}
+
+/* CSS for sans-serif fonts */
+body[data-font=sans-serif] {}
+/* CSS for serif fonts */
+body[data-font=serif] {}
+
+/* CSS for "sepia" theme */
+body[data-mode=sepia] {
+}
+/* CSS for "light" theme */
+body[data-mode=light] {}
+/* CSS for "dark" theme */
+body[data-mode=dark] {}</style>
+</head>
+<body data-images="true" data-mode="light" data-font="sans-serif" data-loaded="true">
+  <span></span> <!-- for IntersectionObserver -->
+  <a id="reader-domain" href="https://web.12min.com/microbook/60498">
+    <span>web.12min.com</span>
+    <span>/microbook/60498</span>
+  </a>
+  <h1 dir="auto" id="reader-title">12min</h1>
+  <span dir="auto" id="reader-credits">Tony Schwartz &amp; Jim Loehr</span>
+  <span dir="auto" id="reader-estimated-time">11-14 minutes</span>
+  <span dir="auto" id="published-time"></span>
+  <hr>
+  <div id="readability-page-1" class="page"><div data-v-0769b40a=""><p>“<em>The Power of When</em>” aims to teach you when is the best time for you to do anything – whether it is drinking your morning coffee, having a shower, or eating your lunch. Make no mistake: Michael Breus is neither a psychic nor a magician; he’s a psychologist with a specialty in sleep disorders.</p>
+
+<p>He is one of only 163 psychologists in the world who has a specialty in sleep disorders. Unsurprisingly, most of his books deal with problems of this kind: "<em>Good Night</em>," "<em>The Sleep Doctor's Diet Plan</em>," and "<em>The Power of When.</em>"</p>
+
+<p>All things considered, he has the expertise to tells us more about “when” and how you can capitalize on it. Let’s bring out some of the techniques that Breus believes could be a real life-changer.</p>
+
+<h2>Your biological clock is ticking</h2>
+
+<p>There are clocks all around you, but there’s also one inside your body; unfortunately, they are rarely in sync. This is why you feel so tired most of the time: your biological clock is ticking in a different rhythm than the one your workday is supposed to be ticking in.</p>
+
+<p>Moreover, let’s face it: you do know at least one person who wakes up without alarms while it’s still dark, and another one who needs seven alarms to get out of bed. That’s circadian rhythm right there for you! And, bear in mind, this is not popular science!</p>
+
+<p>In fact, in 2017, the Nobel Prize in physiology or medicine was awarded to three geniuses who discovered the “molecular mechanisms controlling the circadian rhythm” in fruit flies. In other words, there may be something inside you that controls the when’s of your day! Did we say there <em>may</em> be something inside you? Scratch that: <em>undoubtedly</em> there is. Scientists call them the PER genes and are quite sure that all of them (PER1, PER2, and PER3) play a significant role in your circadian rhythms.</p>
+
+<p>Generally speaking, you’re genetically coded to do some things only at a certain period of your day! The Bible prophet was right: “<em>Everything on earth has its own time and its own season.</em>” And since you’re<em> genetically</em> coded, then, let’s face it, you’re stuck with your biological clock for life! But if you can’t control it, that doesn’t mean that you can’t control your daily schedule so that you sync it with your body.</p>
+
+<h2>The four chronotypes</h2>
+
+<p>The obvious problem? Well, it’s not like you can see your biological clock the same way you can see your watch! Fortunately, that’s what “<em>The Power of When</em>” is all about!</p>
+
+<p>Based on years of practice and research, this book reveals the four basic chronotypes and, furthermore, helps you discover which one you are and how you should sync your daily schedule “for optimal health and performance.” And let’s unravel them one by one.</p>
+
+<h2>The ideal workday for bears</h2>
+
+<p>“Bears” form the majority of the population – 50% of the people are bears. They prefer a solar-based schedule, which means that the normal workday schedule suits them.</p>
+
+<p>They are outgoing and friendly, cautious and open-minded. They are easy to talk to and tend to avoid conflicts. They are not adventurous and take comfort in the familiar. However, they prioritize happiness both for themselves and their close ones. They are more than fine getting up at 7 a.m. and going to bed at 11 p.m. They are most productive during the late part of the morning and most alert between mid-morning and late afternoon.</p>
+
+<p>Their only problem: just like bears, they are anytime hunters, and sometimes deadlines drive them to sleep deprivation; after all, even when tired, they <em>do</em> wake up after the first alarm at 7 a.m. Here’s how an ideal workday would look like for a bear:</p>
+
+<h3>7 a.m.&nbsp;</h3>
+
+<p>Wake up and do a 10-minute stretching session.</p>
+
+<h3>7:30 a.m.&nbsp;</h3>
+
+<p>Eat a light breakfast (fruit, nuts, yogurt) and drink a glass of water.</p>
+
+<h3>9-10 a.m.&nbsp;</h3>
+
+<p>Spend at least 15 minutes planning your day after getting to work.</p>
+
+<h3>10 a.m.&nbsp;</h3>
+
+<p>Your first coffee of the day.</p>
+
+<h3>10-12 a.m.&nbsp;</h3>
+
+<p>This is the time when you’re most productive; so, eat that frog then</p>
+
+<h3>12 p.m.&nbsp;</h3>
+
+<p>Time for a break: what the caffeine did for you the previous two hours, the food and the sunlight should do for the next; so go out, walk, and pick your lunch.</p>
+
+<h3>2:30 p.m.</h3>
+
+<p>Your energy is wearing off, but you should be feeling great; this is the time of the day for either a protein-heavy snack and a few meetings, or a quick, refreshing nap; if you like, you can also meditate.</p>
+
+<h3>3-6 p.m.</h3>
+
+<p>Time for easy tasks: phone calls, emails, notes, etc.</p>
+
+<h3>6-7 p.m.&nbsp;</h3>
+
+<p>Exercise!</p>
+
+<h3>7:30 p.m.</h3>
+
+<p>Dinner time.</p>
+
+<h3>8-10 p.m.</h3>
+
+<p>Time to socialize.</p>
+
+<h3>10 p.m.&nbsp;</h3>
+
+<p>Power down all your devices; read a paper book if you’d like.</p>
+
+<h3>11 p.m.&nbsp;</h3>
+
+<p>Light out; time for an 8-hour sleep.</p>
+
+<h2>The ideal workday for lions&nbsp;&nbsp; &nbsp;</h2>
+
+<p>“Lions” – 15-20% of the people – are early birds: they are morning hunters and have a medium sleep drive. They don’t need alarms to wake up in the morning – and when we say morning, we mean while it’s still dark outside. They are get-to-the-top overachievers and tacticians, stable and practical people who prioritize their health and fitness.</p>
+
+<p>They are most productive in the early morning, and most alert at noon. By early evening, they are too tired to do anything but go to sleep. This is how they can use this to their benefit:</p>
+
+<h3>5:30 a.m.</h3>
+
+<p>All the others are sleeping, but you’re already up and running; probably without an alarm.</p>
+
+<h3>5:30-6 a.m.&nbsp;</h3>
+
+<p>Eat a high-protein low-carb breakfast: you’re a lion, goddammit!</p>
+
+<h3>6-7 a.m.&nbsp;</h3>
+
+<p>Plan your day in the quiet; meditate.</p>
+
+<h3>9-10 a.m.&nbsp;</h3>
+
+<p>Have coffee.</p>
+
+<h3>10-12 a.m.&nbsp;</h3>
+
+<p>The best time of the day to schedule your meetings; it may be a good idea (after all, a lot of time has passed since your breakfast) to munch a protein bar or two between meetings.</p>
+
+<h3>12 p.m.&nbsp;</h3>
+
+<p>Eat your lunch.</p>
+
+<h3>1-2:30 p.m.&nbsp;</h3>
+
+<p>Not a good time of the day to be around people; spend it on doing solitary tasks; brainstorm.</p>
+
+<h3>3-5 p.m.&nbsp;</h3>
+
+<p>Administrative tasks.</p>
+
+<h3>5-6 p.m.&nbsp;</h3>
+
+<p>If you can, go to work earlier, so that you can leave your office by 4-4:30 p.m; because in the hour between 5 and 6 p.m., you’ll need to exercise to boost your energy!</p>
+
+<h3>6:7 p.m.&nbsp;</h3>
+
+<p>Dinner time (protein, fats, carbs).</p>
+
+<h3>7-10 p.m.&nbsp;</h3>
+
+<p>Nothing too taxing: Netflix, friends, family.</p>
+
+<h3>10 p.m.&nbsp;</h3>
+
+<p>Turn off all screens.</p>
+
+<h3>10:30 p.m.&nbsp;</h3>
+
+<p>You’ve been awake since 5:30 a.m.; you’ll be sound asleep by this time.</p>
+
+<h2>The ideal workday for dolphins</h2>
+
+<p>“Dolphins” are very light sleepers: just like their animal counterpart, they sleep only with one-half of their brains; the other one is anxious about what kind of predators tomorrow may bring. Many dolphins – 10% of the population – are introverted insomniacs: they have a low sleep drive and have a tough time falling asleep. However, they are also very intelligent and strive for perfection. Their attentiveness to details sometimes leads them to obsessive-compulsive disorders and neuroticism. They are most alert when they need it the least – late at night –&nbsp; and they are most productive at different times of the day, in spurts. Which is why it’s difficult for them to keep a regular schedule.&nbsp;</p>
+
+<p>If you have an irregular sleep schedule and a feeling that you might be an insomniac, you’re probably a dolphin. Here’s how you can make yourself feel better:</p>
+
+<h3>6:30 a.m.</h3>
+
+<p>Try to wake up regularly at this time of the day; once you do, either start exercising or go out and get some sun.</p>
+
+<h3>7:30 a.m.&nbsp;</h3>
+
+<p>Take a cold shower, so that you resist the temptation to go back to bed.</p>
+
+<h3>8:00 a.m.&nbsp;</h3>
+
+<p>Time for your breakfast (protein + carbs), but <em>not</em> your coffee.</p>
+
+<h3>8-9:30 a.m.&nbsp;</h3>
+
+<p>Make a to-do list for your day; whatever you do – don’t drink your morning coffee just yet.</p>
+
+<h3>9:30 a.m.&nbsp;</h3>
+
+<p>OK – now it’s time for your coffee break (half decaf, by the way!) and a bit of socializing with your colleagues.</p>
+
+<h3>10-12 p.m.&nbsp;</h3>
+
+<p>There’s no way that you won’t get drowsy after your lunch, but that’s not a cue for another coffee; go out and get some fresh air and direct sunlight!</p>
+
+<h3>12 p.m.&nbsp;</h3>
+
+<p>Time for creative projects and brainstorming sessions.</p>
+
+<h3>1 p.m.&nbsp;</h3>
+
+<p>Lunchtime.</p>
+
+<h3>4-6 p.m.&nbsp;</h3>
+
+<p>The hours between 2 and 4 may pass a little slow, but from 4 to 6 p.m. you’ll be at your most alert; time for wearisome and intellectually demanding tasks.</p>
+
+<h3>6 p.m.&nbsp;</h3>
+
+<p>It’s probably a good idea that you sign up for yoga so that you have to head for a yoga class straight from work; a banana should give you enough energy for the class.</p>
+
+<h3>7-9:00 p.m.&nbsp;</h3>
+
+<p>After your yoga class, it’s time for your dinner; you enjoy this part of the day, so spend it with your family discussing your day, and even tricky matters.</p>
+
+<h3>10 p.m.&nbsp;</h3>
+
+<p>Start your bedtime ritual: hot bath/shower, a light read, no TV.</p>
+
+<h3>11:30 p.m.&nbsp;</h3>
+
+<p>You should fall asleep by midnight.</p>
+
+<h2>The ideal workday for wolves&nbsp;&nbsp; &nbsp;</h2>
+
+<p>Just like lions, “wolves” – 15-20% – have a medium sleep drive, but, unlike them, they are nocturnal hunters. There’s no way that a wolf will wake up with a single alarm or go through the day without a few cups of coffee.</p>
+
+<p>Wolves are moody pessimists, but they are also incredibly creative individuals. They are impulsive and adventurous but tend to overdramatize from time to time and react with emotional intensity. They prioritize pleasure before all, which is why they’d rather sleep than work in the morning. They are most alert sometime around 7 p.m., and most productive late at night. They have no idea why society is organized the way it is.</p>
+
+<h3>7-7:30 a.m.</h3>
+
+<p>Set your first alarm at 7 a.m., and the second one at 7:30 a.m.; who are we kidding – one alarm just won’t do it for you; however, more than two will be detrimental; so do your best to wake up the second time.</p>
+
+<h3>7:30 a.m.&nbsp;</h3>
+
+<p>Take a glass of water (<em>not</em> coffee) and stand in front of your window for a few minutes to soak up the sunlight – it should help you feel better; eat your breakfast.</p>
+
+<h3>8:30 a.m.&nbsp;</h3>
+
+<p>Outdoor exercise (<em>not </em>coffee).</p>
+
+<h3>9:00 a.m.&nbsp;</h3>
+
+<p>Start planning your day (it’s still too early for<em> a </em>coffee).</p>
+
+<h3>9 -11 a.m.&nbsp;</h3>
+
+<p>Don’t open your mail; don’t socialize; alone-time: you’re a wolf.</p>
+
+<h3>11 a.m.&nbsp;</h3>
+
+<p>OK, now you can have your coffee (yeah!).</p>
+
+<h3>11:30-1 p.m.&nbsp;</h3>
+
+<p>Busywork.</p>
+
+<h3>1 p.m.&nbsp;</h3>
+
+<p>Take a walk and eat your lunch (<em>not</em> coffee)!</p>
+
+<h3>2-4 p.m.&nbsp;</h3>
+
+<p>You’re finally feeling a bit like yourself; it’s time for some group brainstorming sessions.</p>
+
+<h3>4-7 p.m.&nbsp;</h3>
+
+<p>All the other guys are tired and eager to go home, but you’re still going strong; use your energy peak and acute creative powers; have a little snack in the meantime and, since you were probably a little late for work, stay a bit longer.</p>
+
+<h3>7-8:00 p.m.&nbsp;</h3>
+
+<p>Exercise.</p>
+
+<h3>8 p.m.&nbsp;</h3>
+
+<p>Time for your dinner (you can even eat at 9 p.m. if you feel like you want to work some more around 7 p.m.).</p>
+
+<h3>11 p.m.&nbsp;</h3>
+
+<p>Start powering down your screens; meditate; take a hot shower if you’d like to.</p>
+
+<h3>12 p.m.&nbsp;</h3>
+
+<p>Go to sleep.</p>
+
+<h2>Michael Breus’ chronotype quiz</h2>
+
+<p>Now, before Michael Breus’ recategorization, most sleep doctors would talk only of two sleep categories: “larks” and “owls.” And they’d use the morningness-eveningness questionnaire (MEQ) to determine the right one. However, once he became conscious that a person’s sleep drive and their personality traits were an all too important factor as well, Breus realized that the MEQ might be outdated. So, he developed his own quiz, one that should help anyone determine their chronotype with a high degree of precision.</p>
+
+<h2>Final Notes</h2>
+
+<p>“‘The Power of When’ prepares you to take full advantage of our adaptation to the rhythms of nature,” writes David Perlmutter. “After reading this book,” he adds, “your decision-making ability will forever be improved.” This is a new horizon in our understanding of human behavior, and Michael Breus masterfully presents science as a recipe for self-improvement.”</p>
+
+<p>And there’s nothing better than a scientifically-backed handbook for self-improvement, is it? Simply put, you need to learn how to work <em>with your body</em>, and not<em> against </em>it.</p>
+
+<h2>12min Tip</h2>
+
+<p>You can take Michael Breus’ quiz online right now (simply head over to<em> thepowerofwhenquiz.com</em>) and discover your chronotype in just a few minutes. That way – you’ll get your biological clock in sync with your lifestyle.</p>
+</div></div>
+  <span></span> <!-- for IntersectionObserver -->
+  
+  
+  
+  
+
+
+</body><style>body {
+      font-size:  20px;
+      font-family: Helvetica, Arial, sans-serif;
+      width: 950px;
+    }
+    .page {
+      line-height: 30.0px;
+    }
+    h1, h2, h3 {
+      line-height: initial;
+    }</style></html>
