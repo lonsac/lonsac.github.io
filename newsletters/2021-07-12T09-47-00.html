@@ -1,0 +1,521 @@
+<html><head><title>Amazon (AMZN) and Marathon Digital (MARA) Deep Dive Analysis :: Reader View</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+html {
+  overflow: overlay;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 30px auto 0 auto;
+  padding: 10px;
+}
+body[data-mode="light"] {
+  color:  #222;
+  border-color: %light-color%;
+  background-color:  whitesmoke;
+}
+body[data-mode="dark"] {
+  color:  #eee;
+  border-color: %dark-color%;
+  background-color:  #333;
+}
+body[data-mode="sepia"] {
+  color:  #5b4636;
+  border-color: %sepia-color%;
+  background-color:  #f4ecd8;
+}
+body[data-mode="solarized-light"] {
+  color:  #586e75;
+  border-color: %solarized-light-color%;
+  background-color:  #fdf6e3;
+}
+body[data-mode="nord-light"] {
+  color:  #2e3440;
+  border-color: %nord-light-color%;
+  background-color:  #e5e9f0;
+}
+body[data-mode="groove-dark"] {
+  color:  #cec4ac;
+  border-color: %groove-dark-color%;
+  background-color:  #282828;
+}
+body[data-mode="solarized-dark"] {
+  color:  #93a1a1;
+  border-color: %solarized-dark-color%;
+  background-color:  #002b36;
+}
+body[data-mode="nord-dark"] {
+  color:  #e5e9f0;
+  border-color: %nord-dark-color%;
+  background-color:  #2e3440;
+}
+@media print {
+  body[data-mode="light"],
+  body[data-mode="dark"],
+  body[data-mode="sepia"],
+  body[data-mode="solarized-light"],
+  body[data-mode="nord-light"],
+  body[data-mode="groove-dark"],
+  body[data-mode="solarized-dark"],
+  body[data-mode="nord-dark"] {
+    color: #000;
+    border-color: #000;
+    background-color: #fff;
+  }
+}
+body[data-loaded=true] {
+  
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+img:not([width])[src$=".svg"] {
+  max-width: 100px;
+}
+body[data-images=false] canvas,
+body[data-images=false] svg,
+body[data-images=false] img {
+  display: none;
+}
+a {
+  color: #0095dd;
+  text-decoration: none;
+}
+#reader-domain {
+  font-family: Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  border-bottom-color: currentcolor;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: inline-block;
+  direction: ltr;
+}
+#reader-domain > span:first-child {
+  font-size: 1.1em;
+}
+#reader-domain > span:last-child {
+  font-size: 0.8em;
+}
+#reader-title {
+  font-size: 1.6em;
+  line-height: 1.25em;
+  width: 100%;
+  margin: 20px 0;
+  padding: 0;
+}
+#reader-credits,
+#doi,
+#published-time,
+#reader-estimated-time {
+  font-size: 0.85em;
+  line-height: 1.48em;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+#reader-credits:not(:empty)::after {
+  content: ' ⋮ ';
+}
+#published-time:not(:empty)::before {
+  content: ' ⋮ ';
+}
+#doi-json {
+  overflow: hidden;
+}
+#doi-json code {
+  overflow: auto;
+  max-height: 400px;
+}
+#published-time:empty,
+#reader-credits:empty {
+  display: none;
+}
+body[data-speech="true"] .tts-box {
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  height: 32px;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: 0 0 0 1000vw rgba(128, 128, 128, 0.2);
+}
+body[data-speech="true"] .tts-word {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  background-color: red;
+  height: 2px;
+}
+.tts-word.hidden,
+.tts-box.hidden {
+  display: none;
+}
+body[data-speech="false"] .tts-speaking::after {
+  display: none;
+}
+mark.hghlght {
+  background-color: #ffff81;
+}
+.hidden {
+  display: none;
+}
+</style>
+  <style id="user-css">body {
+  padding-bottom: 64px;
+}
+a:visited {
+  color: #d33bf0;
+}
+a:link, a:link:hover, a:link:active, a:link * {
+  color: #0095dd;
+}
+a:link {
+  text-decoration: none;
+  font-weight: normal;
+}
+pre {
+  white-space: pre-wrap;
+}
+pre code {
+  background-color: #eff0f1;
+  color: #393318;
+  font-family: monospace;
+  display: block;
+  padding: 5px 10px;
+}
+body[data-mode="dark"] pre code {
+  background-color: #585858;
+  color: #e8e8e8;
+}
+
+/* CSS for sans-serif fonts */
+body[data-font=sans-serif] {}
+/* CSS for serif fonts */
+body[data-font=serif] {}
+
+/* CSS for "sepia" theme */
+body[data-mode=sepia] {
+}
+/* CSS for "light" theme */
+body[data-mode=light] {}
+/* CSS for "dark" theme */
+body[data-mode=dark] {}</style>
+</head>
+<body data-images="true" data-mode="light" data-font="sans-serif" data-loaded="true">
+  <span></span> <!-- for IntersectionObserver -->
+  <a id="reader-domain" href="https://www.lynalden.com/premium-2021-7-11/?mc_cid=91f47f43e4&amp;mc_eid=f0f5fdf8b9">
+    <span>www.lynalden.com</span>
+    <span>/premium-2021-7-11/</span>
+  </a>
+  <h1 dir="auto" id="reader-title">Amazon (AMZN) and Marathon Digital (MARA) Deep Dive Analysis</h1>
+  <span dir="auto" id="reader-credits"></span>
+  <span dir="auto" id="reader-estimated-time">43-55 minutes</span>
+  <span dir="auto" id="published-time"></span>
+  <hr>
+  <div id="readability-page-1" class="page"><div><main><article class="page" aria-label="Amazon (AMZN) and Marathon Digital (MARA) Deep Dive Analysis" itemscope="" itemtype="https://schema.org/CreativeWork"><div itemprop="text"><p><em>July 11, 2021</em></p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-feature.jpg" sizes="(max-width: 700px) 100vw, 700px" srcset="https://www.lynalden.com/wp-content/uploads/premium-feature.jpg 700w, https://www.lynalden.com/wp-content/uploads/premium-feature-300x129.jpg 300w" alt="Premium Feature Image" width="700" height="300"></p>
+<p>The macro portion of this report focuses on rates, gold, the dollar, OPEC+, and China.</p>
+<p>The bitcoin portion focuses on the miner migration and the current opportunity in some publicly-traded North American bitcoin miners like Marathon Digital Holdings (MARA).</p>
+<p>The final section dives into Amazon (AMZN) to see why it might be breaking out of its 1-year price consolidation.</p>
+<h2>Macro View</h2>
+<p>On a global scale, daily new cases of COVID-19 are starting another leg up, and deaths attributed to the virus appear to be bottoming out:</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-global-covid19.png" alt="Global COVID-19" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-global-covid19.png 623w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-global-covid19-204x300.png 204w" sizes="(max-width: 623px) 100vw, 623px" width="623" height="917"></p>
+<p><em>Chart Source: <a href="https://www.worldometers.info/coronavirus/" target="_blank" rel="noopener">Worldometer</a></em></p>
+<p>There is a promising outcome happening in the UK, though. Their case counts are up but their attributed deaths remain extremely low.</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-uk-covid19.png" alt="UK COVID-19" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-uk-covid19.png 646w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-uk-covid19-231x300.png 231w" sizes="(max-width: 646px) 100vw, 646px" width="646" height="840"></p>
+<p><em>Chart Source: Worldometer</em></p>
+<p>Treatment methods are better now that doctors have had time to figure it out, most folks who want the vaccine in the UK have received it, many people have already had the virus, and variants over time may spread faster but less lethally. I’m not a medical expert, so mainly I can just track the numbers.</p>
+<p>Indonesia and Malaysia have been in broad lockdowns recently. The spike of cases and deaths in India has subsided, but now that spike is in other countries in Southeast Asia instead.</p>
+<p>Malaysian deaths attributed to the virus, via Worldometer:</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-malaysia-covid19.png" alt="Malaysia COVID-19" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-malaysia-covid19.png 635w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-malaysia-covid19-300x193.png 300w" sizes="(max-width: 635px) 100vw, 635px" width="635" height="408"></p>
+<p>Indonesian deaths attributed to the virus, via Worldometer:</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-indonesia-covid19.png" alt="Indonesia COVID-19" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-indonesia-covid19.png 637w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-indonesia-covid19-300x192.png 300w" sizes="(max-width: 637px) 100vw, 637px" width="637" height="408"></p>
+<p>The same is true for Thailand, with a spike in attributed deaths. Those three countries are interesting places for contrarian/value investors to look at the moment. When they begin getting over the peak of the virus, their markets should be well-positioned for recovery after their lackluster start to 2021.</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-eido-ewm-thd.png" alt="Southeast Asian Equity Performance" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-eido-ewm-thd.png 650w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-eido-ewm-thd-300x214.png 300w" sizes="(max-width: 650px) 100vw, 650px" width="650" height="464"></p>
+<p>Meanwhile, Japan is moving forward with the Olympics without spectators, which basically eliminates the economic benefits of hosting the Olympics. They put in the costs but now won’t get the tourism revenues.</p>
+<p><strong>Rates and Inflation</strong></p>
+<p>Long-duration Treasury yields have declined in recent weeks. They remain well below both the reported year-over-year inflation rate, and the 10-year forward inflation breakeven rate. The forward breakeven inflation rate is the difference between the yields of inflation-protected Treasuries and normal Treasuries, which ostensibly represents the Treasury market’s forward inflation expectations.</p>
+<p>For the first time in US history, the high end of the junk bond market is yielding below the current inflation rate, and only 0.91% over the 10-year inflation breakeven rate.</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-rates.png" alt="Rates" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-rates.png 650w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-rates-300x222.png 300w" sizes="(max-width: 650px) 100vw, 650px" width="650" height="481"></p>
+<p>In other words, the Treasury market is saying “current inflation is 4.99%, but we think inflation will average 2.22% over the next ten years, and we’re willing to hold Treasuries at a 1.37% yield and therefore gradually lose purchasing power during the decade based on our expectations”. The junk bond market is also extremely complacent with record low yields, quite sure that default risk will be low.</p>
+<p>Some of this is being attributed to slower growth expectations, as fiscal stimulus wears off and we move past some of the easy base effects. Another factor could be the market discounting the possibility of the debt ceiling not being extended for a while. The US debt ceiling suspension expires at the end of July, which will limit the new issuance of Treasuries and cause the Treasury Department to take extraordinary measures of shuffling its books around, until the debt ceiling is increased.</p>
+<p>The caveat, of course, is that the Fed is the biggest buyer of Treasuries at this time, including the inflation-protected kind, so the measurement of bond yields has become a target and thus is only mildly informative about economic prospects. In addition, the Fed briefly bought corporate bonds during the heart of the pandemic shutdowns to help with liquidity while fiscal policymakers provided financial assistance to help with solvency, which gave the market the indication that if there were to be another crisis, policymakers might step in again to help with corporate solvency and liquidity.</p>
+<p>This problem of Treasury rates no longer being particularly predictive is something I’ve been discussing since early 2020, and focused on in my <a href="https://www.lynalden.com/august-2020-newsletter/" target="_blank" rel="noopener">August 2020 public newsletter</a>. Here’s an excerpt from that issue:</p>
+<blockquote><p>Historically, the bond market has been the “smart money” because it is largely driven by institutional investors rather than retail investors. It tends to be more focused on near-term math than on emotion or long-term projections, and as such tends to front-run the equity market, at least in terms of major transitions.</p>
+<p>As a key example, an inversion of the Treasury yield curve (10 year yield minus 3 month yield) has preceded the past several U.S. recessions with a useful lead time, and with no misses or false positives. In other words, the Treasury market consistently front-runs what the Federal Reserve will do with regards to interest rates, in reference to prevailing economic data.</p>
+<p>Here is the Treasury yield curve, with recessions shaded in gray:</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/newsletter-2020-8-yield-curve.png" sizes="(max-width: 687px) 100vw, 687px" srcset="https://www.lynalden.com/wp-content/uploads/newsletter-2020-8-yield-curve.png 687w, https://www.lynalden.com/wp-content/uploads/newsletter-2020-8-yield-curve-300x197.png 300w" alt="Yield Curve" width="687" height="450"></p>
+<p><em>Chart Source: St. Louis Fed</em></p>
+<p>In simplistic terms, bond investors pile into long-duration Treasuries when they expect slower economic growth and lower inflation, and move out of them if they expect faster economic growth and higher inflation.</p>
+<p>During this dis-inflationary cycle over the past four decades, economic growth rates and inflation levels tend to be rather correlated. So, the bond market either says growth and inflation are pointing up, or growth and inflation are pointing down. We haven’t seen a notable stagflationary period (high inflation with low growth) since the 1970s (although I do lean in that direction as a risk for the 2020s).</p>
+<p>Over the past couple cycles, equity investors have caught on to bond investors being smart money, and have referenced the yield curve or other moves in the bond market as potential leading indicators of what might happen to equities going forward.</p>
+<p>However, what happens if the Federal Reserve intervenes in the Treasury market? Can we still rely on what Treasury yields are telling us, if the Federal Reserve is the biggest buyer of Treasuries, and uses a combination of forward guidance and ongoing purchases to stabilize yields and ensure liquidity in that market?</p>
+<p>Ever since the September 2019 repo rate spike, and especially during the pandemic fiscal stimulus period in 2020, the Federal Reserve has turned to deficit monetization, meaning it creates new dollars to buy Treasury securities, using primary dealer banks as intermediaries.</p>
+<p>Here is the Fed’s holdings of Treasury securities:</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/newsletter-2020-8-treasury-qe.png" sizes="(max-width: 687px) 100vw, 687px" srcset="https://www.lynalden.com/wp-content/uploads/newsletter-2020-8-treasury-qe.png 687w, https://www.lynalden.com/wp-content/uploads/newsletter-2020-8-treasury-qe-300x197.png 300w" alt="Treasury QE" width="687" height="450"></p>
+<p><em>Chart Source: St. Louis Fed</em></p>
+<p>If we draw the line at the beginning of Q4 2019 for a clean starting point, which was a couple weeks after the repo spike, there has been a little under $4 trillion in net Treasury security issuance since then, and the Federal Reserve has accumulated about $2.2 trillion in Treasuries, which is more than half of the net issuance.</p>
+<p>In fact, the Fed accumulated more Treasuries since the beginning of Q4 2019 than the entire foreign sector accumulated over the past eight years since 2012.</p>
+<p>So, we’re eating our own cooking; the U.S. Federal Reserve is the biggest buyer of U.S. federal government debt, and they print new dollars to do so.</p>
+<p>What should we do about this fact? Does this throw off market signals about what the bond market is telling us, since the “bond market” in reference to actual private bond investors is less than half of the recent Treasury demand, while a semi-government institution is more than half of Treasury demand, against a backdrop of record Treasury supply for the largest fiscal spending environment since World War II?</p>
+<p>I would say so.</p></blockquote>
+<p>Jim Bianco, who specializes in macro analysis for institutional clients, has been consistently pointing this out for a while as well. Here’s his recent exchange with Bloomberg’s Joe Weisenthal:</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-bianco-tweet.png" alt="Bianco Tweet" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-bianco-tweet.png 608w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-bianco-tweet-294x300.png 294w" sizes="(max-width: 608px) 100vw, 608px" width="608" height="621"></p>
+<p>The closest model we have for this type of bond/inflation dynamic is the 1940s, when the Fed intervened to ensure that Treasury rates remained low regardless of what the prevailing inflation level was.</p>
+<p>At this time with so much Fed intervention, the bond market is still somewhat useful for sensing near-term rates of change in economic prospects, but not great for judging inflation magnitudes, default risk, or other important variables.</p>
+<p><strong>The Dollar Index</strong></p>
+<p>The US dollar index continues to be firm. It hasn’t had higher highs yet but it has been holding pretty steady at elevated levels in this recent June/July rally, although it does recently seem like it could roll over again:</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-dxy.png" alt="Dollar Index" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-dxy.png 700w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-dxy-300x188.png 300w" sizes="(max-width: 700px) 100vw, 700px" width="700" height="439"></p>
+<p><em>Chart Source: Trading Economics</em></p>
+<p>The dollar remains one of the most important macro variables. It has had a sizable inverse correlation to risk assets over the past five years, ever since it became strong in 2014/2015, and especially as the US net international investment position became very negative. Here’s the Fed’s version of the dollar index (which is similar to the dollar index but not identical) compared to the S&amp;P 500:</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-spx-vs-dxy.png" alt="S&amp;P 500 vs Dollar Index" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-spx-vs-dxy.png 700w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-spx-vs-dxy-300x193.png 300w" sizes="(max-width: 700px) 100vw, 700px" width="700" height="450"></p>
+<p><em>Chart Source: St. Louis Fed</em></p>
+<p>The spectacular S&amp;P 500 bull run of 2017, and strong global synchronous economic growth, coincided with a year of significant dollar weakness.</p>
+<p>Then, the Fed began quantitative tightening, and the dollar bottomed and started strengthening again. During that time, from early 2018 through mid-2019, the S&amp;P 500 was in a choppy sideways consolidation as the dollar strengthened.</p>
+<p>In the fourth quarter of 2019, the Fed reversed course on quantitative tightening and started doing quantitative easing again, due to the overnight repo spike of September 2019. The dollar then had a short bout of weakness during the fourth quarter of 2019 as the Fed expanded its balance sheet, and the S&amp;P 500 rallied to new highs.</p>
+<p>Then in 2020, COVID-19 hit China and then spread globally. Economic shutdowns began, and international trade collapsed. The dollar spiked up so hard that the foreign sector had to sell some Treasuries to get dollars, causing disruption in the Treasury market. A combination of Federal Reserve action (massive QE, re-introduction of swap lines, and other measures to address the global dollar shortage) along with US fiscal stimulus, weakened the dollar considerably for the next three quarters of 2020. Risk assets, including the S&amp;P 500, shot back up to new highs.</p>
+<p>In recent weeks, the dollar has been firming up. The S&amp;P 500 has gotten a bit more volatile, and equity breadth has broken down. Stocks that are more closely tied to the economy, like banks, commodity producers, and industrials, have faced significant stock price weakness. Big Tech, on the other hand, caught a bid and has been one of the few areas able to rise.</p>
+<p>This is important to monitor, because if the dollar starts to break out to the upside, it’ll be a significant headwind against risk assets, with maybe a few secular growers like Amazon and Facebook able to push upwards but many other stocks finding trouble.</p>
+<p>However, until the dollar index breaks over 94, that scenario is not quite in play. Right now, the dollar is still range-bound rather than breaking down or breaking up.</p>
+<p><strong>Gold Update</strong></p>
+<p>The gold price directionally continues to follow real interest rates, inversely:</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-gold-vs-real-rates.png" alt="Gold vs Real Rates" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-gold-vs-real-rates.png 700w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-gold-vs-real-rates-300x193.png 300w" sizes="(max-width: 700px) 100vw, 700px" width="700" height="450"></p>
+<p><em>Chart Source: St. Louis Fed</em></p>
+<p>Importantly, gold is following real rates as measured by 10-year Treasury yields minus 10-year inflation breakevens (the difference between normal Treasury yields and TIPS yields), not rates minus current year-over-year CPI growth. Treasury rates minus current year-over-year price inflation are actually in deeply negative territory, whereas Treasury rates minus inflation breakevens are merely rangebound.</p>
+<p>Since gold is a financialized asset, it follows what financial markets are saying, and that’s inflation expectations measured by the TIPS market breakevens rather than current inflation.</p>
+<p>Gold has been in a correction/consolidation ever since August 2020, which is also when real Treasury yields measured by breakevens reached a low point of -1.08%.</p>
+<p>What would make inflation breakevens go up, and thus for deeper negative real yields to occur? There are two main possibilities. One possibility would be a sustained rise in energy prices, and/or a sustained rise in wages, while Treasury rates remain low due to policy intervention. That would likely boost inflation expectations and thus lead to deeper negative real yields. The other possibility would be that Treasury rates get pushed lower due to concerns of a weakening economy, while inflation expectations remain flat or otherwise don’t go down as much, and thus real yields go into deeper negative territory.</p>
+<p>As of right now, the market is still grappling with how to interpret inflation, and part of the world remains in lowdown (particularly Southeast Asia at the moment), with unclear virus variants and potential lockdowns that could arise over the next 6+ months.</p>
+<p>I remain long-term bullish on precious metals as part of a diversified portfolio.</p>
+<p><strong>Energy Update</strong></p>
+<p>Oil prices have had a bout of volatility lately. They rose faster this year than most people expected, but over the past week ran into some turbulence driven by OPEC+ disagreements.</p>
+<p>OPEC+, the international oil cartel, has had some disagreements about how much to raise their collective oil output to address rebounding global demand and higher oil prices. In particular, some nations that invested more heavily in production feel that they should have their baseline levels adjusted higher. It remains to be seen how this will play out, but ultimately, OPEC+ is basically the only source of spare capacity at the moment.</p>
+<p>Producers in Europe and North America are under ESG pressure, as well as pressure by shareholders to focus on dividends and buybacks rather than growth capex. During the 2010s decade, many shale producers focused on unprofitable growth, and investors and lenders are tired of that. As a result, US oil production is still nearly 2 million barrels per day below its pre-pandemic peak production rate, and that is helping to firm the price.</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-us-oil-production.png" alt="US Oil Production" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-us-oil-production.png 1058w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-us-oil-production-300x108.png 300w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-us-oil-production-1024x370.png 1024w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-us-oil-production-768x277.png 768w" sizes="(max-width: 1058px) 100vw, 1058px" width="1058" height="382"></p>
+<p><em>Chart Source: EIA</em></p>
+<p>If OPEC+ has a major disagreement and they start unilaterally maxing out their production capacity, it would put significant downward pressure on the oil price for the remainder of this year. I remain long-term bullish on oil and gas, but over the next 6-12 months, the price will mainly be based on 1) decisions by OPEC+ that affect supply and 2) any virus variants and government shutdowns that affect demand.</p>
+<p>For that reason, I prefer to emphasize the low-cost producers with strong balance sheets, as well as some of the best-capitalized midstream businesses that mainly just focus on transporting it. Buying oil futures in the 2024/2025 range also is appealing at this time.</p>
+<p><strong>China’s Perfect Storm</strong></p>
+<p>Chinese regulators have gone all-out on some of its industries to a surprising degree this year.</p>
+<p>For one, the Chinese credit impulse has been on a downtrend lately:</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-china-credit-impulse.png" alt="China Credit Impulse" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-china-credit-impulse.png 639w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-china-credit-impulse-300x179.png 300w" sizes="(max-width: 639px) 100vw, 639px" width="639" height="382"></p>
+<p><em>Chart Source: <a href="https://www.bloomberg.com/news/articles/2021-06-17/china-s-growth-decouples-from-credit-with-global-implications" target="_blank" rel="noopener">Bloomberg</a></em></p>
+<p>China goes through these cycles of “bulking and cutting” and right now they’re in a “cutting” phase. China’s GDP is still growing but the credit layer on top of that GDP growth is decelerating. That’s common every few years.</p>
+<p>Compare the 2013, 2017 and 2020 peaks in China’s credit cycle above with JD’s operating cash flow below (green area):</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-jd-fastgraph.png" alt="JD FASTGraph" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-jd-fastgraph.png 971w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-jd-fastgraph-300x180.png 300w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-jd-fastgraph-768x460.png 768w" sizes="(max-width: 971px) 100vw, 971px" width="971" height="582"></p>
+<p><em>Chart Source: F.A.S.T. Graphs</em></p>
+<p>Starting in late 2020, Chinese regulators went hard after Jack Ma and Alibaba (BABA), both in terms of its payment system and towards its monopolistic ecommerce practices. They then broadened that crackdown towards the rest of their big tech/internet companies as well.</p>
+<p>About two months ago, Chinese regulators also banned crypto mining, so many industrial-scale miners are shifting over to Kazakhstan, North America, and elsewhere. Chinese regulators also made it harder for banks to connect to crypto exchanges, thereby making it harder (not impossible) for Chinese citizens to buy crypto.</p>
+<p>About a week ago, Chinese regulars forced Chinese app stores to delist Chinese ride-hailing company Didi (which just days prior had recently IPO’d on the NYSE). So, American IPO investors who invested into the IPO were slammed as the stock dropped. Didi has 500+ million users, and Chinese regulators are ostensibly concerned about how it handles user data.</p>
+<p>Bloomberg had a good example of the data concerns for Didi in a <a href="https://www.bloomberg.com/news/features/2021-07-08/-didi-crackdown-big-data-is-the-latest-u-s-china-battleground" target="_blank" rel="noopener">recent article</a>. Here’s the punchline:</p>
+<blockquote><p>Shortly after Beijing’s shock cybersecurity probe into&nbsp;Didi Global Inc., Chinese social media users furiously passed around a 2015 story on the Uber-like app that showed what might be spooking President Xi Jinping.</p>
+<p>Screenshots circulated of a breezy state media report on a Didi study that revealed how bureaucrats used the company’s services on two sweltering July days in Beijing. Using playful charts, it showed that traffic at the Ministry of Public Security was among the busiest, while China’s anti-corruption agency was relatively quiet.</p>
+<p>At the time, it looked like an innocuous peek at the potential of Big Data to make the government more efficient. Yet six years later it clearly shows the risk that an outside party—and perhaps foreign spies—could glean valuable intelligence from Didi about some of the country’s most important officials.</p>
+</blockquote>
+<p>Basically, both the US and China have very large tech giants and a variety of questions about data privacy and anti-competitive behaviors, but over the past year the US hasn’t taken many tangible actions with companies in their jurisdiction, while China has practically gone to war with the ones in their jurisdiction.</p>
+<p>As a result, the Chinese equity market has been an underperformer year-to-date, after being a strong 2020 performer:</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-mchi-performance.png" alt="MCHI Performance" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-mchi-performance.png 650w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-mchi-performance-300x191.png 300w" sizes="(max-width: 650px) 100vw, 650px" width="650" height="414"></p>
+<p>While I expected some temporary weakness in China, so far this is a bit deeper than my base case had been, because China’s regulatory crackdown is more significant than my base case had been, given the proximity to the pandemic and lockdowns that the country went through.</p>
+<p>Alibaba (BABA) is now at its lowest valuation in history by several metrics. Here is their revenue valuation:</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-baba-revenue.png" alt="BABA Revenue" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-baba-revenue.png 650w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-baba-revenue-300x198.png 300w" sizes="(max-width: 650px) 100vw, 650px" width="650" height="430"></p>
+<p>And here is their cash flow valuation:</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-baba-cfo.png" alt="BABA Cash Flow" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-baba-cfo.png 650w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-baba-cfo-300x198.png 300w" sizes="(max-width: 650px) 100vw, 650px" width="650" height="430"></p>
+<p>Other big Chinese tech stocks, like Tencent (TCEHY) and JD (JD) are in a similar situation. I am structurally bullish on them, but it’s important to manage position sizes. I think after this dust settles, the next credit cycle in China will likely be very favorable to these types of stocks. However, there are ongoing tail risks related to Chinese politics.</p>
+<h2>Bitcoin Note</h2>
+<p>Bitcoin continues to show weak price action, bouncing between the lower-$30ks and upper-$30ks.</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-btc-price.png" alt="BTC Price" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-btc-price.png 679w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-btc-price-300x183.png 300w" sizes="(max-width: 679px) 100vw, 679px" width="679" height="414"></p>
+<p>There is a decent case to be made that the bitcoin bottom is in or nearly-in, and that most people who will sell during this drawdown have already sold by this point. There is a lot of on-chain volume in the lower-$30ks, providing quite a bit of support. Coins are once again leaving exchanges, rather than going to them.</p>
+<p>However, until price action starts firmly breaking above $41k, it remains in “limbo” with an unclear intermediate-term perspective, and no firm bottom in place for risk management purposes.</p>
+<p>I remain structurally long-term bullish on the protocol, but I would need to see the beginnings of price confirmation to be tactically bullish in any nearer timeframe.</p>
+<p><strong>Global Hash Rate Migration</strong></p>
+<p>I’ve been covering over the past 6 weeks or so that, despite previous bitcoin mining bans over the years not having much impact, China’s latest ban seems to be having a massive effect.</p>
+<p>The bitcoin network had its largest-ever hash rate reduction in percentage terms, over 50% from peak to trough, meaning that about half of bitcoin miners are being disconnected from the network and moved elsewhere at a record pace.</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-bitcoin-hash-rate.png" alt="Bitcoin Hash Rate" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-bitcoin-hash-rate.png 650w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-bitcoin-hash-rate-300x191.png 300w" sizes="(max-width: 650px) 100vw, 650px" width="650" height="414"></p>
+<p>Bitcoin’s network automatically has a difficulty adjustment every two weeks, either up or down, to ensure that roughly the same number of new coins get produced every day regardless of how many miners are on the network. With many miners removed from the network, the network briefly became slower, so it downgraded the mining difficulty to get the network back up to proper speed, and this latest difficulty adjustment was the largest ever, at -28%.</p>
+<p>Imagine, for example, if Amazon had 60% of its servers located in one country, and with a one-week notice was banned from operating servers in that country. It would need to uproot more than half of its server capacity and find other places internationally, and there naturally would be massive disruption to their services for probably half a year or more.</p>
+<p>That’s basically what happened to the Bitcoin network over the past six weeks as China banned crypto mining.</p>
+<p>Except unlike Amazon would be able to do, Bitcoin is going through this process with 100% uptime, since it’s a decentralized network. Its block creation speed slowed down for a few weeks until the next automatic difficulty adjustment kicked in, which was the only noticeable effect for users in terms of network functionality as more than half of the mining hardware goes offline and gets shipped internationally, with new facilities being constructed to house them (which will take a while).</p>
+<p>Chinese miners are losing a lot of money from this. However, existing miners outside of China are prospering. The difficulty adjustment means that each existing active miner gets more profitable, since it mines a larger percentage of the remaining smaller hash rate. Bloomberg <a href="https://www.bloomberg.com/news/articles/2021-07-07/bitcoin-miners-thwarted-by-data-center-crunch-amid-profit-boom" target="_blank" rel="noopener">had a good recent piece</a> on it.</p>
+<p>A Bitmain Antminer S19, for example, was producing about $15 in profit/day after $0.07 kWh all-in operating costs back in June, but now is back up to $24/day even though bitcoin’s price is lower at the moment than it averaged in June.</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-s19-profitability.png" alt="Antminer S19 Profitability" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-s19-profitability.png 552w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-s19-profitability-300x208.png 300w" sizes="(max-width: 552px) 100vw, 552px" width="552" height="382"></p>
+<p>Chart Source: <a href="https://www.asicminervalue.com/" target="_blank" rel="noopener">ASIC Miner Value</a></p>
+<p>The numbers are quite variable depending on what the facility’s electricity, real estate, personnel, and other costs are, but the point is, this is a really good operating environment for non-Chinese bitcoin miners.</p>
+<p>Plus, bitcoin equipment from Bitmain and other vendors are cheaper than they were back in April/May, so the overall return on investment for buying and running a miner is very attractive at the moment. Back in April/May, the shortage was in those ASIC miners. Now in July, the shortage is in hosting space and logistics.</p>
+<p>The current global bitcoin hash rate is equal to about 1 million of those Antminer S19s, and each of those cost several thousand dollars. At its peak in May 2021, the global bitcoin hash rate could have been as high as around 2 million of those machines. In reality, the network consists of multiple types of machines from a few different vendors across a few different generations of ASIC designs, but essentially, somewhere in the loose ballpark of a million machines are trying to find a new home as I write this.</p>
+<p>Meanwhile, every bitcoin mining business in North America is like:</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-million-meme.jpg" alt="One Million Miners" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-million-meme.jpg 495w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-million-meme-300x220.jpg 300w" sizes="(max-width: 495px) 100vw, 495px" width="495" height="363"></p>
+<p>Marathon Digital (MARA) and RIOT Blockchain (RIOT) are two publicly-traded US miners on the NASDAQ. For Canadian miners, there are companies like Hut 8 Mining (HUT) and HIVE Blockchain. Canaan (CAN) is a Chinese semiconductor company on the NASDAQ that makes and sells mining equipment, and that is now mining bitcoin itself with an operation in Kazakhstan.</p>
+<p>There is a big migration from bitcoin mining out of China and into North America and elsewhere, and both publicly-traded and privately-held companies are eating it up. However, there is a bottleneck in terms of finding and building available infrastructure for hosting miners, so there’s an advantage for companies that already have that infrastructure in operation or near completion. The world can’t just snap its fingers and teleport hundreds of millions of dollars of infrastructure to another continent instantaneously; it takes a lot of time.</p>
+<p>If we look at Marathon, we can see some tremendous growth. Here is how many bitcoin they produced each month this year from their June report:</p>
+<ul>
+<li>January 2021: 50.4 BTC</li>
+<li>February 2021: 43.4 BTC</li>
+<li>March 2021: 97.9 BTC</li>
+<li>April 2021: 162.1 BTC</li>
+<li>May 2021: 226.6 BTC</li>
+<li>June 2021: 265.6 BTC</li>
+</ul>
+<p>As of June 2021 (reported in July), they had 19,395 miners. Based on their contract purchases of miners through Q1 2022, they expect to have 103,120 miners by within Q1 2022, which is more than a 5x increase from June 2021.</p>
+<p>This assumes that the vendor Bitmain that makes those miners for Marathon doesn’t run into supply chain issues, and assumes that Marathon doesn’t have any problems at their facility or with their electricity provider that would disrupt them from getting the miners hooked up and working. Both of those are major risks to monitor.</p>
+<p>So, Marathon’s number of mined bitcoin per month is set to increase to perhaps 1,000+ by the end of Q1 2022, depending on exactly what percentage of the network’s hash rate they have at that point.</p>
+<p>They’ve had to issue a lot of shares to finance this growth, but looking forward about a year, the math checks out in their favor.</p>
+<p>For this reason, I’ll be adding Marathon and a couple other public bitcoin stocks to the newsletter and fortress income portfolio, in the portfolio update section. Due to execution risk of acquiring and hooking up those miners, along with bitcoin price risk and regulatory/jurisdictional risk, they are best kept as small positions for most investors. They have plenty of upside potential, but also a high level of risk and volatility from current levels.</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-mara-riot-price.png" alt="MARA and RIOT Price" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-mara-riot-price.png 650w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-mara-riot-price-300x198.png 300w" sizes="(max-width: 650px) 100vw, 650px" width="650" height="430"></p>
+<p>Spreading exposure between MARA and RIOT reduces state-level jurisdictional risk. MARA has more aggressive growth plans over the next 12 months, while RIOT completed an acquisition this year that gives them plenty of hosting space, so in addition to running their miners, they have space to charge hosting fees for other entities that want to run miners in their facility.</p>
+<p>The stocks were in a bubble from February through April, but after this correction are back down to reality, in the context of their aggressive growth plans.</p>
+<p><strong>Lightning Update</strong></p>
+<p>The Bitcoin Lightning network recently crossed over 1,700 BTC capacity and is nearing 1,800:</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-lightning-capacity.jpg" alt="Lightning Capacity" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-lightning-capacity.jpg 680w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-lightning-capacity-300x150.jpg 300w" sizes="(max-width: 680px) 100vw, 680px" width="680" height="340"></p>
+<p><em>Chart Source: <a href="https://twitter.com/kerooke" target="_blank" rel="noopener">Kevin Rooke</a></em></p>
+<p>There’s not much more to say on this here, since I wrote about Lightning a lot recently. I recommend reading some of my recent premium reports (June 13 and June 27) where I discussed this in more detail. In those reports, the Lightning network crossed 1,500 and 1,600 BTC capacity.</p>
+<p>In short, the Lightning network is reaching critical mass in terms of usability, due to enough apps and liquidity now being on the network, which allows for a more rapid phase of adoption.</p>
+<p><strong>ETHBTC</strong></p>
+<p>The ratio of ETH to BTC briefly broke down in June but has since stabilized. The ratio remains below its all-time high from 2017, and also remains in a series of lower lows and lower highs in this cycle:</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-ethbtc.png" alt="ETHBTC" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-ethbtc.png 700w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-ethbtc-300x247.png 300w" sizes="(max-width: 700px) 100vw, 700px" width="700" height="576"></p>
+<p>Over the past decade in crypto bear markets, bitcoin typically holds up better than other coins, whereas in bull markets, other coins have bigger percent gains. Most coins in the space continue to have bearish charts with weak price action.</p>
+<p>This still indicates rather bearish sentiment in the space, which makes sense given how many superfluous cryptos went parabolic in terms of price. Within 2021, there was an inverse correlation between performance and quality in the ecosystem. The market needs time to digest all of that and separate the wheat from the chaff.</p>
+<h2>Portfolio Updates</h2>
+<p>I’m making some portfolio changes this week.</p>
+<p>One of M1 Finance’s shortcomings is that it can’t invest in any stocks or funds that trade over-the-counter, and so it can’t hold any of the Grayscale Bitcoin Trust (GBTC) like the No Limits portfolio at Interactive Brokers can. And there’s no Bitcoin ETF in the United States yet. However, I do think a nonzero allocation to digital assets is useful for a diversified portfolio.</p>
+<p>Fortunately, there are now an increasing number of stocks on the NYSE or NASDAQ that primarily focus on bitcoin or other digital assets. So, I’ve made a pie in M1 Finance pie called “Digital Assets”.</p>
+<p>The digital assets pie at this time will consist of 40% MARA, 20% RIOT, 20% COIN, and 20% MSTR. Those stocks respectively are two bitcoin miners, one multi-crypto exchange, and one software company that holds a lot of bitcoin. I would have included HUT as well, but it’s not available in M1 Finance.</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-digital-assets-pie.png" alt="Digital Assets Pie" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-digital-assets-pie.png 562w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-digital-assets-pie-300x122.png 300w" sizes="(max-width: 562px) 100vw, 562px" width="562" height="229"></p>
+<p>I’ll insert that pie as a small position in the various M1 Finance portfolios. And because those portfolios are modular, folks that follow those portfolios can choose to allocate to that position or not, depending on if they have a bullish or bearish view of bitcoin.</p>
+<p>The full portfolios can be viewed in my Google Drive.</p>
+<p><strong>Top 12 List</strong></p>
+<p>-In the aggressive stock section, remove SSUMY and add MARA.</p>
+<p>I still like SSUMY as a value stock but MARA presents an interesting opportunity over the next 12 months. Due to very high volatility and risk, it only belongs in the aggressive section, and would be the most aggressive stock on the list.</p>
+<p><strong>Newsletter Portfolio</strong></p>
+<p>-Reduce the dividend stock pie by 1% (to 26%), the growth stock pie by 2% (to 10%), the international equity pie by 2% (to 18%), and the commodity pie by 1% (to 12%). Add a 4% allocation to the aforementioned new “digital assets” pie, that consists of 40% MARA, and 20% each of RIOT, MSTR, and COIN. Add a 1% allocation each to SHY and STIP, bringing them up to 8%.</p>
+<p>-In the commodity producer pie, sell RGLD and BTG. Add 2% each to FNV, WPM, and SAND. Add 1% each to GOLD, FSM, and PAAS. I’m consolidating the metals portfolio a bit here to emphasize current quality.</p>
+<p>-In the growth stock pie, sell the 8% positions in MSTR. Add a 4% position each to AMZN and FB, bringing them up to 12%.</p>
+<p><strong>Fortress Income</strong></p>
+<p>-Reduce the Defense segment by 3%, and add 3% to the aforementioned new “digital assets” pie, that consists of 40% MARA, and 20% each of RIOT, MSTR, and COIN.</p>
+<p><strong>ETF-Only Portfolio</strong></p>
+<p>-Sell the 7% stake in IWD. Add 5% to RSP. This consolidates the US equity exposure a bit.</p>
+<p>-Sell KRE (2% existing position).</p>
+<p>-Reduce VNQ from 5% to 4%.</p>
+<p>-Add a 3% allocation to the aforementioned new “digital assets” pie, that consists of 40% MARA, and 20% each of RIOT, MSTR, and COIN.</p>
+<p>-Add 1% to SHY (bringing it to 7%) and 1% to STIP (bringing it to 8%).</p>
+<p>There are no good US digital asset ETFs. If I were building the ETF-only portfolio outside of M1 Finance, I would use a 3-5% allocation to GBTC as my ETF-proxy digital asset allocation. However, GBTC is not available in M1 Finance either. So, I made my own “mini-ETF” pie as a placeholder and allocated to that as though it was an ETF, until there is a proper bitcoin ETF available on M1 Finance.</p>
+<p><strong>No Limits Portfolio</strong></p>
+<p>-Sell SSUMY and ADBE positions. Sell 10 shares of RSP.</p>
+<p>-Buy 1 share of AMZN.</p>
+<p><strong>Other Holdings</strong></p>
+<p>-Buy AMZN.</p>
+
+<p>Amazon.com Inc (AMZN) is one of the largest and most well-known companies in the world, sometimes for good reasons (everyone is basically addicted to the convenience of their services) and sometimes for bad reasons (problematic worker conditions, anti-competitive concerns, eating the retail market like <a href="https://en.wikipedia.org/wiki/Borg" target="_blank" rel="noopener">the Borg</a>).</p>
+<p>Jeff Bezos founded the company in 1994, and the company became a pioneer in the new ecommerce realm. It started as an online bookstore but after it gained enough traction, it became an online everything store.</p>
+<p>A company in the ecommerce space has an annoying problem: maintaining enough server capacity to support the busiest shopping days of the year.</p>
+<p>Suppose, for example, that on average 10 million people use the ecommerce website in a given day. However, during about five days per year that are traditionally heavy days for shopping, it spikes to 25 million. The company would need to maintain enough server capacity to absorb 25 million people. During 360 days of the year, the extra server capacity to handle those extra 15 million people would be wasted.</p>
+<p>I’ve faced this problem myself on a smaller scale for my website. In my first six months of operation, I had a random day where MarketWatch, Business Insider, and Money Magazine linked to me on the same day and collectively sent me 10x the normal level of traffic compared to my daily baseline at that time. Fortunately I had enough hosting capacity to absorb that traffic with only minor slowdowns. If I did not have that, I would have lost out on many of those visitors getting to meet the content and the brand and signing up for my newsletter.</p>
+<p>The same is true for any ecommerce company. They need enough server capacity to absorb visitors on the most high-traffic days of the year, which means wasted capacity on all of the other days. And when you’re one of the biggest ecommerce companies, your team to manage your server systems needs to be extremely large and competent.</p>
+<p>So, Amazon was smart early on. They started Amazon Web Services (aka “AWS”) in the early 2000s. With this service, they built excess server capacity and rented it out, becoming one of the early cloud computing companies and eventually the largest cloud computing company. They harnessed their expertise in running infrastructure, since they have to do it for themselves at a massive scale anyway, as a way to make money from other ecommerce companies as well. This way, those other ecommerce companies don’t have to duplicate the infrastructure themselves. As a result, Amazon always has enough server capacity for themselves, and plenty of server capacity to gain revenue from others as well. Server capacity galore.</p>
+<p>Those represent the two major arms of Amazon: ecommerce and cloud computing. Here’s a breakdown of Amazon’s net sales:</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-amzn-revenue-breakdown.png" alt="Amazon Revenue Breakdown" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-amzn-revenue-breakdown.png 513w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-amzn-revenue-breakdown-291x300.png 291w" sizes="(max-width: 513px) 100vw, 513px" width="513" height="529"></p>
+<p><em>Chart Source: Amazon Q1 2021 Results Presentation</em></p>
+<p>Importantly, although AWS is a relatively small part of Amazon’s net sales, that segment generates more operating profit than either of the other two segments individually do. It’s their higher-margin cash cow business, even though it’s not what most people think of when they think about Amazon.</p>
+<p>Last week, Jeff Bezos stepped down as CEO of Amazon, but will remain as executive chairman. Andy Jassy, who has worked at Amazon since 1997 and has led Amazon Web Services since inception, is the new CEO.</p>
+<p>Finally for this section, we can glance at Amazon’s balance sheet. Here’s their allocation to cash and long-term debt:</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-amzn-balance-sheet.png" alt="AMZN Balance Sheet" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-amzn-balance-sheet.png 650w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-amzn-balance-sheet-300x198.png 300w" sizes="(max-width: 650px) 100vw, 650px" width="650" height="430"></p>
+<p>Like most of the other Big Tech companies, Amazon has more cash than debt, which gives it a fortress balance sheet.</p>
+<p><strong>Stock Analysis and Valuation</strong></p>
+<p>Amazon stock has spent the last year consolidating in a sideways price action, and just recently it started to break out:</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-amzn-technicals.png" alt="AMZN Technicals" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-amzn-technicals.png 650w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-amzn-technicals-300x259.png 300w" sizes="(max-width: 650px) 100vw, 650px" width="650" height="562"></p>
+<p>Now it might back test, and might fall back into that range. I don’t have a strong opinion over the next few months, since I’m not a technical analyst. But from a fundamental analysis perspective, the breakout does make sense.</p>
+<p>Here’s Amazon’s F.A.S.T. Graph, using operating cash flow:</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-amzn-fastgraph.png" alt="AMZN FASTGraph" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-amzn-fastgraph.png 973w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-amzn-fastgraph-300x180.png 300w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-amzn-fastgraph-768x460.png 768w" sizes="(max-width: 973px) 100vw, 973px" width="973" height="583"></p>
+<p>Amazon has traded at a persistent cash flow multiple almost like clockwork for the past fifteen years. The way F.A.S.T. Graphs measures it, that ratio is about 25x.</p>
+<p>Based on analyst consensus expectations, that would suggest a $5,000 stock price by the end of 2023, or about 35% up from here. That leads us to a short list of three possible outcomes:</p>
+<ol>
+<li>Amazon will reach about $5,000/share by late 2023, adjusting for any stock splits that may or may not occur between now and then under the new CEO.</li>
+<li>Analysts are wrong about forward operating cash flow estimates. Historically, Amazon beats estimates more often than not, but maybe in 2022 and 2023, they fail to do so by a wide margin.</li>
+<li>The stock structurally falls below 25x operating cash flow valuation levels and remains there for years, which would be the first time in the company’s history that it has done that.</li>
+</ol>
+<p>Any of those three outcomes are possible. If there is no major regulatory or tax crackdown on the company, I think the first option is the most likely. On the other hand, if there is a significant regulatory or tax crackdown, then the probability of one or both of the other two options increases.</p>
+<p>Amazon has always been a challenging company to value. Valuing Apple (AAPL), Alphabet (GOOGL), Facebook (FB), and Microsoft (MSFT) has generally been easier. Amazon is uniquely harder because they report lower profit margins than those others, since they always heavily reinvest into the business, and so Amazon’s stock tends to trade at an exorbitant price/earning ratio, but reasonable price/sales and price/cash-flow ratios. Among them, it hasn’t been revenue or earnings that Amazon stock trades on; it’s operating cash flow.</p>
+<p>Here’s the past ten years of operating cash flow and the multiple of cash flow that it trades at, via YCharts:</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-amzn-cfo.png" alt="Amazon Cash Flow Valuation" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-amzn-cfo.png 650w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-amzn-cfo-300x198.png 300w" sizes="(max-width: 650px) 100vw, 650px" width="650" height="430"></p>
+<p>If we look at revenue instead, it’s best to look at it quarterly since it gives us a sense of the calendar cycle:</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-amzn-revenue.png" alt="Amazon Revenue Valuation" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-amzn-revenue.png 650w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-amzn-revenue-300x198.png 300w" sizes="(max-width: 650px) 100vw, 650px" width="650" height="430"></p>
+<p>As we can see from the chart above, Amazon is trading near the higher end of its price/sales ratio valuation range. That conflicts with the previous chart that shows that it trades at the middle end of its price/cash-flow ratio valuation range.</p>
+<p>This conflict is because Amazon’s margins have structurally increased during the decade, and the price has more closely tracked cash flow than revenue.</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-amzn-margins.png" alt="AMZN Margins" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-amzn-margins.png 650w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-amzn-margins-300x198.png 300w" sizes="(max-width: 650px) 100vw, 650px" width="650" height="430"></p>
+<p>As a final valuation check, if we compare Amazon to Apple, which currently has the largest market capitalization of any stock, we can see a long-term trend of Amazon catching up:</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-amzn-aapl-market-cap.png" alt="Amazon Apple Market Cap" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-amzn-aapl-market-cap.png 650w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-amzn-aapl-market-cap-300x198.png 300w" sizes="(max-width: 650px) 100vw, 650px" width="650" height="430"></p>
+<p>This makes sense, considering that Amazon’s revenue eclipsed that of Apple a while ago, and their operating cash flow is about to surpass them as well. Apple reached a market saturation point earlier than Amazon, while Amazon continues at full speed for the time being with a likely larger total addressable market:</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-amzn-aapl-revenue.png" alt="AMZN AAPL Revenue" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-amzn-aapl-revenue.png 650w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-amzn-aapl-revenue-300x214.png 300w" sizes="(max-width: 650px) 100vw, 650px" width="650" height="464"></p>
+<p>However, Apple still of course has the advantage in terms of profitability. They don’t have to reinvest as much into their business, so they generate a lot of free cash flow and plow it into dividends and buybacks. They also issue more debt to buy back their own shares as well, thus boosting per-share metrics and making the capital structure less equity-focused.</p>
+<p>Overall, my base case for the next 3-5 years is that without regulatory action, Amazon will eventually surpass Apple in terms of market capitalization. At the moment, Apple’s market cap is about 30% higher. Keep in mind that both Apple and Amazon (and others) are vulnerable to regulatory actions, not just Amazon.</p>
+<p><strong>Risk Analysis</strong></p>
+<p>Amazon has a wide network effect, with over 200 million Prime subscribers internationally, and growing. Those subscribers are paying a recurring fee for a variety of benefits, related to shipping, music, movies, television shows, and more. It also has massive economies of scale, meaning it has entrenched advantages over rival ecommerce companies by this point.</p>
+<p>The stock is almost without weakness, with the key word being “almost”. Its success could very well pave the path towards its own limit being reached.</p>
+<p><em>Regulatory Crackdown</em></p>
+<p>In my view, the single biggest risk facing Amazon is the prospect for tougher regulations, focused on allegations of anti-competitive practices.</p>
+<p>In a mild case, this could take the form of laws saying that Amazon can’t sell its own branded products on its marketplace. Amazon has access to a ton of data to see what products are selling well, and they can use that data to systemically create their own products to replace successful products on their platform to capture that extra margin and push out the sellers who were making good money. Regulators are starting to frown on that sort of thing, along with other Big Tech companies doing similar things in their own marketplaces. Amazon should be able to withstand that type of regulation without much of a problem, since branded products are not a critical part of their success.</p>
+<p>In a more extreme case, regulators could break out Amazon Web Services from Amazon the ecommerce company. Since the services are so intertwined, that would be a far more complicated impact on the company, and make two very different companies. This happened to Standard Oil in the 1910s, and it happened to AT&amp;T in the 1980s.</p>
+<p>In addition, Amazon and other Big Tech companies could face tighter tax policies, reducing their deductions or imposing additional taxes on them. This would also be a meaningful hit to Amazon and most of the other Big Tech companies if it were to come to pass.</p>
+<p>Basically, if the US does a crackdown on some of these Big Tech names, we’d probably see similar price weakness as we’re seeing in the Chinese mega-caps at the moment.</p>
+<p>My primary risk mitigation at this time is to pick my Big Tech companies individually rather than invest in all of them. I sold out of my Apple position a while back, and more recently trimmed out Alphabet. I remain long Amazon, Facebook, and Microsoft for now, as well as some smaller tech players that don’t have the same regulatory risks.</p>
+<p><em>Public Backlash</em></p>
+<p>Amazon faces growing reports about problematic worker conditions, anti-union activities, and anti-competitive business practices, during a time of broadly rising perceptions about historically high levels of wealth concentration. Amazon is also one of the two largest corporate lobbyists in the US, using money to influence politicians to support them in terms of taxes and regulations.</p>
+<p>Amazon has an employee rating of 3.6/5 on Glassdoor. This is better than Walmart at 3.3, but behind Target and Best Buy at 3.7. It’s also way behind all of its Big Tech peers that rank comfortably above 4, but their workforces are skewed towards higher income professions, making it not an apples-to-apples comparison.</p>
+<p>Bezos, who is worth about $200 billion, is currently building a 417 foot long <a href="https://www.bloomberg.com/news/features/2021-05-07/jeff-bezos-s-new-superyacht-heralds-roaring-market-for-big-boats" target="_blank" rel="noopener">super yacht</a> with multiple sailing masts. He’s also having a support yacht built that will accompany his main yacht to hold all of the stuff that the main yacht can’t hold because of its masts, such as the helicopter, submersibles, etc. Plus, he’s planning on an upcoming space trip via his personal space company.</p>
+<p>Meanwhile, his ex-wife MacKenzie Scott married a teacher from her children’s school and is donating billions to charity, <a href="https://www.cbsnews.com/news/mackenzie-scott-charity-donation-billions/" target="_blank" rel="noopener">saying</a> she’s “attempting to give away a fortune that was enabled by systems in need of change.”</p>
+<p>The optics aren’t great here. There’s a long-term risk of Amazon being affected by boycotts, or voting for and encouraging politicians to accelerate regulatory crackdowns.</p>
+<p>However, Facebook has survived years of the #deletefacebook movement and weathered a multi-billion dollar fine without much of an issue, hitting record revenues and profits along the way, showing how resilient these Big Tech companies tend to be.</p>
+<p><em>Interest Rates and Valuations</em></p>
+<p>A shared risk that all growth stocks face is that their high valuations are in part based on low interest rates persisting for a very long time. I do think interest rates will be held low for a while (despite periodic bursts of inflation), but if interest rates start to structurally increase, that would be a big headwind against Big Tech and other growth stocks.</p>
+<p>Overall, I prefer a value tilt in my portfolios at this time. I think there are plenty of healthcare companies, energy producers, energy transporters, select financials, and select industrials, that offer attractive risk/reward scenarios with significant dividend yields and moderate growth, at normal or below-normal valuations. Among those, I prefer more defensive value companies rather than the more speculative variety at this time.</p>
+<p>That being said, I do like a mix of growth and value companies. And out of the Big Tech companies at this time, I prefer Amazon over the others.</p>
+<h2>Final Thoughts</h2>
+<p>A rather large <a href="https://twitter.com/Not_Jim_Cramer" target="_blank" rel="noopener">anonymous account on Twitter</a> who is followed by many serious people on the platform, known for years for making a lot of investment charts, has been posting a series of bearish divergencies in recent weeks.</p>
+<p>Bears would say they are crash indicators. Bulls would say they are merely spurious correlations. The open-minded skeptic would note that finding back-tested data isn’t too hard, but knowing which ones are actionable, is hard.</p>
+<p>Here’s one of the charts, showing a breakdown in correlation between the NASDAQ 100 and Treasury yields, along with the S&amp;P 500:</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-cramer-tweet-1.png" alt="Cramer Tweet 1" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-cramer-tweet-1.png 609w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-cramer-tweet-1-281x300.png 281w" sizes="(max-width: 609px) 100vw, 609px" width="609" height="651"></p>
+<p>Here’s another one, showing clusters of times where the S&amp;P 500 closed at an all-time high while the majority of stocks are below their 50-day moving average (indicating really bad breadth, the market being held up by just a few mega-caps):</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-cramer-tweet-2.png" alt="Cramer Tweet 2" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-cramer-tweet-2.png 606w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-cramer-tweet-2-269x300.png 269w" sizes="(max-width: 606px) 100vw, 606px" width="606" height="677"></p>
+<p>I like making doom charts too. Here’s one showing US stock market (in red) vs the spread between junk bond and safe Treasury yields (in blue). As the chart shows, the market tends to be toppy when junk bond spreads are low (indicating excessive optimism and complacency), and tends to bottom during extreme pessimism. Combined with near-record high valuations, this isn’t a great look:</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-doom-chart.png" alt="Doom Chart" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-doom-chart.png 700w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-doom-chart-300x193.png 300w" sizes="(max-width: 700px) 100vw, 700px" width="700" height="450"></p>
+<p><em>Chart Source: St. Louis Fed</em></p>
+<p>Historically, it’s not when junk bond spreads get very low that one needs to worry, but rather when they get very low<em> and then start to rise</em>.</p>
+<p>The problem now, however, is that because the market is more leveraged than it used to be, and with more algorithmic trading and more dependence on monetary policy support, the reversals happen more quickly. In the past three years, the junk bond spread suddenly shoots straight up and the stock market shoots straight down, rather than forming a rolling top in stock prices.</p>
+<p>In other words, there’s indeed some crash risk with this much investor complacency.</p>
+<p>The S&amp;P 500 has already far outpaced expected forward earnings for the index:</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-spx-fastgraph.png" alt="SPX FASTGraph" srcset="https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-spx-fastgraph.png 973w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-spx-fastgraph-300x180.png 300w, https://www.lynalden.com/wp-content/uploads/premium-2021-7-11-spx-fastgraph-768x462.png 768w" sizes="(max-width: 973px) 100vw, 973px" width="973" height="585"></p>
+<p><em>Chart Source: F.A.S.T. Graphs</em></p>
+<p>What that chart is suggesting is that either earnings need to beat forward analysis consensus expectations by a lot, or stock prices need to correct/consolidate for a while and let earnings catch back up, or stocks need to remain at persistently elevated valuations in the years ahead.</p>
+<p>Overall, I think it’s a good time to review your portfolio and ensure that you are comfortable with your holdings. See if the fundamentals support the price. Consider out-of-favor sectors like healthcare or midstream, or stocks that have already corrected or consolidated for a decent period of time. While cash does yield below the inflation rate and is generally undesirable, having some of it around in these types of complacent environments is useful.</p>
+<p>_____</p>
+<p>All of the analysis in this research report is presented for informational purposes about investments in general and does not constitute investment advice.</p>
+<p>Individuals have unique circumstances, goals, and risk tolerances, so you should consult a certified investment professional and/or do you own due diligence before making investment decisions. Certified professionals can provide individualized investment advice tailored to your unique situation. This research report is for general investment information only, is not individualized, and as such does not constitute investment advice.</p>
+<p>Every effort is made to ensure that the research content in this report is accurate, but accuracy cannot be guaranteed and all information is presented “as is”. Investors should consult multiple sources of information when analyzing investments.</p>
+<p>Investments may lose value. Investors should use proper diversification and maintain appropriate position sizes when managing their investments.</p>
+<p>_____</p>
+<p>Thanks for reading. You can go back to the&nbsp;<a href="https://www.lynalden.com/members/">members area</a>&nbsp;to look at the stock list, portfolios, or other articles.</p>
+<p>Best regards,</p>
+<p><img loading="lazy" src="https://www.lynalden.com/wp-content/uploads/Lyn-Alden-Signature.png" alt="Lyn Alden Signature" width="204" height="126"></p>
+
+
+</div></article></main></div></div>
+  <span></span> <!-- for IntersectionObserver -->
+  
+  
+  
+  
+
+
+</body><style>body {
+      font-size:  20px;
+      font-family: Helvetica, Arial, sans-serif;
+      width: 950px;
+    }
+    .page {
+      line-height: 30.0px;
+    }
+    h1, h2, h3 {
+      line-height: initial;
+    }</style></html>
