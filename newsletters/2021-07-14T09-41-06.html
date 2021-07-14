@@ -1,0 +1,329 @@
+<html><head><title>12min :: Reader View</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+html {
+  overflow: overlay;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 30px auto 0 auto;
+  padding: 10px;
+}
+body[data-mode="light"] {
+  color:  #222;
+  border-color: %light-color%;
+  background-color:  whitesmoke;
+}
+body[data-mode="dark"] {
+  color:  #eee;
+  border-color: %dark-color%;
+  background-color:  #333;
+}
+body[data-mode="sepia"] {
+  color:  #5b4636;
+  border-color: %sepia-color%;
+  background-color:  #f4ecd8;
+}
+body[data-mode="solarized-light"] {
+  color:  #586e75;
+  border-color: %solarized-light-color%;
+  background-color:  #fdf6e3;
+}
+body[data-mode="nord-light"] {
+  color:  #2e3440;
+  border-color: %nord-light-color%;
+  background-color:  #e5e9f0;
+}
+body[data-mode="groove-dark"] {
+  color:  #cec4ac;
+  border-color: %groove-dark-color%;
+  background-color:  #282828;
+}
+body[data-mode="solarized-dark"] {
+  color:  #93a1a1;
+  border-color: %solarized-dark-color%;
+  background-color:  #002b36;
+}
+body[data-mode="nord-dark"] {
+  color:  #e5e9f0;
+  border-color: %nord-dark-color%;
+  background-color:  #2e3440;
+}
+@media print {
+  body[data-mode="light"],
+  body[data-mode="dark"],
+  body[data-mode="sepia"],
+  body[data-mode="solarized-light"],
+  body[data-mode="nord-light"],
+  body[data-mode="groove-dark"],
+  body[data-mode="solarized-dark"],
+  body[data-mode="nord-dark"] {
+    color: #000;
+    border-color: #000;
+    background-color: #fff;
+  }
+}
+body[data-loaded=true] {
+  
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+img:not([width])[src$=".svg"] {
+  max-width: 100px;
+}
+body[data-images=false] canvas,
+body[data-images=false] svg,
+body[data-images=false] img {
+  display: none;
+}
+a {
+  color: #0095dd;
+  text-decoration: none;
+}
+#reader-domain {
+  font-family: Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  border-bottom-color: currentcolor;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: inline-block;
+  direction: ltr;
+}
+#reader-domain > span:first-child {
+  font-size: 1.1em;
+}
+#reader-domain > span:last-child {
+  font-size: 0.8em;
+}
+#reader-title {
+  font-size: 1.6em;
+  line-height: 1.25em;
+  width: 100%;
+  margin: 20px 0;
+  padding: 0;
+}
+#reader-credits,
+#doi,
+#published-time,
+#reader-estimated-time {
+  font-size: 0.85em;
+  line-height: 1.48em;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+#reader-credits:not(:empty)::after {
+  content: ' ⋮ ';
+}
+#published-time:not(:empty)::before {
+  content: ' ⋮ ';
+}
+#doi-json {
+  overflow: hidden;
+}
+#doi-json code {
+  overflow: auto;
+  max-height: 400px;
+}
+#published-time:empty,
+#reader-credits:empty {
+  display: none;
+}
+body[data-speech="true"] .tts-box {
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  height: 32px;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: 0 0 0 1000vw rgba(128, 128, 128, 0.2);
+}
+body[data-speech="true"] .tts-word {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  background-color: red;
+  height: 2px;
+}
+.tts-word.hidden,
+.tts-box.hidden {
+  display: none;
+}
+body[data-speech="false"] .tts-speaking::after {
+  display: none;
+}
+mark.hghlght {
+  background-color: #ffff81;
+}
+.hidden {
+  display: none;
+}
+</style>
+  <style id="user-css">body {
+  padding-bottom: 64px;
+}
+a:visited {
+  color: #d33bf0;
+}
+a:link, a:link:hover, a:link:active, a:link * {
+  color: #0095dd;
+}
+a:link {
+  text-decoration: none;
+  font-weight: normal;
+}
+pre {
+  white-space: pre-wrap;
+}
+pre code {
+  background-color: #eff0f1;
+  color: #393318;
+  font-family: monospace;
+  display: block;
+  padding: 5px 10px;
+}
+body[data-mode="dark"] pre code {
+  background-color: #585858;
+  color: #e8e8e8;
+}
+
+/* CSS for sans-serif fonts */
+body[data-font=sans-serif] {}
+/* CSS for serif fonts */
+body[data-font=serif] {}
+
+/* CSS for "sepia" theme */
+body[data-mode=sepia] {
+}
+/* CSS for "light" theme */
+body[data-mode=light] {}
+/* CSS for "dark" theme */
+body[data-mode=dark] {}</style>
+</head>
+<body data-images="true" data-mode="light" data-font="sans-serif" data-loaded="true">
+  <span></span> <!-- for IntersectionObserver -->
+  <a id="reader-domain" href="https://web.12min.com/microbook/60659">
+    <span>web.12min.com</span>
+    <span>/microbook/60659</span>
+  </a>
+  <h1 dir="auto" id="reader-title">12min</h1>
+  <span dir="auto" id="reader-credits">Scott Belsky</span>
+  <span dir="auto" id="reader-estimated-time">12-15 minutes</span>
+  <span dir="auto" id="published-time"></span>
+  <hr>
+  <div id="readability-page-1" class="page"><div data-v-0769b40a=""><p>Even if you know only a little about Malcolm Gladwell, you’ve probably already heard a lot about one concept he made quite popular in his third book, “Outliers” – the so-called “10,000-Hour Rule.” The basic idea behind it is quite simple: if you want to become an expert, you need about 10,000 hours of “deliberate practice.” The sooner you start practicing – the earlier you’ll grow into a virtuoso performer. That’s it: the simple secret of mastery.</p>
+
+<p>According to David Epstein, however, this might not be the smartest way to go through life nowadays. Though he too believes that getting a head start and specializing in something from an early age works every so often – most of the time, he says, it has detrimental effects. And, believe it or not, Malcolm Gladwell – of all people – seems to agree. “For reasons I cannot explain,” he writes, “ Epstein manages to make me thoroughly enjoy the experience of being told that everything I thought about something was wrong.”</p>
+
+<p>Yup, it’s time we made you question your old belief system once again by way of Epstein’s marvelously iconoclastic “Range.” So, get ready to discover why it is not the masters – but the jacks-of-all-trades who shall inherit the world!</p>
+
+<h2>A story of two boys</h2>
+
+<p>The U.S. Centers for Disease Control and Prevention lists kicking a ball and standing on tiptoe as physical developmental milestones for a 2-year-old child. However, the first boy from our story, at that very same age, was already able to use “a club tall enough to reach his shoulder to drive a ball past an admiring Bob Hope” on national TV! That same year, he entered his first tournament and won against children much older than him.</p>
+
+<p>The very next year, this boy was capable of playing out of a “sand trap” and already boasted a score that many people can only dream of: 48, 11 over par, for 9 holes at a golf course in California. Five years later, the boy beat his father for the first time, even though his father had been an outstanding athlete himself, playing baseball in college as the only black player in the entire conference. The father didn’t mind: he was already aware that his son was the “Chosen One.” Not only he had the talent, but he also had the perfect kind of father to guide him toward greatness.</p>
+
+<p>The mother of the second boy from our story was a coach by profession – but, interestingly enough, she never coached her son. In fact, for all intents and purposes, he had a pretty regular childhood, playing everything from basketball and handball to soccer and table tennis. He also dabbled in skiing, swimming, wrestling, and skateboarding.</p>
+
+<p>One day, he discovered liking sports played with a ball more. Nearing his teens, he started gravitating toward one particular sport: tennis. He still liked playing soccer, though, and by the time he had given up that sport as well, most of the other kids at his age had long since been working with strength coaches, sports psychologists, and nutritionists. It didn’t matter in the long run: just like the kid from the first story, he too became the greatest.</p>
+
+<p>In 2006, these two boys met for the first time and immediately connected. “I’ve never spoken with anybody who was so familiar with the feeling of being invincible,” the second boy would later describe this encounter. He was pretty aware of the differences between the two as well. “His story is completely different from mine,” he added later on for a biographer. “Even as a kid, his goal was to break the record for winning the most majors. I was just dreaming of just once meeting Boris Becker or being able to play at Wimbledon some time.”</p>
+
+<p>And, indeed – though the success of the first boy was all but inevitable considering his upbringing, it seems pretty unusual that our second example was at least as dominant in his sport of choice as the first. How did he do it? Was it against the odds? Or is there something more to it?</p>
+
+<h2>Specialists vs generalists</h2>
+
+<p>By now, you’ve almost certainly guessed the identity of the two boys in question: Tiger Woods and Roger Federer. For Epstein, they are much more than just household names, much more than exceptional sportsmen, much more than the two most dominant athletes of the 20th century. Namely, they are symbols, real-life embodiments of two very different philosophies of life, and two very different approaches toward education.</p>
+
+<p>Tiger Woods is, of course, the “archetypal specialist,” the undeniable proof of the veracity of Gladwell’s 10,000-hours rule. He has “come to symbolize the idea that the quantity of deliberate practice determines success—and its corollary, that the practice must start as early as possible.”</p>
+
+<p>Roger Federer, on the other hand, is the “typical generalist.” He chose to focus on tennis only after he was well into his teens. Unlike Woods, thousands of kids had a head start on Federer, but, for some reason, none of them managed to become the No. 1 tennis player in the world.</p>
+
+<p>No one would blame you for thinking that Federer’s story is the exception, but, believe it or not, it is Wood’s. “The professed necessity of hyperspecialization forms the core of a vast, successful, and sometimes well-meaning marketing machine, in sports and beyond,” writes Epstein. “In reality, the Roger path to sports stardom is far more prevalent than the Tiger path, but those athletes’ stories are much more quietly told if they are told at all.”</p>
+
+<p>For example, have you heard of Vasyl Lomachenko, the current No. 1 pound-for-pound boxer in the world? Even if you have, do you know that he took four years off boxing as a kid to learn traditional Ukrainian dance? And what about Ester Ledecká, the first woman ever to win gold in two different sports (skiing and snowboarding) at the same Winter Olympics? Should we even remind you of LeBron James, Tom Brady, or Nick Foles – all of them exceptionally successful in at least one other sport besides the one they’re famous for?</p>
+
+<p>Finally, how much do you know about the German national soccer team that won the FIFA World Cup in 2014? Has anybody told you that it consisted (almost exclusively) of late specializers who didn’t play more organized soccer than amateur-league players until age 22 or later? We know what you’re thinking: how can that be? What’s the catch? And does it apply outside sports as well?&nbsp;</p>
+
+<h2>Experience vs performance</h2>
+
+<p>Questions, we turn to the findings of Gary Klein and Daniel Kahneman, two pioneers in the study of human decision making.&nbsp;</p>
+
+<p>Klein studied for years firefighting and naval recruits and realized that between 80 and 95 percent of their decisions are made “instinctively and in seconds.” His experiments discovered why and how this happens: apparently, these people tend to recognize repeating patterns. The more experienced they are, the more capable of seeing the patterns – even if unconsciously. Thus, capable of choosing a common course of action – usually the first one to come to mind.</p>
+
+<p>So, something like chess players. “I see a move, a combination, almost instantly,” said Garry Kasparov, arguably the greatest chess player in history, to the author of this book, betting that most grandmasters “usually make the move that springs to mind in the first few seconds of thought.”</p>
+
+<p>Kahneman, however, discovered something far more peculiar than this. Working as a young lieutenant in the psychology unit of the Israel Defense Forces, he noticed that neither he nor his colleagues were able to correctly assess an officer candidate, no matter how many times they tried. Even after years of assessing, they were still barely better than an average human blind-guessing. The experience didn’t make them any better than beginners; there was a “complete lack of connection between the statistical information and the compelling experience of insight.”</p>
+
+<p>So, who was right: Klein or Kahneman? Does experience inevitably make one better in his field, or does it not affect on performance after a certain point? To answer these questions, Kahneman and Klein decided to collaborate on a paper in 2009. Interestingly enough, they discovered that both of them had been right all along.</p>
+
+<h2>Kind vs wicked learning environments</h2>
+
+<p>In essence, focused training and narrow experience matter – but only in certain domains and certain learning environments. In others, they are disadvantages.</p>
+
+<p>Think of golf, chess, playing the guitar, or programming. When you make a mistake, in all of these disciplines, you instantly know that you’ve made a mistake, and you try to correct it on your second attempt. Repeat this for years, and you’re bound to become an expert. Trial-and-error “deliberate” learners thrive in such circumstances where “patterns repeat over and over, and feedback is extremely accurate and usually very rapid.” That’s why these learning environments are called kind.</p>
+
+<p>However, this doesn’t work as well in the so-called “wicked learning environments,” where “the rules of the game are often unclear or incomplete.” In such environments, “there may or may not be repetitive patterns and they may not be obvious,” and “feedback is often delayed, inaccurate, or both.”</p>
+
+<p>Think of poetry or graphic design, or, even better, of political trends and the market. How do you know if a verse is good or not, or whether you’ve made the right prediction? Even better: when can you realize your supposed mistake at the earliest? Is the feedback fast enough to help you learn from it? Are there instantly recognizable patterns under which you can easily correct your errors?</p>
+
+<h2>A brief manual for becoming a generalist</h2>
+
+<p>All of the above questions are, of course, rhetorical, and they all form the basis of Epstein’s main argument. Namely, that specialization is outdated – because it mostly works in areas where humans will probably be replaced by robots soon. A much better way to achieve something in the world of tomorrow is by allowing yourself to become a jack-of-all-trades before you naturally start investing your time and attention into one particular discipline. The following three suggestions should help you on this journey:</p>
+
+<h3>No. 1. Experiment</h3>
+
+<p>Sample everything from math and physics to dancing and playing the guitar! The disorderly path of experimentation pays off in the long run. It’s not a coincidence that Nobel laureates in science are 22 times more likely to have artistic pursuits outside their field than their less-recognized peers!</p>
+
+<p>As Epstein says, “experimentation is not a tidy prescription, but it is common, and it has advantages, and it requires more than the typical motivational-poster lip service to a tolerance for failure. Breakthroughs are high variance.”</p>
+
+<p>So, test and try out new and different things, constantly creating, manufacturing, and generating artifacts. The more work you produce, the higher the chances that you’ll churn out a dud, but also, the higher the chances of a supernova success!</p>
+
+<h3>No. 2. Don’t feel behind</h3>
+
+<p>Two letters make so much difference, don’t they? Usually, people advise other people not to fall behind, but Epstein says quite the opposite: don’t feel behind no matter where you are in your life.</p>
+
+<p>Don’t be Julius Caesar, who broke down in tears upon seeing a statue of Alexander the Great when he was a young man. “Alexander at my age had conquered so many nations, and I have all this time done nothing that is memorable,” he supposedly said. But shortly, he became the ruler of an empire even greater than that of Alexander, and this concern was a distant memory.</p>
+
+<p>“Compare yourself to yourself yesterday,” suggests Epstein, “not to younger people who aren’t you. Everyone progresses at a different rate, so don’t let anyone else make you feel behind. You probably don’t even know where exactly you’re going, so feeling behind doesn’t help.”</p>
+
+<h3>No. 3. Remember that there is nothing wrong with specialization</h3>
+
+<p>Though head starts are overrated and “mental meandering and personal experimentation” are exceptional sources of power, don’t forget that there is nothing inherently wrong with specialization.&nbsp;</p>
+
+<p>So, don’t be a generalist all your life: once you know what you want to do the most, start specializing in that area and try to be the best that you can be in it. Your other experiences should inevitably help you in this endeavor.</p>
+
+<h2>Final Notes</h2>
+
+<p>Dubbed “groundbreaking” and “urgent,” David Epstein’s “Range” challenges a notion that not many believe as challengeable – namely, that specialization is the only path to excellence.</p>
+
+<p>And Epstein does this in such a compelling manner that even the main advocates of the opposite have been sufficiently convinced and have wholeheartedly endorsed this book.</p>
+
+<p>To quote bestselling author and psychologist Adam Grant, “Range” is “a captivating read that will leave you questioning the next steps in your career – and the way you raise your children.” To be frank – at least to us – this doesn’t seem like an exaggeration.</p>
+
+<h2>12min Tip</h2>
+
+<p>Be it a partner or a career, one day you’ll inevitably attach to something. To make the right choice, be sure to test out things beforehand.</p>
+</div></div>
+  <span></span> <!-- for IntersectionObserver -->
+  
+  
+  
+  
+
+
+</body><style>body {
+      font-size:  20px;
+      font-family: Helvetica, Arial, sans-serif;
+      width: 950px;
+    }
+    .page {
+      line-height: 30.0px;
+    }
+    h1, h2, h3 {
+      line-height: initial;
+    }</style></html>
