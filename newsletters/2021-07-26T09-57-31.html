@@ -1,0 +1,379 @@
+<html><head><title>12min :: Reader View</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+html {
+  overflow: overlay;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 30px auto 0 auto;
+  padding: 10px;
+}
+body[data-mode="light"] {
+  color:  #222;
+  border-color: %light-color%;
+  background-color:  whitesmoke;
+}
+body[data-mode="dark"] {
+  color:  #eee;
+  border-color: %dark-color%;
+  background-color:  #333;
+}
+body[data-mode="sepia"] {
+  color:  #5b4636;
+  border-color: %sepia-color%;
+  background-color:  #f4ecd8;
+}
+body[data-mode="solarized-light"] {
+  color:  #586e75;
+  border-color: %solarized-light-color%;
+  background-color:  #fdf6e3;
+}
+body[data-mode="nord-light"] {
+  color:  #2e3440;
+  border-color: %nord-light-color%;
+  background-color:  #e5e9f0;
+}
+body[data-mode="groove-dark"] {
+  color:  #cec4ac;
+  border-color: %groove-dark-color%;
+  background-color:  #282828;
+}
+body[data-mode="solarized-dark"] {
+  color:  #93a1a1;
+  border-color: %solarized-dark-color%;
+  background-color:  #002b36;
+}
+body[data-mode="nord-dark"] {
+  color:  #e5e9f0;
+  border-color: %nord-dark-color%;
+  background-color:  #2e3440;
+}
+@media print {
+  body[data-mode="light"],
+  body[data-mode="dark"],
+  body[data-mode="sepia"],
+  body[data-mode="solarized-light"],
+  body[data-mode="nord-light"],
+  body[data-mode="groove-dark"],
+  body[data-mode="solarized-dark"],
+  body[data-mode="nord-dark"] {
+    color: #000;
+    border-color: #000;
+    background-color: #fff;
+  }
+}
+body[data-loaded=true] {
+  
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+img:not([width])[src$=".svg"] {
+  max-width: 100px;
+}
+body[data-images=false] canvas,
+body[data-images=false] svg,
+body[data-images=false] img {
+  display: none;
+}
+a {
+  color: #0095dd;
+  text-decoration: none;
+}
+#reader-domain {
+  font-family: Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  border-bottom-color: currentcolor;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: inline-block;
+  direction: ltr;
+}
+#reader-domain > span:first-child {
+  font-size: 1.1em;
+}
+#reader-domain > span:last-child {
+  font-size: 0.8em;
+}
+#reader-title {
+  font-size: 1.6em;
+  line-height: 1.25em;
+  width: 100%;
+  margin: 20px 0;
+  padding: 0;
+}
+#reader-credits,
+#doi,
+#published-time,
+#reader-estimated-time {
+  font-size: 0.85em;
+  line-height: 1.48em;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+#reader-credits:not(:empty)::after {
+  content: ' ⋮ ';
+}
+#published-time:not(:empty)::before {
+  content: ' ⋮ ';
+}
+#doi-json {
+  overflow: hidden;
+}
+#doi-json code {
+  overflow: auto;
+  max-height: 400px;
+}
+#published-time:empty,
+#reader-credits:empty {
+  display: none;
+}
+body[data-speech="true"] .tts-box {
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  height: 32px;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: 0 0 0 1000vw rgba(128, 128, 128, 0.2);
+}
+body[data-speech="true"] .tts-word {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  background-color: red;
+  height: 2px;
+}
+.tts-word.hidden,
+.tts-box.hidden {
+  display: none;
+}
+body[data-speech="false"] .tts-speaking::after {
+  display: none;
+}
+mark.hghlght {
+  background-color: #ffff81;
+}
+.hidden {
+  display: none;
+}
+.note {
+  position: absolute;
+  z-index: 10;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 5px;
+  min-width: 32px;
+  min-height: 32px;
+}
+.note:focus {
+  z-index: 11;
+}
+</style>
+  <style id="user-css">body {
+  padding-bottom: 64px;
+}
+a:visited {
+  color: #d33bf0;
+}
+a:link, a:link:hover, a:link:active, a:link * {
+  color: #0095dd;
+}
+a:link {
+  text-decoration: none;
+  font-weight: normal;
+}
+pre {
+  white-space: pre-wrap;
+}
+pre code {
+  background-color: #eff0f1;
+  color: #393318;
+  font-family: monospace;
+  display: block;
+  padding: 5px 10px;
+}
+body[data-mode="dark"] pre code {
+  background-color: #585858;
+  color: #e8e8e8;
+}
+
+/* CSS for sans-serif fonts */
+body[data-font=sans-serif] {}
+/* CSS for serif fonts */
+body[data-font=serif] {}
+
+/* CSS for "sepia" theme */
+body[data-mode=sepia] {
+}
+/* CSS for "light" theme */
+body[data-mode=light] {}
+/* CSS for "dark" theme */
+body[data-mode=dark] {}</style>
+</head>
+<body tabindex="1" data-images="true" data-mode="light" data-font="sans-serif" data-loaded="true">
+  <span></span> <!-- for IntersectionObserver -->
+  <a id="reader-domain" href="https://web.12min.com/en/microbook/60483">
+    <span>web.12min.com</span>
+    <span>/en/microbook/60483</span>
+  </a>
+  <h1 dir="auto" id="reader-title">12min</h1>
+  <span dir="auto" id="reader-credits">George Samuel Clason</span>
+  <span dir="auto" id="reader-estimated-time">12-15 minutes</span>
+  <span dir="auto" id="published-time"></span>
+  <hr>
+  <div id="readability-page-1" class="page"><div data-v-0769b40a=""><p>First published almost a century ago, “The Richest Man in Babylon” by George Samuel Clason – a moderately successful map-maker whose business got crushed by the Great Depression – is a collection of pseudo-ancient fables and parables, which, though set in ancient Babylon, are said to be applicable even in the business and financial world of today.</p>
+
+<p>A comprehensive, unique, and insightful book, Clason’s timeless classic (essentially, a compendium of previously published pamphlets) appeared just three years before the stock market crash of 1929 and served as both a consolation and a recovery manual to millions of American families during the bleak 1930s.</p>
+
+<p>Though brief, novellike and even confusing at first glance – and maybe shallow and repetitive at second – ”The Richest Man in Babylon” has remained in print until today and is often found on relevant reading lists, such as CNBC’s “12 Books to Read If You Want to Get Rich” or Wall Street Journal’s “The Best Book for Investors.”</p>
+
+<p>Care to find out more about the reasons behind its relevance and appeal? Read ahead!</p>
+
+<h2>The man who desired gold meets the richest man in Babylon</h2>
+
+<p>The parables that contain the financial bits of advice in Clason’s book are framed within a story that concerns two friends living in ancient Babylon: Bansir, the chariot builder, and his best friend, Kobbi, a musician.</p>
+
+<p>Both of them are great at their professions, but neither has earned enough money to live a comfortable life. Bansir is especially sad because he feels like he won’t ever be able to provide for his family. He would like to buy finer things to the family but lives on a fixed income that never seems to be enough to satisfy even their basic needs, let alone amass the family a fortune in the near future. “Though we call ourselves free men,” Bansir says to Kobbi, “we seem to be living slavish lives. Working, working, working! Getting nowhere.”</p>
+
+<p>“Might we not find out how others acquire gold and do as they do?” Kobbi asks and almost immediately recalls meeting an old friend of the two who might be able to help them.</p>
+
+<p>This old friend of Bansir and Kobbi is none other than Arkad, the richest man in Babylon, a man so wealthy that he not only rides a golden chariot but also sometimes even lends the king money, who constantly seeks “his golden aid in affairs of the treasury.”</p>
+
+<p>Arkad wasn’t always rich, however. He started as a menial laborer just like Bansir and Kobbi but managed to accumulate his fabulous fortune through perseverance, determination, and smart investments.</p>
+
+<p>What’s more, he also taught his knowledge to his son Nomasir, who went to Nineveh in the meantime and became, without the aid of the father, one of the richest men in that city.</p>
+
+<p>So, definitely, there is something Bansir and Kobbi are missing, some hidden knowledge that Arkad has gotten hold of and bears results. But since “it costs nothing to ask wise advice from a good friend,” before too long, the two set out on a journey to the palace of Arkad.</p>
+
+<h2>A part of all you earn is yours to keep</h2>
+
+<p>Kobbi and Bansir are right: Arkad does know the secret of success and is willing to reveal it to them for free—for he too was once a poor man and would have remained one if he hadn’t learned it from someone else.</p>
+
+<p>Being the son of a humble merchant and not being endowed “with superior powers of wisdom,” Arkad realized, early on life, that if he was to achieve what he desired (to become a rich man living a comfortable life), “time and study would be required.” To read even while working, Arkad found employment as a scribe in the hall of records, and one day Lady Fortune smiled upon him.</p>
+
+<p>Algamish, a rich moneylender, came to the house of the city master and ordered a copy of the Ninth Law. “I must have this in two days,” he said to Arkad, “and if the task is done on time, two coppers I will give to thee.”</p>
+
+<p>When Algamish returned, on the night of the second day, the Ninth Law wasn’t finished. Arkad, though, had a proposal: “Algamish, you are a very rich man. Tell me how I may also become rich, and all night I will carve upon the clay, and when the sun rises it shall be completed.”</p>
+
+<p>Algamish agreed and, since Arkad fulfilled his part of the bargain, he solemnly revealed to him the main secret: “I found the road to wealth when I decided that <em>a part of all I earned was mine to keep</em>.”</p>
+
+<p>Algamish explained further that many people make the mistake of paying everyone else but themselves, which should always be your priority if you want to become rich. For if you keep yourself just one-tenth of all you earn, in ten years you’ll have saved at least as much as you earn in one year.&nbsp;</p>
+
+<p>At least because “every gold piece you save is a slave to work for you,” that is to say, everything you’ve saved you can (and <em>should</em>) invest. After all, even the Bible says so, just read again the parable of the talents and see for yourself!</p>
+
+<h2>Why trust the knowledge of a brickmaker about jewels?</h2>
+
+<p>As seeing it was more than reasonable, Arkad then decided to try Algamish’s strategy. So, each time he was paid, he took one from every ten pieces of copper and hid it away.&nbsp;</p>
+
+<p>Strangely enough, this didn’t affect his standard of life at all: he noticed just a little difference but managed to get along without it just fine. Even though he was tempted from time to time to spend his savings on some of the good things displayed by the merchants, he wisely refrained for a whole year, when, per Algamish’s advice, he decided to make his coppers his slaves and invested his money.</p>
+
+<p>When Algamish came back to see how his disciple was doing, Arkad proudly told him that he did everything he was supposed to. On being asked how he invested his savings, Arkad told Algamish that he gave it to Azmur, the brickmaker.</p>
+
+<p>“He told me that he was traveling over the far seas and in Tyre he would buy for me the rare jewels of the Phoenicians,” Arkad said to Algamish. “When he returns, we shall sell these at high prices and divide the earnings.”</p>
+
+<p>“Every fool must learn,” Algamish growled, “but why trust the knowledge of a brickmaker about jewels? Would you go to the breadmaker to inquire about the stars? No, by my tunic, you would go to the astrologer, if you had the power to think.”</p>
+
+<p>And that was Algamish’s second lesson, one which is still as valid as six millennia ago: <em>you should only entrust your savings to people who know how to use them</em>.&nbsp;</p>
+
+<p>You see, everybody gives away bits of advice nowadays, but most of it doesn’t make sense because it comes from people who have neither the knowledge nor the familiarity to give it.&nbsp;</p>
+
+<p>And, Algamish says it best when he says that “he who takes advice about his savings from one who is inexperienced in such matters, shall pay with his savings for proving the falsity of their opinions.”</p>
+
+<h2>Seven cures for a lean purse</h2>
+
+<p>Years later, having built upon the knowledge Algamish shared with him through his own experience, Arkad developed a whole wealth-building system and was happy to reveal it to Bansir and Kobbi.&nbsp;</p>
+
+<p>The system was, in fact, nothing more but an elucidation of “the seven cures for a lean purse,” which, in turn, strictly obeys the so-called “five laws of gold” – both of them ancient, both of them timeless. Allow us to share those cures with you!&nbsp;</p>
+
+<h4>The First Cure: start thy purse to fattening (or: pay yourself first)</h4>
+
+<p>This is the basic rule of the game, the thing that made Algamish a moneylender and gave Arkad a new direction in life. Arkad advises what he had been advised once: save 10% of your annual income, and already by the end of the first year, you’ll feel happy and satisfied that your purse isn’t lean anymore.</p>
+
+<h4>The Second Cure: control thy expenditures (or: live below your means)</h4>
+
+<p>As Thomas J. Stanley and William D. Danko would reveal seven decades after Clason in “The Millionaire Next Door,” the rich are usually rich because they don’t live luxuriously.&nbsp;</p>
+
+<p>The problem with luxuries, Arkad explains to his friends, is that –&nbsp; in time – they become necessities. "What each of us calls our 'necessary expenses,'” he says, “will always grow to equal our incomes unless we protest to the contrary.”</p>
+
+<p>So, don’t you ever confuse necessary expenses with your needs and desires!</p>
+
+<h4>The Third Cure: make thy gold multiply (or: make your money your slave)</h4>
+
+<p>If you want to start earning money without working for it, you have to make your money work for you instead. Just like a man can earn more if he hires slaves or he has his sons to work beside him, you can earn more if you treat your money in much the same manner.</p>
+
+<p>So, start investing! Make your gold your slave and make its children and its children's children work for you – as Arkad says, with the right set of mind, gold tends to multiply fast.</p>
+
+<h4>The Fourth Cure: guard thy treasures from loss (or: invest only in things you understand)</h4>
+
+<p>But bear in mind that it is not at all smart to invest in get-rich-quick projects because experience has shown that these things never work.</p>
+
+<p>Anticipating one of the most often given bits of advice by Warren Buffett, Arkad suggests to his friends to study carefully each assurance that their treasure may be safely reclaimed – before even parting with it.&nbsp;</p>
+
+<p>Do not allow yourself to be misled by your own romantic desires to make wealth rapidly: the only way to wealth is the slow and smart one.</p>
+
+<h4>The Fifth Cure: make of thy dwelling a profitable investment (or: buy – don't rent)</h4>
+
+<p>According to Arkad, the only difference between rent and mortgage is that, in the first case, you’re investing in yourself, and in the second, you’re giving away your money to someone else.</p>
+
+<p>Don’t do the latter: buy a home, and make your home profitable, by setting your business inside it.&nbsp;</p>
+
+<h4>The Sixth Cure: ensure a future income (or: have a retirement plan)</h4>
+
+<p>Of course, Arkad is very much aware that youth is just a phase of life, and that strength is not a trait of old age, so he advises his friends to start saving for retirement as soon as possible.</p>
+
+<p>He also says that it is wise to make preparations for your family as well, because there will inevitably come a day when you are no longer with them to comfort and support you. And who knows when that day will be!</p>
+
+<h4>The Seventh Cure: increase thy ability to earn (or: invest in yourself)</h4>
+
+<p>Once again channeling his best Buffett, Arkad advises Kobbi and Bansir to never stop learning. The subject doesn’t even matter. "The more of wisdom we know, the more we may earn,'' he says, and "the man who seeks to learn more of his craft shall be richly rewarded.”</p>
+
+<h2>The five laws of gold</h2>
+
+<p>The seven cures for a lean purse explicated above are for all times because, according to both Arkad and Clason, they are firmly rooted within the five immutable laws of gold.</p>
+
+<p>We share with you these almost verbatim – though we intervened here and there to modernize the spelling and to make them sound less biblical (as if that’s possible):</p>
+
+<ol>
+	<li>Gold comes gladly and in increasing quantity to any person who will put by not less than one-tenth of their earnings to create an estate for their future and that of their family.</li>
+	<li>Gold labors diligently and contentedly for the wise owner who finds for it profitable employment, multiplying even as the flocks of the field.</li>
+	<li>Gold clings to the protection of the cautious owner who invests it under the advice of people wise in its handling.</li>
+	<li>Gold slips away from those who invest it in businesses or purposes with which they are not familiar or which are not approved by those skilled in its keep.</li>
+	<li>Gold flees the people who would force it to impossible earnings or who follows the alluring advice of tricksters and schemers or who trusts it to their own inexperience and romantic desires in investment.</li>
+</ol>
+
+<h2>Final Notes</h2>
+
+<p>Both “a great gift for a graduate” and a “refreshing read for even the most experienced investor” (according to the Los Angeles Times), “The Richest Man in Babylon” may be just a little more than a collection of commonsense financial advice, but it is great precisely because of it.</p>
+
+<p>In a world laden with get-rich-quick schemes, it is always uplifting to come across a book on finances that, if not anything else, doesn’t tell too many lies. And Clason’s classic is precisely that kind of a book.</p>
+
+<h2>12min Tip</h2>
+
+<p>Pay yourself first and invest only in things and endeavors you intimately understand. Anything else is a certain recipe for poverty.</p>
+</div></div>
+  <span></span> <!-- for IntersectionObserver -->
+  
+  
+  
+  
+
+
+</body><style>body {
+      font-size:  20px;
+      font-family: Helvetica, Arial, sans-serif;
+      width: 950px;
+    }
+    .page {
+      line-height: 30.0px;
+    }
+    h1, h2, h3 {
+      line-height: initial;
+    }</style></html>
