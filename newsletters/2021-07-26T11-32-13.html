@@ -1,0 +1,901 @@
+<html><head><title>#170 - AMA #25: ﻿Navigating the complexities and nuances of cancer screening - Peter Attia :: Reader View</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+html {
+  overflow: overlay;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 30px auto 0 auto;
+  padding: 10px;
+}
+body[data-mode="light"] {
+  color:  #222;
+  border-color: %light-color%;
+  background-color:  whitesmoke;
+}
+body[data-mode="dark"] {
+  color:  #eee;
+  border-color: %dark-color%;
+  background-color:  #333;
+}
+body[data-mode="sepia"] {
+  color:  #5b4636;
+  border-color: %sepia-color%;
+  background-color:  #f4ecd8;
+}
+body[data-mode="solarized-light"] {
+  color:  #586e75;
+  border-color: %solarized-light-color%;
+  background-color:  #fdf6e3;
+}
+body[data-mode="nord-light"] {
+  color:  #2e3440;
+  border-color: %nord-light-color%;
+  background-color:  #e5e9f0;
+}
+body[data-mode="groove-dark"] {
+  color:  #cec4ac;
+  border-color: %groove-dark-color%;
+  background-color:  #282828;
+}
+body[data-mode="solarized-dark"] {
+  color:  #93a1a1;
+  border-color: %solarized-dark-color%;
+  background-color:  #002b36;
+}
+body[data-mode="nord-dark"] {
+  color:  #e5e9f0;
+  border-color: %nord-dark-color%;
+  background-color:  #2e3440;
+}
+@media print {
+  body[data-mode="light"],
+  body[data-mode="dark"],
+  body[data-mode="sepia"],
+  body[data-mode="solarized-light"],
+  body[data-mode="nord-light"],
+  body[data-mode="groove-dark"],
+  body[data-mode="solarized-dark"],
+  body[data-mode="nord-dark"] {
+    color: #000;
+    border-color: #000;
+    background-color: #fff;
+  }
+}
+body[data-loaded=true] {
+  
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+img:not([width])[src$=".svg"] {
+  max-width: 100px;
+}
+body[data-images=false] canvas,
+body[data-images=false] svg,
+body[data-images=false] img {
+  display: none;
+}
+a {
+  color: #0095dd;
+  text-decoration: none;
+}
+#reader-domain {
+  font-family: Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  border-bottom-color: currentcolor;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: inline-block;
+  direction: ltr;
+}
+#reader-domain > span:first-child {
+  font-size: 1.1em;
+}
+#reader-domain > span:last-child {
+  font-size: 0.8em;
+}
+#reader-title {
+  font-size: 1.6em;
+  line-height: 1.25em;
+  width: 100%;
+  margin: 20px 0;
+  padding: 0;
+}
+#reader-credits,
+#doi,
+#published-time,
+#reader-estimated-time {
+  font-size: 0.85em;
+  line-height: 1.48em;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+#reader-credits:not(:empty)::after {
+  content: ' ⋮ ';
+}
+#published-time:not(:empty)::before {
+  content: ' ⋮ ';
+}
+#doi-json {
+  overflow: hidden;
+}
+#doi-json code {
+  overflow: auto;
+  max-height: 400px;
+}
+#published-time:empty,
+#reader-credits:empty {
+  display: none;
+}
+body[data-speech="true"] .tts-box {
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  height: 32px;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: 0 0 0 1000vw rgba(128, 128, 128, 0.2);
+}
+body[data-speech="true"] .tts-word {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  background-color: red;
+  height: 2px;
+}
+.tts-word.hidden,
+.tts-box.hidden {
+  display: none;
+}
+body[data-speech="false"] .tts-speaking::after {
+  display: none;
+}
+mark.hghlght {
+  background-color: #ffff81;
+}
+.hidden {
+  display: none;
+}
+.note {
+  position: absolute;
+  z-index: 10;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 5px;
+  min-width: 32px;
+  min-height: 32px;
+}
+.note:focus {
+  z-index: 11;
+}
+</style>
+  <style id="user-css">body {
+  padding-bottom: 64px;
+}
+a:visited {
+  color: #d33bf0;
+}
+a:link, a:link:hover, a:link:active, a:link * {
+  color: #0095dd;
+}
+a:link {
+  text-decoration: none;
+  font-weight: normal;
+}
+pre {
+  white-space: pre-wrap;
+}
+pre code {
+  background-color: #eff0f1;
+  color: #393318;
+  font-family: monospace;
+  display: block;
+  padding: 5px 10px;
+}
+body[data-mode="dark"] pre code {
+  background-color: #585858;
+  color: #e8e8e8;
+}
+
+/* CSS for sans-serif fonts */
+body[data-font=sans-serif] {}
+/* CSS for serif fonts */
+body[data-font=serif] {}
+
+/* CSS for "sepia" theme */
+body[data-mode=sepia] {
+}
+/* CSS for "light" theme */
+body[data-mode=light] {}
+/* CSS for "dark" theme */
+body[data-mode=dark] {}</style>
+</head>
+<body tabindex="1" data-images="true" data-mode="light" data-font="sans-serif" data-loaded="true" style="user-select: initial;">
+  <span></span> <!-- for IntersectionObserver -->
+  <a id="reader-domain" href="https://peterattiamd.com/ama25/">
+    <span>peterattiamd.com</span>
+    <span>/ama25/</span>
+  </a>
+  <h1 dir="auto" id="reader-title">#170 - AMA #25: ﻿Navigating the complexities and nuances of cancer screening - Peter Attia</h1>
+  <span dir="auto" id="reader-credits"></span>
+  <span dir="auto" id="reader-estimated-time">38-48 minutes</span>
+  <span dir="auto" id="published-time">7/26/2021</span>
+  <hr>
+  <div id="readability-page-1" class="page"><article>
+          <div>
+            
+            <p><span>In this “Ask Me Anything” (AMA) episode, Peter and Bob dive deep into cancer screening, including why it’s important, what you need to know about a test, and Peter’s approach with patients. They specifically discuss various screening methods, explain important terms like sensitivity and specificity, and how layering and stacking different tests in tandem can improve predictive values. They conclude with a discussion on one of the more exciting screening tools, diffusion-weighted MRI, and how it’s changing the cancer screening landscape.&nbsp;</span></p>
+<p><span>If you’re not a subscriber and listening on a podcast player, you’ll only be able to hear a preview of the AMA. If you’re a subscriber, you can now listen to this full episode on your </span><a href="https://peterattiamd.com/members/private-podcast-feed/"><span>private RSS feed</span></a><span> or on our website at the </span><a href="https://peterattiamd.com/ama25"><span>AMA #25 show notes page</span></a><span>. If you are not a subscriber, you can learn more about the subscriber benefits </span><a href="https://peterattiamd.com/subscribe/"><span>here</span></a><span>.</span></p>
+
+<h2><span>We discuss:</span></h2>
+<ul>
+<li aria-level="1"><span>The importance of cancer screening [1:15];</span></li>
+<li aria-level="1"><span>Cancer screening terms: sensitivity, specificity, false positives, and false negatives [8:25];</span></li>
+<li aria-level="1"><span>Cancer screening terms: positive and negative predictive value [17:00];</span></li>
+<li aria-level="1"><span>Improving predictive value by layering tests, and the predictive values of mammograms [25:45];</span></li>
+<li aria-level="1"><span>How smoking impacts the predictive value of cancer screening [30:45];</span></li>
+<li aria-level="1"><span>Liquid biopsies for ruling out cancer and the blind spots of common cancer screening tests [33:00];</span></li>
+<li aria-level="1"><span>The difference between cancer originating from inside versus outside the body [41:15];</span></li>
+<li aria-level="1"><span>How diffusion-weighted MRI is changing cancer screening [45:15];</span></li>
+<li aria-level="1"><span>Summary of Peter’s approach to cancer screening [53:45]; and</span></li>
+<li aria-level="1"><span>More.</span></li>
+</ul><h2><span>The importance of cancer screening [1:15]</span></h2>
+<p><b>Some subscriber questions covered in this podcast</b><span>:</span></p>
+<ul>
+<li aria-level="1"><span>How do you think about cancer screening?&nbsp;</span></li>
+<li aria-level="1"><span>Why and or when should I be screened?</span></li>
+<li aria-level="1"><span>Which tests are worth getting?&nbsp;</span></li>
+<li aria-level="1"><span>What do you think of liquid biopsies?&nbsp;</span></li>
+<li aria-level="1"><span>How do you interpret sensitivity and specificity of tests? What do those actually mean?&nbsp;</span></li>
+<li aria-level="1"><span>What are some screening tools for cancer you use in your practice?</span></li>
+<li aria-level="1"><span>Can you discuss how you categorize cancers and how you screen for each?</span></li>
+<li aria-level="1"><span>What’s the difference between cancers outside the body versus cancers inside the body?</span></li>
+</ul>
+<p><b>Addressing the first question</b><span>: </span><i><span>How do you think about cancer screening?</span></i></p>
+<p><span>Longevity has these two components—they’re not independent—but sometimes, it’s helpful to think about them in isolation:</span></p>
+<ul>
+<li aria-level="1"><span>Lifespan—How do you live longer?&nbsp;</span></li>
+<li aria-level="1"><span>Healthspan—How do you live better?</span></li>
+<li aria-level="1"><span>Major diseases that rob a person of lifespan include cancer, atherosclerotic diseases, and the diseases of dementia and neurocognitive decline</span></li>
+<li aria-level="1"><span>The latter two go more hand in hand with the reduction in health span</span></li>
+<li aria-level="1"><span>By definition, when a person has Alzheimer’s disease, their quality of life&nbsp; i.e. their cognition) is also deteriorating–So they’re experiencing both the slide in quality of life and eventually length of life</span></li>
+<li aria-level="1"><span>Similarly in people that have advanced atherosclerosis, a lot of times the reduction in the ability to carry out activities of daily living kind of moves more hand in hand with that</span></li>
+<li aria-level="1"><span>In the case of cancer, health span decline is a little less the case</span></li>
+<li aria-level="1"><span>Age is the greatest risk factor for cancer just as it is for the other two diseases</span></li>
+<li aria-level="1"><span>But in some ways it’s a little bit easier to think of cancer in isolation from the health span stuff</span></li>
+<li aria-level="1"><span>if you’re trying to imagine a world in which you can live longer… that means living in a world where we </span><b>delay the onset of chronic disease</b><span> and/or have </span><b>better tools to live longer with chronic disease</b></li>
+<li aria-level="1"><span>Peter much more favors the former option (i.e., delay) because we’ve basically spent most of the history of modern medicine working on the latter option with very, very limited success.</span></li>
+</ul>
+<p><b>Screening</b></p>
+<ul>
+<li aria-level="1"><span>One of the pillars of longevity is </span><b>minimizing mortality from cancer</b></li>
+<li aria-level="1"><span>So </span><i><span>where does screening fit into this</span></i><span>?</span></li>
+<li aria-level="1"><span>Screening is one of three pieces</span></li>
+<li aria-level="1"><span>First piece would be, </span><i><span>how do you prevent cancer</span></i><span>?&nbsp;</span></li>
+<li aria-level="1"><span>The second thing would be, </span><i><span>how do you screen for cancer and detect it early</span></i><span>?&nbsp;</span></li>
+<li aria-level="1"><span>And the third is, </span><i><span>how do you treat it when you have it</span></i><span>?</span></li>
+</ul>
+<p><span>Focusing on the prevention piece…</span></p>
+<ul>
+<li aria-level="1"><span>W</span><i><span>hy does Peter believe that screening is an important pillar</span></i><span>?&nbsp;</span>
+<ul>
+<li aria-level="2"><span>The simplest explanation for why screening matters is the evidence that suggests that a </span><b>cancer that is caught earlier is easier to treat</b><span> than a cancer that is caught later</span></li>
+<li aria-level="2"><span>For instance, if you catch a breast cancer or a colon cancer when there are tens or hundreds of millions of cancer cells, your odds of treating that successfully are better than if you catch the same cancer years later, when there are billions of cells</span></li>
+<li aria-level="2"><span>The evidence for that basically comes from examining how patients respond to the exact same drugs in the adjuvant setting versus in the metastatic setting&nbsp;</span></li>
+<li aria-level="2"><span>The adjuvant setting is when a drug is given to a patient who has no visible cancer</span></li>
+<li aria-level="2"><span>So if you believe that they have microscopic disease that remains, and you give them a drug like Herceptin for a HER2/neu positive breast cancer</span></li>
+<li aria-level="2"><span>If you compare the outcomes of those patients to the outcomes of patients who are given the exact same drug for the exact same phenotype and genotype of the cancer, but in the metastatic setting, there’s no comparison in the outcomes</span></li>
+</ul>
+</li>
+<li aria-level="1"><span>Possible explanation for the difference in success rates:</span>
+<ul>
+<li aria-level="2"><span>One explanation for that may be that the cancers that have been around longer have developed more mutations</span></li>
+<li aria-level="2"><span>It is therefore Peter’s belief that the more we can do to screen for cancer and catch it earlier, the better we will be</span></li>
+</ul>
+</li>
+</ul>
+<p><b>Screening frequently comes with a price</b><span>:</span></p>
+<ul>
+<li aria-level="1"><span>We pay a financial price for that</span></li>
+<li aria-level="1"><span>And we pay potentially an emotional price</span>
+<ul>
+<li aria-level="2"><span>We have to now get into false positives and false negatives</span></li>
+</ul>
+</li>
+</ul>
+<p><b>Looking at five-year survival stats…</b></p>
+<ul>
+<li aria-level="1"><span>Take breast cancer—If you catch it early and it’s a local cancer and it hasn’t metastasized, the </span><a href="https://www.cancer.net/cancer-types/breast-cancer/statistics#:~:text=The%20average%205%2Dyear%20survival,with%20this%20disease%20is%2099%25." target="_blank"><span>five-year survival rates are 99%</span></a><span>&nbsp;</span></li>
+<li aria-level="1"><span>But for metastatic breast cancer, </span><a href="https://www.cancer.net/cancer-types/breast-cancer-metastatic/statistics" target="_blank"><span>five-year survival is about 28%</span></a><span>&nbsp;</span></li>
+</ul>
+
+<h2><span>Cancer screening terms: Sensitivity, specificity, false positives, and false negatives [8:25]</span></h2>
+<p><b>Sensitivity</b></p>
+<p><img src="https://peterattiamd.com/wp-content/uploads/2021/07/f1-ama25-1024x662.png" alt="" srcset="https://peterattiamd.com/wp-content/uploads/2021/07/f1-ama25-1024x662.png 1024w, https://peterattiamd.com/wp-content/uploads/2021/07/f1-ama25-300x194.png 300w, https://peterattiamd.com/wp-content/uploads/2021/07/f1-ama25-768x496.png 768w, https://peterattiamd.com/wp-content/uploads/2021/07/f1-ama25.png 1436w" sizes="(max-width: 1024px) 100vw, 1024px" width="1024" height="662"></p>
+<p><span><b>Figure 1</b><span>.&nbsp;</span></span></p>
+<ul>
+<li aria-level="1"><span>Sensitivity is the probability that the test yields a positive result for someone who has the condition of interest</span></li>
+<li aria-level="1"><span>A sensitive test is likely to detect a person who has COVID if they’re tested</span></li>
+</ul>
+<p><i><span>A realistic example: Mammography</span></i></p>
+<p><img src="https://peterattiamd.com/wp-content/uploads/2021/07/f2-ama25-1024x636.png" alt="" srcset="https://peterattiamd.com/wp-content/uploads/2021/07/f2-ama25-1024x636.png 1024w, https://peterattiamd.com/wp-content/uploads/2021/07/f2-ama25-300x186.png 300w, https://peterattiamd.com/wp-content/uploads/2021/07/f2-ama25-768x477.png 768w, https://peterattiamd.com/wp-content/uploads/2021/07/f2-ama25.png 1250w" sizes="(max-width: 1024px) 100vw, 1024px" width="1024" height="636"></p>
+<p><span><b>Figure 2.</b></span></p>
+<ul>
+<li aria-level="1"><span>we are now talking about 1,000 women who have breast cancer</span></li>
+<li aria-level="1"><span>if you were to run a mammogram on them, 840 of them would have a positive mammogram</span>
+<ul>
+<li aria-level="2"><span>the radiologist would read that and say, “this woman has breast cancer.” So those are true positives.</span></li>
+</ul>
+</li>
+<li aria-level="1"><span>In this example, 160 of those women would have their mammogram read as negative</span>
+<ul>
+<li aria-level="2"><span>And these would be false negatives</span></li>
+</ul>
+</li>
+<li aria-level="1"><span>Sensitivity is defined as the true positive rate over the total number of cases</span></li>
+<li aria-level="1"><span>True positives plus the false negatives, which in this case yields 84%.&nbsp;</span></li>
+<li aria-level="1"><span>a </span><i><span>very, very, very</span></i><span> sensitive test would always have caught the people who have the condition</span></li>
+<li aria-level="1"><span>Best case scenario here is a 100% sensitive test that would detect 1,000 of those women, and none of them would be false negatives</span></li>
+</ul>
+<p><span>With sensitivity, you have to understand that it’s basically backwards looking</span></p>
+<ul>
+<li aria-level="1"><span>With specificity, by contrast, you truly know who has cancer, who doesn’t have cancer, when we get into specificity</span></li>
+<li aria-level="1"><span>when you look at sensitivity, you already know what the result is when somebody, after they get screened and you know the results</span></li>
+<li aria-level="1"><span>But in the case of sensitivity, if the test is negative, you know it’s wrong. You know it’s a false negative, just because we’re looking at a group of people where you already kind of have the answer in hand with sensitivity</span></li>
+<li aria-level="1"><span>with specificity as you’ll see in a moment, it means that you actually have forward-looking data to know that a negative is truly a negative</span></li>
+</ul>
+<p><b>Specificity</b></p>
+<p><img src="https://peterattiamd.com/wp-content/uploads/2021/07/f3-specificity-ama25-1024x707.png" alt="" srcset="https://peterattiamd.com/wp-content/uploads/2021/07/f3-specificity-ama25-1024x707.png 1024w, https://peterattiamd.com/wp-content/uploads/2021/07/f3-specificity-ama25-300x207.png 300w, https://peterattiamd.com/wp-content/uploads/2021/07/f3-specificity-ama25-768x530.png 768w, https://peterattiamd.com/wp-content/uploads/2021/07/f3-specificity-ama25-390x270.png 390w, https://peterattiamd.com/wp-content/uploads/2021/07/f3-specificity-ama25.png 1350w" sizes="(max-width: 1024px) 100vw, 1024px" width="1024" height="707"></p>
+<p><span><b>Figure 3.</b></span></p>
+<ul>
+<li aria-level="1"><span>contrapositive of sensitivity</span></li>
+<li aria-level="1"><span>specificity is the probability that a bunch of people who do not have the condition will also end up with a negative test</span></li>
+</ul>
+<p><i><span>An example…</span></i></p>
+<p><img src="https://peterattiamd.com/wp-content/uploads/2021/07/f4-ama25-1024x641.png" alt="" srcset="https://peterattiamd.com/wp-content/uploads/2021/07/f4-ama25-1024x641.png 1024w, https://peterattiamd.com/wp-content/uploads/2021/07/f4-ama25-300x188.png 300w, https://peterattiamd.com/wp-content/uploads/2021/07/f4-ama25-768x480.png 768w, https://peterattiamd.com/wp-content/uploads/2021/07/f4-ama25.png 1250w" sizes="(max-width: 1024px) 100vw, 1024px" width="1024" height="641"></p>
+<p><span><b>Figure 4.</b></span></p>
+<ul>
+<li aria-level="1"><span>So if you took 1,000 women who do not have breast cancer (that means that I know longitudinally that they don’t have breast cancer)</span>
+<ul>
+<li aria-level="2"><span>For the next five years, you follow them, and none of them go on to develop breast cancer</span></li>
+<li aria-level="2"><span>These are truly women who do not have breast cancer</span></li>
+</ul>
+</li>
+<li aria-level="1"><span>You run the mammogram on them, 90 of them are going to have a positive finding</span>
+<ul>
+<li aria-level="2"><span>A radiologist is going to read this and say, “Hey, I think you have breast cancer here. We need to do a biopsy or do something else</span></li>
+<li aria-level="2"><span>In other words, those 90 women (or 9%) had a false positive.&nbsp;</span></li>
+</ul>
+</li>
+<li aria-level="1"><span>Conversely, 910 women in this case would have a negative read, which is truly negative</span>
+<ul>
+<li aria-level="2"><span>Specificity is therefore the number of true negatives over the total number of cases, the true negatives plus the false positive</span></li>
+<li aria-level="2"><span>910 over 1,000 is a 91% specificity</span></li>
+</ul>
+</li>
+<li aria-level="1"><span>As </span><b>specificity</b><span> goes up, your</span><b> ability to discern negatives </b><span>goes up</span></li>
+<li aria-level="1"><span>As </span><b>sensitivity</b><span> goes up, your </span><b>ability to discern positives</b><span> goes up</span></li>
+</ul>
+<p><img src="https://peterattiamd.com/wp-content/uploads/2021/07/f5-trade-off-ama25-1024x595.png" alt="" srcset="https://peterattiamd.com/wp-content/uploads/2021/07/f5-trade-off-ama25-1024x595.png 1024w, https://peterattiamd.com/wp-content/uploads/2021/07/f5-trade-off-ama25-300x174.png 300w, https://peterattiamd.com/wp-content/uploads/2021/07/f5-trade-off-ama25-768x446.png 768w, https://peterattiamd.com/wp-content/uploads/2021/07/f5-trade-off-ama25-1536x892.png 1536w, https://peterattiamd.com/wp-content/uploads/2021/07/f5-trade-off-ama25.png 1646w" sizes="(max-width: 1024px) 100vw, 1024px" width="1024" height="595"></p>
+<p><span><b>Figure 5</b><span>.</span></span></p>
+<ul>
+<li aria-level="1"><span>As sensitivity goes up, your true positives go up and your false negatives go down</span></li>
+</ul>
+<p><i><span>The “metal detector” example for illustrative purposes</span></i><span>:</span></p>
+<ul>
+<li aria-level="1"><span>You have a metal detector in the airport, and your goal is to figure out if people walking through the metal detector are carrying metal</span></li>
+<li aria-level="1"><span>you can adjust the gain on that for how much magnetic signal you want to pick up</span></li>
+<li aria-level="1"><span>if you want it to be very, very sensitive, that means you never want to have a false negative</span></li>
+<li aria-level="1"><span>You never want anyone to walk through that detector with metal and get missed</span></li>
+<li aria-level="1"><span>you are dialing up sensitivity</span></li>
+<li aria-level="1"><span>Your true positives are going to go very high. You’re going to catch everybody. And your false negatives are going to be very low</span></li>
+<li aria-level="1"><span>What’s happening on the flip side of that, you’re going to get a lot of false positives. Which means you’re going to be dinging a lot of people for metal who don’t have metal</span></li>
+<li aria-level="1"><span>In the case of a metal detector in an airport, we probably are willing to make that trade off</span></li>
+</ul>
+<p><i><span>Using the “metal detector” analogy, now let’s look on the other side with </span></i><b><i>specificity</i></b><b>:</b></p>
+<ul>
+<li aria-level="1"><span>Let’s say you forgot to plug it in, and everybody walks through&nbsp;</span></li>
+<li aria-level="1"><span>And imagine the manufacturer says, “One thing in our favor is that our specificity is 100%. If you’re not carrying any metal, we’re going to pick up every single true negative. And we will never pick up any false positives with our machine.”</span></li>
+<li aria-level="1"><span>An unplugged metal detector has 100% specificity, because there will be no false positives—so it’s useless when it comes to actually accomplishing what you need a metal detector for, which is finding the true positives and minimizing the false negatives</span></li>
+</ul>
+<p><span>Similarly, a test that is 100% sensitive but 0% specific is equally useless</span></p>
+<ul>
+<li aria-level="1"><span>For example, say you send a million letters out to women and tell every one of them they have breast cancer</span>
+<ul>
+<li aria-level="2"><span>Guess what? That’s 100% sensitive</span></li>
+<li aria-level="2"><span>In that group of a million women, some are guaranteed to have breast cancer and you have truly told every one of them that they have breast cancer</span></li>
+<li aria-level="2"><span>The problem is your false positives are so high, your specificity is effectively zero—It’s a useless test</span></li>
+</ul>
+</li>
+</ul>
+<blockquote><p><span>“Don’t be lulled into the trap of thinking [a cancer screening test] has to have 100% sensitivity or 100% specificity. It’s more about the interplay between them.” —Peter Attia</span></p></blockquote>
+
+<h2><span>Cancer screening terms: positive and negative predictive value [17:00]</span></h2>
+<p><img src="https://peterattiamd.com/wp-content/uploads/2021/07/f6-ppv-and-npv-ama25-1024x756.png" alt="" srcset="https://peterattiamd.com/wp-content/uploads/2021/07/f6-ppv-and-npv-ama25-1024x756.png 1024w, https://peterattiamd.com/wp-content/uploads/2021/07/f6-ppv-and-npv-ama25-300x222.png 300w, https://peterattiamd.com/wp-content/uploads/2021/07/f6-ppv-and-npv-ama25-768x567.png 768w, https://peterattiamd.com/wp-content/uploads/2021/07/f6-ppv-and-npv-ama25.png 1278w" sizes="(max-width: 1024px) 100vw, 1024px" width="1024" height="756"></p>
+<p><span><b>Figure 6</b><span>.&nbsp;</span></span></p>
+<ul>
+<li aria-level="1"><span>If you’re going in to get screened, these two metrics (PPV and NPV) are really important</span></li>
+<li aria-level="1"><span>Peter points out that he has a hard time thinking about them in isolation, because it’s better to think about them in terms of prevalence&nbsp;</span></li>
+<li aria-level="1"><span>This is what determines clinical decision-making and anxiety—This is not just an academic exercise, we are doing this because we need to make decisions based on the outcomes </span><i><span>and we don’t want to cause undue stress</span></i></li>
+</ul>
+<p><b>Definitions:</b></p>
+<p><span>The </span><b>positive predictive value</b><span> is defined as the number of </span><i><span>true</span></i><span> positives over the true positives + the false positives (the tested positives versus all the positives)</span></p>
+<ul>
+<li aria-level="1"><span>So a high positive predictive value means if you get a positive test, here’s how confident you are that your test is truly positive</span></li>
+<li aria-level="1"><span>For example, a 50% positive predictive value means one out of every two tests is a false positive (a true positive is a test positive that is indeed positive)</span></li>
+<li aria-level="1"><span>A false positive is a test positive that is not positive for the condition.</span></li>
+</ul>
+<p><span>Similarly, the </span><b>negative predictive value</b><span> are the </span><i><span>true</span></i><span> negatives</span></p>
+<ul>
+<li aria-level="1"><span>So if you had a 50% negative predictive value, it would mean that only half the people for whom a negative test is the outcome are actually negative for the condition</span></li>
+</ul>
+<p><span>The </span><b>single most important concept</b><span> is: </span><i><span>How do these numbers change in the context of the </span></i><b><i>prevalence</i></b><i><span>?</span></i></p>
+<ul>
+<li aria-level="1"><span>Because you have to know what’s called the pretest probability before you can take a given sensitivity and specificity and get a PPV and an NPV</span></li>
+</ul>
+<p><span>*</span><a href="https://peterattiamd.com/how-to-interpret-screening-tests-video-spreadsheet-and-primer/"><b>Interactive spreadsheet</b></a><span>*</span></p>
+<ul>
+<li aria-level="1"><b>Four things that you get to input into the spreadsheet</b><span> –&nbsp;</span>
+<ul>
+<li aria-level="2"><span>i) Population,&nbsp;</span></li>
+<li aria-level="2"><span>ii) Prevalence,&nbsp;</span></li>
+<li aria-level="2"><span>iii) Sensitivity, and&nbsp;</span></li>
+<li aria-level="2"><span>iv) Specificity&nbsp;</span></li>
+</ul>
+</li>
+<li aria-level="1"><span>For the population — if you want to actually see numerical relevance, it does not change the PPV or the NPV</span></li>
+<li aria-level="1"><span>For Prevalence – Things to consider when inputting prevalence:&nbsp;</span>
+<ul>
+<li aria-level="2"><span>Are we talking about the general population? Are we talking about a given individual?</span></li>
+<li aria-level="2"><span>If you consider a 60 year old who smokes two pack a day for the last 30 years, the prevalence of cancer in a group of those people is </span><i><span>much higher</span></i><span> than a 30 year old who is a totally healthy nonsmoker without Lynch syndrome or something like that</span></li>
+<li aria-level="2"><span>In that latter case, the prevalence is less than 1%. In the former case, that prevalence is probably greater than 10%</span></li>
+</ul>
+</li>
+</ul>
+<p><img src="https://peterattiamd.com/wp-content/uploads/2021/07/f7-ama25-1024x632.png" alt="" srcset="https://peterattiamd.com/wp-content/uploads/2021/07/f7-ama25-1024x632.png 1024w, https://peterattiamd.com/wp-content/uploads/2021/07/f7-ama25-300x185.png 300w, https://peterattiamd.com/wp-content/uploads/2021/07/f7-ama25-768x474.png 768w, https://peterattiamd.com/wp-content/uploads/2021/07/f7-ama25.png 1490w" sizes="(max-width: 1024px) 100vw, 1024px" width="1024" height="632"></p>
+<p><span><b>Figure 7.</b></span></p>
+<p><img src="https://peterattiamd.com/wp-content/uploads/2021/07/f8-ama25-1024x635.png" alt="" srcset="https://peterattiamd.com/wp-content/uploads/2021/07/f8-ama25-1024x635.png 1024w, https://peterattiamd.com/wp-content/uploads/2021/07/f8-ama25-300x186.png 300w, https://peterattiamd.com/wp-content/uploads/2021/07/f8-ama25-768x477.png 768w, https://peterattiamd.com/wp-content/uploads/2021/07/f8-ama25.png 1486w" sizes="(max-width: 1024px) 100vw, 1024px" width="1024" height="635"></p>
+<p><span><b>Figure 8.</b></span></p>
+<p><b>Example using the </b><a href="https://peterattiamd.com/how-to-interpret-screening-tests-video-spreadsheet-and-primer/"><b>interactive spreadsheet</b></a><b>:&nbsp;</b></p>
+<p><i><span>Let’s first use an example of a high-risk person doing a mammography test whose prevalence of cancer is 5% at the time you do this test</span></i><span> [see timestamp 23:20 in the video above]—</span></p>
+<p><img src="https://peterattiamd.com/wp-content/uploads/2021/07/f9-ama25-1024x460.png" alt="" srcset="https://peterattiamd.com/wp-content/uploads/2021/07/f9-ama25-1024x460.png 1024w, https://peterattiamd.com/wp-content/uploads/2021/07/f9-ama25-300x135.png 300w, https://peterattiamd.com/wp-content/uploads/2021/07/f9-ama25-768x345.png 768w, https://peterattiamd.com/wp-content/uploads/2021/07/f9-ama25.png 1398w" sizes="(max-width: 1024px) 100vw, 1024px" width="1024" height="460"></p>
+<p><span><b>Figure 9. Screenshot from video at 23:20.</b></span></p>
+<ul>
+<li aria-level="1"><span>The numbers for the mammography test — sensitivity is 84% &amp; the specificity is 91%.</span></li>
+<li aria-level="1"><span>The </span><b>green squares</b><span> show you when the test is doing its job correctly—the true positives are 84%, which means 4,200 out of 5,000 people (5,000 because 5% of 100,000 have cancer)</span></li>
+<li aria-level="1"><span>Then when you look at the “don’t have cancer” column, which is the 95,000 people who don’t have cancer, </span><i><span>how many of them were truly diagnosed as negative?</span></i><span> = 86,450</span></li>
+<li aria-level="1"><span>Your </span><b>red squares</b><span> show you where the test didn’t work (i.e., the false negatives) = 800 women in this case have breast cancer (i.e, 800 women would get missed)</span></li>
+<li aria-level="1"><span>For the false positives, we have about ~8,500 (i.e., the people that are going to require follow-up testing or even a biopsy)</span></li>
+<li aria-level="1"><span>Now, let’s take at </span><b>positive predictive value</b><span> (PPV)</span>
+<ul>
+<li aria-level="2"><span>In an environment where prevalence is 5%, sensitivity is 84%, specificity is 91%, the </span><b>positive predictive value is only about 33%.</b><span>&nbsp;</span></li>
+<li aria-level="2"><span>This is very important to understand… it means if you have a mammogram that says you have breast cancer, there’s actually only a 33% chance that you actually do have cancer</span></li>
+</ul>
+</li>
+<li aria-level="1"><span>Conversely, the </span><b>negative predictive value</b><span> is very high at 99% — Meaning if you have a negative mammogram in this setting, you can be very confident that you do not have breast cancer</span></li>
+</ul>
+<p><i><span>Now, let’s </span></i><b><i>change the prevalence value to 1%</i></b><i><span> and see what happens</span></i><span> [see timestamp 25:00 in the video above]—</span></p>
+<p><img src="https://peterattiamd.com/wp-content/uploads/2021/07/f10-ama25-1024x458.png" alt="" srcset="https://peterattiamd.com/wp-content/uploads/2021/07/f10-ama25-1024x458.png 1024w, https://peterattiamd.com/wp-content/uploads/2021/07/f10-ama25-300x134.png 300w, https://peterattiamd.com/wp-content/uploads/2021/07/f10-ama25-768x344.png 768w, https://peterattiamd.com/wp-content/uploads/2021/07/f10-ama25.png 1386w" sizes="(max-width: 1024px) 100vw, 1024px" width="1024" height="458"></p>
+<p><span><b>Figure 10. Screenshot from video at 25:10.</b><span>&nbsp;</span></span></p>
+<ul>
+<li aria-level="1"><span>Note that we haven’t changed the sensitivity or the specificity so this is the same exact test</span></li>
+<li aria-level="1"><span>We’re now just applying it to a person who has a much lower pretest probability of the cancer</span></li>
+<li aria-level="1"><span>In this case, if this person has a positive test, it means almost nothing because the PPV is really low at 8.6%</span></li>
+<li aria-level="1"><span>The NPV becomes even stronger at 99.8% — so it’s overwhelmingly the case that this person does not have cancer</span></li>
+<li aria-level="1"><span>You could argue that that’s not very relevant because the person’s pretest probability was only 1%, and their post-test probability is 0.2%, so you’ve gained 5X in terms of negative predictive value</span></li>
+</ul>
+<p><i><span>Now, let’s </span></i><b><i>change the sensitivity to 50% and specificity to 99%</i></b><i><span> while keeping the prevalence at 1% and see what happen</span></i><span> [see timestamp 26:15 in the video above]—</span></p>
+<p><img src="https://peterattiamd.com/wp-content/uploads/2021/07/f11-ama25-1024x452.png" alt="" srcset="https://peterattiamd.com/wp-content/uploads/2021/07/f11-ama25-1024x452.png 1024w, https://peterattiamd.com/wp-content/uploads/2021/07/f11-ama25-300x133.png 300w, https://peterattiamd.com/wp-content/uploads/2021/07/f11-ama25-768x339.png 768w, https://peterattiamd.com/wp-content/uploads/2021/07/f11-ama25.png 1376w" sizes="(max-width: 1024px) 100vw, 1024px" width="1024" height="452"></p>
+<p><span><b>Figure 11. Screenshot from video at 26:25.</b></span></p>
+<ul>
+<li aria-level="1"><span>You now have a test that is far less sensitive — meaning it’s not as good at detecting cancer when it’s there, but it’s much better at knowing </span><b>when cancer is not there</b></li>
+<li aria-level="1"><span>Notice that you’ve paid a little bit of a price on your NPV as it’s come down from 99.8 to 99.5.</span></li>
+<li aria-level="1"><span>And look what it’s done on your PPV — it’s increased that from basically nothing to at least 33%.</span></li>
+</ul>
+<p><i><span>Now, let’s </span></i><b><i>move the specificity up to 99.5%</i></b><i><span> while keeping everything the same and see what happens</span></i><span> [see timestamp 26:55 in the video above]—</span></p>
+<p><img src="https://peterattiamd.com/wp-content/uploads/2021/07/f12-ama25-1024x458.png" alt="" srcset="https://peterattiamd.com/wp-content/uploads/2021/07/f12-ama25-1024x458.png 1024w, https://peterattiamd.com/wp-content/uploads/2021/07/f12-ama25-300x134.png 300w, https://peterattiamd.com/wp-content/uploads/2021/07/f12-ama25-768x344.png 768w, https://peterattiamd.com/wp-content/uploads/2021/07/f12-ama25.png 1372w" sizes="(max-width: 1024px) 100vw, 1024px" width="1024" height="458"></p>
+<p><span><b>Figure 12.</b></span></p>
+<ul>
+<li aria-level="1"><span>now you’re talking about a positive predictive value of a coin toss 50%</span></li>
+<li aria-level="1"><span>in a patient population where the prevalence of cancer is 1% is not that bad.&nbsp;</span></li>
+<li aria-level="1"><span>And the negative predictive value is basically unchanged</span></li>
+</ul>
+<p><i><span>Just to complete this, let’s </span></i><b><i>change the prevalence 10%</i></b> <span>[see timestamp 27:20 in the video above]—</span></p>
+<p><img src="https://peterattiamd.com/wp-content/uploads/2021/07/f13-ama25-1024x454.png" alt="" srcset="https://peterattiamd.com/wp-content/uploads/2021/07/f13-ama25-1024x454.png 1024w, https://peterattiamd.com/wp-content/uploads/2021/07/f13-ama25-300x133.png 300w, https://peterattiamd.com/wp-content/uploads/2021/07/f13-ama25-768x340.png 768w, https://peterattiamd.com/wp-content/uploads/2021/07/f13-ama25.png 1376w" sizes="(max-width: 1024px) 100vw, 1024px" width="1024" height="454"></p>
+<p><span><b>Figure 13.&nbsp;</b></span></p>
+<ul>
+<li aria-level="1"><span>now we’re talking about a very high risk population</span></li>
+<li aria-level="1"><span>prevalence is 10%. Your sensitivity is still 50%. Your specificity is basically 100%. It rounds up to 100</span></li>
+<li aria-level="1"><span>Your positive and negative predictive value are very high here</span></li>
+<li aria-level="1"><span>If you have a positive test, you’re more than 90% sure that it’s positive, that you have the condition</span></li>
+<li aria-level="1"><span>And if you have a negative test, you’re 95% sure that that’s correct.</span></li>
+</ul>
+<p><span>*IMPORTANT POINTS: [25:24]</span></p>
+<ul>
+<li aria-level="1"><span>The first point is that sensitivity and specificity cannot be evaluated in isolation. They have to be evaluated in the context of the prevalence or what we call the </span><i><span>pretest probability.</span></i></li>
+<li aria-level="1"><span>The second point is the nonlinearity with which sensitivity and specificity affect PPV and NPV in the case of prevalence makes it such that we need a worksheet like this to play with. We can’t do this math in our head.</span></li>
+</ul>
+
+<h2><span>Improving predictive value by layering tests, and the predictive values of mammograms [25:45]</span></h2>
+<p><span>[To see the spreadsheet results from this section, start the video at timestamp 28:30]</span></p>
+<p><b>Looking at mammography…</b></p>
+<ul>
+<li aria-level="1"><span>Bob says, “if you’re looking at routine screening in people who are at average risk, the prevalence might be around 1.3%.”</span></li>
+<li aria-level="1"><span>And then if we go back to those values of was it 84% sensitivity, 91% specificity</span></li>
+<li aria-level="1"><span>You might say “okay, well mammography has a sensitivity of 84% and specificity of 91%”</span></li>
+<li aria-level="1"><span>Well, what does that mean?&nbsp;</span></li>
+<li aria-level="1"><span>If a woman has a mammography in this population and has a positive test…what is the likelihood that she actually has breast cancer?&nbsp;</span></li>
+<li aria-level="1"><span>When Bob saw a positive predictive value of about 10%, “it just didn’t compute even though I’m literally computing this”</span></li>
+<li aria-level="1"><span>You look at 84% and 91% and you just think those are good grades</span></li>
+<li aria-level="1"><span>And then you actually look at, how predictive is this test?&nbsp;</span></li>
+<li aria-level="1"><span>Well, the prevalence is 1% and the positive predictive value is 10%—That’s actually pretty good as far as a test goes.&nbsp;</span></li>
+<li aria-level="1"><span>“</span><i><span>But just looking at the absolute numbers, it just took me aback that when you looked at those sensitivity and specificity and you think well, somebody comes back with a positive test. What’s the likelihood that she has breast cancer? And just on average, it’s a 1 in 10 chance</span></i><span>.” says Bob</span></li>
+<li aria-level="1"><span>Peter points out that today’s mammography is better</span></li>
+<li aria-level="1"><span>But the reality of it is I think this gets to another question, which is: </span><i><span>Why is screening such a controversial topic?&nbsp;</span></i></li>
+</ul>
+<p><b><i>Why is screening such a controversial topic?&nbsp;</i></b></p>
+<ul>
+<li aria-level="1"><span>People tend to revisit literature they are familiar with rather than seek out and become versed in new literature</span></li>
+<li aria-level="1"><span>A paper published 10 years ago was going to be based on mammography done 25 years ago, following women from, say, the mid ’90s to the early 2000s</span></li>
+<li aria-level="1"><span>At that time, you had two things going on:</span>
+<ul>
+<li aria-level="2"><span>One, you had less sensitive, less specific tests.&nbsp;</span></li>
+<li aria-level="2"><span>And two, the outcome was, we’re going to go and do a biopsy—therefore the morbidity of the false positives was large—so therein lies the opposition</span></li>
+</ul>
+</li>
+<li aria-level="1"><span>Fast forward to today…Today’s mammography is going to have a higher sensitivity and specificity</span></li>
+<li aria-level="1"><span>Let’s plug in 90 and 95 into the spreadsheet and see how it changes</span>
+<ul>
+<li aria-level="2"><span>That’s basically going to increase your positive predictive value to 20%</span></li>
+<li aria-level="2"><span>That means there’s still an 80% chance when you have a positive mammo that you don’t have breast cancer</span></li>
+<li aria-level="2"><span>But if you have a negative mammo, you’re in pretty solid shape</span></li>
+</ul>
+</li>
+<li aria-level="1"><span>Peter still believes mammo is essential for all women despite all of the fancy other tests we can do, like diffusion-weighted imaging, and MRI, and ultrasound, mammo is important for an anatomic reason we’ll get to.&nbsp;</span></li>
+</ul>
+<p><b>Importance of layering tests [28:53]</b></p>
+<ul>
+<li aria-level="1"><span>If you do one particular test, so for mammography for example, maybe it doesn’t mean right away that you get a biopsy</span></li>
+<li aria-level="1"><span>Instead, maybe you do another test on top of that and you might actually be able to get a better positive predictive value&nbsp;</span></li>
+<li aria-level="1"><span>That’s effectively how we think about cancer screening, says Peter</span></li>
+<li aria-level="1"><span>One type of test is a piece of Swiss cheese, there are lots of pencils that can go through it.&nbsp;</span></li>
+<li aria-level="1"><span>You really want to stack a few pieces of Swiss cheese on top of each other such that the holes are all obstructed except the one which is the true positive</span></li>
+</ul>
+<p><i><span>Using breast cancer as an example for the value in layering tests</span></i><span>:</span></p>
+<ul>
+<li aria-level="1"><span>Best way to do that with today’s technology is mammography plus MRI with diffusion-weighted imaging</span>
+<ul>
+<li aria-level="2"><span>Not the most cost-effective way to do it</span></li>
+<li aria-level="2"><span>But it minimizes radiation because the mammography is very low radiation</span></li>
+<li aria-level="2"><span>Whereas there are other types of imaging for breast that have an enormous amount of radiation that used to be in vogue less so now with MRI and ultrasound.&nbsp;</span></li>
+</ul>
+</li>
+<li aria-level="1"><span>As they talk about later in the podcast, the diffusion-weighted imaging with background subtraction can pick up things that no other test can pick up</span></li>
+<li aria-level="1"><span>However, diffusion-weighted imaging misses something that mammograms pick up— small calcified lesions</span>
+<ul>
+<li aria-level="2"><span>If you have dense breast tissue, if you have glandular breast tissue, you’re going to get a lot of false positives</span></li>
+<li aria-level="2"><span>And that’s why ultrasound or MRI as a backup is a great way to avoid the unnecessary biopsies that plagued many women for decades.</span></li>
+</ul>
+</li>
+</ul>
+
+<h2><span>How smoking impacts the predictive value of cancer screening [30:45]</span></h2>
+<p><img src="https://peterattiamd.com/wp-content/uploads/2021/07/f14-ama25-1024x213.png" alt="" srcset="https://peterattiamd.com/wp-content/uploads/2021/07/f14-ama25-1024x213.png 1024w, https://peterattiamd.com/wp-content/uploads/2021/07/f14-ama25-300x62.png 300w, https://peterattiamd.com/wp-content/uploads/2021/07/f14-ama25-768x160.png 768w, https://peterattiamd.com/wp-content/uploads/2021/07/f14-ama25-1536x320.png 1536w, https://peterattiamd.com/wp-content/uploads/2021/07/f14-ama25-2048x426.png 2048w" sizes="(max-width: 1024px) 100vw, 1024px" width="1024" height="213"></p>
+<p><span><b>Figure 14.</b><span>&nbsp;</span></span></p>
+<p><b>Population of smokers</b></p>
+<ul>
+<li aria-level="1"><span>If you look at a population of smokers and you’re looking at screening, you’re going to have a higher prevalence.&nbsp;</span></li>
+<li aria-level="1"><span>One study showed ~70 year old individuals with a two pack a day smoking habit for 50 years would have a pretest probability of the prevalence of about 15%</span></li>
+<li aria-level="1"><span>That pretest probability of the prevalence is going to change the landscape in terms of the predictive value of a test—if you’ve got a higher prevalence, you’re going to have more predictive value with that</span></li>
+</ul>
+<p><b>Looking at row #6 in the figure above…</b></p>
+<p><span>Mammography—using the old numbers—at 1.3% prevalence of breast cancer, sensitivity of 84%, specificity of 91%</span></p>
+<ul>
+<li aria-level="1"><span>Your positive predictive value is 11.6%</span></li>
+<li aria-level="1"><span>Your negative predictive value is 98.8%</span></li>
+<li aria-level="1"><span>So a women gets that test and comes back negative can confident in the result</span></li>
+<li aria-level="1"><span>But if she’s positive…</span><i><span>now what do we do?</span></i>
+<ul>
+<li aria-level="2"><span>You take that woman with a positive mammo, and you do the MRI with diffusion-weighted imaging and background signaling—A test which has a 92% sensitivity, a 99.6% specificity</span></li>
+<li aria-level="2"><span>And now, your pre-test probability goes up to that 10.6% based on the positive mammo</span></li>
+<li aria-level="2"><span>This is not a woman with a pretest probability of 1.3%, this is a woman with a pretest probability of 11%</span></li>
+<li aria-level="2"><span>And all of a sudden now if the MRI comes back positive, she has a 97% chance of breast cancer</span></li>
+<li aria-level="2"><span>This is a woman in whom you can justify doing a biopsy</span>
+<ul>
+<li aria-level="3"><span>And if it comes back negative, you’re 99% sure it’s negative</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<h2><span>Liquid biopsies for ruling out cancer and the blind spots of common cancer screening tests [33:00]</span></h2>
+<p><b>What is a liquid biopsy?&nbsp;</b></p>
+<ul>
+<li aria-level="1"><span>A liquid biopsy is a biopsy of the blood (essentially a blood sample)</span></li>
+<li aria-level="1"><span>The goal here is to be able to infer through a blood test if a person has a solid organ tumor</span></li>
+<li aria-level="1"><span>If a person has a blood cancer like a leukemia, that would be the way you would gather that information before ultimately doing a bone marrow biopsy</span></li>
+<li aria-level="1"><span>But what we’d really like to know—and it turns out it is possible—is to determine that a person has lung cancer, or breast cancer, or pancreatic cancer just by sampling in the blood</span></li>
+<li aria-level="1"><span>A company called </span><a href="https://grail.com/" target="_blank"><span>GRAIL</span></a><span> has basically developed a technology of both sequencing and machine learning that takes blood and looks for something called </span><a href="https://en.wikipedia.org/wiki/Circulating_free_DNA" target="_blank"><span>cell-free DNA</span></a><span> fragments</span></li>
+<li aria-level="1"><span>DNA resides in cells</span></li>
+<li aria-level="1"><span>But inside the nucleus of a cell, there’s a reasonable amount of extracellular DNA fragments</span></li>
+<li aria-level="1"><span>When a cell gets recycled, when it dies, or even when it releases DNA from the spontaneous synthesis of DNA in white blood cells, cell-free DNA occurs as part of normal cell turnover.</span></li>
+<li aria-level="1"><span>When cancer is present, the methylation profile of cfDNA or cell-free DNA changes</span></li>
+<li aria-level="1"><span>Methyl groups are those little CH groups that are ubiquitous in all of biochemistry and when they get attached to DNA/get attached to the nucleotides it’s like fingerprints, like knowing that there’s a change in the signature of what’s going on</span></li>
+<li aria-level="1"><span>It’s that CF or cell-free DNA methylation pattern that is what allows people to in the case of these machine learning algorithms infer that a cancer is present AND what the likely tissue of origin is</span></li>
+</ul>
+<p><span>Originally, there was another hypothesis was that you could look for tumor DNA</span></p>
+<ul>
+<li aria-level="1"><span>But it turns out that this cell-free DNA approach is the more robust approach because it’s simply a numbers game</span></li>
+<li aria-level="1"><span>While there is some DNA from tumors, it’s far less common</span></li>
+<li aria-level="1"><span>The actual amount of it is about 1/1000th the amount of cell-free DNA</span></li>
+<li aria-level="1"><span>In other words, you’ve got about 0.1% the amount of tumor DNA that you have cell-free DNA so you’d be better off looking at the cell-free DNA and looking at the methylation patterns of that than trying to find the tumor DNA</span></li>
+<li aria-level="1"><span>This kind of epigenetic screening is basically what allows you to infer what’s going on at the level of the tissue</span></li>
+</ul>
+<p><b>How do liquid biopsies work?</b></p>
+<ul>
+<li aria-level="1"><span>You validate using known positive and known negatives</span></li>
+<li aria-level="1"><span>You look at blood banks in which you have a whole bunch of people who have a known type of cancer</span></li>
+<li aria-level="1"><span>And then you have blood from people who are known to not have cancer and not develop cancer in the next period of X months or years</span></li>
+<li aria-level="1"><span>Then the question is, </span><i><span>Can you take that information of something that you calibrate on known positives and negatives, and then apply it to what we call real-world performance?</span></i>
+<ul>
+<li aria-level="2"><span>The answer is yes</span></li>
+</ul>
+</li>
+</ul>
+<p><b>Specificity and sensitivity of liquid biopsies</b><span>:</span></p>
+<ul>
+<li aria-level="1"><span>Preliminarily, what we know is that the test increases in sensitivity as cancer stages goes up</span></li>
+<li aria-level="1"><span>The specificity on this test is very high – about 99.5%&nbsp;</span></li>
+<li aria-level="1"><span>But the sensitivity starts low</span>
+<ul>
+<li aria-level="2"><span>stage one cancers – about 20%</span></li>
+<li aria-level="2"><span>stage two cancers – about 45%</span></li>
+<li aria-level="2"><span>Stage three cancers – about 81%</span></li>
+<li aria-level="2"><span>Stage four cancers – about 93%</span></li>
+<li aria-level="2"><span>For all local cancers—stage one, two, and three—it’s a 44% sensitivity</span></li>
+</ul>
+</li>
+<li aria-level="1"><span>For all cancers all told, </span><i><span>it’s about a 55% sensitivity, 99.3% specificity</span></i></li>
+<li aria-level="1"><span>Predictive value:</span>
+<ul>
+<li aria-level="2"><span>If you apply those data to an all-comer prevalence, you’ll see that the positive predictive value for early stage tumors is about 20%</span></li>
+<li aria-level="2"><span>And it increases to about 45% for all cancers, and 55-60% for advanced cancers</span></li>
+<li aria-level="2"><span>Negative predictive value vacillates between 99.2 and 99.9%.</span></li>
+</ul>
+</li>
+<li aria-level="1"><span>“That’s a really long-winded way of saying liquid biopsies are an amazing way to tell somebody that they do not have cancer. They’re not a great way to tell somebody that they do have cancer.”</span>
+<ul>
+<li aria-level="2"><span>And this why layering tests is important</span></li>
+</ul>
+</li>
+</ul>
+<p><i><span>The most remarkable thing about liquid biopsies…</span></i></p>
+<ul>
+<li aria-level="1"><span>It’s testing for more or less 50 cancer types and it’s really good at discerning what they call the tissue of origin—96% of the samples can actually detect which location it’s coming from</span></li>
+<li aria-level="1"><span>So rather than going through the multitude of invasive tests (CT scan, biopsy, colonoscopy) in search of the origin, you can know this from the liquid biopsy</span></li>
+</ul>
+<p><b>Blind spots of liquid biopsies (and other tests)</b></p>
+<ul>
+<li aria-level="1"><span>With mammography, there are huge blind spots when it comes to very dense glandular breast tissue</span></li>
+<li aria-level="1"><span>Huge blind spot to MRI, small calcified lesion</span></li>
+<li aria-level="1"><span>There’s a blind spot to liquid biopsies, </span><b><i>tissues that are encapsulated</i></b></li>
+<li aria-level="1"><span>Prostate, for example—liquid biopsies are not a great test for prostate cancer</span></li>
+</ul>
+<p><i><span>What is good for prostate screening?</span></i></p>
+<ul>
+<li aria-level="1"><span>Multiplanar MRI is incredible for prostate cancer</span></li>
+<li aria-level="1"><span>So is PSA despite the fact that most people don’t think it is, but that’s because most people just look at PSA when they should be paying closer attention to PSA density and PSA velocity</span></li>
+<li aria-level="1"><span>You have other blood tests like the 4K diagnostic test, which doesn’t just look at PSA and free PSA, but looks at two other proteins and has tremendous accuracy at not just determining if prostate cancer is present, but determining if aggressive prostate cancer is present</span></li>
+<li aria-level="1"><span>Because the important question with prostate cancer is not if a man has it, but if a man is going to die from it</span></li>
+<li aria-level="1"><span>There’s a saying that goes, “</span><i><span>Every man dies with prostate cancer. Some die of it</span></i><span>.”</span></li>
+</ul>
+<p><span>⇒ For prostate cancer testing – See </span><a href="https://peterattiamd.com/tedschaeffer/"><span><span>podcast with Ted Schaeffer</span></span></a></p>
+<p><span>The macro point is knowing where your blind spots are&nbsp;</span></p>
+<ul>
+<li aria-level="1"><span>One other example of blind spots is with MRI in early lesions in the GI tract</span></li>
+<li aria-level="1"><span>If the lesion is big enough, you’re going to see it, but if not, you’re going to need to look inside</span></li>
+</ul>
+
+<h2><span>The difference between cancer originating from inside versus outside the body [41:15]</span></h2>
+<blockquote><p><span>“In my mind, it’s unacceptable for a person to die from a cancer that starts outside the body that is visible.” —Peter Attia</span></p></blockquote>
+<p><b>Starting with outside the body</b></p>
+<ul>
+<li aria-level="1"><span>Everything from the mouth to the anus is outside the body</span></li>
+<li aria-level="1"><span>It is part of the same type of tissue lining</span></li>
+<li aria-level="1"><span>Outside the body would be things like melanoma or even colon cancer</span></li>
+<li aria-level="1"><span>It’s exposed to the outside world, which means you can look at it directly, you can look at it with your eyes</span>
+<ul>
+<li aria-level="2"><span>I.e., There is no barrier between you and the lesion</span></li>
+</ul>
+</li>
+</ul>
+<p><i><span>Colon cancer</span></i></p>
+<ul>
+<li aria-level="1"><span>There’s another thing that makes colon cancer in particular very amenable to early screening</span></li>
+<li aria-level="1"><span>Unlike other cancers, it has a very predictable path of development</span></li>
+<li aria-level="1"><span>It always goes from polyp to cancer</span></li>
+<li aria-level="1"><span>Not all of those polyps are pedunculated, meaning they’re not all the little polyps that stick out that are easy to see</span></li>
+<li aria-level="1"><span>There are also sessile polyps, which are flat and easy to miss</span></li>
+<li aria-level="1"><span>A great endoscopist and an exceptional bowel prep should be able to identify all polyps, especially if the endoscopist is able to spend enough time looking and get complete visualization of the entire colon</span></li>
+</ul>
+<p><i><span>Thought experiment</span></i><span>:</span></p>
+<ul>
+<li aria-level="1"><span>If you were to do a colonoscopy on a person every single day, you would by definition always see the thing that is going to become colon cancer</span></li>
+<li aria-level="1"><span>That means nobody should ever be dying of colon cancer if we’re smart enough to know how often to do that test</span></li>
+<li aria-level="1"><span>A common recommendations today says somewhere between every 5 and 10 years, starting between age 40 and 50 depending on your risk factors</span></li>
+<li aria-level="1"><span>But, at the individual level, those recommendations don’t make any sense</span></li>
+<li aria-level="1"><span>And the reason they don’t make any sense is there are still people dying of colon cancer, despite following those recommendations</span></li>
+</ul>
+<p><b>Inside the body&nbsp;</b></p>
+<ul>
+<li aria-level="1"><span>Inside the body cancer is tougher</span></li>
+<li aria-level="1"><span>Examples: Brain cancers, breast cancers, lung cancers, pancreatic cancers, liver cancer, kidney cancer, prostate cancer, sarcomas, cancers of the connective tissue</span></li>
+<li aria-level="1"><span>Cancers that you can’t look at with the naked eye</span></li>
+<li aria-level="1"><span>And liquid biopsies can hopefully give us a great insight into this coupled with all of these other types of screenings</span></li>
+<li aria-level="1"><span>The MRI is a big part of that</span></li>
+<li aria-level="1"><span>it’s also knowing when you need other things — </span><i><span>For example, knowing you also need the mammography</span></i></li>
+</ul>
+<ul>
+<li aria-level="1"><span>Other examples of outside the body, cervical cancer, head and neck cancer, you can’t look at—it’s too far away</span></li>
+<li aria-level="1"><span>Even though some of them can be outside the body, but they’re just too difficult to see. So we tend to rely on the inside the body looks.</span></li>
+</ul>
+<p><b>The final category is in the blood</b></p>
+<ul>
+<li aria-level="1"><span>There are cancers of the blood – Leukemias</span></li>
+<li aria-level="1"><span>Unfortunately, those are still things that show up when people are symptomatic — we don’t have routine tests for looking for leukemias</span></li>
+<li aria-level="1"><span>People usually show up with anemia or some abnormal finding on a blood count that usually tips people off to that</span></li>
+<li aria-level="1"><span>So it’s a question of, </span><i><span>How do we stack our screening in each of those three categories to go about finding it?</span></i></li>
+</ul>
+
+<h2><span>How diffusion-weighted MRI is changing cancer screening [45:15]</span></h2>
+<p><span><span>⇒ Previous </span><a href="https://peterattiamd.com/rajpaulattariwala/"><span>episode of The Drive</span></a><span> dedicated to discussing diffusion-weighted imaging MRI</span></span></p>
+<p><b>How MRI works</b></p>
+<ul>
+<li aria-level="1"><span>MRI is it’s all about proton manipulation</span></li>
+<li aria-level="1"><span>Protons or hydrogen atoms are ubiquitous in the body, and if you think about it, we’re 70, 75% water and water is H2O</span></li>
+<li aria-level="1"><span>By the way says nothing of all the hydrocarbons in our body—We are organic matter, we’re made of carbon, hydrogen, nitrogen</span></li>
+<li aria-level="1"><span>Everything that is happening with an MRI is basically manipulating a hydrogen atom with a very, very strong magnet</span></li>
+<li aria-level="1"><span>if anybody’s had an MRI, they’re probably very used to seeing the images and they may even notice that sometimes the images look really good (meaning they look anatomically normal)</span></li>
+<li aria-level="1"><span>Then other times, the images don’t look very good at all, things light up very bright or they sort of look a bit odd</span></li>
+<li aria-level="1"><span>And that has to do with the sequence, the timing of how the protons are led to be pulsed with a frequency</span></li>
+<li aria-level="1"><span>The two most common sequences in MRI are called T1 and T2-weighted images</span></li>
+<li aria-level="1"><span>They basically highlight different elements of the anatomy</span></li>
+<li aria-level="1"><span>A T1-weighted image is a very anatomically beautiful image – it tends to highlight fat</span></li>
+</ul>
+<ul>
+<li aria-level="1"><span>A T2-weighted image conversely is not as anatomically nice, but it’s still a very helpful image especially, for example, if you’re looking at the spine</span></li>
+<li aria-level="1"><span>If someone’s getting a dedicated MRI of their spine and you want to truly understand the nature of the discs, the intervertebral discs, the T2-weighted image is really good</span></li>
+</ul>
+<p><b>Explaining </b><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2516183/" target="_blank"><b>diffusion-weighted imaging with background subtraction</b></a><b> (DWIBS)</b></p>
+<ul>
+<li aria-level="1"><span>Easiest way to explain it is that it’s looking at water, but it’s doing so across two points of time</span></li>
+<li aria-level="1"><span>It’s doing so at two very small points of time, which is about 60 microseconds</span></li>
+<li aria-level="1"><span>When you consider how ubiquitous water is in our body, even over 60 microseconds, water should be moving</span></li>
+<li aria-level="1"><span>But if it doesn’t, then it tells us that that water is somehow </span><b>trapped</b></li>
+<li aria-level="1"><span>For example, if you look at the water in your blood between 60 microseconds, it’s going to have moved, it’s in constant circulation</span>
+<ul>
+<li aria-level="2"><span>But if there’s water that is not moving at all, we might infer that it’s stuck within a cell that is preventing the water from moving in and of itself</span></li>
+<li aria-level="2"><span>Or that it’s stuck in tight membranes</span></li>
+<li aria-level="2"><span>If that’s happening, it gives you a sense that there’s a high density of cells within that area</span></li>
+<li aria-level="2"><span>This is what makes diffusion-weighted imaging a little bit more of a functional test than an imaging test</span></li>
+</ul>
+</li>
+</ul>
+<p><span>In the </span><a href="https://peterattiamd.com/rajpaulattariwala/"><span>podcast with Raj Attariwala</span></a><span>, they talked about the difference between a CT scan and a PET scan</span></p>
+<ul>
+<li aria-level="1"><span>A CT scan is an image that shows anatomic detail</span></li>
+<li aria-level="1"><span>Whereas a PET scan is a functional study—it shows glucose uptake by tissue so it’s not really trying to show you a nice picture where you can infer the minutiae of the vascular system of the liver or the pancreas.&nbsp;</span>
+<ul>
+<li aria-level="2"><span>Instead, it’s just trying to say, “Look, here’s an area where a lot of cells are taking up glucose.”</span></li>
+</ul>
+</li>
+<li aria-level="1"><span>The DWI is more akin to the latter (the PET scan)—</span>
+<ul>
+<li aria-level="2"><span>It’s basically showing you the darker something is on that scan, the firmer that tissue is</span></li>
+<li aria-level="2"><span>And that becomes very relevant in the setting of cancer, because cancer feels different than non-cancer</span>
+<ul>
+<li aria-level="3"><span>For example: women doing a self exam for a lump on their breasts</span>
+<ul>
+<li aria-level="4"><span>By feeling, palpating over breast tissue, if you feel a lump, that is a concern because cancer is firm</span></li>
+<li aria-level="4"><span>When you’re in the operating room and you run your hand across a patient’s liver and look for tumors, the tumors stand out because they are firm</span></li>
+<li aria-level="4"><span>“</span><i><span>This is why the DWI, when paired with the other phases of the MRI, is a very powerful tool</span></i><span>.” says Peter</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://peterattiamd.com/wp-content/uploads/2021/07/f15-prenuvo-pancreas-ama25-1024x606.png" alt="" srcset="https://peterattiamd.com/wp-content/uploads/2021/07/f15-prenuvo-pancreas-ama25-1024x606.png 1024w, https://peterattiamd.com/wp-content/uploads/2021/07/f15-prenuvo-pancreas-ama25-300x178.png 300w, https://peterattiamd.com/wp-content/uploads/2021/07/f15-prenuvo-pancreas-ama25-768x455.png 768w, https://peterattiamd.com/wp-content/uploads/2021/07/f15-prenuvo-pancreas-ama25-1536x909.png 1536w, https://peterattiamd.com/wp-content/uploads/2021/07/f15-prenuvo-pancreas-ama25-2048x1212.png 2048w" sizes="(max-width: 1024px) 100vw, 1024px" width="1024" height="606"></p>
+<p><span><b>Figure 15. Prenuvo MRI versus conventional MRI—Pancreatic cancer</b></span></p>
+<ul>
+<li aria-level="1"><span>In the figure above, you’ll see the upper right and the lower left are axial views of the patient</span></li>
+<li aria-level="1"><span>What we’re basically trying to show you is what’s happening with the pancreas</span></li>
+<li aria-level="1"><span>The point of this is that in all but the bottom right photo, it’s not entirely clear that there is something nefarious going on in the pancreas</span></li>
+<li aria-level="1"><span>But in the bottom right, it lights up very dark—which is to say that it is a very firm mass in the pancreas, which in this case turned out to be a very early stage pancreatic cancer that was otherwise missed.</span></li>
+</ul>
+<p><img src="https://peterattiamd.com/wp-content/uploads/2021/07/f16-prenuvo-breast-cancer-ama25-1024x628.png" alt="" srcset="https://peterattiamd.com/wp-content/uploads/2021/07/f16-prenuvo-breast-cancer-ama25-1024x628.png 1024w, https://peterattiamd.com/wp-content/uploads/2021/07/f16-prenuvo-breast-cancer-ama25-300x184.png 300w, https://peterattiamd.com/wp-content/uploads/2021/07/f16-prenuvo-breast-cancer-ama25-768x471.png 768w, https://peterattiamd.com/wp-content/uploads/2021/07/f16-prenuvo-breast-cancer-ama25-1536x942.png 1536w, https://peterattiamd.com/wp-content/uploads/2021/07/f16-prenuvo-breast-cancer-ama25-2048x1256.png 2048w" sizes="(max-width: 1024px) 100vw, 1024px" width="1024" height="628"></p>
+<p><span><b>Figure 16. Prenuvo MRI versus conventional MRI—Breast cancer</b></span></p>
+<ul>
+<li aria-level="1"><span>In the figure above, the upper right and lower left are showing you foot up view of a person cut in an axial manner</span></li>
+<li aria-level="1"><span>What we’re trying to look at here is the left breast</span></li>
+<li aria-level="1"><span>In this case, the patient has very dense breast tissue—a woman with very dense breast tissue is going to easily have a mammogram that’s going to make mistakes</span></li>
+<li aria-level="1"><span>And it can make mistakes in both directions</span></li>
+<li aria-level="1"><span>interestingly here, the mammogram did not identify a tumor</span></li>
+<li aria-level="1"><span>But what you do see is the dark tissue on the DWI, which is the bottom right</span></li>
+<li aria-level="1"><span>Again, the DWI is not an anatomically attractive image</span></li>
+<li aria-level="1"><span>In other words, you’re doing this just to understand how firm the tissue is, and then to have that correspond with the anatomic information</span></li>
+<li aria-level="1"><span>In this case, it did ultimately end up corresponding to an eight millimeter high ductal breast cancer</span></li>
+<li aria-level="1"><span>This is an aggressive cancer that unfortunately would have been missed not just by mammogram, but also would have been missed by traditional MRI</span></li>
+</ul>
+
+<h2><span>Summary of Peter’s approach to cancer screening [53:45]</span></h2>
+<blockquote><p><span>“We screen often, we screen early, and we screen aggressively.” —Peter Attia</span></p></blockquote>
+<p><b>Important tests</b></p>
+<ul>
+<li aria-level="1"><span>Widely utilizing the liquid biopsy</span></li>
+<li aria-level="1"><span>utilizing the full body MRI with diffusion-weighted imaging</span></li>
+<li aria-level="1"><span>The following Peter encourages to do frequently:</span>
+<ul>
+<li aria-level="2"><span>Mammography</span></li>
+<li aria-level="2"><span>cervical exam</span></li>
+<li aria-level="2"><span>Colonoscopy</span></li>
+<li aria-level="2"><span>Endoscopy</span></li>
+<li aria-level="2"><span>dermatologic exam</span></li>
+<li aria-level="2"><span>ophthalmologic exam for ocular melanoma</span></li>
+<li aria-level="2"><span>In men, PSA with PSA velocity, PSA volume — and if suspicion is high, they will do a </span><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2891337/" target="_blank"><span>Four-kallikrein test (4k score)</span></a></li>
+</ul>
+</li>
+</ul>
+<p><b>Tailed to the individual</b></p>
+<ul>
+<li aria-level="1"><span>All of this is tailored to a person — they don’t have an algorithm that they would apply to all people</span></li>
+<li aria-level="1"><span>Some patients are getting a colonoscopy every year because they’re finding polyps every year that are tubular adenomas that are precursors to cancer</span></li>
+<li aria-level="1"><span>Other patients are going to get colonoscopy every five years</span></li>
+<li aria-level="1"><span>By most people’s standards, Peter is on the far end of the spectrum with screening</span></li>
+<li aria-level="1"><span>But this approach comes at a cost — A financial cost, and at the cost of the risk of identifying </span><b>false positives</b></li>
+<li aria-level="1"><span>But by stacking these things, so far it has not yet led to any unnecessary procedures for his patients</span></li>
+<li aria-level="1"><span>For example, when his patients have had suspicious findings on one test—like an elevated 4K score— it has not led to a biopsy of the prostate, but it has led to a multiplanar MRI of the prostate that has shown this is a very low concern</span></li>
+</ul>
+<blockquote><p><span>“I can’t say. . .that this is the approach that everyone should take. But I hope that this discussion at least makes it easier for people to understand another way to think about it beyond the standard approach.” —Peter Attia</span></p></blockquote>
+<p>§</p><h4 id="notes">Selected Links / Related Material</h4><p><b>Five-year survival rates of non-metastatic, local breast cancer are 99%</b><span>: </span><a href="https://www.cancer.net/cancer-types/breast-cancer/statistics#:~:text=The%20average%205%2Dyear%20survival,with%20this%20disease%20is%2099%25." target="_blank"><span>Breast Cancer: Statistics</span></a><span> | (cancer.net) [8:00]</span></p>
+<p><b>Five-year survival rates of metastatic breast cancer is 28%</b><span>: </span><a href="https://www.cancer.net/cancer-types/breast-cancer-metastatic/statistics" target="_blank"><span>Breast Cancer – Metastatic: Statistics</span></a><span> | (cancer.net) [8:00]</span></p>
+<p><b>Interactive spreadsheet for determining the predictive value of cancer screening tests</b><span>: </span><a href="https://peterattiamd.com/how-to-interpret-screening-tests-video-spreadsheet-and-primer/"><span>How to interpret screening tests: video, spreadsheet, and primer</span></a><span> | Peter Attia (peterattiamd.com) [19:30]</span></p>
+<p><b>Company developing liquid biopsy technology</b><span>: </span><a href="https://grail.com/" target="_blank"><span>GRAIL</span></a><span> | (grail.com) [33:45]</span></p>
+<p><b>Podcast discussing prostate cancer with Ted Schaeffer</b><span>: </span><a href="https://peterattiamd.com/tedschaeffer/"><span>#39 – Ted Schaeffer, M.D., Ph.D.: How to catch, treat, and survive prostate cancer</span></a><span> | Peter Attia (peterattiamd.com)[40:15]</span></p>
+<p><b>Podcast discussing diffusion-weighted MRIs</b><span>: </span><a href="https://peterattiamd.com/rajpaulattariwala/"><span>#61 – Rajpaul Attariwala, M.D., Ph.D.: Cancer screening with full-body MRI scans and a seminar on the field of radiology</span></a><span> | Peter Attia (peterattiamd.com) [45:45, 49:45]</span></p>
+<p>§</p><h4 id="notes">People Mentioned</h4><ul>
+<li aria-level="1"><a href="http://dr-schaeffer.com/" target="_blank"><span>Ted Schaeffer</span></a><span> [40:15]</span></li>
+<li><a href="https://peterattiamd.com/rajpaulattariwala/"><span>Raj Attariwala</span></a><span> [49:45]</span></li>
+</ul>
+<p>§</p>
+                      </div>
+                    
+        </article></div>
+  <span></span> <!-- for IntersectionObserver -->
+  
+  
+  
+  
+
+
+</body><style>body {
+      font-size:  20px;
+      font-family: Helvetica, Arial, sans-serif;
+      width: 950px;
+    }
+    .page {
+      line-height: 30.0px;
+    }
+    h1, h2, h3 {
+      line-height: initial;
+    }</style></html>
