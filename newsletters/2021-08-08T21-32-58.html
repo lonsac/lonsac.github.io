@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Stages</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+  body {
+    padding: 2cm; 
+  }
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">Stages of Fasting</h1>
+
+<h2 id="toc_1">Anabolic</h2>
+
+<p>0-4 hours</p>
+
+<p>1 Food breaks down into glucose, amino
+acids, and fatty acids.</p>
+
+<p>2 Leptin increases and ghrelin
+decreases.</p>
+
+<p>3 Pancreas secretes insulin.</p>
+
+<p>4 Insulin shuttles nutrients into cells to
+be stored as glycogen, fat, muscle, or
+used as energy.</p>
+
+<h3 id="toc_2">Summary</h3>
+
+<p>Primary fuel source: glucose from your
+previous meal.</p>
+
+<p>Between 0 and 4 hours, your body is still
+going through the process of ingesting and
+storing the last thing you ate. After your
+body breaks down carbs, protein, and fat
+into glucose, amino acids, and fatty acids,
+your body metabolizes them for energy or
+stores them for later use. Depending on the
+last thing you ate before starting your fast, a
+few different hormones could be at play in
+your bloodstream.
+### Deep Dive</p>
+
+<p>If you&#39;ve eaten a meal heavy in
+carbohydrates, you&#39;ll have a lot of glucose in
+your bloodstream. That means a rise in
+insulin. Your pancreas secretes insulin to
+help shuttle glucose into cells where it can
+immediately be used for energy production
+or stored for later use, either as glycogen
+(the short-term storage of glucose) or as fat
+(long-term storage). Four hours after your
+last meal, glucose and insulin have most
+likely returned to “normal” pre-meal levels.</p>
+
+<p>You&#39;ll also experience a fluctuation in ghrelin
+and leptin. Ghrelin, the “hunger hormone” is
+what turns on your appetite. Leptin does the
+opposite. After a meal, your ghrelin levels
+fall and your leptin levels rise, signaling to
+your brain that you&#39;re full.</p>
+
+<p>The 0-4 hour time frame is what we call an
+anabolic, or growth period since nutrients
+are available and the body can burn them,
+build muscle with them, or store them. It’s
+essential for long term health to balance
+cellular growth with cellular breakdown and
+cleanup. The prevalence of snacking and
+frequent meals, however, mean most people
+spend the bulk of our waking hours (and
+some of our sleeping ones too) in this
+anabolic state.</p>
+
+<h2 id="toc_3">Catabolic</h2>
+
+<p>4-16 hours</p>
+
+<p>1 Blood glucose continues to drop.</p>
+
+<p>2 Release of insulin is low, but release of
+glucagon starts to rise.</p>
+
+<p>3 Glucagon triggers liver glycogen
+breakdown.</p>
+
+<p>4 Suppression of mTOR “opens the door”
+for autophagy.</p>
+
+<h3 id="toc_4">Summary</h3>
+
+<p>Primary fuel source: glucose from liver
+glycogen and fatty acids from fat stores.</p>
+
+<p>During the 4-16 hour phase, your body
+switches to the catabolic, or breakdown,
+state where stored nutrients including
+glycogen and fat are put to use. Once blood
+glucose and insulin levels drop, your
+pancreas will release glucagon—a catabolic
+hormone that stimulates the breakdown of
+glycogen (stored glucose) for energy. Since
+glucose is still a prominent fuel source in
+this phase, your metabolism will attempt to
+break down enough glycogen to keep your
+blood glucose in the “normal” range (about
+70-99 mg/dL).</p>
+
+<h3 id="toc_5">Deep Dive</h3>
+
+<p>Glucose is still your primary, preferred fuel
+source, but when your glycogen reserves
+are nearing empty, you&#39;ll start using fat
+stores and ketone bodies to make up the
+difference. The exact time that your body
+starts shifting from using glucose to fat and
+ketones for energy depends on how much
+glycogen you&#39;ve got stored away and how
+much energy you&#39;re burning throughout the
+day. This switch happens faster if you&#39;re
+exercising since you&#39;ll burn through your
+glycogen stores more quickly; it happens
+slower if you have compromised metabolic
+health (i.e. insulin resistance).</p>
+
+<p>As your body exits the “anabolic state” you
+begin to make room for cellular cleanup, a
+process known as autophagy. This is the
+process by which cellular debris are
+disposed of, and worn-down cellular
+components are recycled. Animal studies
+have demonstrated the value of autophagy
+in protecting against age-associated
+dysfunction in important organs including
+the brain, heart, liver, kidneys, and pancreas.
+The process isn’t yet well-studied in
+humans, but we do know that autophagy is
+diminished by the presence of growth
+factors in the anabolic state.</p>
+
+<p>One particular growth regulator, the
+mechanistic target of rapamycin (mTOR),
+has a prominent role in the switching back
+and forth between an anabolic state and
+autophagy. The switch activity of mTOR is
+largely influenced by nutrient intake,
+particularly protein, but also other nutrient
+and growth factors including glucose and
+insulin. AS you enter a catabolic state,
+fasting diminishes all of these signals. While
+there is always some level of autophagy
+taking place in your body, suppression of
+mTOR opens the door for a much higher rate
+of cellular cleanup.</p>
+
+<h2 id="toc_6">Fat Burning</h2>
+
+<p>16-24 hours</p>
+
+<p>1 Asglycogen becomes depleted,
+glucose from gluconeogenesis starts
+to rise.</p>
+
+<p>2 Lipolysis breaks down fat stores.</p>
+
+<p>3 Fatty acids are mobilized for energy.</p>
+
+<p>4 The liver begins to synthesize ketones
+from excess energy produced from
+fatty acid oxidation.</p>
+
+<p>5 AMPK activity promotes autophagy.</p>
+
+<h3 id="toc_7">Summary</h3>
+
+<p>Primary fuel source: fatty acids from fat
+stores and glucose from gluconeogenesis.</p>
+
+<p>Your body is switching into fat-burning
+mode now. In this zone, your body still uses
+glucose (in fact, it will always use some
+amount of glucose!), but it is now
+significantly more dependent on fatty acids
+for fuel. Glycogen is significantly depleted,
+so your body produces glucose through a
+process called gluconeogenesis while fat
+cells release free fatty acids through a
+process called lipolysis. In the liver, overflow
+from fat oxidation is transformed into
+ketone bodies.</p>
+
+<h3 id="toc_8">Deep Dive</h3>
+
+<p>Between 16 and 24 hours, blood glucose
+levels will be reduced by about 20%. At this
+point, fatty acids from fat oxidation become
+your primary fuel source, but your brain still
+needs glucose to function. With your
+glycogen stores tapped, your body makes
+glucose from non-carbohydrate sources like
+lactate, glycerol, and amino acids through
+gluconeogenesis. Yes, your body can
+actually make sugar out of protein. In this
+zone, your glucose production from
+gluconeogenesis increases from
+approximately 50 g/d to around 100 g/d.
+Most of this glucose is used by the brain
+while the rest of your body switches over to
+fat for fuel.</p>
+
+<p>Decreasing levels of glycogen and insulin
+trigger activity of an energy-sensing protein
+called adenosine monophosphate kinase
+(AMPK), which further promotes the
+activation of autophagy. So you&#39;ve taken
+the brakes off of autophagy by reducing
+mTOR, and now you&#39;ve started to press the
+gas pedal. Things really start to speed up
+from here as the presence of AMPK further
+inhibits mTOR.</p>
+
+<h2 id="toc_9">Ketosis</h2>
+
+<p>24-72 hours</p>
+
+<p>1 Liver glycogen stops being a source of
+glucose.</p>
+
+<p>2  Gluconeogenesis reaches its peak and
+begins to drop off.</p>
+
+<p>3 Blood ketones increase; BHB is usually
+0.5-2 mM.</p>
+
+<p>4 Total ghrelin output decreases.</p>
+
+<p>5 Diminished growth signals and
+increased AMPK activity further
+promote autophagy.</p>
+
+<h3 id="toc_10">Summary</h3>
+
+<p>Primary fuel source: fatty acids and ketone
+bodies plus glucose from gluconeogenesis.</p>
+
+<p>You are now entering a multi-day fast.
+Between 24 and 72 hours, you rely more and
+more on fat and ketone bodies for fuel. Your
+body will prioritize burning fatty acids,
+sparing ketone bodies to be used by the
+brain. Any remaining liver glycogen will be
+fully used up. Glucose production from
+gluconeogenesis peaks shortly after the 24
+hour mark at around 150 g/d and then drops
+off, settling around 80 g/d after 48 hours.
+As ketosis gets underway, levels of ketone
+bodies in your blood will begin to elevate
+indicating you&#39;re in a state of “fasting
+ketosis.”</p>
+
+<h3 id="toc_11">Deep Dive</h3>
+
+<p>“Ketone bodies” refer to three distinct types
+of molecules: acetone, acetoacetate, and
+beta-hydroxybutyrate (BHB). Your body can
+use both acetoacetate and BHB for energy
+production. Blood ketone meters, which you
+may have seen people use while fasting or
+on a ketogenic diet, measure BHB levels in
+the blood. Throughout the third day of a
+fast, ghrelin levels (particularly the form of
+ghrelin thought to be influential for appetite)
+tend to be consistently low, about as low as
+after a meal.</p>
+
+<p>It&#39;s important to note here the difference
+between ketosis (a natural metabolic
+pathway that allows you to burn ketones for
+fuel) and ketoacidosis (dangerously acidic
+blood from overly high ketone levels, usually
+only seen in alcoholics, diabetics, and cases
+of extreme starvation). Ketoacidosis
+normally occurs only when both blood
+glucose and blood ketone levels are
+elevated, which is unlikely to occur during a
+fast. BHB levels will vary based on the
+individual, but within 24-72 hours of fasting,
+you&#39;re likely to see BHB levels rise to
+somewhere between 0.5 - 2.0 mM, safely in
+the “fasting ketosis” range.</p>
+
+<p>With diminishing nutrients and growth
+factors like protein, glucose and insulin
+along with increased AMPK activity,
+autophagy is able to ramp up its process of
+cellular cleanup.</p>
+
+<h2 id="toc_12">Deep Ketosis</h2>
+
+<p>72+ hours</p>
+
+<p>1 Liver continues to produce ketones
+which become the primary fuel for the
+brain.</p>
+
+<p>2  IGF-1 levels are low, as is glucose and
+circulating insulin.</p>
+
+<p>3 BHB production increases.</p>
+
+<p>4 Total ghrelin output remains lower
+than baseline.</p>
+
+<p>5 Autophagy accelerates.</p>
+
+<p>Primary fuel source: ketone bodies and fatty
+reTer(e ion</p>
+
+<p>You are now in the Prolonged Fasting Zone.
+After day 3, glucose and insulin levels
+remain low, hunger stays suppressed, and
+you&#39;re in a steady state of physiological
+ketosis. You&#39;ll also see a decrease in
+something called IGF-1 (insulin-like growth
+factor). IGF-1 is a hormone involved in
+growth and development. When nutrients
+are restricted, your liver decreases its IGF-1
+production.</p>
+
+<h3 id="toc_13">Deep Dive</h3>
+
+<p>Fasting for 3+ days has been shown to
+decrease circulating insulin and glucose by
+30% or more, which can contribute to
+decreased risk of metabolic disease. Blood
+BHB will continue to elevate. One study
+showed that BHB levels will eventually
+plateau between 5-6 mM by day 20-25 of
+fasting. (NOTE: If you&#39;re contemplating an
+extremely long fast, it’s worth consulting
+with a medical professional to make sure
+you&#39;re doing so safely.) As your BHB levels
+rise, your hunger should diminish. A 2020
+review of the scientific literature showed a
+correlation between elevated BHB levels
+and lower levels of hunger, although the
+underlying mechanisms are currently
+unknown.</p>
+
+<p>Inhibiting IGF-1 is another step toward
+taking the brakes off your cellular cleanup
+process. This deep into your fast, all the
+nutrients and growth signals that inhibit
+autophagy continue to diminish until they
+reach a plateau.</p>
+
+
+
+
+</body>
+
+</html>
