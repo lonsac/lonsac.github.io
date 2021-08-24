@@ -1,0 +1,912 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml"><head><meta content="IE=edge" http-equiv="X-UA-Compatible"/><meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><meta name="x-apple-disable-message-reformatting"/><meta content="yes" name="apple-mobile-web-app-capable"/><meta content="black" name="apple-mobile-web-app-status-bar-style"/><meta content="telephone=no" name="format-detection"/><title></title><link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet" type="text/css"/><style type="text/css">
+/* Resets */
+.ReadMsgBody { width: 100%; background-color: #ebebeb;}
+.ExternalClass {width: 100%; background-color: #ebebeb;}
+.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height:100%;}
+a[x-apple-data-detectors]{
+color:inherit !important;
+text-decoration:none !important;
+font-size:inherit !important;
+font-family:inherit !important;
+font-weight:inherit !important;
+line-height:inherit !important;
+}
+body {-webkit-text-size-adjust:none; -ms-text-size-adjust:none;}
+body {margin:0; padding:0;}
+.yshortcuts a {border-bottom: none !important;}
+.rnb-del-min-width{ min-width: 0 !important; }
+/* Add new outlook css start */
+.templateContainer{
+max-width:590px !important;
+width:auto !important;
+}
+/* Add new outlook css end */
+/* Image width by default for 3 columns */
+img[class="rnb-col-3-img"] {
+max-width:170px;
+}
+/* Image width by default for 2 columns */
+img[class="rnb-col-2-img"] {
+max-width:264px;
+}
+/* Image width by default for 2 columns aside small size */
+img[class="rnb-col-2-img-side-xs"] {
+max-width:180px;
+}
+/* Image width by default for 2 columns aside big size */
+img[class="rnb-col-2-img-side-xl"] {
+max-width:350px;
+}
+/* Image width by default for 1 column */
+img[class="rnb-col-1-img"] {
+max-width:550px;
+}
+/* Image width by default for header */
+img[class="rnb-header-img"] {
+max-width:590px;
+}
+/* Ckeditor line-height spacing */
+.rnb-force-col p, ul, ol{margin:0px!important;}
+.rnb-del-min-width p, ul, ol{margin:0px!important;}
+/* tmpl-2 preview */
+.rnb-tmpl-width{ width:100%!important;}
+/* tmpl-11 preview */
+.rnb-social-width{padding-right:15px!important;}
+/* tmpl-11 preview */
+.rnb-social-align{float:right!important;}
+/* Ul Li outlook extra spacing fix */
+li{mso-margin-top-alt: 0; mso-margin-bottom-alt: 0;}
+/* Outlook fix */
+table {mso-table-lspace:0pt; mso-table-rspace:0pt;}
+/* Outlook fix */
+table, tr, td {border-collapse: collapse;}
+/* Outlook fix */
+p,a,li,blockquote {mso-line-height-rule:exactly;}
+/* Outlook fix */
+.msib-right-img { mso-padding-alt: 0 !important;}
+@media only screen and (min-width:590px){
+/* mac fix width */
+.templateContainer{width:590px !important;}
+}
+@media screen and (max-width: 360px){
+/* yahoo app fix width "tmpl-2 tmpl-10 tmpl-13" in android devices */
+.rnb-yahoo-width{ width:360px !important;}
+}
+@media screen and (max-width: 380px){
+/* fix width and font size "tmpl-4 tmpl-6" in mobile preview */
+.element-img-text{ font-size:24px !important;}
+.element-img-text2{ width:230px !important;}
+.content-img-text-tmpl-6{ font-size:24px !important;}
+.content-img-text2-tmpl-6{ width:220px !important;}
+}
+@media screen and (max-width: 480px) {
+td[class="rnb-container-padding"] {
+padding-left: 10px !important;
+padding-right: 10px !important;
+}
+/* force container nav to (horizontal) blocks */
+td.rnb-force-nav {
+display: inherit;
+}
+/* fix text alignment "tmpl-11" in mobile preview */
+.rnb-social-text-left {
+width: 100%;
+text-align: center;
+margin-bottom: 15px;
+}
+.rnb-social-text-right {
+width: 100%;
+text-align: center;
+}
+}
+@media only screen and (max-width: 600px) {
+/* center the address & social icons */
+.rnb-text-center {text-align:center !important;}
+/* force container columns to (horizontal) blocks */
+th.rnb-force-col {
+display: block;
+padding-right: 0 !important;
+padding-left: 0 !important;
+width:100%;
+}
+table.rnb-container {
+width: 100% !important;
+}
+table.rnb-btn-col-content {
+width: 100% !important;
+}
+table.rnb-col-3 {
+/* unset table align="left/right" */
+float: none !important;
+width: 100% !important;
+/* change left/right padding and margins to top/bottom ones */
+margin-bottom: 10px;
+padding-bottom: 10px;
+/*border-bottom: 1px solid #eee;*/
+}
+table.rnb-last-col-3 {
+/* unset table align="left/right" */
+float: none !important;
+width: 100% !important;
+}
+table.rnb-col-2 {
+/* unset table align="left/right" */
+float: none !important;
+width: 100% !important;
+/* change left/right padding and margins to top/bottom ones */
+margin-bottom: 10px;
+padding-bottom: 10px;
+/*border-bottom: 1px solid #eee;*/
+}
+table.rnb-col-2-noborder-onright {
+/* unset table align="left/right" */
+float: none !important;
+width: 100% !important;
+/* change left/right padding and margins to top/bottom ones */
+margin-bottom: 10px;
+padding-bottom: 10px;
+}
+table.rnb-col-2-noborder-onleft {
+/* unset table align="left/right" */
+float: none !important;
+width: 100% !important;
+/* change left/right padding and margins to top/bottom ones */
+margin-top: 10px;
+padding-top: 10px;
+}
+table.rnb-last-col-2 {
+/* unset table align="left/right" */
+float: none !important;
+width: 100% !important;
+}
+table.rnb-col-1 {
+/* unset table align="left/right" */
+float: none !important;
+width: 100% !important;
+}
+img.rnb-col-3-img {
+/**max-width:none !important;**/
+width:100% !important;
+}
+img.rnb-col-2-img {
+/**max-width:none !important;**/
+width:100% !important;
+}
+img.rnb-col-2-img-side-xs {
+/**max-width:none !important;**/
+width:100% !important;
+}
+img.rnb-col-2-img-side-xl {
+/**max-width:none !important;**/
+width:100% !important;
+}
+img.rnb-col-1-img {
+/**max-width:none !important;**/
+width:100% !important;
+}
+img.rnb-header-img {
+/**max-width:none !important;**/
+width:100% !important;
+margin:0 auto;
+}
+img.rnb-logo-img {
+/**max-width:none !important;**/
+width:100% !important;
+}
+td.rnb-mbl-float-none {
+float:inherit !important;
+}
+.img-block-center{text-align:center !important;}
+.logo-img-center
+{
+float:inherit !important;
+}
+/* tmpl-11 preview */
+.rnb-social-align{margin:0 auto !important; float:inherit !important;}
+/* tmpl-11 preview */
+.rnb-social-center{display:inline-block;}
+/* tmpl-11 preview */
+.social-text-spacing{margin-bottom:0px !important; padding-bottom:0px !important;}
+/* tmpl-11 preview */
+.social-text-spacing2{padding-top:15px !important;}
+/* UL bullet fixed in outlook */
+ul {mso-special-format:bullet;}
+}@media screen{body{font-family:'Rajdhani','Arial',Helvetica,sans-serif;}}</style><!--[if gte mso 11]><style type="text/css">table{border-spacing: 0; }table td {border-collapse: separate;}</style><![endif]--><!--[if !mso]><!--><style type="text/css">table{border-spacing: 0;} table td {border-collapse: collapse;}</style> <!--<![endif]--><!--[if gte mso 15]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]--><!--[if gte mso 9]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]--></head><body> <table border="0" cellpadding="0" cellspacing="0" style=" mso-hide: all; display: none;"><tbody><tr><td>I’m excited to share some news on several upcoming releases…</td></tr></tbody></table>  
+
+<table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="main-template" style="background-color: rgb(255, 255, 255);" width="100%">
+
+    <tbody><tr>
+        <td align="center" valign="top">
+        <!--[if gte mso 9]>
+                        <table align="center" border="0" cellspacing="0" cellpadding="0" width="590" style="width:590px;">
+                        <tr>
+                        <td align="center" valign="top" width="590" style="width:590px;">
+                        <![endif]-->
+            <table border="0" cellpadding="0" cellspacing="0" class="templateContainer" style="max-width:590px!important; width: 590px;" width="590">
+        <tbody><tr>
+
+        <td align="center" valign="top">
+
+            <div style="background-color: rgb(255, 255, 255); border-radius: 0px;">
+                
+                <!--[if mso]>
+                <table align="center" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                <tr>
+                <![endif]-->
+                
+                <!--[if mso]>
+                <td valign="top" width="590" style="width:590px;">
+                <![endif]-->
+                <table border="0" cellpadding="0" cellspacing="0" class="rnb-del-min-width" id="Layout_8" name="Layout_8" style="min-width:100%;" width="100%">
+                <tbody><tr>
+                    <td align="center" class="rnb-del-min-width" valign="top">
+                        <a href="#" name="Layout_8"></a>
+                        <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="rnb-container" style="max-width: 100%; min-width: 100%; table-layout: fixed; background-color: rgb(255, 255, 255); border-radius: 0px; border-collapse: separate; padding-left: 20px; padding-right: 20px;" width="100%">
+                            <tbody><tr>
+                                <td height="20" style="font-size:1px; line-height:20px; mso-hide: all;"> </td>
+                            </tr>
+                            <tr>
+                                <td align="left" class="rnb-container-padding" valign="top">
+
+                                    <table border="0" cellpadding="0" cellspacing="0" class="rnb-columns-container" width="100%">
+                                        <tbody><tr>
+                                            <th class="rnb-force-col" style="text-align: left; font-weight: normal; padding-right: 0px;" valign="top" width="550">
+                                                <table align="left" border="0" cellpadding="0" cellspacing="0" class="rnb-col-1" valign="top" width="550">
+                                                    <tbody><tr>
+                                                        <td align="left" class="img-block-center" valign="top" width="100%">
+                                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td align="left" class="img-block-center" valign="top" width="100%">
+                                                                        <table border="0" cellpadding="0" cellspacing="0" style="display:inline-block;">
+                                                                            <tbody><tr>
+                                                                                <td>
+                                                                                    <div style="border-top:0px None #000;border-right:0px None #000;border-bottom:0px None #000;border-left:0px None #000;display:inline-block;"><div><img alt="" border="0" class="rnb-col-1-img" hspace="0" style="vertical-align: top; max-width: 584px; float: left;" vspace="0" width="550"/></div><div style="clear:both;"></div>
+                                                                                    </div>
+                                                                            </td>
+                                                                            </tr>
+                                                                        </tbody></table>
+
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table></td>
+                                                    </tr><tr>
+                                                        <td class="col_td_gap" height="10" style="font-size:1px; line-height:10px; mso-hide: all;"> </td>
+                                                    </tr><tr>
+                                                        <td style="font-size:14px; font-family:Arial,Helvetica,sans-serif, sans-serif; color:#3c4858;">
+                                                            <div><div>Hello friends!<br/>
+<br/>
+I’m excited to share some news on <em>several</em> upcoming releases…</div>
+
+<div><br/>
+You read that right, <em>several.</em> We’ve been exceptionally busy conducting and producing new interviews recently, and we’ve decided to try something a little different when it comes to how we release the next few episodes.</div>
+
+<div><br/>
+Starting with today’s episode — an incredible conversation with Dr. Mark Mattson, the father of the theory of hormesis and intermittent fasting — we’re testing releasing the next few interviews as audio-only podcasts first, exclusively on the FoundMyFitness podcast feed.<br/>
+<br/>
+If you want to listen to these upcoming episodes, make sure you subscribe to the podcast on <a href="https://r.sib.foundmyfitness.com/mk/cl/f/7z4tiyi0dKsFu-or9paTm-KmCSKl-Ct0Tn8mI4Cmsp4EljCKvepcX_aP5XOXLz3l5HEpanC6QAHOfxPfukIa9TxPbPqZJRhNer5mstyHJrWixnHtDMYtXMR_4vmd_O4ETPKJjH2R76Wweq-0pXkqzEq89SaJ_GHQb9lCO3Lw86tYK5JeLdkQ7kqLobhL1lP6XiWneDXMuHmEcEx9ou9EXC8sRl-9AcoXvmcDDypb" sib_link_id="0" style="text-decoration: underline; color: rgb(0, 146, 255);">Apple Podcasts</a> or <a href="https://r.sib.foundmyfitness.com/mk/cl/f/2N5NOxqGLWG1DD7znHUnLQrbS8n8Mq9oKxuFBzkVUsMkuWVxQGBpmREozxwflmNDagzu1UO7ETHXN9LPy9CBSX61__VN5KRj4iatW1UO-iR66mtYKpeG-b8AvnLX6I4-oPqKRGeOKlE3lBjs-miWma_utQi1HOI2wVQ-3HiVXf7hU18D9g7poSrkfjmL0RbmuzQhJudQaadA_pvvg3A" sib_link_id="1" style="text-decoration: underline; color: rgb(0, 146, 255);">Spotify</a> so you get notified as soon as they are released.<br/>
+<br/>
+<strong>So, here’s what you can expect to hear on the FoundMyFitness podcast over the next few weeks:<span style="background-color: transparent;"> </span></strong></div>
+</div>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody></table>
+
+                                                </th></tr>
+                                    </tbody></table></td>
+                            </tr>
+                            <tr>
+                                <td height="20" style="font-size:1px; line-height:20px; mso-hide: all;"> </td>
+                            </tr>
+                        </tbody></table>
+
+                    </td>
+                </tr>
+            </tbody></table><!--[if mso]>
+                </td>
+                <![endif]-->
+                
+                <!--[if mso]>
+                </tr>
+                </table>
+                <![endif]-->
+                
+            </div></td>
+    </tr><tr>
+
+        <td align="center" valign="top">
+
+            <div style="background-color: rgb(255, 255, 255); border-radius: 0px;">
+                
+                <!--[if mso 15]>
+                <table align="center" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                <tr>
+                <![endif]-->
+                
+                <!--[if mso 15]>
+                <td valign="top" width="590" style="width:590px;">
+                <![endif]-->
+                <table border="0" cellpadding="0" cellspacing="0" class="rnb-del-min-width" id="Layout_79" name="Layout_79" style="min-width:100%;" width="100%">
+                <tbody><tr>
+                    <td align="center" class="rnb-del-min-width" valign="top">
+                        <a href="#" name="Layout_79"></a>
+                        <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="rnb-container" style="max-width: 100%; min-width: 100%; table-layout: fixed; background-color: rgb(255, 255, 255); border-radius: 0px; border-collapse: separate; padding: 20px;" width="100%">
+                            <tbody><tr>
+                                <td align="left" class="rnb-container-padding" valign="top">
+
+                                    <table border="0" cellpadding="0" cellspacing="0" class="rnb-columns-container" width="100%">
+                                        <tbody><tr>
+
+                                            <th class="rnb-force-col" style="text-align: left; font-weight: normal" valign="top">
+
+                                                <table align="left" border="0" cellpadding="0" cellspacing="0" class="rnb-last-col-2" valign="top" width="350">
+
+                                                    <tbody><tr>
+                                                        <td style="font-size:24px; font-family:Arial,Helvetica,sans-serif; color:#3c4858; text-align:left;">
+                                                            <span style="color:#3c4858; "><strong><span style="font-size:18px;">#066 - Dr. Mark Mattson (listen today!)</span></strong></span></td>
+                                                    </tr><tr>
+                                                        <td height="10" style="font-size:1px; line-height:10px; mso-hide: all;"> </td>
+                                                    </tr><tr>
+                                                        <td class="rnb-mbl-float-none" style="font-size:14px; font-family:Arial,Helvetica,sans-serif;color:#3c4858;float:left;width:350px;"><div><strong>Released today: </strong>Dr. Mark Mattson is one of the most cited neuroscientists in the world, with more than 180,000 citations of his work noted in the scientific literature.</div>
+
+<div> </div>
+
+<div>His rigorous work has advanced scientific understanding of brain aging, intermittent fasting, and theory on the evolutionary origins of the benefits we derived from stress.</div>
+</td>
+                                                    </tr>
+                                                    </tbody></table>
+                                                </th>
+
+                                            <th class="msib-right-img rnb-force-col img-block-center" style="text-align: left; font-weight: normal; padding-left: 20px;" valign="top" width="180">
+
+                                                <table align="left" border="0" cellpadding="0" cellspacing="0" class="rnb-col-2-noborder-onleft" valign="top" width="100%">
+
+                                                    <tbody><tr>
+                                                        <td align="left" class="img-block-center" style="line-height: auto;" valign="top" width="100%">
+                                                            <div style="border-top:0px None #9c9c9c;border-right:0px None #9c9c9c;border-bottom:0px None #9c9c9c;border-left:0px None #9c9c9c;display:inline-block;"><div><a href="https://r.sib.foundmyfitness.com/mk/cl/f/5_m5LdJl2RspjOb9Zgm2ghpCxo36j0kLyO04wRaIGIDyyWVRk5RpB-MuS-gqPQg7pe6OTVMMY2GLAdecTOZiAB-mGdVRUI2mPkAuZQ4Zfy7KqG1hVa2BKijmiFpq96gUR-K2alxATym9imi9DQNnADw4IdA9hrp9C4kU3cA3_i8ln_5RqEfK6lT4lzJQ58Fzhi4QkYZj9wroRH5jXfRL81W1QXOqWtbUTUTCyyZTc-05VdhroaMryz_M-IuVOasbWRH52k4Zvwq_NPz4hQrBRUlUzL-zX77OAl_k7-Z_a2QzQw" sib_link_id="2" target="_blank">
+                                                                <img alt="" border="0" class="rnb-col-2-img-side-xl" hspace="0" style="vertical-align:top; float: left; max-width:225px !important; " vspace="0" width="180"/></a></div><div style="clear:both;"></div>
+                                                            </div></td>
+                                                    </tr>
+                                                    </tbody></table>
+                                                </th></tr></tbody></table></td>
+                            </tr>
+                        </tbody></table>
+
+                    </td>
+                </tr>
+            </tbody></table>
+            <!--[if mso 15]>
+                </td>
+                <![endif]-->
+
+                <!--[if mso 15]>
+                </tr>
+                </table>
+                <![endif]-->
+            
+        </div></td>
+    </tr><tr>
+
+        <td align="center" valign="top">
+
+            <div style="background-color: rgb(255, 255, 255); border-radius: 0px;">
+            
+                <!--[if mso]>
+                <table align="center" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                <tr>
+                <![endif]-->
+                
+                <!--[if mso]>
+                <td valign="top" width="590" style="width:590px;">
+                <![endif]-->
+                <table border="0" cellpadding="0" cellspacing="0" class="rnb-del-min-width" name="Layout_68" style="min-width:100%;" width="100%">
+                <tbody><tr>
+                    <td align="center" class="rnb-del-min-width" valign="top">
+                        <a href="#" name="Layout_68"></a>
+                        <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="rnb-container" style="background-color: rgb(255, 255, 255); padding-left: 20px; padding-right: 20px; border-collapse: separate; border-radius: 0px; border-bottom: 0px none rgb(200, 200, 200);" width="100%">
+
+                                        <tbody><tr>
+                                            <td height="0" style="font-size:1px; line-height:0px; mso-hide: all;"> </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left" class="rnb-container-padding" valign="top">
+
+                                                <table border="0" cellpadding="0" cellspacing="0" class="rnb-columns-container" width="100%">
+                                                    <tbody><tr>
+                                                        <th class="rnb-force-col" style="text-align: left; font-weight: normal; padding-right: 0px;" valign="top">
+
+                                                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="rnb-col-1" valign="top" width="100%">
+
+                                                                <tbody><tr>
+                                                                    <td style="font-size:14px; font-family:Arial,Helvetica,sans-serif, sans-serif; color:#3c4858;"><div> <strong>In this excellent, 2.5-hour conversation, Dr. Mattson and I talk a lot about:</strong></div>
+
+<ul>
+	<li>Time-restricted eating and intermittent fasting (including specifically how it affects older adults vs young, and women vs. men),</li>
+	<li>The benefit of the occasional metabolic switch as a result of fasting-induced ketosis,</li>
+	<li>The ketogenic diet’s effects on brain health, cortisol, resveratrol and spermidine,</li>
+	<li>How plant-based bioactive compounds induce hormetic stress,</li>
+	<li>...and more!</li>
+</ul>
+
+<div><br/>
+<strong>This episode is available today!</strong></div>
+
+<div> </div>
+
+<div>Listen on <strong><a href="https://r.sib.foundmyfitness.com/mk/cl/f/Sc9Z3qF-0zLLvYACUP6ngN341GMGDW75VqVtvMcOfJgn61FroOWBgOerp8avWW7LYmnp-kYE_GLEgr16GxQpsOHT9Zwzc3NMLFQUmqJvV0mmiCmmsfU5D_KSxTdwqNTyDs1gzjs_yO2E1ff4Xd00O_c0Xc5JdLoqItItdo9Pup2vxphKtBGsEPm7lRRnA9kBustBYxW9WAEPq6cpF_90izzbON-GeyoovDUuAH94Nflkz9AAwNMpPhgRavBekiHrnzFYhtef9gbr3vEqNA7F25O0bLITleiQh5Hj3t_JyRaukA" sib_link_id="3" style="text-decoration: underline; color: rgb(0, 146, 255);">Apple Podcasts</a></strong> or <strong><a href="https://r.sib.foundmyfitness.com/mk/cl/f/hxikcGge_xkmqnXoe2PEkLoG4qJEXs9wUf4-pJJ6ZS2qbKQBI-0kdtXbzX9uin08TvVAcgTA323br7N7eqYrivdK6YBRCYMt-Uy1xryynj5ptqZdzanzE_qo7wuqL2HVuPnw1TYypEKvIFYTkVDItCKKqth-rdXwCZV4hSYoP6lNsuF0DNdOZqxOwA2V2a_27mqEDSrdHO0P5qbnAQlDnA4hni3ik3Bi-kmXv5wr_07rPKyIemtKKjgRu8__Nlyd8qSwgt58bqAlQa3XR9SEqg" sib_link_id="4" style="text-decoration: underline; color: rgb(0, 146, 255);">Spotify</a></strong>, or in your favorite podcast player.</div>
+</td>
+                                                                </tr>
+                                                                </tbody></table>
+
+                                                            </th></tr>
+                                                </tbody></table></td>
+                                        </tr>
+                                        <tr>
+                                            <td height="20" style="font-size:1px; line-height:20px; mso-hide: all;"> </td>
+                                        </tr>
+                                    </tbody></table>
+                    </td>
+                </tr>
+            </tbody></table><!--[if mso]>
+                </td>
+                <![endif]-->
+                
+                <!--[if mso]>
+                </tr>
+                </table>
+                <![endif]-->
+
+            </div></td>
+    </tr><tr>
+
+        <td align="center" valign="top">
+
+            <div style="background-color: rgb(255, 255, 255); border-radius: 0px;">
+                
+                <!--[if mso]>
+                <table align="center" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                <tr>
+                <![endif]-->
+                
+                <!--[if mso]>
+                <td valign="top" width="590" style="width:590px;">
+                <![endif]-->
+            
+                <table border="0" cellpadding="0" cellspacing="0" id="Layout_75" name="Layout_75" width="100%"><tbody><tr>
+                    <td align="center" valign="top"><a href="#" name="Layout_75"></a>
+                        <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="rnb-container" style="height: 0px; background-color: rgb(255, 255, 255); border-radius: 0px; border-collapse: separate; padding-left: 20px; padding-right: 20px;" width="100%"><tbody><tr>
+                                <td class="rnb-container-padding" style="font-size: px;font-family: ; color: ;">
+
+                                    <table align="left" border="0" cellpadding="0" cellspacing="0" class="rnb-columns-container" style="margin:auto;">
+                                        <tbody><tr>
+
+                                            <th align="left" class="rnb-force-col" style="text-align: center; font-weight: normal">
+
+                                                <table align="center" border="0" cellpadding="0" cellspacing="0" class="rnb-col-1">
+
+                                                    <tbody><tr>
+                                                        <td height="10"></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td style="font-family:Arial,Helvetica,sans-serif; color:#3c4858; text-align:left;">
+
+                                                            <span style="color:#3c4858;"><span style="font-size:18px;"><strong>#067 - Dr. Ashley Mason (listen next week)</strong></span></span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="10"></td>
+                                                    </tr>
+                                                    </tbody></table>
+                                                </th></tr>
+                                    </tbody></table></td>
+                            </tr>
+
+                        </tbody></table>
+
+                    </td>
+                </tr>
+
+            </tbody></table><!--[if mso]>
+                </td>
+                <![endif]-->
+                
+                <!--[if mso]>
+                </tr>
+                </table>
+                <![endif]-->
+            
+        </div></td>
+    </tr><tr>
+
+        <td align="center" valign="top">
+
+            <div style="background-color: rgb(255, 255, 255); border-radius: 0px;">
+            
+                <!--[if mso]>
+                <table align="center" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                <tr>
+                <![endif]-->
+                
+                <!--[if mso]>
+                <td valign="top" width="590" style="width:590px;">
+                <![endif]-->
+                <table border="0" cellpadding="0" cellspacing="0" class="rnb-del-min-width" name="Layout_77" style="min-width:100%;" width="100%">
+                <tbody><tr>
+                    <td align="center" class="rnb-del-min-width" valign="top">
+                        <a href="#" name="Layout_77"></a>
+                        <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="rnb-container" style="background-color: rgb(255, 255, 255); padding-left: 20px; padding-right: 20px; border-collapse: separate; border-radius: 0px; border-bottom: 0px none rgb(200, 200, 200);" width="100%">
+
+                                        <tbody><tr>
+                                            <td height="20" style="font-size:1px; line-height:20px; mso-hide: all;"> </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left" class="rnb-container-padding" valign="top">
+
+                                                <table border="0" cellpadding="0" cellspacing="0" class="rnb-columns-container" width="100%">
+                                                    <tbody><tr>
+                                                        <th class="rnb-force-col" style="text-align: left; font-weight: normal; padding-right: 0px;" valign="top">
+
+                                                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="rnb-col-1" valign="top" width="100%">
+
+                                                                <tbody><tr>
+                                                                    <td style="font-size:14px; font-family:Arial,Helvetica,sans-serif, sans-serif; color:#3c4858;"><div>Dr. Ashley Mason is director of the Sleep, Eating, and Affect Laboratory at the Osher Center for Integrative Medicine at UCSF. She specializes in various different non-pharmacological treatments for changing behaviors including sleep and eating behavior disorders, or affect/mood disorders.<br/>
+<br/>
+In this in-depth discussion we talk about:
+<ul>
+	<li>Non-pharmacological depression treatment via sauna use</li>
+	<li>Cognitive behavioural therapy for insomnia</li>
+	<li>Effective strategies to change bad behaviours despite known negative health outcomes (including environmental approaches and reinforcement models</li>
+	<li>...and more!</li>
+</ul>
+</div>
+</td>
+                                                                </tr>
+                                                                </tbody></table>
+
+                                                            </th></tr>
+                                                </tbody></table></td>
+                                        </tr>
+                                        <tr>
+                                            <td height="20" style="font-size:1px; line-height:20px; mso-hide: all;"> </td>
+                                        </tr>
+                                    </tbody></table>
+                    </td>
+                </tr>
+            </tbody></table><!--[if mso]>
+                </td>
+                <![endif]-->
+                
+                <!--[if mso]>
+                </tr>
+                </table>
+                <![endif]-->
+
+            </div></td>
+    </tr><tr>
+
+        <td align="center" valign="top">
+
+            <div style="background-color: rgb(255, 255, 255); border-radius: 0px;">
+                
+                <!--[if mso]>
+                <table align="center" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                <tr>
+                <![endif]-->
+                
+                <!--[if mso]>
+                <td valign="top" width="590" style="width:590px;">
+                <![endif]-->
+            
+                <table border="0" cellpadding="0" cellspacing="0" id="Layout_76" name="Layout_76" width="100%"><tbody><tr>
+                    <td align="center" valign="top"><a href="#" name="Layout_76"></a>
+                        <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="rnb-container" style="height: 0px; background-color: rgb(255, 255, 255); border-radius: 0px; border-collapse: separate; padding-left: 20px; padding-right: 20px;" width="100%"><tbody><tr>
+                                <td class="rnb-container-padding" style="font-size: px;font-family: ; color: ;">
+
+                                    <table align="left" border="0" cellpadding="0" cellspacing="0" class="rnb-columns-container" style="margin:auto;">
+                                        <tbody><tr>
+
+                                            <th align="left" class="rnb-force-col" style="text-align: center; font-weight: normal">
+
+                                                <table align="center" border="0" cellpadding="0" cellspacing="0" class="rnb-col-1">
+
+                                                    <tbody><tr>
+                                                        <td height="10"></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td style="font-family:Arial,Helvetica,sans-serif; color:#3c4858; text-align:left;">
+
+                                                            <span style="color:#3c4858;"><span style="font-size:18px;"><strong>#068 - Dr. Bill Harris - (listen the week of August 30th)</strong></span></span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="10"></td>
+                                                    </tr>
+                                                    </tbody></table>
+                                                </th></tr>
+                                    </tbody></table></td>
+                            </tr>
+
+                        </tbody></table>
+
+                    </td>
+                </tr>
+
+            </tbody></table><!--[if mso]>
+                </td>
+                <![endif]-->
+                
+                <!--[if mso]>
+                </tr>
+                </table>
+                <![endif]-->
+            
+        </div></td>
+    </tr><tr>
+
+        <td align="center" valign="top">
+
+            <div style="background-color: rgb(255, 255, 255); border-radius: 0px;">
+            
+                <!--[if mso]>
+                <table align="center" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                <tr>
+                <![endif]-->
+                
+                <!--[if mso]>
+                <td valign="top" width="590" style="width:590px;">
+                <![endif]-->
+                <table border="0" cellpadding="0" cellspacing="0" class="rnb-del-min-width" name="Layout_71" style="min-width:100%;" width="100%">
+                <tbody><tr>
+                    <td align="center" class="rnb-del-min-width" valign="top">
+                        <a href="#" name="Layout_71"></a>
+                        <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="rnb-container" style="background-color: rgb(255, 255, 255); padding-left: 20px; padding-right: 20px; border-collapse: separate; border-radius: 0px; border-bottom: 0px none rgb(200, 200, 200);" width="100%">
+
+                                        <tbody><tr>
+                                            <td height="20" style="font-size:1px; line-height:20px; mso-hide: all;"> </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left" class="rnb-container-padding" valign="top">
+
+                                                <table border="0" cellpadding="0" cellspacing="0" class="rnb-columns-container" width="100%">
+                                                    <tbody><tr>
+                                                        <th class="rnb-force-col" style="text-align: left; font-weight: normal; padding-right: 0px;" valign="top">
+
+                                                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="rnb-col-1" valign="top" width="100%">
+
+                                                                <tbody><tr>
+                                                                    <td style="font-size:14px; font-family:Arial,Helvetica,sans-serif, sans-serif; color:#3c4858;"><div>If you enjoyed our <a href="https://r.sib.foundmyfitness.com/mk/cl/f/w5Q_iWhszG4qOgS53z9CdABi-6Prkr4CIIvkmbkMyIKGX43svcbTxgPGYq_TeIX7PCx-WMPpyxmjWFpqKm4kuhcSsAl7cSjxmMbRiqAdNs_3Q3WWFgXgGjBwzVFH7mfihFHXnA8MGJ18vE15c_Z3GYiGCyk9LDSLzsAnHnbM0W6jYbqWcwuf6iOQPrX2UPq8zt6kpY1NcHqHvUH8z3OunlI0dtBboJjZzzIUiLjdaHfJU45xbP6Ht2dhoQ80FjVmII39zc_hVTlAZJp0sorf2TGWU4qkiC5y7dH1O4p094TgnDpi31fPNXKegGPgI62Y0j2t" sib_link_id="5" style="text-decoration: underline; color: rgb(0, 146, 255);">recent video on omega-3s</a>, you’ll really love this episode: Dr. Bill Harris is one of the world’s foremost experts on omega-3 fatty acids.</div>
+
+<div> </div>
+
+<div>In 2004 he and his co-author Dr. Von Schacky first proposed that their test, an index of the membrane content of omega-3 found in red blood cells, could advantageously be used to track as a risk factor for heart disease. The index contrasts with other tests, which look at plasma content but are less correlated to long-term omega-3 status.</div>
+
+<div><br/>
+<strong>In this deep dive episode, Dr. Harris and I discuss:</strong></div>
+
+<ul>
+	<li>Omega-3s ALA, EPA and DHA</li>
+	<li>The Omega-3 index</li>
+	<li>How Omega-3 levels predict all-cause mortality, cardiovascular benefits of Omega-3s, dosage and safety</li>
+	<li>A pilot study looking into Omega-3s and COVID-19</li>
+	<li>....and more!</li>
+</ul>
+</td>
+                                                                </tr>
+                                                                </tbody></table>
+
+                                                            </th></tr>
+                                                </tbody></table></td>
+                                        </tr>
+                                        <tr>
+                                            <td height="20" style="font-size:1px; line-height:20px; mso-hide: all;"> </td>
+                                        </tr>
+                                    </tbody></table>
+                    </td>
+                </tr>
+            </tbody></table><!--[if mso]>
+                </td>
+                <![endif]-->
+                
+                <!--[if mso]>
+                </tr>
+                </table>
+                <![endif]-->
+
+            </div></td>
+    </tr><tr>
+
+        <td align="center" valign="top">
+
+            <div style="background-color: rgb(237, 246, 255); border-radius: 0px;">
+            
+                <!--[if mso]>
+                <table align="center" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                <tr>
+                <![endif]-->
+                
+                <!--[if mso]>
+                <td valign="top" width="590" style="width:590px;">
+                <![endif]-->
+                <table border="0" cellpadding="0" cellspacing="0" class="rnb-del-min-width" name="Layout_72" style="min-width:100%;" width="100%">
+                <tbody><tr>
+                    <td align="center" class="rnb-del-min-width" valign="top">
+                        <a href="#" name="Layout_72"></a>
+                        <table bgcolor="#edf6ff" border="0" cellpadding="0" cellspacing="0" class="rnb-container" style="background-color: rgb(237, 246, 255); padding-left: 20px; padding-right: 20px; border-collapse: separate; border-radius: 0px; border-bottom: 0px none rgb(200, 200, 200);" width="100%">
+
+                                        <tbody><tr>
+                                            <td height="20" style="font-size:1px; line-height:20px; mso-hide: all;"> </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left" class="rnb-container-padding" valign="top">
+
+                                                <table border="0" cellpadding="0" cellspacing="0" class="rnb-columns-container" width="100%">
+                                                    <tbody><tr>
+                                                        <th class="rnb-force-col" style="text-align: left; font-weight: normal; padding-right: 0px;" valign="top">
+
+                                                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="rnb-col-1" valign="top" width="100%">
+
+                                                                <tbody><tr>
+                                                                    <td style="font-size:14px; font-family:Arial,Helvetica,sans-serif, sans-serif; color:#3c4858;"><div><strong><span style="font-size:18px;">Full videos coming soon!</span></strong><br/>
+If you also enjoy our in-depth video interviews, don’t worry! We plan to release the full, annotated video version of these interviews as soon as they’re ready. We’ll send you our usual emails including rich show notes for each video interview in the near future.<br/>
+<br/>
+As many of you already know, though, the post-production work that goes into ensuring our videos is quite intense, and we just couldn’t wait to share this conversation with you!<br/>
+<br/>
+If you are <a href="https://r.sib.foundmyfitness.com/mk/cl/f/VdHQ5wrkUANB0A-zW9rSOBrwRMHFe58vhDvc27IbvEg2wfLjLtIt5dJ5Rm3KgadKO9s04AH0S2p2BGvhCJXUqkHxt0wCYMkWin-Pe6zPpxMLCvbn6_WeO6QrERg4TdPXmT0nGSAeKw839sS5QCAH1SS0wYdo45LLJ-1fscYTtcDk_cHAZL4GFeK8eyTStSuMfPYg7laxZPmFqRoatzfn0d4eNHoOjjwqhUkh4dQ" sib_link_id="6" style="text-decoration: underline; color: rgb(0, 146, 255);">subscribed to the FoundMyFitness YouTube channel</a>, you will get a notification when those videos are live. Make sure to subscribe so you don't miss out!</div>
+</td>
+                                                                </tr>
+                                                                </tbody></table>
+
+                                                            </th></tr>
+                                                </tbody></table></td>
+                                        </tr>
+                                        <tr>
+                                            <td height="20" style="font-size:1px; line-height:20px; mso-hide: all;"> </td>
+                                        </tr>
+                                    </tbody></table>
+                    </td>
+                </tr>
+            </tbody></table><!--[if mso]>
+                </td>
+                <![endif]-->
+                
+                <!--[if mso]>
+                </tr>
+                </table>
+                <![endif]-->
+
+            </div></td>
+    </tr><tr>
+
+        <td align="center" valign="top">
+
+            <div style="background-color: rgb(255, 255, 255); border-radius: 0px;">
+            
+                <!--[if mso]>
+                <table align="center" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                <tr>
+                <![endif]-->
+                
+                <!--[if mso]>
+                <td valign="top" width="590" style="width:590px;">
+                <![endif]-->
+                <table border="0" cellpadding="0" cellspacing="0" class="rnb-del-min-width" name="Layout_73" style="min-width:100%;" width="100%">
+                <tbody><tr>
+                    <td align="center" class="rnb-del-min-width" valign="top">
+                        <a href="#" name="Layout_73"></a>
+                        <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="rnb-container" style="background-color: rgb(255, 255, 255); padding-left: 20px; padding-right: 20px; border-collapse: separate; border-radius: 0px; border-bottom: 0px none rgb(200, 200, 200);" width="100%">
+
+                                        <tbody><tr>
+                                            <td height="20" style="font-size:1px; line-height:20px; mso-hide: all;"> </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left" class="rnb-container-padding" valign="top">
+
+                                                <table border="0" cellpadding="0" cellspacing="0" class="rnb-columns-container" width="100%">
+                                                    <tbody><tr>
+                                                        <th class="rnb-force-col" style="text-align: left; font-weight: normal; padding-right: 0px;" valign="top">
+
+                                                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="rnb-col-1" valign="top" width="100%">
+
+                                                                <tbody><tr>
+                                                                    <td style="font-size:14px; font-family:Arial,Helvetica,sans-serif, sans-serif; color:#3c4858;"><div>Thanks for listening,<br/>
+<br/>
+Rhonda and team<br/>
+<br/>
+<br/>
+P.S. I’m in Austin right now to record my 10th appearance on the Joe Rogan Experience! Watch this space — this interview will be released on The Joe Rogan Experience podcast on Spotify soon.</div>
+</td>
+                                                                </tr>
+                                                                </tbody></table>
+
+                                                            </th></tr>
+                                                </tbody></table></td>
+                                        </tr>
+                                        <tr>
+                                            <td height="20" style="font-size:1px; line-height:20px; mso-hide: all;"> </td>
+                                        </tr>
+                                    </tbody></table>
+                    </td>
+                </tr>
+            </tbody></table><!--[if mso]>
+                </td>
+                <![endif]-->
+                
+                <!--[if mso]>
+                </tr>
+                </table>
+                <![endif]-->
+
+            </div></td>
+    </tr><tr>
+
+        <td align="center" valign="top">
+
+            <div style="background-color: rgb(255, 255, 255); border-radius: 0px;">
+            
+                <!--[if mso]>
+                <table align="center" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                <tr>
+                <![endif]-->
+                
+                <!--[if mso]>
+                <td valign="top" width="590" style="width:590px;">
+                <![endif]-->
+                <table border="0" cellpadding="0" cellspacing="0" class="rnb-del-min-width" name="Layout_11" style="min-width:100%;" width="100%">
+                <tbody><tr>
+                    <td align="center" class="rnb-del-min-width" valign="top">
+                        <a href="#" name="Layout_11"></a>
+                        <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="rnb-container" style="background-color: rgb(255, 255, 255); padding-left: 20px; padding-right: 20px; border-collapse: separate; border-radius: 0px; border-bottom: 0px none rgb(200, 200, 200);" width="100%">
+
+                                        <tbody><tr>
+                                            <td height="20" style="font-size:1px; line-height:20px; mso-hide: all;"> </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left" class="rnb-container-padding" valign="top">
+
+                                                <table border="0" cellpadding="0" cellspacing="0" class="rnb-columns-container" width="100%">
+                                                    <tbody><tr>
+                                                        <th class="rnb-force-col" style="text-align: left; font-weight: normal; padding-right: 0px;" valign="top">
+
+                                                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="rnb-col-1" valign="top" width="100%">
+
+                                                                <tbody><tr>
+                                                                    <td style="font-size:14px; font-family:Arial,Helvetica,sans-serif, sans-serif; color:#3c4858;"><div><span style="font-size:12px;"><span style="color:#666666;"><a href="https://r.sib.foundmyfitness.com/mk/un/v2/_kGArmoM2NUlK_LeNVkIVYlCROh3ZcvPFPfmPlo1S0LiYAGHedoeCOAlvGSimyF-3pu2woL-G28BifwLaR-wi3NtUUU2hDSGgq-1nyCTZ8fSjW9AIVueCjaRjNLY2JXiFXeKyQ7wIm2Ypp1TfVsXnHL0Ujg" style="text-decoration: underline; color: rgb(0, 146, 255);">Unsubscribe</a> | © 2021 FoundMyFitness, LLC | PO Box 99785, San Diego, CA, 92169</span></span></div>
+</td>
+                                                                </tr>
+                                                                </tbody></table>
+
+                                                            </th></tr>
+                                                </tbody></table></td>
+                                        </tr>
+                                        <tr>
+                                            <td height="20" style="font-size:1px; line-height:20px; mso-hide: all;"> </td>
+                                        </tr>
+                                    </tbody></table>
+                    </td>
+                </tr>
+            </tbody></table><!--[if mso]>
+                </td>
+                <![endif]-->
+                
+                <!--[if mso]>
+                </tr>
+                </table>
+                <![endif]-->
+
+            </div></td>
+    </tr></tbody></table>
+            <!--[if gte mso 9]>
+                        </td>
+                        </tr>
+                        </table>
+                        <![endif]-->
+                        </td>
+        </tr>
+        </tbody></table>
+
+ <div align="center" style="color: #727272; font-size: 10px;">If you wish to unsubscribe from our newsletter, click <a href="https://r.sib.foundmyfitness.com/mk/un/v2/_kGArmoM2NUlK_LeNVkIVYlCROh3ZcvPFPfmPlo1S0LiYAGHedoeCOAlvGSimyF-3pu2woL-G28BifwLaR-wi3NtUUU2hDSGgq-1nyCTZ8fSjW9AIVueCjaRjNLY2JXiFXeKyQ7wIm2Ypp1TfVsXnHL0Ujg" style="color:#01a4c6;" target="_blank">here</a></div><div><img height="1" src="https://r.sib.foundmyfitness.com/mk/op/Vlgc7PXNKH1yJub06Gw07lmilWWa0XKAbBUxXIg1nYuVg19jBy8f0baXCV_IxkpbLk9JNDbZNJ-ErvROvLcnO1Sp0qMMlGsSPiG7bjlFjD6KUou8rA" width="1"/></div>  
+</body></html>
