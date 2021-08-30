@@ -1,0 +1,484 @@
+<html><head><title>SuperRare: Enabling User-Driven Curation of NFT Art and Differentiating from OpenSea - Delphi Digital :: Reader View</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+html {
+  overflow: overlay;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 30px auto 0 auto;
+  padding: 10px;
+}
+body[data-mode="light"] {
+  color: #222;
+  border-color: %light-color%;
+  background-color: whitesmoke;
+}
+body[data-mode="dark"] {
+  color: #eee;
+  border-color: %dark-color%;
+  background-color: #333;
+}
+body[data-mode="sepia"] {
+  color: #5b4636;
+  border-color: %sepia-color%;
+  background-color: #f4ecd8;
+}
+body[data-mode="solarized-light"] {
+  color: #586e75;
+  border-color: %solarized-light-color%;
+  background-color: #fdf6e3;
+}
+body[data-mode="nord-light"] {
+  color: #2e3440;
+  border-color: %nord-light-color%;
+  background-color: #e5e9f0;
+}
+body[data-mode="groove-dark"] {
+  color: #cec4ac;
+  border-color: %groove-dark-color%;
+  background-color: #282828;
+}
+body[data-mode="solarized-dark"] {
+  color: #93a1a1;
+  border-color: %solarized-dark-color%;
+  background-color: #002b36;
+}
+body[data-mode="nord-dark"] {
+  color: #e5e9f0;
+  border-color: %nord-dark-color%;
+  background-color: #2e3440;
+}
+@media print {
+  body[data-mode="light"],
+  body[data-mode="dark"],
+  body[data-mode="sepia"],
+  body[data-mode="solarized-light"],
+  body[data-mode="nord-light"],
+  body[data-mode="groove-dark"],
+  body[data-mode="solarized-dark"],
+  body[data-mode="nord-dark"] {
+    color: #000;
+    border-color: #000;
+    background-color: #fff;
+  }
+}
+body[data-loaded=true] {
+  
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+img:not([width])[src$=".svg"] {
+  max-width: 100px;
+}
+body[data-images=false] canvas,
+body[data-images=false] svg,
+body[data-images=false] img {
+  display: none;
+}
+a {
+  color: #0095dd;
+  text-decoration: none;
+}
+#reader-domain {
+  font-family: Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  border-bottom-color: currentcolor;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: inline-block;
+  direction: ltr;
+}
+#reader-domain > span:first-child {
+  font-size: 1.1em;
+}
+#reader-domain > span:last-child {
+  font-size: 0.8em;
+}
+#reader-title {
+  font-size: 1.6em;
+  line-height: 1.25em;
+  width: 100%;
+  margin: 20px 0;
+  padding: 0;
+}
+#reader-credits,
+#doi,
+#published-time,
+#reader-estimated-time {
+  font-size: 0.85em;
+  line-height: 1.48em;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+#reader-credits:not(:empty)::after {
+  content: ' ⋮ ';
+}
+#published-time:not(:empty)::before {
+  content: ' ⋮ ';
+}
+#doi-json {
+  overflow: hidden;
+}
+#doi-json code {
+  overflow: auto;
+  max-height: 400px;
+}
+#published-time:empty,
+#reader-credits:empty {
+  display: none;
+}
+body[data-speech="true"] .tts-box {
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  height: 32px;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: 0 0 0 1000vw rgba(128, 128, 128, 0.2);
+}
+body[data-speech="true"] .tts-word {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  background-color: red;
+  height: 2px;
+}
+.tts-word.hidden,
+.tts-box.hidden {
+  display: none;
+}
+body[data-speech="false"] .tts-speaking::after {
+  display: none;
+}
+mark.hghlght {
+  background-color: #ffff81;
+}
+.hidden {
+  display: none;
+}
+.note {
+  position: absolute;
+  z-index: 10;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 5px;
+  min-width: 32px;
+  min-height: 32px;
+}
+.note:focus {
+  z-index: 11;
+}
+</style>
+  <style id="user-css">body {
+  padding-bottom: 64px;
+}
+a:visited {
+  color: #d33bf0;
+}
+a:link, a:link:hover, a:link:active, a:link * {
+  color: #0095dd;
+}
+a:link {
+  text-decoration: none;
+  font-weight: normal;
+}
+pre {
+  white-space: pre-wrap;
+}
+pre code {
+  background-color: #eff0f1;
+  color: #393318;
+  font-family: monospace;
+  display: block;
+  padding: 5px 10px;
+}
+body[data-mode="dark"] pre code {
+  background-color: #585858;
+  color: #e8e8e8;
+}
+
+/* CSS for sans-serif fonts */
+body[data-font=sans-serif] {}
+/* CSS for serif fonts */
+body[data-font=serif] {}
+
+/* CSS for "sepia" theme */
+body[data-mode=sepia] {
+}
+/* CSS for "light" theme */
+body[data-mode=light] {}
+/* CSS for "dark" theme */
+body[data-mode=dark] {}</style>
+</head>
+<body tabindex="1" data-images="true" data-mode="light" data-font="sans-serif" data-loaded="true">
+  <span></span> <!-- for IntersectionObserver -->
+  <a id="reader-domain" href="https://www.delphidigital.io/reports/superrare-enabling-user-driven-curation-of-nft-art-and-differentiating-from-opensea/">
+    <span>www.delphidigital.io</span>
+    <span>/reports/superrare-enabling-user-driven-curation-of-nft-art-and-differentiating-from-opensea/</span>
+  </a>
+  <h1 dir="auto" id="reader-title">SuperRare: Enabling User-Driven Curation of NFT Art and Differentiating from OpenSea - Delphi Digital</h1>
+  <span dir="auto" id="reader-credits">Tom Shaughnessy</span>
+  <span dir="auto" id="reader-estimated-time">48-61 minutes</span>
+  <span dir="auto" id="published-time"></span>
+  <hr>
+  <div id="readability-page-1" class="page"><p><iframe src="https://player.vimeo.com/video/593550587?badge=0" allowfullscreen="allowfullscreen" width="640" height="360" frameborder="0"><span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span><span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span><span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span><span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start"><span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>﻿</span><span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span><span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span><span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span><span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span><span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span><span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span><span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span></iframe></p><div id="podcast_transcript">
+                      <p><b>Interview Transcript:</b></p>
+<p><strong>Tom</strong> (00:00):</p>
+<p>Hey, everyone. Welcome back to the podcast. I’m your host, Tom Shaughnessy. I’m here at the office actually recording, and I’m thrilled to have on John from SuperRare. John, how’s the going?</p>
+<p><strong>John</strong> (00:10):</p>
+<p>Going great, Tom. Thanks for having me on.</p>
+<p><strong>Tom</strong> (00:13):</p>
+<p>John, I think my background beats your background. I’m not going to lie, I got a painting and you just have all white.</p>
+<p><strong>John</strong> (00:18):</p>
+<p>Yeah. I mean, it’s actually a conceptual piece of art, it’s whatever you want it to be.</p>
+<p><strong>Tom</strong> (00:24):</p>
+<p>I love that. Well, John, I think a lot of people know what SuperRare is, but for those who don’t give us a quick 30 second intro before I ask you to tell me your life story. Just so people have some context.</p>
+<p><strong>John</strong> (00:35):</p>
+<p>Yeah, absolutely. So SuperRare is a marketplace and social network built around digital art. The elevator pitch I often give people is, if you think, Instagram meets Christie’s.</p>
+<p><strong>Tom</strong> (00:53):</p>
+<p>I like that, man, and tell us a bit about yourself. How’d you get started in crypto? I think you have quite the history here.</p>
+<p><strong>John</strong> (01:00):</p>
+<p>Yeah, so it was certainly a meandering path I had after college. I moved to New York and was working in advertising just doing creative tech stuff. So building websites, building apps, also doing some digital arts. So I was like into Processing and openFrameworks, some of these creative programming languages. And I discovered the New York Bitcoin Meetup, which was very exciting, kind of just started slowly following down the rabbit hole. Did the whole, I agree and read the white paper thing.</p>
+<p><strong>Tom</strong> (01:38):</p>
+<p>Hit all basis.</p>
+<p><strong>John</strong> (01:39):</p>
+<p>Exactly, hit all the bases. It was fun. It was right before a Counterparty launch so people are starting to experiment with Smart Contract like things, so it was an exciting time. Through that meetup, learned about Ethereum, which I was very skeptical about at first but then after the network launched, I quickly changed my mind and decided I was totally wrong and it was pretty incredible and actually went to go work with a consensus out in Bushwick.</p>
+<p><strong>Tom</strong> (02:19):</p>
+<p>Awesome. So what year was this that you found the Bitcoin Meetup? Is that ’16 or ’17 or was that…?</p>
+<p><strong>John</strong> (02:25):</p>
+<p>No, I think it was like the winter of 2013 or something.</p>
+<p><strong>Tom</strong> (02:33):</p>
+<p>Oh baby, I was way off there, sorry.</p>
+<p><strong>John</strong> (02:35):</p>
+<p>That’s okay. Yeah, it was… Unfortunately, I was just living in a tiny apartment with no money after college. So it didn’t really change my life, other than that, I met a bunch of really cool people.</p>
+<p><strong>Tom</strong> (02:48):</p>
+<p>I like that. Did you ever think that… I mean you were here early, did you ever think that what we have now would ever be built on Bitcoin back then? Like what were you thinking back then when you first found Bitcoin?</p>
+<p><strong>John</strong> (03:02):</p>
+<p>Yeah, it’s a good question. I mean, one of the popular means back then was that like, there were all these other, like Namecoin and like Primecoin and all these other random chains. And one of the popular narratives is, people experiment and then anything that’s actually working will kind of just get absorbed into Bitcoin, which obviously, it didn’t happen. I mean, people were talking… Like Counterparty was super interesting. I thought Counterparty was awesome. I mean, it still is also, the idea is super interesting, putting data into Bitcoin transactions so like building this, I don’t know, higher order layer of things. It’s pretty cool. I mean, I think Counterparty launched like early 2014 and it worked, you could mint other types of things.</p>
+<p><strong>John</strong> (03:59):</p>
+<p>There was some gaming stuff happening with like Spells of Genesis and… But yeah, so I wasn’t sure. I was just very excited about it. Like all the things, it was like, there’s all these new toys to play with. But yeah, it’s been amazing to see the growth in the Ethereum ecosystem. It’s interesting how it’s ground or like Bitcoin has got the super hard money narrative which I’m a big fan, love Bitcoin. But also I love… For us it was like, and me personally, having experimented with building things on top of Bitcoin, like with Solidity, it was like, “Oh shit, well, this is way easier.” I can get behind this so, yeah, it’s been interesting to see it evolve.</p>
+<p><strong>Tom</strong> (04:49):</p>
+<p>No, it’s cool. It’s cool that you have, like you have the history of being early in Bitcoin yet you’re building something that’s fully taken advantage of Ether. I’m not going to make this first step podcast, but I always like to shout out people who are able to make that mental leap, because I feel like a lot of people get stuck in one world or the other.</p>
+<p><strong>John</strong> (05:08):</p>
+<p>Yeah. I definitely was a little stuck and then as soon as I started playing around with Ethereum it was just like, well, this is clearly amazing, and I don’t want to not be a part of this.</p>
+<p><strong>Tom</strong> (05:22):</p>
+<p>Yeah, no, I’m with you. Most people that don’t like it I’ve never used it. So that’s usually the barrier.</p>
+<p><strong>John</strong> (05:27):</p>
+<p>Yeah.</p>
+<p><strong>Tom</strong> (05:27):</p>
+<p>But John, I mean your whole business is built on NFTs, I think, right? And an insane amount of creativity and art, and it’s something that’s unlike DeFi because… DeFi is amazing, but it’s hard and it takes a while to get up to speed, but NFTs are just super simple, people get it, has a huge target base. Tell us a bit about SuperRare.</p>
+<p><strong>John</strong> (05:48):</p>
+<p>Yeah. So being on this space and built side projects, had been experimenting, for me, I was really excited with Web 3, this idea of a value transfer protocol that’s part of the internet. So it was like, how do you make money a native part of all these different apps that we use? We’re all addicted to them. We’re on Twitter all the time or on Telegram all the time, and it’s like, how do you add this money layer? Right, that was the big story. Earliest, for me, it was like, wow, there isn’t really a value transfer layer or value transfer protocol on the internet like, how’s that going to change things? And so in thinking about that, the first hints of SuperRare were like, okay, well, what would it look like if you built a social network that didn’t have an advertising business model, right?</p>
+<p><strong>John</strong> (06:45):</p>
+<p>Like my incentive isn’t to try to keep you trapped in the app, it’s more of a utility. And then with the advent of NFTs and seeing the standard, it was like, oh, what if it could be like a marketplace business model where it’s like totally peer to peer. I thought that the idea was pretty interesting. And then with my background in processing and having been interested in digital art for so long, it was kind of this aha moment of… It was actually at Devcon 3 in Cancun, EtherDelta was the highest volume. I think it was like right before CryptoKitties took off.</p>
+<p><strong>Tom</strong> (07:35):</p>
+<p>[inaudible 00:07:35].</p>
+<p><strong>John</strong> (07:36):</p>
+<p>If I remembered correctly, and I was just like, this is ridiculous. The best app that we’ve built on Ethereum is just a really slow trading app. No shade being thrown on EtherDelta, it was awesome what they had built, but I was just like, ah, this isn’t really what I showed up for like finances school, but it isn’t really what was speaking to me, it was like, how do you get other consumer apps using this technology? And it was kind of slow, it was like, oh, what if you had DEX but instead of for trading Fungible assets and financial instruments, what if it was for art or photos or something like this? And so that was really the origin and then… Yeah, just being in art, I was like, “Oh shit, this is amazing.” All the processing sketches I was just creating for myself could have been… Try to monetize and yeah, just grew from there.</p>
+<p><strong>Tom</strong> (08:35):</p>
+<p>What was the… I guess there’s a timeline, like a disconnect for me here, right? Because you wanted to do something creative, which became SuperRare, but at the time NFTs really weren’t a thing. I mean, what were you thinking back then? Like this would appeal to people taking photographs or… Yeah, I guess I’m just like, did you have to wait for NFTs to become a reality to do your vision? Or was there something there before that?</p>
+<p><strong>John</strong> (09:00):</p>
+<p>Yeah. So it was just like ruminations in my mind. And then when I saw the Dapper Labs team pioneering the standard around and it unique individual objects, I was like, “Oh, this is going to be huge.” A lot of the Smart Contract stuff I had done before involved some kind of unique identifier in some Solidity Smart Contract. And I just felt like all the other parts of the internet have been standards-based, the ICO boom was a simple standard that everybody adopted and we saw how much wealth was generated there. So I was like, okay, unique identifiers are a native part of the internet. Every tweet has a unique ID. Every video has a unique ID, like it’s literally a core feature and so if digital objects with unique identifiers could also be bearer instruments, that’s crazy. How do you even think about what this market’s going to look like.</p>
+<p><strong>John</strong> (10:04):</p>
+<p>So it was just like, “Oh, I have to just go start building stuff because this is going to be amazing.” And then the thing that was most interesting to me personally was digital art.</p>
+<p><strong>Tom</strong> (10:15):</p>
+<p>The cool thing about your story is, and I mentioned at the start is like, you had incredible foresight at those early Bitcoin days to adopt the Ethereum at the EtherDelta days to want to do something creative, non-finance. I know we’re kind of deep into NFTs right now and it’s all the rage, but what’s your foresight on what’s important here and where we’re going, right? Like, do we stop at artwork? Like what gets you really excited about NFTs? I mean, you could talk about different versions, different types, different experiences. Like what gets you going now but also, what do you want to see because you are somebody who could see into the future a bit and you already have.</p>
+<p><strong>John</strong> (11:00):</p>
+<p>Yeah. Collecting has been very much part of the human experience and it hasn’t really gone through this digitization process yet, whereas like video did, music did. So I’m going to be as kind of like fun parts of… Collecting is just a fun part about being a human or lots of people think so. And it’s kind of tied into the digital identity thing, I think that’s part of why the avatar stuff hit so fast and hard. It was like, no matter if people like it, you want to make fun of this for collecting crypto punk, like they’ve probably never bought a crypto punk and made it their profile picture because it’s extremely fucking fun. And that’s just why this, the collecting in this sense is so much more like, if I have… I have a surfboard collection and I have a small art collection and the only people who ever see it are people who’ve been to my house.</p>
+<p><strong>John</strong> (12:09):</p>
+<p>But if you make your new crypto punk your Twitter profile, it’s like on blast to the whole world, and so it’s fun and exciting in a different way. So I think that’s like the tip of the iceberg and just thinking about AR fashion where it kind of seems silly but people just love face filters, right? Like this stuff is clearly not going away, it’s like people are obsessed with it. And so I think that having this, the digital identity also kind of becoming more part of your physical identity in a weird way is kind of where this is, I think that’s where we’re going, where people will have interesting, weird AR clothes that they’re wearing for the day or things like that.</p>
+<p><strong>John</strong> (13:00):</p>
+<p>So I don’t know. That’s kind of where my head goes, where it’s like, for me, the Metaverse isn’t necessarily just ready player one, it’s almost a spectrum of like, do you want to just be playing with AR and you’re on the edge of the Metaverse or do you go all the way deep and now you’re completely immersed? But they’re not like… I think it’s like a continuum versus like a place that you go to.</p>
+<p><strong>Tom</strong> (13:26):</p>
+<p>No, that’s fair. It’s good color. I mean, one of the… I guess one of the side effects of having such a creative explosion of NFTs is, I guess all the extra that piles up, right? Like we have rock selling from 1.3 million, but we also have a graveyard of tens of thousands or hundreds thousands, or millions of NFTs that people will probably never touch that may not have much value, right? In your mind, as that piles up, how do we have that fight for quality while maintaining creativity, right? We don’t want to just stay on punks, we want creativity, but we also don’t want billions of worthless kind of NFTs. How do you keep the creativity going without just piling on this debt of never-ending NFTs?</p>
+<p><strong>John</strong> (14:10):</p>
+<p>Yeah. Well, I do sort of think there’s just going to be more and more NFTs. Like early on we were like, well, if this actually happens there’s going to be like, billions, if not trillions of these things. I mean, that was kind of part of the decision to have curation, like be part of the platform. Is like, if we are in a world where there’s just a huge, huge number, like an infallible number, it’s like how many YouTube videos are there? I don’t know, I haven’t seen most of them, probably don’t want to either. So thinking about the curation layer, I think that’s going to become more and more like the search and discover where it’s like Google’s page rank sort of decides the quality of websites.</p>
+<p><strong>John</strong> (15:06):</p>
+<p>And I don’t think you necessarily have an algorithm curating collectibles and art, but that was part of the inspiration and motivation where the Rare token is like, how do you try to curate at scale? Curating on a small scale is hard, on a large scale is even harder and so this is like us taking that direction. So it’s like, all right, we think it’s possible to crowdsource curation, you just have to do it slowly and thoughtfully.</p>
+<p><strong>Tom</strong> (15:40):</p>
+<p>No, that’s a good point. I’ll definitely get into the Rare token, but I guess before we do that, I mean, tell us, for those who are just listening on audio and can’t go to superrare.com, tell us the differences about the experience with SuperRare. Like when you come to SuperRare, what sets it apart first going to OpenSea or going to Rarible or going to XYZ exchange. Like what’s the experience you’re trying to get to here and what do people take away from that?</p>
+<p><strong>John</strong> (16:06):</p>
+<p>Yeah. So we, and really, really on felt like there’s a bunch of interesting consumer tech, like patterns that you can draw from for like how to, scrolling feeds and things like this. And so it was like, well, you don’t want to throw it all out, it’s not all bad, but at the same time, our goal at SuperRare wasn’t, like I said, it’s not Ad driven, so it’s not like, oh, our goal is to like trap you here. It’s to help people find beauty, appreciate it, want to go chat with an artist on Twitter. Right, like that’s part of what we want to happen. And so it’s really like trying to make the UI minimal, make it easy to find, but also easy to like pause and appreciate our… So yeah, I think that’s one area where we’ve put a lot of thought into, like how does the art look? What is the experience going to be like for another artist or a collector when they see a piece of art?</p>
+<p><strong>John</strong> (17:16):</p>
+<p>You almost want like a negative design, right? If you think about like, we almost want our website to like, you don’t even know it’s there, all you as the user notice is the art you’re looking at and who created it and how this rich art consumption experience. But it’s not us trying to make our brand cool. So it was kind of like, how do you have a brand and a user experience that supports the art? Obviously, we do want to have a brand, but kind of wanting it to be understated. So I think that’s probably the main difference from different aggregator marketplaces, is like really highlighting the art. And then for like competitors and some of the other competitors, it’s like really trying to almost have a museum or gallery experience where really what you notice is the art. I’m sure that the app’s easy to use, but it’s kind of behind the scenes.</p>
+<p><strong>Tom</strong> (18:14):</p>
+<p>The negative design idea you mentioned is actually really interesting. It’s kind of funny because everyone wants to have this very unique, powerful, out in the center front brand but in your sense, you want to showcase all of these artists. It’s a cool idea. Is that something that you guys have from the get-go or is this something you kind of figure out over time?</p>
+<p><strong>John</strong> (18:35):</p>
+<p>Earlier on we… So one of my buddies who I worked with in advertising, his name’s Josh, he’s like very much like a no coiner, but I convinced him to set up MetaMask, and he’s got some art on SuperRare. So he was early on helping us think through what the experience should be like, and we settled on this like… Giphy is amazing, it’s like [inaudible 00:19:05] been to the site, searching through content there is interesting but it’s also extremely overwhelming. There’s way too much stuff, and it was like, what would it be like if you did a mashup where it was a fine art museum but crossed with Giphy, what does that end up with? And so that was kind of the inspiration. Because galleries often they’re very understated, it’s like trying to put the art forward but pretty early on, that was what we settled on.</p>
+<p><strong>Tom</strong> (19:36):</p>
+<p>That’s awesome. No, it’s a really cool feature. One of the things I wanted to talk a lot with you about is curation. I’d first love to start with why you think it’s important and how your token plays into it. But I guess down the line of it, I want to talk a bit about how do we even figure out who the best curators are, right? I mean, today we leave it to the market, right? The market decides for various reasons beyond the scope of this pod, that Punks are super valuable, right, and I agree. But how do we decide that an NFT is valuable when it’s different groups in different use cases, valued in different ways. It’s a huge coordination problem, but we’d love to dive in here and get your take.</p>
+<p><strong>John</strong> (20:18):</p>
+<p>Yeah. It’s super interesting. I think there’s… if you choose a metric, maybe you can then decide whether or not curation is good or valuable. With art, I think it’s definitely a little bit harder, what is good curation? Often it’s like the curation that produces things you like, it would be we each have our own definition of what is good curation. So I think with… So Super 1.0, our team did a pretty good job of curating our, sort of like goal was to support emerging artists, support well-known artists that helps elevate the whole ecosystem and kind of having a broad cross section. But still are limited by the amount of applications we can review, our own personal preferences and tastes in art, and thinking through like, okay, what do we want Super to be, right? If this is the place where people come to discover and collect the vast, most interesting internet art.</p>
+<p><strong>John</strong> (21:36):</p>
+<p>You need a much wider range or more diverse group of voices curating what they each individually think is interesting. So then I was like, okay, well, how do we… Sort of like a rabbit hole where you’re like peeling back layers of things you want. And so ultimately-</p>
+<p><strong>Tom</strong> (21:55):</p>
+<p>How the hell do we do this?</p>
+<p><strong>John</strong> (21:56):</p>
+<p>Yeah, how the hell do we do this? But we were lucky in that there was this kind of emergent pattern on SuperRare where we would talk to people who did feel like they had good curatorial tastes, had either a mission they were interested in. Often curation has some sort of theme and we would work with these, they were galleries, they were just curators. Yeah, early on, there was this guy, Mark, who runs, it’s like an art collective called FELT Zine, who I was like super stoked because I was a big FELT Zine fan. And he was like, we connected, which I was trying not to be too much of a fan boy because for a long time, I was like, “Oh, this is art is so cool.” But it was like, “Oh, hey, I have like…” The type of art I like to curate, I want to have like a voice within SuperRare and so we worked together.</p>
+<p><strong>John</strong> (22:50):</p>
+<p>There was this emergent pattern where people would want to curate their own artists, their own, like a select group of art, which wasn’t necessarily in line with our internal teams, like curatorial taste, but it’s super interesting, right? It’s like this conversation back and forth, like yeah, somebody, one of the viewers or listeners might love the painting behind you. Somebody else might think like, oh, this is terrible, for whatever reason but people have these opinions. So that’s the idea with these SuperRare spaces was like, well, if we could take this emergent pattern and extrapolate it into a product feature where, if you don’t like the style of curation that a space is doing, then don’t go look at the art, it’s pretty straight forward.</p>
+<p><strong>John</strong> (23:41):</p>
+<p>But it allows for people to find their tribe and find what they’re into. I mean, I think ultimately, the first iteration will probably be relatively limited feature set, but long-term, I could see these spaces being their own little DAOs or something like that with members who are on the collecting side, on the art producing side.</p>
+<p><strong>Tom</strong> (24:10):</p>
+<p>Yeah, no, that’s great color. And where exactly does the curation take place? Is it curating the artists on Super or is it curating the artwork that’s displayed? Like where does the curation play into it?</p>
+<p><strong>John</strong> (24:25):</p>
+<p>Yeah. So with Rare, basically the token holders are going to be voting on, we’re going to have like bi-weekly spaces are going to be added and so people will get to vote on what’s the next space. So we looked at all the different… Most of the patterns we were looking at were more like DeFi governance patterns. But just trying to draw inspiration from those, and then so we’ll have essentially these proposals people will get to put together, they’ll get voted on and we’ll have this rolling bi-weekly. We’re calling it the Space Race, inspired by [crosstalk 00:25:06]. Yeah, and so then from there, the operator, we’re currently calling them operators, this base operators they’ll get to curate however they want.</p>
+<p><strong>John</strong> (25:17):</p>
+<p>So they might add artists to their space who can mint as much as they want, or maybe it would just be select pieces of art that get produced in a space. Still very experimental, but that’s the idea, is that they’ll be free to curate however they want and then in addition to that, we’ll still have independent artists representing themselves on SuperRare. Another part of the motivation with this space, like having the space is, our team’s limited in the amount of promotion we can do, right? If we sent 50 emails about auctions during the week, non of the auctions get very much traffic. Whereas like if people start following specific spaces, artists can get better promotion out of the space. So kind of like, it allows us to scale up pretty much everything that’s working with SuperRare.</p>
+<p><strong>Tom</strong> (26:11):</p>
+<p>No, that’s helpful. And a super dumb question for you though, what’s the process for figuring out what goes on the SuperRare homepage, right? Because I understand the Rare token holders can approve spaces and artists, but let’s say a year from now you have a zillion spaces on here, and I’m probably confusing a couple of things, but yeah, what makes to the homepage?</p>
+<p><strong>John</strong> (26:35):</p>
+<p>Yeah. No, this is a great question. Right now it’s just… Currently our team is curating what goes on to the homepage and if you’re logged in, I guess then you’re just seeing the feed that you’ve curated for yourself. But I think it’s a great question and still very experimental, some of the things we’ve talked about like, you could also use the token and have kind of like [Hardberger 00:27:04] tax style featured placements, right? If you think about marketplaces and social platforms, there often are these promoted or featured spots. Yeah, I think that’s where it gets really fun if you think about the token economics, like maybe you’re burning Rare to put a piece of art or feature an artist, or feature an exhibition or something and like playing with that. I like the Harberger tax model because it’s pretty simple but… [crosstalk 00:27:40] if I’m saying it correctly.</p>
+<p><strong>Tom</strong> (27:43):</p>
+<p>No, no, no, it’s fine. It’s kind of cool to think about though, because I mean, I’ve never… Maybe there’s a traditional comparison here, I’m not sure if there is, but in the traditional world, is there anywhere where artists now own part of the vertical that they’re selling on? I don’t think there is, right? I mean, other than buying stock on eBay and trying to sell something.</p>
+<p><strong>John</strong> (28:01):</p>
+<p>Yeah. I don’t really think so. So yeah, no, I think we’re pioneering in the sense that there’s not a lot of prior art for consumer apps and especially, yeah, for these creator platforms. Like Instagram, it’s like, you’re just creating content for free maybe you’re hoping someone clicks on your link tree and buys a T-shirt from your store. But it’s very abstracted from the act of creating the Instagram post, and so what I love about NFTs is the content is the art. That’s the thing a patron can go and collect. So it’s so much more direct sort of like economic system in my mind.</p>
+<p><strong>Tom</strong> (28:47):</p>
+<p>No, I’m with you there. I guess the other thing that plays into this and I’m going to botch the tweet it’s from the mega old Punk owner, who’s super well-known. But basically he was comparing quality to quantity here, and on creators shopping NFTs and a really good point. And obviously hindsight that he brought up was, if you drop something super valuable, the artists will earn so much on royalties from that on secondary sales. How do you think through royalties for artists on SuperRare and other platforms? Because it seems like it’s extremely important for the sustainability of the artists.</p>
+<p><strong>John</strong> (29:21):</p>
+<p>Yeah, absolutely. I mean, I think, initially like royalty is, well, number one, we were like, well, it’s just so easy with Solidity it would be ridiculous not to try building it into the Smart Contract, right? This is actually the point of programmable money, is you can program it to do different things. I think it really makes for a much more, I don’t know, sustainable or fair market, right? Like almost anywhere where there are secondary markets where it’s like the original creators, whether it’s like concert, tickets or swag, like baseball swag or whatever it happens to be, they’re kind of like cut out. And with art specifically, it’s like the artists are poor until they die and then there are like skyrockets in value.</p>
+<p><strong>John</strong> (30:25):</p>
+<p>It’s also a kind of like socially shunned to resell art in the art world. And I think a big part of it though is like, if you buy a painting from someone for 10 grand and then go flip it at the auction house for $2 million and the artist doesn’t see any of that, like that’s a… You can argue whether or not it’s fair, but it’s certainly sucks for the artist. They’re like, “Fuck, I did the actual work here, you just went and resold something.” And so part of the idea is like, well, could you make this… It’s clearly a thing people like to do, people love to resell stuff. People love this act of buying and selling, and so what if you make it a feature as opposed to this like dirty thing that happens, but it’s like you’re not supposed to do it but everybody still does it anyway. And so we were like, this is so weird, like it’s happening over there, everyone can see it but no one’s going to do anything about it.</p>
+<p><strong>John</strong> (31:24):</p>
+<p>And we’re like, well, what if you make it like a core feature? So it’s like the artist is fucking stoked when the collector also makes more money, we can make this more win-win. And so I think… I mean, it makes for a more interesting art market too, right. It’s like, we want it to not only be like a financial game, obviously, but at the same time, the record breaking sale… How did NFTs really jump into the mainstream? There was the Beeple’s sale at Christie’s. It was like, yes, there was some discussion about the, some people like the arts, some people didn’t, but what you saw everywhere, it was digital JPEG sells for $70 million. That was just all over the place, and so pretending like it’s not an important part of the ecosystem I think is silly.</p>
+<p><strong>Tom</strong> (32:17):</p>
+<p>No, I’m with you there. One of the other cool things you guys have built and I haven’t spent a lot of time on is your sovereign smart contracts. Not to like totally shift gears on you, but can you kind of dive into the gravity of that?</p>
+<p><strong>John</strong> (32:31):</p>
+<p>Yeah, absolutely. So early on there were sort of these like platforms that sprouted up, there was not a lot of options for minting NFTs. And the easiest thing to do is have one NFT smart contract that all the artists were minting into. And then it ends up, it’s sort of like branded as like a SuperRare NFT, which is sort of silly because if you think about it, it’s like the artist is who’s important. It’s like we facilitated the NFT, but it’s really about the artist. So having this idea of artists being the most important piece, like it’s a core fundamental piece. And so having this idea of the sovereign artist smart contracts is basically smart contracts that the artist totally owns, they’re minting in them. They can be branded with their name. They could have potentially custom features, like if there’s certain properties that artists want to program into these smart contracts.</p>
+<p><strong>John</strong> (33:37):</p>
+<p>And ultimately not limiting for collectors, right, if you’re say X copy and you’ve minted on other platforms, collectors still, they want to see the whole body of work. And so it’s like in addition to having sovereign artists smart contracts that you created on SuperRare, importing other parts of the collection, I think is a big part of that story as well.</p>
+<p><strong>Tom</strong> (34:05):</p>
+<p>No, that’s pretty cool. I’m just trying to think through spaces a bit more like, how do you envision these artists working together, right? Is it just one artist, one space, or do you envision artists working together on spaces and collaborating and making new art? How do you see through the collaboration aspect on SuperRare?</p>
+<p><strong>John</strong> (34:25):</p>
+<p>Yeah, so I think… So, well, I kind of think two ways about it. So I think artists collaborating on a piece of art, you could have N number of artists collaborating on it, but with Spaces, I kind of think about them like the clubhouse groups or something where it’s, you could see so-and-so is a member of these different groups. I’m kind of imagining it like this where you say, Flamingo DAO has a Space and they’re curating art and artists and you could see, oh, here’s all the different artists who have ever created something in the Flamingo DAO Space or the Goshen Gallery Space or something like that. So I’m imagining them, it’s kind of more high level in ways to sort of group together, like having a bunch of different artists be potentially they’re part of many different spaces.</p>
+<p><strong>Tom</strong> (35:30):</p>
+<p>No, that’s pretty cool. Yeah. I guess the other thing is like, so somebody like Flamingo DAO can curate art for other people, but they can also obviously share the art that they own, right? Like there is the afterward gallery effect?</p>
+<p><strong>John</strong> (35:45):</p>
+<p>Yeah. Yeah. So that’s the, yeah, that’s the plan.</p>
+<p><strong>Tom</strong> (35:50):</p>
+<p>That’s cool. What do you think about post-sale, right? Like there’s a ton of work that you’re doing to incentivize basically the global community to curate artists and art work, and that’s a huge undertaking. And that’s to get the right artwork in front of the people for a sale, but what happens after that? Right, how do you curate people’s galleries after the fact, right? If I spend… You’re spending so much resources to get the right artwork in front of people, but after the sale it’s kind of like art whatever, how do you make it important afterward?</p>
+<p><strong>John</strong> (36:20):</p>
+<p>Yeah. No, that’s… It’s super interesting to think about how people actually interact with these things and they can be more tactile. One way, I think, it’s not as exciting as the Metaverse is, but really just things as simple as digital display, I think Samsung has got the frame, there’s the mural that’s pretty popular where these art focus frames are getting better and cheaper. I think there’s a big opportunity around the UX with those, so if you think about the collecting experience from start to finish, it’s like you find an artist you like, you find a piece of art you like, you acquire it and then you can go show it off on your frame. It’s still pretty clunky no matter what technology are used, like there’s not really a seamless experience.</p>
+<p><strong>John</strong> (37:19):</p>
+<p>A lot of these frames have their own art stores, but I think they haven’t really totally embraced the NFT ethos, so of open standards and open assets, and they’re like a little bit stuck in a Web 2 business model. But we’re actively… I think like Samsung has been pretty progressive, we’ve been talking to them a lot about NFTs and how to like… Here’s an ideal state, let’s work on building something like this together. So I think that’s a big part of this, right. I think really having, whether it’s fine art or collectibles, whatever it is, people want to show it off and having something as simple as just enabling this on… Most people have more than one screen in their house, and so I think it like… I kind of think about it like, you wake up, you have some coffee, you might turn on music and also decide what are you going to have on that day? Like something like that. So I think that’s a big part of how this gets us to the kind of crazier more futuristic Metaverse stuff.</p>
+<p><strong>Tom</strong> (38:27):</p>
+<p>No, I’m with you there. And when you’re thinking through incentives, I guess my concern with curation is always, I’m rewarded now but what about later? Right? If people are curating for SuperRare, obviously they own the Rare token. They get the value flow through increasing the quality and transactions on the site, et cetera. But is there any follow through for the curators after the fact, like is there any value flow to them down the road for curating what may become something that’s extremely important? Like let’s say somebody’s curating Punks early on before they’re valuable, do they get some type of outsized reputation or reward down the line for having thought early on?</p>
+<p><strong>John</strong> (39:12):</p>
+<p>Yeah. So I think it’s super… I mean, it’s a really good point you bring up, they’re very much part of the growth of potentially a specific artist or a specific artwork. And not too long ago, we announced piloting this collector royalties concept, we’re just kind of like playing with. Yeah, these people are sort of interacting together, adding value to this ecosystem. I also think curator royalties are a pretty interesting concept. There’s this, it’s like the comment on YouTube or whatever, it’s like saw at first. It’s just like, you get the social reputation for being the first person to, I don’t know, watch a little Punk music video. But at the same time it could be extended to sort of like monetary success and then maybe royalties are more sophisticated.</p>
+<p><strong>John</strong> (40:11):</p>
+<p>I think the tooling is just getting easier and easier, right? You could have potentially many different parties involved in these royalty transactions.</p>
+<p><strong>Tom</strong> (40:22):</p>
+<p>No. The delayed royalties idea is genius. I mean, because people could put a lot of work in to find really valuable pieces. And obviously, by design, it’s not the crowd that’s going to find that, right, it’s going to be smaller people. I really like that idea, it’s cool.</p>
+<p><strong>John</strong> (40:39):</p>
+<p>Yeah. Even my own behavior on SuperRare is like, if I see someone whose tastes I respect and they start collecting from somebody you’re like, oh, that’s like, maybe I should go get one of those. So having them kind of… If there is like a mechanic there to incentivize that, I think that’s great, right? It makes it easier for people to find art. It makes it easier for them to collect it, which benefits everybody.</p>
+<p><strong>Tom</strong> (41:10):</p>
+<p>Yeah. So I was chatting with Coley B, he goes by, a close friend in the space who helps me to understand it. And one of the key points that he brought up during our conversation was, I guess exactly what you’re attempting to solve, right? That the NFT space, when there’s a drop it’s dominated by the projects that get a ton of social media and cloud and plug the right people in. But for the smaller artists, it’s obviously extremely hard for them to get eyeball time, right? Do you have any success stories you can share on how SuperRare helps the unknown artists achieve the top despite all of this NFT spam per se on Twitter?</p>
+<p><strong>John</strong> (41:52):</p>
+<p>Oh, yeah, that’s a good question. I mean, certainly prior to the NFT spam, it’s easier to put… A number of artists on SuperRare were not famous, well-known artists before all of this started. I think FEWOCiOUS is a great example where he was selling paintings in his online store for like 300 bucks, and now is like probably one of the most, well-known, also, one of my personal favorites, but like most well-known artist like, I mean, I don’t know, in the world. But certainly in this ecosystem FEWOCiOUS is a household name. So I think it’s interesting, I think, it’s kind of like what we’re saying around the curation, right, it’s like finding…</p>
+<p><strong>John</strong> (42:47):</p>
+<p>It is an interesting matching problem, matching collectors and artists at the right stage where you know like, FEWOCiOUS pieces are now currently out of my personal price range, but like, how do I get matched with somebody early on in their career before they have notoriety? So yeah, still, I think it’s an open question around what’s the best way to go about solving it.</p>
+<p><strong>Tom</strong> (43:16):</p>
+<p>Yeah, no, I’m with you there. Not to play devil’s advocate, but I’d love to get your take. People see OpenSea doing like, I think it’s like 3 billion in volume in like the last week or something, just like insane growth. But obviously the experience of OpenSea is very, very different from SuperRare. What’s your take though on a couple of years out, like everybody always argues convergence to winner takes most or winner takes all markets. Obviously, in the real world it’s not totally reality, if you look at department stores, if you look online, kind of is with Amazon. I guess, how are you thinking about maintaining this incredible experience on curation in the face of mass retail using something like OpenSea?</p>
+<p><strong>John</strong> (44:05):</p>
+<p>Yeah. It’s a super valid question. I mean, it’s interesting in that our infrastructure could support whatever NFTs, right? It’s a conscious decision to have it be more focused on our… My personal opinion is that eventually it gets kind of vertical, you’ll see sort of this like unbundling, I know people understand about unbundling, but like-</p>
+<p><strong>Tom</strong> (44:32):</p>
+<p>Oh man, an ex-telco analyst man. [crosstalk 00:44:36].</p>
+<p><strong>John</strong> (44:38):</p>
+<p>[crosstalk 00:44:38] is great so, yeah, ebb and flow.</p>
+<p><strong>Tom</strong> (44:39):</p>
+<p>Yeah.</p>
+<p><strong>John</strong> (44:41):</p>
+<p>But I think like, I imagine the experience for the specific asset type becomes more and more sophisticated. So you have to think about like virtual land, like someone will probably build a very cool, like Zillow style virtual real estate website. So even though that’s like an NFT, you could sell it next to domain names. Ultimately it’s hard to specialize in these very different verticals. And so I think there’ll be these sort of like category winners, it’s kind of like how I, like in the next five years, I see very category specific platforms. And obviously, I think SuperRare is going to win the art category.</p>
+<p><strong>Tom</strong> (45:33):</p>
+<p>Yeah, no I’m with you there. And [inaudible 00:45:37], man. I mean, the Rare token is new. I mean, it’s had an incredible launch, the idea for curation is cool. I mean, what’s your take long-term? I guess, what do you see as the biggest hurdle for the token? Do you think people are going to understand curation from the get-go? Is everything live today? Would love kind of an update there too.</p>
+<p><strong>John</strong> (45:56):</p>
+<p>Yeah. I mean, I think it’s… I’m clearly very excited about it, right, I think we’re an interesting hybrid of consumer app, but also there’s like this protocol component related to NFTs. One of the hurdles is just PI being early to market there is, there’s not lots of prior arts of figuring out, right? Like governance around curation is different than governing the maker interest rate, right, that’s extremely specific whereas like this is a little bit more broad. So I think there’s some challenges in refining that model, but I also think that’s where the opportunity is as well. You get that sort of the asymmetry around the risks. I mean, I think another challenge is like, where the crypto crowd totally understands what these tokens are and what they need and how to use them. And I really see this as a much more mainstream sort of art. You don’t need to know anything about monetary theory to appreciate art and so trying…</p>
+<p><strong>John</strong> (47:15):</p>
+<p>And that’s kind of why we’re thinking of calling it the Space Race. We’re not calling it decentralized, DAO governance of curatorial. It’s like, how do you make governance a fun product, so you can have high engagement? So I think that’s the biggest challenge. Like I think it’s a big opportunity, but it’s still something to be ironed out.</p>
+<p><strong>Tom</strong> (47:39):</p>
+<p>No, I love that. And John, we have like five or 10 minutes left. I’d love to switch gears to you. I want to start with hardest hurdles to overcome, and then we’ll go to the best ones that you’ve overcame. But I guess what was the biggest setback for you that you overcame in SuperRare’s history? Like what was something that just, you woke up one day and you’re like, “Fuck man, I don’t know if I can do this.” What was something that was a hard thing that you overcame that people might not know about.</p>
+<p><strong>John</strong> (48:04):</p>
+<p>People might not know about?</p>
+<p><strong>Tom</strong> (48:06):</p>
+<p>Or they might know. Either one.</p>
+<p><strong>John</strong> (48:08):</p>
+<p>Let’s see. I mean, we were extremely early and so basically we did an accelerator program, so like have a little bit of cash for three months and then came out and it was like middle of crypto winter, like complete failure to raise. We didn’t get a single dollar after the accelerator. So it was like, great, this isn’t really what… Yeah. Originally you read about that on, in fact, at TechCrunch, it says like, how this a terrible idea. And so-</p>
+<p><strong>Tom</strong> (48:42):</p>
+<p>Had the title, ready to go.</p>
+<p><strong>John</strong> (48:43):</p>
+<p>Yeah, had you read the press release, I says like [inaudible 00:48:50]. I mean, that was super challenging. The three of us, there’s three co-founders, it’s my brother and our cousin, Jonathan, we had quit our jobs to dive in and so it was just pretty challenging. We were like doing side projects, so it was a lot of like, all right, well, I’ll do this thing from 6:00 AM until 3:00 PM and I’ll switch gears. And like, we could do a super standup at four and work until midnight. So it was definitely a challenge, and there were many times we were just like, “Oh my God, is this worth it?” It’s fun and cool, but is this just like a really hard hobby that we have, or what’s going to happen?</p>
+<p><strong>Tom</strong> (49:37):</p>
+<p>On the 10th, the [inaudible 00:49:39] start arguing whether you should go back to your job or not?</p>
+<p><strong>John</strong> (49:41):</p>
+<p>Yeah, exactly. Everyone’s like, “Fuck, I quit my job where I actually got paid, this is horrible.”</p>
+<p><strong>Tom</strong> (49:48):</p>
+<p>No, it’s interesting. And I mean, you started your career in crypto so early, right? I mean, I know I keep saying that, but it feels like the NFT crowd is a totally new crowd and you’re someone who’s been here since 2013 or so, like it’s awesome to see you go from new, “new paradigm to new paradigm” kind of.</p>
+<p><strong>John</strong> (50:09):</p>
+<p>Yeah, well. I mean, really early on, I was like, ah, the internet money plus consumer web is going to be super lit. I just don’t exactly know what it’s going to be like. And I think we’re starting to see like, okay, this is actually what it’s going to be like.</p>
+<p><strong>Tom</strong> (50:27):</p>
+<p>Yeah, no, I love that. I guess any words of caution for those entering the NFT space now? I just saw an alert that [inaudible 00:50:36] just went for 508th, and it’s sick. Yeah, it’s rainbow. It’s kind of a cool robot eye. It just looks great. But yeah, I guess, what would you caution people who you want to make sure that they authentically stay in the NFT or crypto space, but they also take part? Like how do you get them to stay, learn the right way?</p>
+<p><strong>John</strong> (50:59):</p>
+<p>Yeah. Well, I think, I mean, I don’t know, it probably sounds cheesy, but it’s like, what was fun early on for us is no one was making any money and it was like, “Well, this is just cool. We’re making art, making friends, this is awesome.” And so I would say for new entrants it’s like, I think the eye-popping numbers are super exciting. It’s great for attention, right? We’re getting more and more eyeballs on the space, but it’s not everybody is selling board apes for 500 each. And so, I think that, just get involved with, I don’t know, like the speculation is one thing, but find something you’re interested in. There’s a ton of interesting, from other crazy shit art is doing, right, like pioneering play to earn to the collectibles projects.</p>
+<p><strong>John</strong> (52:01):</p>
+<p>The NFTs are extremely broad, and so if you get involved with something you’re truly interested in, it’s going to be way more satisfying. I think you’ll probably have, I’m not giving people investment advice, but for me personally, when I’ve been passionate about things, I’ve had better returns than if you’re like just coming in to be like, “Oh, sick, this is a cool new way to like, diamond hands, I’m going to get rich.” If that’s your mindset, you’re probably not going to get rich.</p>
+<p><strong>Tom</strong> (52:31):</p>
+<p>You’re screwed.</p>
+<p><strong>John</strong> (52:31):</p>
+<p>Yeah.</p>
+<p><strong>Tom</strong> (52:32):</p>
+<p>Just the other side of the equation here, what advice would you give to artists? Right, let’s say you’re an artist who dreams to be on the front page of SuperRare. What tips would you give them not to like play the system or anything, but just on how to create the right type of artwork and community to kind of get there.</p>
+<p><strong>John</strong> (52:51):</p>
+<p>Yeah. I think, I mean, you’re probably familiar with Cole D and his work. He always, I like his message to younger artists of just being like, you should just focus on the art and the success can come later where like, early on, like all the art on SuperRare was selling from like $5 to maybe $300. So don’t necessarily try to start comparing yourself to people who’ve been around in the space and have notoriety right away. Continue to develop your style, continue to make personal connections. I think a big, kind of like everything, right, it’s at the end of the day, it’s just a bunch of humans hanging out and doing things. And so if you are making interesting art, you can go join some of these DAO’s, meet people and just start exposing yourself to the many different facets. I think that’s a pretty surefire way to achieve some success. Because it’s still really early, right, like there’s still a lot of people who’ve never heard of DAOs and are just like, why are these crazy people buying gifts on the internet?</p>
+<p><strong>Tom</strong> (54:05):</p>
+<p>No, I’m with you. We definitely will. And John, my last question for you is it’s always hard for founders to fire themselves, to centralize the community, give up their baby. For you, not to put myself in your shoes, but super success has come off the heels of you and your team’s ability to create this negative brand, and to know the artist and to put the right artwork out there. Is there any feeling of unease or excitement in giving that curation to the community? Because it’s definitely where you want to go, but it’s definitely a handoff from you and saying, I’ve done this for so long, I know what works, community go crazy.</p>
+<p><strong>John</strong> (54:49):</p>
+<p>Yeah, absolutely. I mean, it’s a huge change. It’s a big step. It was heavily debated, right, what should we do? How should we approach this? And I think what makes me the most excited is, I still think we haven’t necessarily figured out exactly what the form factor is and what this looks like in 10 years. And so in my mind, opening it up more, like decentralizing the protocol more, and the platform enables other community members who have really good ideas to help you contribute to the direction of where they should go. I think it’s come a long way and it’s mature enough and that we can now, if we have more inputs we can achieve greater outputs.</p>
+<p><strong>John</strong> (55:46):</p>
+<p>And so that’s what gets me excited is just thinking through like… Yeah, I don’t actually know what… Should it just be one of ones? Where you’re like, there’s all sorts of interesting dials and knobs to turn. And so I’m excited to see how people approach these spaces and how that kind of influences the greater platform.</p>
+<p><strong>Tom</strong> (56:08):</p>
+<p>No, that’s a fair point. And I won’t talk about any platform here, but OpenSea has had incredible success. I won’t knock them at all, but they also feel somewhat disconnected from the NFT community a bit in that, it’s all just extra stuff I’m hearing, but you guys are pretty much handing over the keys to the community. So it’s crazy just to think of the two extremes here and how you guys differentiate. And OpenSea is an incredible platform, I love them. It’s just a great comparison on two very different strategies, I guess.</p>
+<p><strong>John</strong> (56:41):</p>
+<p>Yeah. Also, a huge fan, I purchased many [inaudible 00:56:47] on OpenSea and things like that. Yeah, I think it’s just a different approach, right? It’s like, I think this ecosystem is still so nascent and like experimenting at both ends, the rising tide quote. I think there’s just different approaches. It’s going to be not positive for everyone, but yeah, I’m personally biased and very excited about going down the path of decentralization. It’s been in the DNA, I was like, should I go bake like a Bitcoin talk forum post about SuperRare just for my own personal… Because I think that’s cool.</p>
+<p><strong>Tom</strong> (57:37):</p>
+<p>Just to have it.</p>
+<p><strong>John</strong> (57:38):</p>
+<p>Exactly. So yeah, starting with the Smart Contracts and then evolving it to be something much bigger is definitely something that’s personally very exciting for me.</p>
+<p><strong>Tom</strong> (57:53):</p>
+<p>I’m sorry, last question, John. I know I’m keeping you, but do you ever foresee OpenSea launching a token and doing curation? I don’t see it happening, but what are your thoughts?</p>
+<p><strong>John</strong> (58:03):</p>
+<p>So I wouldn’t rule it out, I’m not sure. I think, kind of like my personal opinion. I see, what I think would be cool, if folks at OpenSea are listening and want my unsolicited advice is just like-</p>
+<p><strong>Tom</strong> (58:20):</p>
+<p>I doubt they’re listen to my pod.</p>
+<p><strong>John</strong> (58:21):</p>
+<p>Yeah, they’re certainly not listening to me talk. But them almost being like a Coinbase or something of NFTs where it’s like, it’s a massive platform, it’s got a million features. They have amazing custodial, like custody being one, I think something like that could be super cool. So if I was going to guess, I imagine maybe more kind of the… I don’t know if Coinbase is the right comparison, but something like that, that’s going to be a massive business. So I’m sure somebody is going to do something like that, and I feel like they’d probably be well positioned but I guess we’ll find out.</p>
+<p><strong>Tom</strong> (59:04):</p>
+<p>I love that. Well, John, thanks so much for coming on, man. It’s great to hear your story. You’ve been around a long time, you’ve made a lot of changes. You’ve taken a lot of risks. You’ve handed over the keys of a very important project to the community in a short time. So kudos to you and I have to see that progress, and thanks so much for coming on, man.</p>
+<p><strong>John</strong> (59:24):</p>
+<p>Yeah, absolutely, Tom. Thanks for having me. It’s a pleasure.</p>
+                    </div></div>
+  <span></span> <!-- for IntersectionObserver -->
+  
+  
+  
+  
+
+
+</body><style>body {
+      font-size:  20px;
+      font-family: Helvetica, Arial, sans-serif;
+      width: 950px;
+    }
+    .page {
+      line-height: 30.0px;
+    }
+    h1, h2, h3 {
+      line-height: initial;
+    }</style></html>
