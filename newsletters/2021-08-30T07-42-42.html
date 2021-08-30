@@ -1,0 +1,340 @@
+<html><head><title>Optimistic Pioneers - Uniswap & Synthetix - Delphi Digital :: Reader View</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+html {
+  overflow: overlay;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 30px auto 0 auto;
+  padding: 10px;
+}
+body[data-mode="light"] {
+  color: #222;
+  border-color: %light-color%;
+  background-color: whitesmoke;
+}
+body[data-mode="dark"] {
+  color: #eee;
+  border-color: %dark-color%;
+  background-color: #333;
+}
+body[data-mode="sepia"] {
+  color: #5b4636;
+  border-color: %sepia-color%;
+  background-color: #f4ecd8;
+}
+body[data-mode="solarized-light"] {
+  color: #586e75;
+  border-color: %solarized-light-color%;
+  background-color: #fdf6e3;
+}
+body[data-mode="nord-light"] {
+  color: #2e3440;
+  border-color: %nord-light-color%;
+  background-color: #e5e9f0;
+}
+body[data-mode="groove-dark"] {
+  color: #cec4ac;
+  border-color: %groove-dark-color%;
+  background-color: #282828;
+}
+body[data-mode="solarized-dark"] {
+  color: #93a1a1;
+  border-color: %solarized-dark-color%;
+  background-color: #002b36;
+}
+body[data-mode="nord-dark"] {
+  color: #e5e9f0;
+  border-color: %nord-dark-color%;
+  background-color: #2e3440;
+}
+@media print {
+  body[data-mode="light"],
+  body[data-mode="dark"],
+  body[data-mode="sepia"],
+  body[data-mode="solarized-light"],
+  body[data-mode="nord-light"],
+  body[data-mode="groove-dark"],
+  body[data-mode="solarized-dark"],
+  body[data-mode="nord-dark"] {
+    color: #000;
+    border-color: #000;
+    background-color: #fff;
+  }
+}
+body[data-loaded=true] {
+  
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+img:not([width])[src$=".svg"] {
+  max-width: 100px;
+}
+body[data-images=false] canvas,
+body[data-images=false] svg,
+body[data-images=false] img {
+  display: none;
+}
+a {
+  color: #0095dd;
+  text-decoration: none;
+}
+#reader-domain {
+  font-family: Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  border-bottom-color: currentcolor;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: inline-block;
+  direction: ltr;
+}
+#reader-domain > span:first-child {
+  font-size: 1.1em;
+}
+#reader-domain > span:last-child {
+  font-size: 0.8em;
+}
+#reader-title {
+  font-size: 1.6em;
+  line-height: 1.25em;
+  width: 100%;
+  margin: 20px 0;
+  padding: 0;
+}
+#reader-credits,
+#doi,
+#published-time,
+#reader-estimated-time {
+  font-size: 0.85em;
+  line-height: 1.48em;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+#reader-credits:not(:empty)::after {
+  content: ' ⋮ ';
+}
+#published-time:not(:empty)::before {
+  content: ' ⋮ ';
+}
+#doi-json {
+  overflow: hidden;
+}
+#doi-json code {
+  overflow: auto;
+  max-height: 400px;
+}
+#published-time:empty,
+#reader-credits:empty {
+  display: none;
+}
+body[data-speech="true"] .tts-box {
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  height: 32px;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: 0 0 0 1000vw rgba(128, 128, 128, 0.2);
+}
+body[data-speech="true"] .tts-word {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  background-color: red;
+  height: 2px;
+}
+.tts-word.hidden,
+.tts-box.hidden {
+  display: none;
+}
+body[data-speech="false"] .tts-speaking::after {
+  display: none;
+}
+mark.hghlght {
+  background-color: #ffff81;
+}
+.hidden {
+  display: none;
+}
+.note {
+  position: absolute;
+  z-index: 10;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 5px;
+  min-width: 32px;
+  min-height: 32px;
+}
+.note:focus {
+  z-index: 11;
+}
+</style>
+  <style id="user-css">body {
+  padding-bottom: 64px;
+}
+a:visited {
+  color: #d33bf0;
+}
+a:link, a:link:hover, a:link:active, a:link * {
+  color: #0095dd;
+}
+a:link {
+  text-decoration: none;
+  font-weight: normal;
+}
+pre {
+  white-space: pre-wrap;
+}
+pre code {
+  background-color: #eff0f1;
+  color: #393318;
+  font-family: monospace;
+  display: block;
+  padding: 5px 10px;
+}
+body[data-mode="dark"] pre code {
+  background-color: #585858;
+  color: #e8e8e8;
+}
+
+/* CSS for sans-serif fonts */
+body[data-font=sans-serif] {}
+/* CSS for serif fonts */
+body[data-font=serif] {}
+
+/* CSS for "sepia" theme */
+body[data-mode=sepia] {
+}
+/* CSS for "light" theme */
+body[data-mode=light] {}
+/* CSS for "dark" theme */
+body[data-mode=dark] {}</style>
+</head>
+<body tabindex="1" data-images="true" data-mode="light" data-font="sans-serif" data-loaded="true">
+  <span></span> <!-- for IntersectionObserver -->
+  <a id="reader-domain" href="https://www.delphidigital.io/reports/optimistic-pioneers-uniswap-synthetix/">
+    <span>www.delphidigital.io</span>
+    <span>/reports/optimistic-pioneers-uniswap-synthetix/</span>
+  </a>
+  <h1 dir="auto" id="reader-title">Optimistic Pioneers - Uniswap &amp; Synthetix - Delphi Digital</h1>
+  <span dir="auto" id="reader-credits">Can Gurel</span>
+  <span dir="auto" id="reader-estimated-time">12-15 minutes</span>
+  <span dir="auto" id="published-time"></span>
+  <hr>
+  <div id="readability-page-1" class="page"><div>
+              
+              <!-- Article disclosure -->
+                              <p><em>Disclosure:&nbsp;<a href="https://www.delphidigital.io/transparency-board/">Delphi Ventures</a> has invested in Arbitrum (Offchain Labs), ETH, UNI, dYdX, DeversiFi and Immutable. Members of our team also hold SNX and MATIC.&nbsp;</em><em>These statements are intended to disclose any conflict of interest and should not be misconstrued as a recommendation to purchase any token. This content is for informational purposes only and you should not make decisions based solely on it. This is not investment advice.</em></p>
+                            <!-- Article disclosure END -->
+
+              <!-- Article key takeaways -->
+                              <div>
+                  <h2>Key Takeaways</h2>
+                                      <div>
+                      <p>Optimism &amp; Arbitrum are the first Rollups suitable to host general-purpose applications with full smart contract capabilities. In that sense, they offer similar functionality to L1 Ethereum.</p>
+                    </div>
+                                      <div>
+                      <p>While currently live, Optimism is still months away from their public mainnet. Until then, they are onboarding select applications through a whitelisted process, with the two most notable being Uniswap and Synthetix.</p>
+                    </div>
+                                      <div>
+                      <p>Currently, &gt;90% of TVL on Optimism originates from SNX deposits ($73M), of which ~5.4M SNX ($60M) was deposited as a lump sum on day one.</p>
+                    </div>
+                                      <div>
+                      <p>Optimism gas has been ~15x cheaper than Ethereum gas on average thus far, although this may not be a perfect barometer for what the future holds.</p>
+                    </div>
+                                      <div>
+                      <p>When data storage on Ethereum starts being sharded as part of ETH2.0, Rollups will be able to post more data to L1. This will be a massive boost for scalability, as we could theoretically see aggregate rollup throughput reach 100k+ tps.</p>
+                    </div>
+                                  </div>
+                            <!-- Article key takeaways END -->
+              
+            </div><div>
+              <p>In his post <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">A-rollup-centric Ethereum roadmap</a>, Vitalik states “the Ethereum ecosystem is likely to be all-in on rollups (plus some plasma and channels) as a scaling strategy for the near and mid-term future.” Almost a year later, we are witnessing this vision come to life, as seen in the chart below.</p>
+<p><img src="https://cdn.delphidigital.io/uploads/2021/08/opt4.png" alt="" srcset="https://cdn.delphidigital.io/uploads/2021/08/opt4.png 1148w, https://cdn.delphidigital.io/uploads/2021/08/opt4-300x159.png 300w, https://cdn.delphidigital.io/uploads/2021/08/opt4-1024x544.png 1024w, https://cdn.delphidigital.io/uploads/2021/08/opt4-768x408.png 768w, https://cdn.delphidigital.io/uploads/2021/08/opt4-600x319.png 600w" sizes="(max-width: 1148px) 100vw, 1148px" width="1148" height="610"></p>
+<p data-renderer-start-pos="1365">Existing L2 technologies can be grouped under 4 broad categories; Rollups, Validium, Plasma &amp; Channels. While the intricacies of their various designs are beyond the scope of this report, we think it’s important to at least highlight their different use cases at the moment. This may change with time (e.g. StarkNet) but most of the existing L2 solutions serve app-specific purposes. For example –</p>
+<div data-level="1">
+<ul>
+<li data-renderer-start-pos="1705">Loopring &amp; DyDx are L2 DEXs</li>
+</ul>
+</div>
+<div data-level="1">
+<ul>
+<li data-renderer-start-pos="1734">Aztec is best suited for privacy</li>
+</ul>
+</div>
+<div data-level="1">
+<ul>
+<li>Sorare &amp; ImmutableX are NFT exchanges</li>
+</ul>
+</div>
+<div data-level="1">
+<ul>
+<li>Connext functions as a p2p liquidity bridge across chains</li>
+</ul>
+</div>
+
+<p data-renderer-start-pos="1960">In contrast to this, Optimism and Arbitrum, two Optimistic Rollup implementations, are designed to be general-purpose. In that sense, they offer similar functionality to L1 Ethereum. Importantly, these Rollups inherent the underlying security assurances of Ethereum. They do not rely on their own consensus mechanisms for security, like a sidechain would.</p>
+<p data-renderer-start-pos="2426">With this context in mind, let’s take a look at the historical liquidity across Rollups to date. While Optimism has been operational since the beginning of the year, TVL on the Rollup has been purposely limited as it gets off the ground. The focus has been on onboarding a few prominent applications.</p>
+<p data-renderer-start-pos="2350"><img src="https://cdn.delphidigital.io/uploads/2021/08/opt3.png" alt="" srcset="https://cdn.delphidigital.io/uploads/2021/08/opt3.png 1148w, https://cdn.delphidigital.io/uploads/2021/08/opt3-300x159.png 300w, https://cdn.delphidigital.io/uploads/2021/08/opt3-1024x544.png 1024w, https://cdn.delphidigital.io/uploads/2021/08/opt3-768x408.png 768w, https://cdn.delphidigital.io/uploads/2021/08/opt3-600x319.png 600w" sizes="(max-width: 1148px) 100vw, 1148px" width="1148" height="610"></p>
+<p data-renderer-start-pos="2608">Optimism is still months away from the public mainnet and instead runs a whitelisted mainnet at the moment. In order to be onboarded, applications need to go through a whitelisting process. Whether fair or not, this whitelisting&nbsp;process has been <a href="https://twitter.com/optimismPBC/status/1425488353835720704?s=20">publicly criticized</a> by Sushiswap recently.</p>
+<p data-renderer-start-pos="2872"><strong data-renderer-mark="true">Applications on Optimism</strong></p>
+<p data-renderer-start-pos="2898">Uniswap V3 and Synthetix are the first major DeFi applications that have launched on Optimism.&nbsp;Other upcoming applications include Synth DEX <a href="https://kwenta.io/dashboard">Kwenta</a> and options DEX <a href="https://www.lyra.finance/">Lyra</a><strong data-renderer-mark="true">.</strong></p>
+<p data-renderer-start-pos="2898"><img src="https://cdn.delphidigital.io/uploads/2021/08/opt2.png" alt="" srcset="https://cdn.delphidigital.io/uploads/2021/08/opt2.png 1148w, https://cdn.delphidigital.io/uploads/2021/08/opt2-300x159.png 300w, https://cdn.delphidigital.io/uploads/2021/08/opt2-1024x544.png 1024w, https://cdn.delphidigital.io/uploads/2021/08/opt2-768x408.png 768w, https://cdn.delphidigital.io/uploads/2021/08/opt2-600x319.png 600w" sizes="(max-width: 1148px) 100vw, 1148px" width="1148" height="610"></p>
+<p data-renderer-start-pos="2898">Currently, &gt;90% of TVL on Optimism originates from SNX deposits ($73M), of which ~5.4M SNX ($60M) was deposited as a lump sum on day one. As you may notice from the above chart, the current volumes remain quite low compared to their L1 equivalents. This is a function of the Rollups limited utility in its current state, in addition to constraints that have been put in place. For example, the Optimism team implemented a throughput limit for 0.6 tps (50k tx/day). Half of this limit has already been reached from the current user activity.</p>
+<p data-renderer-start-pos="2898"><img src="https://cdn.delphidigital.io/uploads/2021/08/opt1.png" alt="" srcset="https://cdn.delphidigital.io/uploads/2021/08/opt1.png 1148w, https://cdn.delphidigital.io/uploads/2021/08/opt1-300x159.png 300w, https://cdn.delphidigital.io/uploads/2021/08/opt1-1024x544.png 1024w, https://cdn.delphidigital.io/uploads/2021/08/opt1-768x408.png 768w, https://cdn.delphidigital.io/uploads/2021/08/opt1-600x319.png 600w" sizes="(max-width: 1148px) 100vw, 1148px" width="1148" height="610"></p>
+<p data-renderer-start-pos="3627">Furthermore, taking into account potential infrastructure <a href="https://community.optimism.io/faqs/#limitations-and-disclaimers">risks and limitations</a>, applications prefer to prudently, and slowly, activate their functionalities on Optimism. For example, Synthetix only recently enabled trading, and the current c-ratio on Optimism is set at 1000% instead of the 600% seen on L1. This limits synth minting to only 1/10th of the staked SNX value. It’s also important to note that, in the case of Synthetix, L1 trading fees are not shared with stakers on L2. As such, for large-size stakers, it may not make economic sense to migrate over to L2 in the absence of other incentives. However,&nbsp; smaller stakers and traders are already enjoying the reduced gas on L2,&nbsp; as transaction fees typically range below $2, which is roughly 15x cheaper than on L1.</p>
+<p data-renderer-start-pos="4239"><img src="https://cdn.delphidigital.io/uploads/2021/08/opt6.png" alt="" srcset="https://cdn.delphidigital.io/uploads/2021/08/opt6.png 1148w, https://cdn.delphidigital.io/uploads/2021/08/opt6-300x159.png 300w, https://cdn.delphidigital.io/uploads/2021/08/opt6-1024x544.png 1024w, https://cdn.delphidigital.io/uploads/2021/08/opt6-768x408.png 768w, https://cdn.delphidigital.io/uploads/2021/08/opt6-600x319.png 600w" sizes="(max-width: 1148px) 100vw, 1148px" width="1148" height="610"></p>
+<p data-renderer-start-pos="4398">Importantly, fees on L2 are not independent of L1. Fees on Optimism (and Rollups in general) rise when there is congestion on either the L1 or L2. This is because, as part of the Rollup security model, the Rollup Sequencer (the party that replaces the miner functionality on L2) has to periodically submit data to L1, spending gas on L1 in the process. When L1 is congested, the Sequencer essentially competes with lots of people for Ethereum block space on behalf of all L2 users. Hence, to compensate for the costs, the Sequencer charges higher fees to L2 users. The Sequencer also charges a premium on top of their expected costs to make sure they can submit data to L1 without delay, which is essential for security.</p>
+<p data-renderer-start-pos="5092">Furthermore, similar to L1, fees are also driven by congestion on the Rollup.&nbsp;Optimism implements an EIP 1559-style pricing mechanism where, if there is too much congestion on L2, the protocol automatically increases fees until tps falls back under a predefined limit (initially set to 50k tx/day).</p>
+<p data-renderer-start-pos="5429">However, unlike with Ethereum, paying more gas on Optimism doesn’t help users get to the front of the transaction queue.&nbsp;This is because all txs are processed by the Sequencer on a first-come, first-served basis. With this in mind, let’s dive into the inner mechanics of Optimism to better understand how it functions.</p>
+<p data-renderer-start-pos="5726"><strong data-renderer-mark="true">Optimism Overview</strong></p>
+<p data-renderer-start-pos="5746">As of today, there are 2 types of nodes in Optimism – the Sequencer and Verifier. At a high level, the Sequencer role is responsible for collecting all transactions, validating, and ordering them to update the L2 state. On a periodic basis, the Sequencer will submit data to L1, related to the L2’s state. Once submitted, Verifiers check the Sequencer’s work and challenge it on L1 if they have proof that the Sequencer has been acting maliciously. Currently, Optimism operates under a single Sequencer model where the Sequencer is run by the Optimism development team. While this sounds like a centralized approach, as we will see shortly, the Sequencer can only impact liveness, not safety.</p>
+<p data-renderer-start-pos="6514">On Optimism’s Rollup, every new transaction can be thought of as a new block. As the Sequencer executes the txns, it immediately updates the state of the L2, without having to sync up with any other node.</p>
+<p data-renderer-start-pos="6514"><img src="https://cdn.delphidigital.io/uploads/2021/08/opt5.png" alt="" srcset="https://cdn.delphidigital.io/uploads/2021/08/opt5.png 1148w, https://cdn.delphidigital.io/uploads/2021/08/opt5-300x159.png 300w, https://cdn.delphidigital.io/uploads/2021/08/opt5-1024x544.png 1024w, https://cdn.delphidigital.io/uploads/2021/08/opt5-768x408.png 768w, https://cdn.delphidigital.io/uploads/2021/08/opt5-600x319.png 600w" sizes="(max-width: 1148px) 100vw, 1148px" width="1148" height="610"></p>
+<p data-renderer-start-pos="6945">Every couple of minutes, the Sequencer submits both the <strong data-renderer-mark="true">Tx Data</strong> and the resulting <strong data-renderer-mark="true">State Root</strong> of the rollup to L1 in batches. More specifically, it takes the calldata from the chain of txns that have been executed, combines them into a batch and then submits the batch to a smart contract on L1 called the Canonical Tx Chain (“CTC”). This way, anyone can track the order of L2 transactions based on data that now exists immutably on L1.</p>
+<p data-renderer-start-pos="7332">For every batch of transactions sent to the CTC, the Sequencer also sends the corresponding State Root (i.e. the result of executing txs on CTC) to the State Commitment Chain. In doing so, the Sequencer signals to everyone that they have executed the batch of L2 txs on CTC, and the result was the State Root that was just “committed” to STC.</p>
+<p data-renderer-start-pos="7645">Once the Sequencer commits to post-state, Verifiers can grab the data available on L1 (state root and tx data), replay the same txs, and see for themselves if the committed state matches theirs. In the optimistic case where their state matches that of the Sequencer, there won’t be any need to execute challenges on L1. Verifiers will simply update their copy of the L2 state as well. If, however, the two states don’t match, Verifiers will submit a fraud-proof on L1. In that case, the chain of L2 txs recorded on CTC will be executed by a list of L1 challenge contracts which will determine the true state of L2. The Sequencer may automatically get slashed depending on the result of challenge.</p>
+<p data-renderer-start-pos="8318"><strong data-renderer-mark="true">Challenge Period</strong></p>
+<p data-renderer-start-pos="8455">Optimism implements a 7 day challenge period that gives Verifiers enough time to submit their fraud proofs. The 7 day period is in large part designed as a precaution, in case malicious miners censor fraud-proof submissions on L1. This means users can’t withdraw their tokens to L1 without having to wait 7 days. While many consider this a significant pain point for users, we expect that much of the friction around withdrawals will be abstracted away by other protocols / counter parties (e.g. <a href="https://hop.exchange/">Hop</a> and <a href="https://forum.makerdao.com/t/announcing-the-optimism-dai-bridge-with-fast-withdrawals/6938">Maker’s Dai Bridge</a>).</p>
+<p data-renderer-start-pos="9749"><strong data-renderer-mark="true">Wrap Up</strong></p>
+<p data-renderer-start-pos="9758">The scalability on Optimism (and Rollups in general) originates from 2 factors:</p>
+<ol data-indent-level="1">
+<li>
+<p data-renderer-start-pos="9841"><strong data-renderer-mark="true">Execution On L2 →</strong> Sequencer can “optimistically” process L2 txs and update the state on Optimism without having to sync up with any other nodes. Furthermore, multiple Rollups mean multiple parallel (asynchronous) execution environments.</p>
+</li>
+<li>
+<p data-renderer-start-pos="10081"><strong data-renderer-mark="true">Data Storage On L1 → </strong>L2 data gets submitted to L1 in batches and stored in a highly compressed form (Merkle Root), saving a significant amount of block space and cost.</p>
+</li>
+</ol>
+<p data-renderer-start-pos="10252">So how much throughput can Optimism achieve? While a common question, it could be framed better. Instead, it might be worth asking – how much throughput can Rollups achieve *in aggregate*? That answer ultimately depends on how much L2 data can be compressed and stored in a L1 block. It’s due to this reason that more rollups don’t necessarily mean more throughput. ETH2.0 will be a massive help in this regard. In the future, when data storage on Ethereum starts being sharded, Rollups will be able to post more data to L1. In theory, this could boost aggregate throughput above 100k tps.</p>
+<p data-renderer-start-pos="10870"><strong data-renderer-mark="true">Trust Model</strong></p>
+<p data-renderer-start-pos="10883">Earlier we mentioned that Optimism currently operates under a Single Sequencer model. While in the future Optimism could transition into a multi Sequencer operation, the team plans to continue operating with a single Sequencer for several months after the public mainnet.&nbsp;Below you can see what this means in terms of safety and liveness.</p>
+<p data-renderer-start-pos="10883"><img src="https://cdn.delphidigital.io/uploads/2021/08/opt7.png" alt="" srcset="https://cdn.delphidigital.io/uploads/2021/08/opt7.png 1148w, https://cdn.delphidigital.io/uploads/2021/08/opt7-300x159.png 300w, https://cdn.delphidigital.io/uploads/2021/08/opt7-1024x544.png 1024w, https://cdn.delphidigital.io/uploads/2021/08/opt7-768x408.png 768w, https://cdn.delphidigital.io/uploads/2021/08/opt7-600x319.png 600w" sizes="(max-width: 1148px) 100vw, 1148px" width="1148" height="610"></p>
+<p data-renderer-start-pos="11364">As <a href="https://vitalik.ca/general/2020/08/20/trust.html">proposed</a> by Vitalik, a good mental model for security in any system is asking “How many participants, out of how many, need to behave correctly for the system to work?” Notice that liveness on Optimism today relies on a 1-of-1 model where the uptime of the network depends on a single actor. It would therefore be naive to expect the same level of continuous uptime from Optimism that we’ve become so accustomed to on Ethereum L1. More importantly, while it’s stated that the Sequencer processes txns on a first come, first served basis, there is nothing to enforce this. An evil Sequencer could indefinitely censor L2 transactions and extract all sorts of MEV (front-run, back-run, sandwich attacks etc.) from them. With that said, the Optimism team is formed by well-known figures in the Ethereum community and has publicly stated that all Sequencer profits will be donated for retroactive publics good funding. We should also note that having a centralized sequencer is not unique to Optimism, but is also currently the case for other L2 Rollups as well.</p>
+            </div></div>
+  <span></span> <!-- for IntersectionObserver -->
+  
+  
+  
+  
+
+
+</body><style>body {
+      font-size:  20px;
+      font-family: Helvetica, Arial, sans-serif;
+      width: 950px;
+    }
+    .page {
+      line-height: 30.0px;
+    }
+    h1, h2, h3 {
+      line-height: initial;
+    }</style></html>
