@@ -1,0 +1,331 @@
+<html><head><title>L1 szn: The Delphi Debrief - Delphi Digital :: Reader View</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+html {
+  overflow: overlay;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 30px auto 0 auto;
+  padding: 10px;
+}
+body[data-mode="light"] {
+  color: #222;
+  border-color: %light-color%;
+  background-color: whitesmoke;
+}
+body[data-mode="dark"] {
+  color: #eee;
+  border-color: %dark-color%;
+  background-color: #333;
+}
+body[data-mode="sepia"] {
+  color: #5b4636;
+  border-color: %sepia-color%;
+  background-color: #f4ecd8;
+}
+body[data-mode="solarized-light"] {
+  color: #586e75;
+  border-color: %solarized-light-color%;
+  background-color: #fdf6e3;
+}
+body[data-mode="nord-light"] {
+  color: #2e3440;
+  border-color: %nord-light-color%;
+  background-color: #e5e9f0;
+}
+body[data-mode="groove-dark"] {
+  color: #cec4ac;
+  border-color: %groove-dark-color%;
+  background-color: #282828;
+}
+body[data-mode="solarized-dark"] {
+  color: #93a1a1;
+  border-color: %solarized-dark-color%;
+  background-color: #002b36;
+}
+body[data-mode="nord-dark"] {
+  color: #e5e9f0;
+  border-color: %nord-dark-color%;
+  background-color: #2e3440;
+}
+@media print {
+  body[data-mode="light"],
+  body[data-mode="dark"],
+  body[data-mode="sepia"],
+  body[data-mode="solarized-light"],
+  body[data-mode="nord-light"],
+  body[data-mode="groove-dark"],
+  body[data-mode="solarized-dark"],
+  body[data-mode="nord-dark"] {
+    color: #000;
+    border-color: #000;
+    background-color: #fff;
+  }
+}
+body[data-loaded=true] {
+  
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+img:not([width])[src$=".svg"] {
+  max-width: 100px;
+}
+body[data-images=false] canvas,
+body[data-images=false] svg,
+body[data-images=false] img {
+  display: none;
+}
+a {
+  color: #0095dd;
+  text-decoration: none;
+}
+#reader-domain {
+  font-family: Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  border-bottom-color: currentcolor;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: inline-block;
+  direction: ltr;
+}
+#reader-domain > span:first-child {
+  font-size: 1.1em;
+}
+#reader-domain > span:last-child {
+  font-size: 0.8em;
+}
+#reader-title {
+  font-size: 1.6em;
+  line-height: 1.25em;
+  width: 100%;
+  margin: 20px 0;
+  padding: 0;
+}
+#reader-credits,
+#doi,
+#published-time,
+#reader-estimated-time {
+  font-size: 0.85em;
+  line-height: 1.48em;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+#reader-credits:not(:empty)::after {
+  content: ' ⋮ ';
+}
+#published-time:not(:empty)::before {
+  content: ' ⋮ ';
+}
+#doi-json {
+  overflow: hidden;
+}
+#doi-json code {
+  overflow: auto;
+  max-height: 400px;
+}
+#published-time:empty,
+#reader-credits:empty {
+  display: none;
+}
+body[data-speech="true"] .tts-box {
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  height: 32px;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: 0 0 0 1000vw rgba(128, 128, 128, 0.2);
+}
+body[data-speech="true"] .tts-word {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  background-color: red;
+  height: 2px;
+}
+.tts-word.hidden,
+.tts-box.hidden {
+  display: none;
+}
+body[data-speech="false"] .tts-speaking::after {
+  display: none;
+}
+mark.hghlght {
+  background-color: #ffff81;
+}
+.hidden {
+  display: none;
+}
+.note {
+  position: absolute;
+  z-index: 10;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 5px;
+  min-width: 32px;
+  min-height: 32px;
+}
+.note:focus {
+  z-index: 11;
+}
+</style>
+  <style id="user-css">body {
+  padding-bottom: 64px;
+}
+a:visited {
+  color: #d33bf0;
+}
+a:link, a:link:hover, a:link:active, a:link * {
+  color: #0095dd;
+}
+a:link {
+  text-decoration: none;
+  font-weight: normal;
+}
+pre {
+  white-space: pre-wrap;
+}
+pre code {
+  background-color: #eff0f1;
+  color: #393318;
+  font-family: monospace;
+  display: block;
+  padding: 5px 10px;
+}
+body[data-mode="dark"] pre code {
+  background-color: #585858;
+  color: #e8e8e8;
+}
+
+/* CSS for sans-serif fonts */
+body[data-font=sans-serif] {}
+/* CSS for serif fonts */
+body[data-font=serif] {}
+
+/* CSS for "sepia" theme */
+body[data-mode=sepia] {
+}
+/* CSS for "light" theme */
+body[data-mode=light] {}
+/* CSS for "dark" theme */
+body[data-mode=dark] {}</style>
+</head>
+<body tabindex="1" data-images="true" data-mode="light" data-font="sans-serif" data-loaded="true">
+  <span></span> <!-- for IntersectionObserver -->
+  <a id="reader-domain" href="https://www.delphidigital.io/reports/l1-szn-the-delphi-debrief/">
+    <span>www.delphidigital.io</span>
+    <span>/reports/l1-szn-the-delphi-debrief/</span>
+  </a>
+  <h1 dir="auto" id="reader-title">L1 szn: The Delphi Debrief - Delphi Digital</h1>
+  <span dir="auto" id="reader-credits">Nick Pappageorge</span>
+  <span dir="auto" id="reader-estimated-time">4-5 minutes</span>
+  <span dir="auto" id="published-time"></span>
+  <hr>
+  <div id="readability-page-1" class="page"><div>
+              <div>
+<p>Markets enjoyed a nice&nbsp;bounce this week, with bitcoin up nearly 9%. However, the true standouts were other layer 1 protocols.&nbsp;Avalanche, Solana, and Terra saw remarkable price action—up 120%, 78%, and 75%,&nbsp;respectively—in just the past 7 days.</p>
+<p>As markets turned risk-on in the past week or two, the alt L1 narrative took center stage.&nbsp;<a href="http://go.pardot.com/e/875501/ts-diving-deep-into-avalanche-/21xdp1/294959816?h=B4WWOJEryTLC3YF_zqu-P2HLW_z1KLrzVSUuC6js4QQ" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://go.pardot.com/e/875501/ts-diving-deep-into-avalanche-/21xdp1/294959816?h%3DB4WWOJEryTLC3YF_zqu-P2HLW_z1KLrzVSUuC6js4QQ&amp;source=gmail&amp;ust=1629580269172000&amp;usg=AFQjCNH9b718JvB-5Hh4i2CWF5s4FPXD0A">Avalanche</a>, for example, announced $180M in liquidity mining incentives and&nbsp;attracted Aave and Curve to launch&nbsp;on its public blockchain. And, as we explored in this week’s Daily posts,&nbsp;<a href="http://go.pardot.com/e/875501/o-symbiosis-drives-ust-demand-/21xdp3/294959816?h=B4WWOJEryTLC3YF_zqu-P2HLW_z1KLrzVSUuC6js4QQ" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://go.pardot.com/e/875501/o-symbiosis-drives-ust-demand-/21xdp3/294959816?h%3DB4WWOJEryTLC3YF_zqu-P2HLW_z1KLrzVSUuC6js4QQ&amp;source=gmail&amp;ust=1629580269172000&amp;usg=AFQjCNETi9PfTZnYgkWIXP04drywjOOV0w">Solana and Terra&nbsp;TVL surged</a>&nbsp;as their prices ran up.&nbsp;Meanwhile, it’s unclear how much room there is for ETH to run, especially as the&nbsp;<a href="http://go.pardot.com/e/875501/reports-exploring-the-opensea-/21xdp5/294959816?h=B4WWOJEryTLC3YF_zqu-P2HLW_z1KLrzVSUuC6js4QQ" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://go.pardot.com/e/875501/reports-exploring-the-opensea-/21xdp5/294959816?h%3DB4WWOJEryTLC3YF_zqu-P2HLW_z1KLrzVSUuC6js4QQ&amp;source=gmail&amp;ust=1629580269172000&amp;usg=AFQjCNG5dXa5F-ulJoaoJAOgNqnmTWfCRw">OpenSea-led NFT mania</a>&nbsp;appears to be winding down.</p>
+<p>​​​​​In Delphi news, we launched a beautiful&nbsp;<a href="http://go.pardot.com/e/875501/member-portal-/21xdp7/294959816?h=B4WWOJEryTLC3YF_zqu-P2HLW_z1KLrzVSUuC6js4QQ" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://go.pardot.com/e/875501/member-portal-/21xdp7/294959816?h%3DB4WWOJEryTLC3YF_zqu-P2HLW_z1KLrzVSUuC6js4QQ&amp;source=gmail&amp;ust=1629580269172000&amp;usg=AFQjCNFMaTBP8dwheBTxEiM00vvRh2lyYw">new research portal</a>&nbsp;this week. For members, we also have 2 can’t-miss reports on&nbsp;<a href="http://go.pardot.com/e/875501/lido-dominates-liquid-staking-/21xdp9/294959816?h=B4WWOJEryTLC3YF_zqu-P2HLW_z1KLrzVSUuC6js4QQ" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://go.pardot.com/e/875501/lido-dominates-liquid-staking-/21xdp9/294959816?h%3DB4WWOJEryTLC3YF_zqu-P2HLW_z1KLrzVSUuC6js4QQ&amp;source=gmail&amp;ust=1629580269173000&amp;usg=AFQjCNHIq7y6sXjbTMn5LkSxuBIOIAGmCA">Lido</a>&nbsp;and&nbsp;<a href="http://go.pardot.com/e/875501/-into-dydxs-growth-post-token-/21xdpc/294959816?h=B4WWOJEryTLC3YF_zqu-P2HLW_z1KLrzVSUuC6js4QQ" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=http://go.pardot.com/e/875501/-into-dydxs-growth-post-token-/21xdpc/294959816?h%3DB4WWOJEryTLC3YF_zqu-P2HLW_z1KLrzVSUuC6js4QQ&amp;source=gmail&amp;ust=1629580269173000&amp;usg=AFQjCNGveekAH8VYJRryPs4azXWsHL9W0Q">dYdX’s post-token growth</a>. Plenty of alpha to dig through over the weekend.</p>
+<p>Nick<br>
+<a href="https://twitter.com/NpappaG">@NpappaG</a></p>
+<p><strong>Here were the highlights from this week’s research:</strong></p>
+<div>
+<p><a href="https://www.delphidigital.io/reports/lido-dominates-liquid-staking/"><img src="https://cdn.delphidigital.io/uploads/2021/08/LDO2.png" alt="" srcset="https://cdn.delphidigital.io/uploads/2021/08/LDO2.png 1148w, https://cdn.delphidigital.io/uploads/2021/08/LDO2-300x159.png 300w, https://cdn.delphidigital.io/uploads/2021/08/LDO2-1024x544.png 1024w, https://cdn.delphidigital.io/uploads/2021/08/LDO2-768x408.png 768w, https://cdn.delphidigital.io/uploads/2021/08/LDO2-600x319.png 600w" sizes="(max-width: 900px) 100vw, 900px" width="900" height="478"></a></p>
+<div>
+<p><strong>[Ethereum]&nbsp;<a href="https://www.delphidigital.io/reports/lido-dominates-liquid-staking/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=https://www.delphidigital.io/reports/lido-dominates-liquid-staking/&amp;source=gmail&amp;ust=1629501495951000&amp;usg=AFQjCNG5fzUgiCbBE26L-yNJd9_RcWgoxQ">Lido Dominates Liquid Staking</a></strong></p>
+<ul>
+<li>Lido dominates the staking derivatives sector, with an 81% market share on Ethereum that continues to move higher.</li>
+<li><em>Delphi Institutional subscribers &amp; clients can see the full brief&nbsp;<a href="https://www.delphidigital.io/reports/lido-dominates-liquid-staking/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=https://www.delphidigital.io/reports/lido-dominates-liquid-staking/&amp;source=gmail&amp;ust=1629501495951000&amp;usg=AFQjCNG5fzUgiCbBE26L-yNJd9_RcWgoxQ">here</a>.</em></li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<p><a href="https://www.delphidigital.io/reports/a-quick-look-into-dydxs-growth-post-token/"><img src="https://cdn.delphidigital.io/uploads/2021/08/Slide2-10.png" alt="" srcset="https://cdn.delphidigital.io/uploads/2021/08/Slide2-10.png 1148w, https://cdn.delphidigital.io/uploads/2021/08/Slide2-10-300x159.png 300w, https://cdn.delphidigital.io/uploads/2021/08/Slide2-10-1024x544.png 1024w, https://cdn.delphidigital.io/uploads/2021/08/Slide2-10-768x408.png 768w, https://cdn.delphidigital.io/uploads/2021/08/Slide2-10-600x319.png 600w" sizes="(max-width: 900px) 100vw, 900px" width="900" height="478"></a></p>
+<div>
+<div>
+<p><strong>[DeFi]​​​​&nbsp;<a href="https://www.delphidigital.io/reports/a-quick-look-into-dydxs-growth-post-token/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=https://www.delphidigital.io/reports/a-quick-look-into-dydxs-growth-post-token/&amp;source=gmail&amp;ust=1629501495951000&amp;usg=AFQjCNFh2tfDxd6k-ewczO3UuCWguBu3Yg">A Quick Look Into dYdX’s Growth Post-Token</a></strong></p>
+<ul>
+<li>The launch of the DYDX token has caused a rush of activity to the exchange, with open interest and volume rising sharply week-over-week.</li>
+<li><em>Delphi Institutional&nbsp;subscribers &amp; clients can see the full brief&nbsp;<a href="https://www.delphidigital.io/reports/a-quick-look-into-dydxs-growth-post-token/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=https://www.delphidigital.io/reports/a-quick-look-into-dydxs-growth-post-token/&amp;source=gmail&amp;ust=1629501495951000&amp;usg=AFQjCNFh2tfDxd6k-ewczO3UuCWguBu3Yg">here</a>.</em></li>
+</ul>
+</div>
+<p><a href="https://www.delphidigital.io/reports/what-on-chain-market-data-is-saying/"><img src="https://cdn.delphidigital.io/uploads/2021/08/Slide4-8.png" alt="" srcset="https://cdn.delphidigital.io/uploads/2021/08/Slide4-8.png 1148w, https://cdn.delphidigital.io/uploads/2021/08/Slide4-8-300x159.png 300w, https://cdn.delphidigital.io/uploads/2021/08/Slide4-8-1024x544.png 1024w, https://cdn.delphidigital.io/uploads/2021/08/Slide4-8-768x408.png 768w, https://cdn.delphidigital.io/uploads/2021/08/Slide4-8-600x319.png 600w" sizes="(max-width: 900px) 100vw, 900px" width="900" height="478"></a></p>
+<p><strong>[Delphi Daily]&nbsp;<a href="https://www.delphidigital.io/reports/what-on-chain-market-data-is-saying/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=https://www.delphidigital.io/reports/what-on-chain-market-data-is-saying/&amp;source=gmail&amp;ust=1629501495951000&amp;usg=AFQjCNFgpQQwg_4T5eDYWRBz6iU4kAoZ1w"><u>What On-Chain Market Data is Saying</u></a></strong></p>
+<ul>
+<li>BTC and ETH found a short-term bottom during the Asia session after hitting a block of bids around $44K. But the market has been pretty choppy since then. SOL, LUNA, and AR are the biggest winners today. All three coins set fresh ATHs with high-volume moves.</li>
+<li><em>Delphi Daily&nbsp;subscribers &amp; clients can see the full brief&nbsp;<a href="https://www.delphidigital.io/reports/what-on-chain-market-data-is-saying/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=https://www.delphidigital.io/reports/what-on-chain-market-data-is-saying/&amp;source=gmail&amp;ust=1629501495951000&amp;usg=AFQjCNFgpQQwg_4T5eDYWRBz6iU4kAoZ1w">here</a>.</em></li>
+</ul>
+<p><a href="https://www.delphidigital.io/reports/exploring-the-opensea/"><img src="https://cdn.delphidigital.io/uploads/2021/08/OS5.png" alt="" srcset="https://cdn.delphidigital.io/uploads/2021/08/OS5.png 1148w, https://cdn.delphidigital.io/uploads/2021/08/OS5-300x159.png 300w, https://cdn.delphidigital.io/uploads/2021/08/OS5-1024x544.png 1024w, https://cdn.delphidigital.io/uploads/2021/08/OS5-768x408.png 768w, https://cdn.delphidigital.io/uploads/2021/08/OS5-600x319.png 600w" sizes="(max-width: 900px) 100vw, 900px" width="900" height="478"></a></p>
+<p><strong>[NFT / Gaming]&nbsp;<a href="https://www.delphidigital.io/reports/exploring-the-opensea/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=https://www.delphidigital.io/reports/exploring-the-opensea/&amp;source=gmail&amp;ust=1629501495951000&amp;usg=AFQjCNEp825xPkWJ3tJB73sstpDb7DX51g">Exploring The OpenSea</a></strong></p>
+<ul>
+<li>OpenSea has established itself as the go-to marketplace for NFTs on Ethereum, from having only 33% market share on Ethereum in Oct 2020 to having ~97% today (excl. the Axie Marketplace).</li>
+<li><em>Delphi Institutional&nbsp;subscribers &amp; clients can see the full brief&nbsp;<a href="https://www.delphidigital.io/reports/exploring-the-opensea/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=https://www.delphidigital.io/reports/exploring-the-opensea/&amp;source=gmail&amp;ust=1629501495951000&amp;usg=AFQjCNEp825xPkWJ3tJB73sstpDb7DX51g">here</a>.</em></li>
+</ul>
+<p><a href="https://www.delphidigital.io/reports/sol-luna-defi-explosion-anchor-lido-symbiosis-drives-ust-demand/"><img src="https://cdn.delphidigital.io/uploads/2021/08/Slide1-6-1.png" alt="" srcset="https://cdn.delphidigital.io/uploads/2021/08/Slide1-6-1.png 1148w, https://cdn.delphidigital.io/uploads/2021/08/Slide1-6-1-300x159.png 300w, https://cdn.delphidigital.io/uploads/2021/08/Slide1-6-1-1024x544.png 1024w, https://cdn.delphidigital.io/uploads/2021/08/Slide1-6-1-768x408.png 768w, https://cdn.delphidigital.io/uploads/2021/08/Slide1-6-1-600x319.png 600w" sizes="(max-width: 900px) 100vw, 900px" width="900" height="478"></a></p>
+<p><strong>[Delphi Daily]&nbsp;<a href="https://www.delphidigital.io/reports/sol-luna-defi-explosion-anchor-lido-symbiosis-drives-ust-demand/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=https://www.delphidigital.io/reports/sol-luna-defi-explosion-anchor-lido-symbiosis-drives-ust-demand/&amp;source=gmail&amp;ust=1629501495951000&amp;usg=AFQjCNEEy4dAf8PLpOv-hj2Yz-LKROVgSw"><u>SOL &amp; LUNA DeFi Explosion, Anchor &amp; Lido Symbiosis Drives UST Demand</u></a></strong></p>
+<ul>
+<li>All around, markets look indecisive today as majors continue ranging. SOL and LUNA have been stand outs, hitting fresh all-time highs. Other tokens such as YGG, AXS, GRT, AVAX, SUSHI, AUDIO are also having a great day.</li>
+<li><em>Delphi Daily subscribers &amp; clients can see the full brief&nbsp;<a href="https://www.delphidigital.io/reports/sol-luna-defi-explosion-anchor-lido-symbiosis-drives-ust-demand/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=https://www.delphidigital.io/reports/sol-luna-defi-explosion-anchor-lido-symbiosis-drives-ust-demand/&amp;source=gmail&amp;ust=1629501495951000&amp;usg=AFQjCNEEy4dAf8PLpOv-hj2Yz-LKROVgSw">here</a>.</em></li>
+</ul>
+<p><a href="https://www.delphidigital.io/reports/an-update-on-crypto-market-structure-leverage-and-volatility/"><img src="https://cdn.delphidigital.io/uploads/2021/08/Slide5-2.png" alt="" srcset="https://cdn.delphidigital.io/uploads/2021/08/Slide5-2.png 1148w, https://cdn.delphidigital.io/uploads/2021/08/Slide5-2-300x159.png 300w, https://cdn.delphidigital.io/uploads/2021/08/Slide5-2-1024x544.png 1024w, https://cdn.delphidigital.io/uploads/2021/08/Slide5-2-768x408.png 768w, https://cdn.delphidigital.io/uploads/2021/08/Slide5-2-600x319.png 600w" sizes="(max-width: 900px) 100vw, 900px" width="900" height="478"></a></p>
+<p><strong>[Delphi Daily]&nbsp;<a href="https://www.delphidigital.io/reports/an-update-on-crypto-market-structure-leverage-and-volatility/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=https://www.delphidigital.io/reports/an-update-on-crypto-market-structure-leverage-and-volatility/&amp;source=gmail&amp;ust=1629501495951000&amp;usg=AFQjCNHJj9HV2MaPcEgLF-ss96G4zuL2Nw"><u>An Update on Crypto Market Structure: Leverage and Volatility</u></a></strong></p>
+<ul>
+<li>The market found strength on the Asia open today, but the European and North American sessions saw sellers take control and push almost everything lower. BTC fell by nearly 2% as the North American session opened today. It was a buzzing weekend though; coins like SOL, YGG, and LUNA hit fresh all-time highs, and DeFi tokens enjoying a bounce too.</li>
+<li><em>Delphi Daily subscribers &amp; clients can see the full brief&nbsp;<a href="https://www.delphidigital.io/reports/an-update-on-crypto-market-structure-leverage-and-volatility/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=https://www.delphidigital.io/reports/an-update-on-crypto-market-structure-leverage-and-volatility/&amp;source=gmail&amp;ust=1629501495951000&amp;usg=AFQjCNHJj9HV2MaPcEgLF-ss96G4zuL2Nw">here</a>.</em></li>
+</ul>
+<p><a href="https://www.delphidigital.io/reports/yield-strats-23/"><img src="https://cdn.delphidigital.io/uploads/2021/08/YS-23.png" alt="" srcset="https://cdn.delphidigital.io/uploads/2021/08/YS-23.png 2049w, https://cdn.delphidigital.io/uploads/2021/08/YS-23-300x159.png 300w, https://cdn.delphidigital.io/uploads/2021/08/YS-23-1024x544.png 1024w, https://cdn.delphidigital.io/uploads/2021/08/YS-23-768x408.png 768w, https://cdn.delphidigital.io/uploads/2021/08/YS-23-1536x816.png 1536w, https://cdn.delphidigital.io/uploads/2021/08/YS-23-1505x800.png 1505w, https://cdn.delphidigital.io/uploads/2021/08/YS-23-600x319.png 600w" sizes="(max-width: 900px) 100vw, 900px" width="900" height="478"></a></p>
+<p><strong>[Yield Strats]​​​​&nbsp;<a href="https://www.delphidigital.io/reports/yield-strats-23/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=https://www.delphidigital.io/reports/yield-strats-23/&amp;source=gmail&amp;ust=1629501495952000&amp;usg=AFQjCNFZUbd9rinXuYB1BNCQdPxQD42i_w"><u>Yield Strats #23</u></a></strong></p>
+<ul>
+<li>In this week’s edition, we cover yield farming opportunities for Tokemak on Ethereum and Raydium on Solana.</li>
+<li><em>Delphi Insights and Institutional subscribers &amp; clients can see the full brief&nbsp;<a href="https://www.delphidigital.io/reports/yield-strats-23/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=https://www.delphidigital.io/reports/yield-strats-23/&amp;source=gmail&amp;ust=1629501495952000&amp;usg=AFQjCNFZUbd9rinXuYB1BNCQdPxQD42i_w">here</a>.</em></li>
+</ul>
+</div>
+</div>
+
+<div>
+<h6><img src="https://www.delphidigital.io/wp-content/uploads/2020/11/Logo-Transparent-Background-White-Fill-Black-Outline.png" alt="" srcset="https://cdn.delphidigital.io/uploads/2020/11/Logo-Transparent-Background-White-Fill-Black-Outline.png 152w, https://cdn.delphidigital.io/uploads/2020/11/Logo-Transparent-Background-White-Fill-Black-Outline-150x150.png 150w, https://cdn.delphidigital.io/uploads/2020/11/Logo-Transparent-Background-White-Fill-Black-Outline-100x100.png 100w" sizes="(max-width: 139px) 100vw, 139px" width="139" height="139"></h6>
+</div>
+
+<p>As mentioned, we will continue to iterate on the design of our&nbsp;<strong>Delphi Debrief</strong>&nbsp;based on your feedback—so please let us know which section you enjoy the most and what else you’d like to see!</p>
+            </div><div>
+                <div>
+                  <p><a href="https://www.delphidigital.io/analysts/nick-pappageorge/">
+                      <img src="https://cdn.delphidigital.io/uploads/2021/03/Untitled-design-150x150.png" alt="Nick Pappageorge">
+                    </a>
+                  </p>
+                  
+                </div>
+                
+                                  <div>
+                    <p>Upgrade your account to book time with the lead analyst for this report!</p>
+                    
+                    <p><a href="https://www.delphidigital.io/membership-account/membership-levels/" _self="">Upgrade Now</a>
+                  </p></div>
+                              </div></div>
+  <span></span> <!-- for IntersectionObserver -->
+  
+  
+  
+  
+
+
+</body><style>body {
+      font-size:  20px;
+      font-family: Helvetica, Arial, sans-serif;
+      width: 950px;
+    }
+    .page {
+      line-height: 30.0px;
+    }
+    h1, h2, h3 {
+      line-height: initial;
+    }</style></html>
