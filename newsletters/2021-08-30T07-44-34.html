@@ -1,0 +1,309 @@
+<html><head><title>[Design Mode]</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+html {
+  overflow: overlay;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 30px auto 0 auto;
+  padding: 10px;
+}
+body[data-mode="light"] {
+  color: #222;
+  border-color: %light-color%;
+  background-color: whitesmoke;
+}
+body[data-mode="dark"] {
+  color: #eee;
+  border-color: %dark-color%;
+  background-color: #333;
+}
+body[data-mode="sepia"] {
+  color: #5b4636;
+  border-color: %sepia-color%;
+  background-color: #f4ecd8;
+}
+body[data-mode="solarized-light"] {
+  color: #586e75;
+  border-color: %solarized-light-color%;
+  background-color: #fdf6e3;
+}
+body[data-mode="nord-light"] {
+  color: #2e3440;
+  border-color: %nord-light-color%;
+  background-color: #e5e9f0;
+}
+body[data-mode="groove-dark"] {
+  color: #cec4ac;
+  border-color: %groove-dark-color%;
+  background-color: #282828;
+}
+body[data-mode="solarized-dark"] {
+  color: #93a1a1;
+  border-color: %solarized-dark-color%;
+  background-color: #002b36;
+}
+body[data-mode="nord-dark"] {
+  color: #e5e9f0;
+  border-color: %nord-dark-color%;
+  background-color: #2e3440;
+}
+@media print {
+  body[data-mode="light"],
+  body[data-mode="dark"],
+  body[data-mode="sepia"],
+  body[data-mode="solarized-light"],
+  body[data-mode="nord-light"],
+  body[data-mode="groove-dark"],
+  body[data-mode="solarized-dark"],
+  body[data-mode="nord-dark"] {
+    color: #000;
+    border-color: #000;
+    background-color: #fff;
+  }
+}
+body[data-loaded=true] {
+  
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+img:not([width])[src$=".svg"] {
+  max-width: 100px;
+}
+body[data-images=false] canvas,
+body[data-images=false] svg,
+body[data-images=false] img {
+  display: none;
+}
+a {
+  color: #0095dd;
+  text-decoration: none;
+}
+#reader-domain {
+  font-family: Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  border-bottom-color: currentcolor;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: inline-block;
+  direction: ltr;
+}
+#reader-domain > span:first-child {
+  font-size: 1.1em;
+}
+#reader-domain > span:last-child {
+  font-size: 0.8em;
+}
+#reader-title {
+  font-size: 1.6em;
+  line-height: 1.25em;
+  width: 100%;
+  margin: 20px 0;
+  padding: 0;
+}
+#reader-credits,
+#doi,
+#published-time,
+#reader-estimated-time {
+  font-size: 0.85em;
+  line-height: 1.48em;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+#reader-credits:not(:empty)::after {
+  content: ' ⋮ ';
+}
+#published-time:not(:empty)::before {
+  content: ' ⋮ ';
+}
+#doi-json {
+  overflow: hidden;
+}
+#doi-json code {
+  overflow: auto;
+  max-height: 400px;
+}
+#published-time:empty,
+#reader-credits:empty {
+  display: none;
+}
+body[data-speech="true"] .tts-box {
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  height: 32px;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: 0 0 0 1000vw rgba(128, 128, 128, 0.2);
+}
+body[data-speech="true"] .tts-word {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  background-color: red;
+  height: 2px;
+}
+.tts-word.hidden,
+.tts-box.hidden {
+  display: none;
+}
+body[data-speech="false"] .tts-speaking::after {
+  display: none;
+}
+mark.hghlght {
+  background-color: #ffff81;
+}
+.hidden {
+  display: none;
+}
+.note {
+  position: absolute;
+  z-index: 10;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 5px;
+  min-width: 32px;
+  min-height: 32px;
+}
+.note:focus {
+  z-index: 11;
+}
+</style>
+  <style id="user-css">body {
+  padding-bottom: 64px;
+}
+a:visited {
+  color: #d33bf0;
+}
+a:link, a:link:hover, a:link:active, a:link * {
+  color: #0095dd;
+}
+a:link {
+  text-decoration: none;
+  font-weight: normal;
+}
+pre {
+  white-space: pre-wrap;
+}
+pre code {
+  background-color: #eff0f1;
+  color: #393318;
+  font-family: monospace;
+  display: block;
+  padding: 5px 10px;
+}
+body[data-mode="dark"] pre code {
+  background-color: #585858;
+  color: #e8e8e8;
+}
+
+/* CSS for sans-serif fonts */
+body[data-font=sans-serif] {}
+/* CSS for serif fonts */
+body[data-font=serif] {}
+
+/* CSS for "sepia" theme */
+body[data-mode=sepia] {
+}
+/* CSS for "light" theme */
+body[data-mode=light] {}
+/* CSS for "dark" theme */
+body[data-mode=dark] {}</style>
+</head>
+<body tabindex="1" data-images="true" data-mode="light" data-font="sans-serif" data-loaded="true" style="user-select: initial;">
+  <span></span> <!-- for IntersectionObserver -->
+  <a id="reader-domain" href="https://www.delphidigital.io/reports/september-showers-bring-fall-gains/">
+    <span>www.delphidigital.io</span>
+    <span>/reports/september-showers-bring-fall-gains/</span>
+  </a>
+  <h1 dir="auto" id="reader-title">September Showers Bring Fall Gains - Delphi Digital</h1>
+  <span dir="auto" id="reader-credits">Kevin Kelly, CFA</span>
+  <span dir="auto" id="reader-estimated-time">6-8 minutes</span>
+  <span dir="auto" id="published-time"></span>
+  <hr>
+  <div id="readability-page-1" class="page"><div>
+              
+              <!-- Article disclosure -->
+                              
+                            <!-- Article disclosure END -->
+
+              <!-- Article key takeaways -->
+                              <div>
+                  <h2>Key Takeaways</h2>
+                                      <div>
+                      <p><span>Bitcoin’s break above $50k earlier this week was both exciting and short-lived as the world’s largest crypto asset was met with serious resistance following its best 30-day performance since February; DeMark Indicators are signaling trend exhaustion as well.</span></p>
+                    </div>
+                                      <div>
+                      <p>Historically, early September through early October has been a difficult period for BTC, and the rest of the crypto market hasn’t fared much better. I<span>f we were to see a pullback in the near term, however, our guess is it’ll be rather short-lived, especially since we’re <strong>approaching one of the best periods of the year for the crypto market.</strong></span></p>
+                    </div>
+                                      <div>
+                      <p>Market tops are usually characterized by a sizable inflow of BTC to exchanges. However, despite its recent rebound, we’re still seeing record amounts of BTC coming off exchanges, as measured in USD; when measured in BTC, the amount being withdrawn still marks one of the largest net outflows from exchange wallets on record, surpassed only by periods in April and November 2020.</p>
+                    </div>
+                                  </div>
+                            <!-- Article key takeaways END -->
+              
+            </div><div>
+              <p><span>Bitcoin’s break above $50k earlier this week was both exciting and short-lived as the world’s largest crypto asset was met with serious resistance following its best 30-day performance since February. </span><span>One of the key levels we’re watching is ~$51,100; this marks the 61.8% Fibonacci retracement level, which is often viewed as a key area of resistance.</span></p>
+<p><a href="https://cdn.delphidigital.io/uploads/2021/08/BTC-Fib-Retracement.png"><img src="https://cdn.delphidigital.io/uploads/2021/08/BTC-Fib-Retracement.png" alt="" srcset="https://cdn.delphidigital.io/uploads/2021/08/BTC-Fib-Retracement.png 1258w, https://cdn.delphidigital.io/uploads/2021/08/BTC-Fib-Retracement-300x158.png 300w, https://cdn.delphidigital.io/uploads/2021/08/BTC-Fib-Retracement-1024x540.png 1024w, https://cdn.delphidigital.io/uploads/2021/08/BTC-Fib-Retracement-768x405.png 768w, https://cdn.delphidigital.io/uploads/2021/08/BTC-Fib-Retracement-600x317.png 600w" sizes="(max-width: 1000px) 100vw, 1000px" width="1000" height="528"></a></p>
+<p><span>DeMark Indicators are signaling trend exhaustion as well, as evidenced by the recent 13s reading, which often marks an inflection point in price trend; similar readings signaled the top back in February and the bottoms in June and July.</span></p>
+<p><img src="https://cdn.delphidigital.io/uploads/2021/08/MN2-1024x541.png" alt="" srcset="https://cdn.delphidigital.io/uploads/2021/08/MN2-1024x541.png 1024w, https://cdn.delphidigital.io/uploads/2021/08/MN2-300x159.png 300w, https://cdn.delphidigital.io/uploads/2021/08/MN2-768x406.png 768w, https://cdn.delphidigital.io/uploads/2021/08/MN2-1536x812.png 1536w, https://cdn.delphidigital.io/uploads/2021/08/MN2-1513x800.png 1513w, https://cdn.delphidigital.io/uploads/2021/08/MN2-600x317.png 600w, https://cdn.delphidigital.io/uploads/2021/08/MN2.png 1999w" sizes="(max-width: 1000px) 100vw, 1000px" width="1000" height="529"></p>
+<p><span>Historically, early September through early October has been a difficult period for BTC, and the rest of the crypto market hasn’t fared much better.</span></p>
+<p><img src="https://cdn.delphidigital.io/uploads/2021/08/MN3-1024x542.png" alt="" srcset="https://cdn.delphidigital.io/uploads/2021/08/MN3-1024x542.png 1024w, https://cdn.delphidigital.io/uploads/2021/08/MN3-300x159.png 300w, https://cdn.delphidigital.io/uploads/2021/08/MN3-768x406.png 768w, https://cdn.delphidigital.io/uploads/2021/08/MN3-1536x813.png 1536w, https://cdn.delphidigital.io/uploads/2021/08/MN3-1512x800.png 1512w, https://cdn.delphidigital.io/uploads/2021/08/MN3-600x318.png 600w, https://cdn.delphidigital.io/uploads/2021/08/MN3.png 1999w" sizes="(max-width: 1000px) 100vw, 1000px" width="1000" height="529"></p>
+<p><span>However, it’s important to remember we’re working with rather limited price history, and one could argue each period’s price action was driven by different factors. For example, ETH’s ~18% decline last September came on the heels of 2020’s “DeFi Summer”, which saw an explosion in activity and asset prices. Bitcoin was also down ~8% that month, posting losses every September for the last four years.</span></p>
+<p><span>Fund flows into institutional products that track BTC have contracted the last couple months following substantial demand in Q4 2020 and Q1 2021.</span></p>
+<p><img src="https://cdn.delphidigital.io/uploads/2021/08/MN4-1024x544.png" alt="" srcset="https://cdn.delphidigital.io/uploads/2021/08/MN4-1024x544.png 1024w, https://cdn.delphidigital.io/uploads/2021/08/MN4-300x159.png 300w, https://cdn.delphidigital.io/uploads/2021/08/MN4-768x408.png 768w, https://cdn.delphidigital.io/uploads/2021/08/MN4-600x319.png 600w, https://cdn.delphidigital.io/uploads/2021/08/MN4.png 1148w" sizes="(max-width: 1000px) 100vw, 1000px" width="1000" height="531"></p>
+<p><span>While whales appear to be adding to some of the selling pressure this week…</span></p>
+<p><img src="https://cdn.delphidigital.io/uploads/2021/08/MN5.png" alt="" srcset="https://cdn.delphidigital.io/uploads/2021/08/MN5.png 947w, https://cdn.delphidigital.io/uploads/2021/08/MN5-300x151.png 300w, https://cdn.delphidigital.io/uploads/2021/08/MN5-768x386.png 768w, https://cdn.delphidigital.io/uploads/2021/08/MN5-600x302.png 600w" sizes="(max-width: 1000px) 100vw, 1000px" width="1000" height="503"></p>
+<p><span>BTC’s breakout following a multi-month consolidation period is significant though, and it’s ability to defend $30k also stands as a testament to the outsize demand and strength of its backers.</span></p>
+<p><img src="https://cdn.delphidigital.io/uploads/2021/08/MN6-1024x542.png" alt="" srcset="https://cdn.delphidigital.io/uploads/2021/08/MN6-1024x542.png 1024w, https://cdn.delphidigital.io/uploads/2021/08/MN6-300x159.png 300w, https://cdn.delphidigital.io/uploads/2021/08/MN6-768x406.png 768w, https://cdn.delphidigital.io/uploads/2021/08/MN6-1536x813.png 1536w, https://cdn.delphidigital.io/uploads/2021/08/MN6-1512x800.png 1512w, https://cdn.delphidigital.io/uploads/2021/08/MN6-600x318.png 600w, https://cdn.delphidigital.io/uploads/2021/08/MN6.png 1999w" sizes="(max-width: 1000px) 100vw, 1000px" width="1000" height="529"></p>
+<p><span>So, if we were to see a pullback in the near term, my guess is it would be rather short-lived, especially since we’re approaching one of the best periods of the year for the crypto market.</span></p>
+<p><img src="https://cdn.delphidigital.io/uploads/2021/08/MN7-1024x542.png" alt="" srcset="https://cdn.delphidigital.io/uploads/2021/08/MN7-1024x542.png 1024w, https://cdn.delphidigital.io/uploads/2021/08/MN7-300x159.png 300w, https://cdn.delphidigital.io/uploads/2021/08/MN7-768x407.png 768w, https://cdn.delphidigital.io/uploads/2021/08/MN7-1536x814.png 1536w, https://cdn.delphidigital.io/uploads/2021/08/MN7-1510x800.png 1510w, https://cdn.delphidigital.io/uploads/2021/08/MN7-600x318.png 600w, https://cdn.delphidigital.io/uploads/2021/08/MN7.png 1999w" sizes="(max-width: 1000px) 100vw, 1000px" width="1000" height="530"></p>
+<p>In other words, Q4 tends to favor the bulls.</p>
+<p><img src="https://cdn.delphidigital.io/uploads/2021/08/MN8-1024x542.png" alt="" srcset="https://cdn.delphidigital.io/uploads/2021/08/MN8-1024x542.png 1024w, https://cdn.delphidigital.io/uploads/2021/08/MN8-300x159.png 300w, https://cdn.delphidigital.io/uploads/2021/08/MN8-768x406.png 768w, https://cdn.delphidigital.io/uploads/2021/08/MN8-1536x813.png 1536w, https://cdn.delphidigital.io/uploads/2021/08/MN8-1512x800.png 1512w, https://cdn.delphidigital.io/uploads/2021/08/MN8-600x318.png 600w, https://cdn.delphidigital.io/uploads/2021/08/MN8.png 1999w" sizes="(max-width: 1000px) 100vw, 1000px" width="1000" height="529"></p>
+<p><span>Longer term momentum indicators are also showing signs of strength; BTC’s weekly MACD, for example, has reversed course after its downtrend the past several months.</span><span>&nbsp;</span></p>
+<p><img src="https://cdn.delphidigital.io/uploads/2021/08/MN9-1024x540.png" alt="" srcset="https://cdn.delphidigital.io/uploads/2021/08/MN9-1024x540.png 1024w, https://cdn.delphidigital.io/uploads/2021/08/MN9-300x158.png 300w, https://cdn.delphidigital.io/uploads/2021/08/MN9-768x405.png 768w, https://cdn.delphidigital.io/uploads/2021/08/MN9-1536x811.png 1536w, https://cdn.delphidigital.io/uploads/2021/08/MN9-1516x800.png 1516w, https://cdn.delphidigital.io/uploads/2021/08/MN9-600x317.png 600w, https://cdn.delphidigital.io/uploads/2021/08/MN9.png 1999w" sizes="(max-width: 1000px) 100vw, 1000px" width="1000" height="528"></p>
+<p><span>As we outlined in our recent market </span><a href="https://www.delphidigital.io/reports/the-evolution-of-crypto-price-discovery/"><span>note</span></a><span>, titled “The Evolution of Crypto Price Discovery”, derivatives have become wildly popular over the last 12 months; futures and perps now consistently account for well over 50% of total volume for BTC.</span></p>
+<p><i><span>“Perpetuals are eating into spot market activity, becoming the prime source of price discovery.”</span></i></p>
+<p><span>The weighted average funding rate for BTC perps spent most of the period between mid-May and late July in negative territory, indicating bearish sentiment among traders. It wasn’t until a couple weeks ago that we saw average funding rates flip positive again, which historically has coincided with the early stages of a price recovery (albeit historical data is still limited).</span></p>
+<p><img src="https://cdn.delphidigital.io/uploads/2021/08/MN10-1024x544.png" alt="" srcset="https://cdn.delphidigital.io/uploads/2021/08/MN10-1024x544.png 1024w, https://cdn.delphidigital.io/uploads/2021/08/MN10-300x159.png 300w, https://cdn.delphidigital.io/uploads/2021/08/MN10-768x408.png 768w, https://cdn.delphidigital.io/uploads/2021/08/MN10-600x319.png 600w, https://cdn.delphidigital.io/uploads/2021/08/MN10.png 1148w" sizes="(max-width: 1000px) 100vw, 1000px" width="1000" height="531"></p>
+<p><span>We’ve also seen a similar trend for ETH perps over the last few weeks…</span></p>
+<p><img src="https://cdn.delphidigital.io/uploads/2021/08/MN11-1024x544.png" alt="" srcset="https://cdn.delphidigital.io/uploads/2021/08/MN11-1024x544.png 1024w, https://cdn.delphidigital.io/uploads/2021/08/MN11-300x159.png 300w, https://cdn.delphidigital.io/uploads/2021/08/MN11-768x408.png 768w, https://cdn.delphidigital.io/uploads/2021/08/MN11-600x319.png 600w, https://cdn.delphidigital.io/uploads/2021/08/MN11.png 1148w" sizes="(max-width: 1000px) 100vw, 1000px" width="1000" height="531"></p>
+<p><span>Total open interest for BTC perps is on the rise again but is still a far cry away from its recent peak (~$16B) in mid-April.</span></p>
+<p><img src="https://cdn.delphidigital.io/uploads/2021/08/MN13-1024x544.png" alt="" srcset="https://cdn.delphidigital.io/uploads/2021/08/MN13-1024x544.png 1024w, https://cdn.delphidigital.io/uploads/2021/08/MN13-300x159.png 300w, https://cdn.delphidigital.io/uploads/2021/08/MN13-768x408.png 768w, https://cdn.delphidigital.io/uploads/2021/08/MN13-600x319.png 600w, https://cdn.delphidigital.io/uploads/2021/08/MN13.png 1148w" sizes="(max-width: 1000px) 100vw, 1000px" width="1000" height="531"></p>
+<p><span>We’ve often tried to use different measures to gauge the level of leverage in crypto markets. Another useful metric we’ve been tracking is the ratio between BTC’s open interest (across both futures and perps) and its total market cap. When the ratio is rising, open interest is growing faster than market cap and vice versa.</span></p>
+<p><span>If we examine the leverage ratio vs. price during Mar. 2020, Jul. 2020, and Apr. 2021, in all 3 instances we saw open interest grow faster than market cap following a significant rally. This was essentially a swathe of longs getting trapped near the top.</span></p>
+<p><span>On the flipside, the latest spike in the ratio was near the bottom after BTC took a 50% haircut. Given the way the ratio declined after price began to rally, it seems likely that late shorts were rinsed, thus wiping out some open interest.</span></p>
+<p><img src="https://cdn.delphidigital.io/uploads/2021/08/MN14-1024x544.png" alt="" srcset="https://cdn.delphidigital.io/uploads/2021/08/MN14-1024x544.png 1024w, https://cdn.delphidigital.io/uploads/2021/08/MN14-300x159.png 300w, https://cdn.delphidigital.io/uploads/2021/08/MN14-768x408.png 768w, https://cdn.delphidigital.io/uploads/2021/08/MN14-600x319.png 600w, https://cdn.delphidigital.io/uploads/2021/08/MN14.png 1148w" sizes="(max-width: 1000px) 100vw, 1000px" width="1000" height="531"></p>
+<p><span>Market tops are usually characterized by a sizable inflow of BTC to exchanges. However, despite its recent rebound, we’re still seeing record amounts of BTC coming off exchanges, as measured in USD. In fact, it’s estimated over $4B of BTC has been withdrawn from exchanges over the last 30 days, according to data tracked by Glassnode.</span></p>
+<p><img src="https://cdn.delphidigital.io/uploads/2021/08/MN15-1024x544.png" alt="" srcset="https://cdn.delphidigital.io/uploads/2021/08/MN15-1024x544.png 1024w, https://cdn.delphidigital.io/uploads/2021/08/MN15-300x159.png 300w, https://cdn.delphidigital.io/uploads/2021/08/MN15-768x408.png 768w, https://cdn.delphidigital.io/uploads/2021/08/MN15-600x319.png 600w, https://cdn.delphidigital.io/uploads/2021/08/MN15.png 1148w" sizes="(max-width: 1000px) 100vw, 1000px" width="1000" height="531"></p>
+<p><span>When measured in BTC, the amount being withdrawn still marks one of the largest net outflows from exchange wallets on record, surpassed only by periods in April and November 2020.</span></p>
+<h4>Conclusion</h4>
+<p>There are a few warning signs of trend exhaustion, which may put pressure on the market in the near term. However, we’re rapidly approaching the best period for crypto historically, so any pullback from current levels may open up attractive entry points for those with unwavering conviction. If the crypto market starts to move higher, we expect ETH to outperform as its higher beta nature complements a handful of major catalysts on the horizon.</p>
+
+            </div></div>
+  <span></span> <!-- for IntersectionObserver -->
+  
+  
+  
+  
+
+
+<span style="position: absolute; width: 16px; height: 16px; background-color: rgba(125, 0, 0, 0.5); border: 1px solid rgb(255, 255, 255); box-sizing: border-box; display: none; cursor: move; left: 1227.07px; top: 1928.02px;"></span></body><style>body {
+      font-size:  20px;
+      font-family: Helvetica, Arial, sans-serif;
+      width: 950px;
+    }
+    .page {
+      line-height: 30.0px;
+    }
+    h1, h2, h3 {
+      line-height: initial;
+    }</style></html>
