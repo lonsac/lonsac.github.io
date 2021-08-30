@@ -1,0 +1,361 @@
+<html><head><title>Bridging Fragmented Liquidity: Hop & Connext - Delphi Digital :: Reader View</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+html {
+  overflow: overlay;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 30px auto 0 auto;
+  padding: 10px;
+}
+body[data-mode="light"] {
+  color: #222;
+  border-color: %light-color%;
+  background-color: whitesmoke;
+}
+body[data-mode="dark"] {
+  color: #eee;
+  border-color: %dark-color%;
+  background-color: #333;
+}
+body[data-mode="sepia"] {
+  color: #5b4636;
+  border-color: %sepia-color%;
+  background-color: #f4ecd8;
+}
+body[data-mode="solarized-light"] {
+  color: #586e75;
+  border-color: %solarized-light-color%;
+  background-color: #fdf6e3;
+}
+body[data-mode="nord-light"] {
+  color: #2e3440;
+  border-color: %nord-light-color%;
+  background-color: #e5e9f0;
+}
+body[data-mode="groove-dark"] {
+  color: #cec4ac;
+  border-color: %groove-dark-color%;
+  background-color: #282828;
+}
+body[data-mode="solarized-dark"] {
+  color: #93a1a1;
+  border-color: %solarized-dark-color%;
+  background-color: #002b36;
+}
+body[data-mode="nord-dark"] {
+  color: #e5e9f0;
+  border-color: %nord-dark-color%;
+  background-color: #2e3440;
+}
+@media print {
+  body[data-mode="light"],
+  body[data-mode="dark"],
+  body[data-mode="sepia"],
+  body[data-mode="solarized-light"],
+  body[data-mode="nord-light"],
+  body[data-mode="groove-dark"],
+  body[data-mode="solarized-dark"],
+  body[data-mode="nord-dark"] {
+    color: #000;
+    border-color: #000;
+    background-color: #fff;
+  }
+}
+body[data-loaded=true] {
+  
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+img:not([width])[src$=".svg"] {
+  max-width: 100px;
+}
+body[data-images=false] canvas,
+body[data-images=false] svg,
+body[data-images=false] img {
+  display: none;
+}
+a {
+  color: #0095dd;
+  text-decoration: none;
+}
+#reader-domain {
+  font-family: Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  border-bottom-color: currentcolor;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: inline-block;
+  direction: ltr;
+}
+#reader-domain > span:first-child {
+  font-size: 1.1em;
+}
+#reader-domain > span:last-child {
+  font-size: 0.8em;
+}
+#reader-title {
+  font-size: 1.6em;
+  line-height: 1.25em;
+  width: 100%;
+  margin: 20px 0;
+  padding: 0;
+}
+#reader-credits,
+#doi,
+#published-time,
+#reader-estimated-time {
+  font-size: 0.85em;
+  line-height: 1.48em;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+#reader-credits:not(:empty)::after {
+  content: ' ⋮ ';
+}
+#published-time:not(:empty)::before {
+  content: ' ⋮ ';
+}
+#doi-json {
+  overflow: hidden;
+}
+#doi-json code {
+  overflow: auto;
+  max-height: 400px;
+}
+#published-time:empty,
+#reader-credits:empty {
+  display: none;
+}
+body[data-speech="true"] .tts-box {
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  height: 32px;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: 0 0 0 1000vw rgba(128, 128, 128, 0.2);
+}
+body[data-speech="true"] .tts-word {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  background-color: red;
+  height: 2px;
+}
+.tts-word.hidden,
+.tts-box.hidden {
+  display: none;
+}
+body[data-speech="false"] .tts-speaking::after {
+  display: none;
+}
+mark.hghlght {
+  background-color: #ffff81;
+}
+.hidden {
+  display: none;
+}
+.note {
+  position: absolute;
+  z-index: 10;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 5px;
+  min-width: 32px;
+  min-height: 32px;
+}
+.note:focus {
+  z-index: 11;
+}
+</style>
+  <style id="user-css">body {
+  padding-bottom: 64px;
+}
+a:visited {
+  color: #d33bf0;
+}
+a:link, a:link:hover, a:link:active, a:link * {
+  color: #0095dd;
+}
+a:link {
+  text-decoration: none;
+  font-weight: normal;
+}
+pre {
+  white-space: pre-wrap;
+}
+pre code {
+  background-color: #eff0f1;
+  color: #393318;
+  font-family: monospace;
+  display: block;
+  padding: 5px 10px;
+}
+body[data-mode="dark"] pre code {
+  background-color: #585858;
+  color: #e8e8e8;
+}
+
+/* CSS for sans-serif fonts */
+body[data-font=sans-serif] {}
+/* CSS for serif fonts */
+body[data-font=serif] {}
+
+/* CSS for "sepia" theme */
+body[data-mode=sepia] {
+}
+/* CSS for "light" theme */
+body[data-mode=light] {}
+/* CSS for "dark" theme */
+body[data-mode=dark] {}</style>
+</head>
+<body tabindex="1" data-images="true" data-mode="light" data-font="sans-serif" data-loaded="true">
+  <span></span> <!-- for IntersectionObserver -->
+  <a id="reader-domain" href="https://www.delphidigital.io/reports/bridging-fragmented-liquidity-hop-connext/">
+    <span>www.delphidigital.io</span>
+    <span>/reports/bridging-fragmented-liquidity-hop-connext/</span>
+  </a>
+  <h1 dir="auto" id="reader-title">Bridging Fragmented Liquidity: Hop &amp; Connext - Delphi Digital</h1>
+  <span dir="auto" id="reader-credits">Can Gurel</span>
+  <span dir="auto" id="reader-estimated-time">24-30 minutes</span>
+  <span dir="auto" id="published-time"></span>
+  <hr>
+  <div id="readability-page-1" class="page"><div>
+                  <h2>Key Takeaways</h2>
+                                      <div>
+                      <p><span>While Rollups and Sidechains offer high throughput and low fees, going from one scaling solution platform to another typically requires long exit durations and base layer gas consumption. Connext and Hop are two prominent solutions that enable low fee, fast transfers across various scaling solutions.</span></p>
+                    </div>
+                                      <div>
+                      <p><span>Both solutions rely on a network of nodes to front liquidity at the destination chain so users can perform quick cross chain swaps abstracted away from all the complexity underlying platforms.</span></p>
+                    </div>
+                                      <div>
+                      <p><span>While Connext is ideal for micropayments &amp; conditional transfers like pay-as-you-go services, Hop is better suited for cross platform DeFi apps given easier native deployment in app interfaces.</span></p>
+                    </div>
+                                      <div>
+                      <p><span>Connext has the edge on capital efficiency and settlement duration for its routers whereas Hop is better suited for rebalancing of liquidity, use by smart contracts, and multihop transactions. Both solutions currently optimize for the short tail of assets and have low swap duration times for end users.&nbsp;</span></p>
+                    </div>
+                                      <div>
+                      <p><span>While both approaches offer decentralized and non-custodial services, more work is needed to make both networks fully permissionless.&nbsp;</span></p>
+                    </div>
+                                      <div>
+                      <p><span>Connext has been active in Mainnet since the beginning of April 2021. Hop is expected to launch on mainnet in the upcoming days with a notable collaboration being </span><a href="https://medium.com/hop-protocol/connecting-polygon-to-the-multi-chain-world-via-hop-ec4930ffb2a2"><span>Polygon </span></a><span>for liquidity mining. Neither protocols have a utility token just yet.</span></p>
+                    </div>
+                                      <div>
+                      <p><span>A concern with the multichain thesis with L2s and EVM-compatible chains has been liquidity fragmentation. Crosschain liquidity solutions are working to patch this area and serve as the transport layer for value.</span></p>
+                    </div>
+                                  </div><div>
+              <p><b>Introduction&nbsp;</b></p>
+<p><span>Ethereum L2s need interoperability. This can entail layer 2 exits and broader L2:L2 communication. With gas fees increasing, users would like to avoid having to go through Ethereum Layer 1. Liquidity is already getting fragmented across scaling solutions. Most interop approaches range from Rollups (native crosschain validation), MPC bridges like Ren to 1:1 swaps like Connext. At the end of the day many facets of interoperability boil down to the trustlessness of the bridges used. In this report we dive into two innovative solutions, Hop and Connext, that aim to facilitate the growth of cross-chain value transfer to create a better UX.&nbsp;</span></p>
+<p><img src="https://cdn.delphidigital.io/uploads/2021/06/Simplified2.png" alt="" srcset="https://cdn.delphidigital.io/uploads/2021/06/Simplified2.png 1331w, https://cdn.delphidigital.io/uploads/2021/06/Simplified2-300x158.png 300w, https://cdn.delphidigital.io/uploads/2021/06/Simplified2-1024x541.png 1024w, https://cdn.delphidigital.io/uploads/2021/06/Simplified2-768x406.png 768w, https://cdn.delphidigital.io/uploads/2021/06/Simplified2-600x317.png 600w" sizes="(max-width: 1331px) 100vw, 1331px" width="1331" height="703"></p>
+<p><b>State Channels Refresher: </b><span>Let’s go back to the bar tab analogy. At a bar, if you open a tab with your card you are locking up funds with them (collateral) and the bartender has the right to your card if you don’t pay. You could buy many drinks on the open tab but there’s only one transaction at the end. Instead of signing a transaction to Ethereum it’s handed to the counterparty (bar tab). Applying the crypto lens, instead of many transactions onchain, you can send the recipient however many cryptographic signatures instead, giving the end user the ability to draw up to a certain amount from the multisig.<br>
+</span></p>
+<p><img src="https://cdn.delphidigital.io/uploads/2021/06/Design-Principles2.png" alt="" srcset="https://cdn.delphidigital.io/uploads/2021/06/Design-Principles2.png 1331w, https://cdn.delphidigital.io/uploads/2021/06/Design-Principles2-300x159.png 300w, https://cdn.delphidigital.io/uploads/2021/06/Design-Principles2-1024x544.png 1024w, https://cdn.delphidigital.io/uploads/2021/06/Design-Principles2-768x408.png 768w, https://cdn.delphidigital.io/uploads/2021/06/Design-Principles2-600x319.png 600w" sizes="(max-width: 1331px) 100vw, 1331px" width="1331" height="707"></p>
+<p><b>How does Connext work?</b><span> In its simplest form Connext is a state channel network. You have a set of liquidity providers or state channel nodes (routers) that front liquidity in a receiving side channel to get a payment in a sending channel. Essentially routers also function as LPs. To maintain profitability and offset charges like onchain transaction costs, server costs, collateral costs and more, they can either charge static fees or dynamic fees. One can send a payment in a state channel in ETH to a Connext router and it sends a corresponding payment in the state channel back to the user. Since channels are used, one can enforce that those two interactions are atomic (no way to lose funds, not complete once router has initiated process).&nbsp;</span></p>
+<p><span>Connext expands on the concepts of state channels in that updates within channels have arbitrary conditionality between them, </span><i><span>enabling conditional payments</span></i><span>. This also circumvents the issue of needing to deploy a new multisig with each person transacted with. User A can pay User B (taking microfee) who pays User C (taking microfee). Since channels are linked by offchain communication it’s possible to transact in various currencies within the same flow across different chains. Another benefit that comes with Connext is the strong UX as it’s gas abstracted, making a frictionless onboarding experience.</span></p>
+<p><i><span>As a mental model for Connext, think of it as a cross-chain clearinghouse that sits on top of any of the chains within the Ethereum layer 2 ecosystem and allows one to net off volume between them. </span></i></p>
+<p><b>High Level Step by Step Walkthrough: Connext flow.&nbsp;</b></p>
+
+<p><span>While the walk though above portrays a high-level flow of how Connext works, it does have some oversimplifications which are not entirely accurate.&nbsp;</span></p>
+<p><span>The actual implementation of Connext leverages a particular op-code “Create2” supported by almost all connected chains such as Matic, Optimism, xDai, SKALE, Arbitrum. In simple terms, Create2 assigns addresses to particular contracts that do not exist yet on-chain but can be deployed if needed. Leveraging this capability of underlying chains, Connext allows users to create a channel without having to make an on-chain transaction.</span> <span>Instead, to create a channel, users commit to an off-chain transfer sending funds to a Create2 address. This means, if both parties are honest, on-chain tx is needed only once during withdrawal.&nbsp;</span></p>
+<p><span>A major benefit of this approach is that it minimizes the “free option” problem of atomic swaps. Generally, in atomic swaps, one party must commit to a price and the counterparty is free to take it or leave it. The option on price held by the counterparty usually lasts for minutes due to limitations of the base layer. This leads to unfair trades and is inarguably one of the main reasons why atomic swaps haven’t gone mainstream. In Connext, because channels can be instantly created and updated off-chain, the duration of free options on swaps is reduced from hours/minutes to seconds, enabling much fairer trades in practice.</span></p>
+<p><span>Furthermore, as mentioned earlier, in Connext’s design arbitrary conditions can be introduced to update balances from within the channel, extending the functionality of Connext network to include new use cases such as conditional micropayments (See </span><a href="https://thegraph.com/blog/scalar"><span>Scalar </span></a><span>by the Graph).</span></p>
+<p><img src="https://cdn.delphidigital.io/uploads/2021/06/Stablecoins2.png" alt="" srcset="https://cdn.delphidigital.io/uploads/2021/06/Stablecoins2.png 1247w, https://cdn.delphidigital.io/uploads/2021/06/Stablecoins2-300x159.png 300w, https://cdn.delphidigital.io/uploads/2021/06/Stablecoins2-1024x543.png 1024w, https://cdn.delphidigital.io/uploads/2021/06/Stablecoins2-768x407.png 768w, https://cdn.delphidigital.io/uploads/2021/06/Stablecoins2-600x318.png 600w" sizes="(max-width: 1247px) 100vw, 1247px" width="1247" height="661"></p>
+<p><span>As seen in the following diagram, BSC saw a lot of attention earlier on, followed by demand to move from BSC to Matic. A temporary pause for BSC support hampered growth whereas alternative chains like Fantom and xDAI have warranted a need for supplying more liquidity to fulfill requests for exit liquidity. As of 6/11, $2m out of the total $2.29m router liquidity consists of stablecoins, indicating strong demand for bridging those assets.&nbsp;&nbsp;</span></p>
+<p><img src="https://cdn.delphidigital.io/uploads/2021/06/Capital-Efficiency.png" alt="" srcset="https://cdn.delphidigital.io/uploads/2021/06/Capital-Efficiency.png 1144w, https://cdn.delphidigital.io/uploads/2021/06/Capital-Efficiency-300x160.png 300w, https://cdn.delphidigital.io/uploads/2021/06/Capital-Efficiency-1024x545.png 1024w, https://cdn.delphidigital.io/uploads/2021/06/Capital-Efficiency-768x409.png 768w, https://cdn.delphidigital.io/uploads/2021/06/Capital-Efficiency-600x319.png 600w" sizes="(max-width: 1144px) 100vw, 1144px" width="1144" height="609"></p>
+<p><span>As seen above, Connext’s capital efficiency stands out here with growing volumes on the back of fairly constant liquidity in the back of May. A high volume/liquidity ratio is representative of this and partially bolstered by the fact that state channels can net off liquidity going in different directions.&nbsp;</span></p>
+<p><b>Upcoming Challenges &amp; Proposed Solutions:&nbsp;</b></p>
+<p><b>Problem 1:&nbsp; </b><b><i>Automating router rebalancing </i></b><span>: Routers have liquidity pools on each chain. If users do larger transfers, liquidity gets pushed to one side. Need incentive for people to rebalance. It’s more expensive for a router operator to do this.</span></p>
+<p><b>Solution </b><span>– A similar concept of AMMs can be applied to routers in the form of “virtual AMMs”, which are not actual AMM contracts on chain. This includes bonding swap rates that router provides between for example assets on Arbitrum vs assets on Optimism via an AMM curve. Over time, the price between two assets changes on state channels and this difference is reflected in availability liquidity in the system (Router). This incentivizes someone to push liquidity in the opposite direction.</span></p>
+<p><b>Problem 2: </b><b><i>Decentralize and scale liquidity</i></b><b>:</b><span> Connext wants to add more routers to the system and find a better way to aggregate liquidity.</span></p>
+<p><b>Solution: Aggregate liquidity across routers via Router Auctions</b><span>. The end user doesn’t care which router liquidity is sourced from. It can be routed via one or many concurrently. The user has the incentive to pick the cheapest one or in this case the one that’s most unbalanced. Routers provide liquidity for X amount of dollars and pricing liquidity on AMM curve, and the user ends up defacto rebalancing someone else’s liquidity. This flywheel helps the network rebalance over time. With adoption this may reduce the need for arbitrage as more users participate.&nbsp;</span></p>
+<p><span>Onehive is a 3</span><span>rd</span><span> party solution working on aggregating liquidity and router selection. The problem with router construction currently is that rebalancing manually doesn’t work at scale. Although incentivizing rebalancing with the virtual AMM design and finding the optimal way to price based on availability liquidity are both important, </span><b>the main focus is to address demand for liquidity. The near term goal is to focus on scaling up liquidity and getting more routers up and running first.&nbsp;</b></p>
+<p><b>Hop Protocol</b></p>
+<p><span>Another solution that facilitates instant 1:1 swaps across Rollups is Hop Protocol. Like Connext, the general design principle of Hop relies on third-party entities providing up-front liquidity at the destination chains available for cross-chain swap requests on-demand. However, Hop’s approach is fairly distinct from Connext.</span></p>
+<p><span>While Connext relies on state channels, Hop is a generic token bridge that facilitates swaps using intermediary Hop Tokens (hopETH or hETH, hopDai or hDAI, etc.) minted and burned by Hop Bonders. Hop Bonders (akin to Connext Routers) provide up-front liquidity in the form of intermediary Hop Tokens across various chains to enable instant swaps for users.&nbsp;</span></p>
+<p><span>In addition to the fronted liquidity, the intermediary tokens are also pooled in AMMs with their canonical counterparts in respective chains. The combination of AMMs &amp; up-front liquidity enables a scalable solution where users can instantly swap across Rollups without having to wait for the Rollup’s long withdrawal times (7 days for Optimism &amp; Arbitrum).</span></p>
+<p><span>Let’s visualize the whole process step-by-step in the diagram below.</span></p>
+
+<p><span>To recap, here are the different participants that make up Hop and their associated roles in the protocol.</span></p>
+<p><b>Users</b><span> are the first-class citizens of the Hop Protocol. Every other participant of the protocol (Liquidity Providers, Bonders, Arbitrageurs) is there to ensure that the whole swap process </span><b>aETH in –&gt;</b><span> [+aETH : -hETH] -&gt; [+hETH : -oETH] </span><b>—&gt; oETH out</b><span> happens quickly and safely.&nbsp;</span></p>
+<p><b>Liquidity Providers </b><span>provide liquidity to AMM pools supplying aETH &amp; hETH on Arbitrum &amp; oETH &amp; hETH on Optimism. Just like in any other AMM they earn LP fees when there is a swap. Since these are 1:1 pools LPs suffer little to no IL. Anyone can become an LP by providing </span><i><span>passive liquidity</span></i><b><i>.</i></b></p>
+<p><b>Bonders </b><span>run full verifier nodes on Rollups to facilitate cross-chain transfers. Bonders verify users burn hTokens on origin and lock up collateral for 24 hours to become eligible to mint &amp; use hTokens to facilitate transfer for users at the destination. Bonders provide</span> <i><span>active liquidity.</span></i></p>
+<p><b>Arbs </b><span>counteract movements in AMM pools to profit off of the unbalanced AMM pools. In doing so they rebalance liquidity across L2s.&nbsp;</span></p>
+<p><b>Key Design Principles</b></p>
+<p><span>There are 2 critical optimizations in Hop’s design that enable the solution to work at scale.</span></p>
+<ol>
+<li><b>Aggressive Exit Time -&gt; </b>When facilitating transfers Bonders lock in collateral at destination as soon as they attest to an exit attempt on origin. In Arbitrum/Optimism exits through native Rollup bridges only finalize once the 7 day withdrawal duration is over. However Hop makes a design choice by allowing Bonders to unlock their collateral if their attestation goes unchallenged for the first day.</li>
+</ol>
+<p><span>While this means Hop Protocol is vulnerable to a censorship attack on L1 lasting for 24 hours (instead of 1-week), it reduces the need for active liquidity in the system. The team considers this as a sweet spot between security and capital efficiency. As explained </span><a href="https://ethresear.ch/t/hop-send-tokens-across-rollups/8581"><span>here</span></a> <span>by the team, the logic behind this design choice relies on the risk exposure gap between Users and other participants. While Bonders, LPs &amp; Arbs are always exposed to platform risk, users only get exposed to platform risk within their swap duration.</span></p>
+<ol start="2">
+<li><b> Aggregation -&gt; </b><span>When a user swaps from one Rollup to another, he instantly receives his tokens. However as we saw earlier these swaps are facilitated through intermediary hop tokens whose transfer data need to be moved from origin L2 to destination L2 through the base layer. In order to save on L1 gas costs, Hop Transfers in Rollup are aggregated so a single L1 transfer can account for hundreds of L2 transfers. The protocol can therefore remain gas efficient at scale.</span></li>
+</ol>
+<p><b>Hop vs Connext</b></p>
+<p><img src="https://cdn.delphidigital.io/uploads/2021/06/Comparison2.png" alt="" srcset="https://cdn.delphidigital.io/uploads/2021/06/Comparison2.png 1250w, https://cdn.delphidigital.io/uploads/2021/06/Comparison2-300x158.png 300w, https://cdn.delphidigital.io/uploads/2021/06/Comparison2-1024x541.png 1024w, https://cdn.delphidigital.io/uploads/2021/06/Comparison2-768x406.png 768w, https://cdn.delphidigital.io/uploads/2021/06/Comparison2-600x317.png 600w" sizes="(max-width: 1250px) 100vw, 1250px" width="1250" height="660"></p>
+<p><b>Key Highlights -&gt; </b><span>&nbsp;Connext has the edge on capital efficiency and settlement duration for its routers whereas Hop is better suited for rebalancing of liquidity, use by smart contracts, and multihop transactions. Both solutions currently optimize for the short tail of assets and have low swap duration times for end users.&nbsp;</span></p>
+<p><b>Capital Efficiency -&gt; </b><span>Initially both designs address like-for-like, 1:1 swaps instead of any-to-any. This alleviates capital requirements at the expense of flexibility of users. Moving forward, capital requirements will be a fundamental factor of scalability for both protocols.&nbsp;</span></p>
+<p><span>Empirical evidence on Connext proves that the design is very capital efficient. Historically, the volume to liquidity ratio of Connext transfers have been ranging anywhere from 5 to 15.&nbsp;</span></p>
+<p><span>Although we can’t measure the capital efficiency of Hop (as protocol is not launched yet) initially we anticipate it to be relatively less capital efficient. This is because in addition to </span><i><span>active</span></i><span> liquidity of Bonders, Hop necessitates </span><i><span>passive</span></i><span> liquidity in the form of AMM pools across connected chains.&nbsp;</span></p>
+<p><span>However, high capital requirements are alleviated to a certain extent by following factors:</span></p>
+<ol>
+<li aria-level="1"><span>1. Passive liquidity is much easier to source than active liquidity as AMM pools can be incentivized and crowdsourced.</span> <span><span><span>Anyone can add liquidity to pools to earn fees and help the protocol to organically grow its passive liquidity.</span></span></span></li>
+<li aria-level="1"><span>2. Unlike in Connext, the requirement to own requested assets at destination is not on Bonders but on crowdsourced LPs. Bonders can lock up the same form of collateral asset to mint the requested asset on-demand which significantly reduces their capital burdens particularly on any-to-any type swaps.</span></li>
+</ol>
+<p><b><br>
+Pricing of swaps -&gt; </b><span>For Hop, the swap rates are primarily determined by AMM pools. In addition to slippage &amp; LP fees in pools, Bonders charge a 4 bps flat fee for transfers they bond.&nbsp;</span></p>
+<p><span>In Connext, the swap rates will eventually be determined by Routers who will run their own pricing algorithms in an attempt to simulate the effect of AMM price curves. This is currently under development and inarguably is a more complex price discovery method.&nbsp;</span></p>
+<p><b>Rebalancing of Liquidity -&gt; </b><span>Another important aspect of both Connext and Hop is how Bonders/Routers rebalance their liquidity across multiple L2s. Bonders/Routers need to make sure they have enough liquidity at the end destinations at all times so they can keep serving user requests. This is especially important when all of a sudden all users want to go in one direction to take advantage of the next high APY farming opportunity.</span></p>
+<p><span>In Hop’s case liquidity rebalancing is crowdsourced as AMM pools incentivize arbitrageurs to correct prices by counteracting user flow. More importantly, arbitrageurs only rely on the native Rollup bridge and Hop Bridge to rebalance liquidity and therefore the rebalancing mechanism is designed to work sustainably at scale. On the other hand, Connext Routers rebalance their liquidity entirely manually with no uniform route. These routes may not be always reliable for all the tokens involved. Unexpected shutdowns in commonly used routes (ex:Binance&lt;&gt;Ethereum bridge temporary shutdowns) may lead to temporary interruptions as fronted liquidity gets drained at destination and Routers can’t rebalance.</span></p>
+<p><b>Security Assumptions -&gt; </b><span>Both Hop and Connext are completely non-custodial and can be deemed to be sufficiently secure.</span></p>
+<p><span>The main security mechanism of Hop is to piggyback off the security of Rollups and thereby benefit from Ethereum base layer security.&nbsp;</span></p>
+<p>Long Rollup withdrawal periods ensure users (who don’t necessarily compute L2 transactions) are not being tricked. However, any full verifier node on a Rollup can compute post-state on its own and be 100% certain whether a withdrawal tx will revert or succeed on the base layer without waiting at all. As full verifier nodes, Hop Bonders can be sure which hop transfers are being withdrawn from a Rollup. They then immediately lock up collateral to mint hTokens and bond transfers at destination. Just like in any Rollup withdrawal, if any other Bonder considers this bonded transfer to be fraudulent he can challenge it (with the caveat that the challenge period is chosen as 24 hrs instead of full 7 day due to capital efficiency purposes). If challenged within 24 hrs, the Bonder’s collateral remains locked until the challenge is fully resolved by the Rollup. If unchallenged, Bonder receives back his collateral when 24 hrs is over. This means Hop can resist against &lt;1 day long censorship attacks (instead of &lt;7 day) on the base layer. While this is a compromise on native Rollup security it’s still a high-security threshold as it ultimately relies on Ethereum’s base layer security.</p>
+<p>But what about sidechains with weaker security than Ethereum? It’s true that these dynamics are not present in the case of sidechains. However, Hop limits any liability of a network to only participants in that network. It does so by tracking the balance of hTokens on each network and restricting hToken exits that exceed the amount that already exists on that network. This allows Hop to support sidechains with weaker security than Ethereum without weakening the system’s security as a whole.</p>
+<p><span>Finally, it’s crucial to remember that these security risks entitle hToken holders only. As first-class citizens of the protocol, users are only exposed to systematic risks during the brief period of swaps.</span></p>
+<p><span>Connext, on the other hand doesn’t have intermediary tokens and therefore is not concerned with related attack surfaces. As a state channel solution, the main security assumption in Connext is </span><a href="https://github.com/connext/spacefold/blob/master/README.md#trust-assumptions-and-considerations"><span>data availability &amp; chain monitoring.</span></a><span> Unlike Rollups, state channels don’t publish data on the base layer. This means, parties must store the latest off-chain state and monitor the base layer so they can dispute a withdrawal on the base layer if the other party is being dishonest. User’s responsibility can be alleviated through use of watchtowers in future iterations. </span><span>Long term, they can be held liable by having value staked for skin in the game with slashing penalties. </span><span>Besides these there are no trust assumptions involved. Transfers are atomic. If Router withdraws funds, users are guaranteed to withdraw as well and vice versa.</span></p>
+<p><span>State channels are not immune to censorship. Instead of framing them as consensus systems they are more similar to TCP/IP and have potential for censorship of intermediary routers, given the current construction has limited routers. Eventually Connext plans to decentralize by having many routing nodes all connecting to each other.</span></p>
+<p><b>Use Cases-&gt; </b><span>Hop transfers can be triggered by smart contracts. This key ability allows Hop’s use cases to extend beyond cross-chain transfers to possibly include cross-chain DEXs (see Vitalik’s </span><a href="https://ethresear.ch/t/cross-rollup-dex-with-smart-contracts-only-on-the-destination-side/8778"><span>proposal</span></a><b>)</b><span> and possibly many other fancy multi-chain applications in the future.&nbsp;</span></p>
+<p><span>In Connext, although users can call smart contracts at their destination it’s not possible for smart contracts to initiate swaps. That said, Connext is capable of introducing arbitrary conditionality into transfers which makes it suitable for some round based payment use cases beyond simple transfers such as pay-as-you-go type conditional micro-payments.</span></p>
+<p><b>Transactional Capacity &amp; Gas Usage -&gt; </b><span>Since communication within a state channel is entirely off-chain, the balances in a Connext channel can change hands an unlimited amount of times with zero gas. Furthermore L2&lt;&gt;L2 transfer settles on L2 so only consumes L2 gas. In the case of Hop, L2&lt;&gt;L2 Hop transfers consume L1 gas as they eventually touch the base layer. That said, the protocol is still highly gas efficient since a single L1 transfer accounts for hundreds of swaps bundled together. Hop’s transactional capacity is limited to underlying L2s.&nbsp;&nbsp;</span></p>
+<p><b>Finality -&gt; </b><span>Both protocols finalize swaps for users within few mins and can reduce the duration with further optimizations.</span></p>
+<p><b>Accessibility -&gt; </b><span>Hop requires both sides (origin &amp; destination) to have complete smart contract capability. While this isn’t required by Connext it certainly is preferable. As of today both protocols are focused on EVM compatible L2s. Without further research and engineering, they can’t be easily integrated with Loopring, Starkware, Zksync or other non-EVM compatible Rollups.</span></p>
+<p><b>Decentralization -&gt; </b><span>Both approaches are looking to decentralize Bonder/Router infrastructure so people can permissionlessly and easily spin up new Bonder/Router nodes and contribute to protocol. One challenge with regards to a multiple Bonder/Router network is order matching; how to determine which swaps will get matched with which Bonders/Routers. Although not an unsolvable challenge, automating order matching is a prerequisite for scaling the number of nodes in both approaches.&nbsp;</span></p>
+<p><b>Ease of Use -&gt; </b><span>Both </span><a href="https://kovan.hop.exchange/send"><span>Hop.exchange</span></a><span> and </span><a href="https://www.xpollinate.io/"><span>xpollinate</span></a><span> can currently only be used through Metamask. For sidechains like Matic, xDai Metamask users need to first add the origin network and switch to that network to make a transfer. Such a step is not needed for Rollups (Optimism, Arbitrum).&nbsp;</span></p>
+<p><span>Connext requires users to turn off ad blockers and enable cookies because it needs to access browser storage to store the off-chain state channel updates during the swap process in order to make sure users can always unilaterally withdraw their funds.</span></p>
+<p><b>Similar solutions under development: cBridge &amp; Dai Bridge&nbsp;</b></p>
+<p>While doing the deep dive on Hop and Connext, we’ve also identified projects under development by MakerDAO and Celer which take somewhat similar approaches to the above designs. There will surely be more competition to come as liquidity surfaces in the multichain world and demand grows. Projects like <a href="https://medium.com/biconomy/introducing-hyphen-missing-inter-chain-bridge-to-bring-mass-adoption-to-multi-chain-web3-0-4183741dc205">Hyphen</a> by Biconomy and Router Protocol are also in the mix.</p>
+<p><b>Maker’s Optimism Dai Bridge</b></p>
+<p><span>Maker has announced a custom </span><a href="https://forum.makerdao.com/t/announcing-the-optimism-dai-bridge-with-fast-withdrawals/6938">Optimism Dai Bridge</a><b>,</b><span> which, similar to Hop, offers a combination of intermediary token &amp; AMMs to enable fast Optimism-&gt;Ethereum withdrawals. Similar to Hop Bonders, Maker Oracles verify Rollup withdrawals off-chain. Oracle’s attestation allows withdrawing users to mint fDAI on the base layer, acting as tokenized claims on pending withdrawals. Users can then (without having to wait for the entire challenge period to be over) immediately open a Vault to mint actual DAI by providing fDAI as collateral or alternatively swap fDAI for DAI via AMMs maintained by LPs and arbs.&nbsp;</span></p>
+<p><span>As you may already tell, Dai Bridge and Hop carry similarities. Amongst others, one difference between the two is that in contrast to Hop where the uncollateralized minting risk involves hToken holders, the ultimate risk-taker in Dai Bridge will be MKR holders.&nbsp;</span></p>
+<p><span>Given DAI’s popularity, Dai Bridge has a good chance of becoming the go to exit mechanism for Optimism. That said, Hop may lever up on its generalized approach across multiple L2s and first mover advantage as it’s expected to launch on mainnet in upcoming days.&nbsp;</span></p>
+<p><b>Celer’s cBridge</b></p>
+<p><span>Another promising project that carries similarities with Connext is Celer network or more specifically Celer Network’s cBridge (Testnet ETA in Late June). cBridge is a generalized state channel solution that allows fast and low-cost value transfer solutions across Ethereum base layer and EVM compatible Rollups &amp; Sidechains. While implementation of cBridge (and Celer Network) are beyond this report’s scope, Celer’s cBridge mainly differs from Connext through its State Guardian Network(SGN). SGN is a specialized Ethereum sidechain that aims to weaken the trust assumptions of state channels by lifting off the two primary duties, data availability and chain monitoring off of the user’s shoulders and having users connected to always-online services.&nbsp;</span></p>
+<p><b>Closing Thoughts</b></p>
+<p><span>At a high level, while state channels &amp; generic token bridges compete with each other to a certain extent, it’s likely that we will see them co-exist in the near future as they make different trade-offs. While state channels are better suited for micropayments and repeated conditional payments, generic token bridges are better suited for direct cross platform DeFi integrations. Both solutions may indeed complement each other in future as state channel operators may choose generic token bridges as a reliable way to rebalance their liquidity across various chains. The rise of the multichain world significantly increases the need for crosschain liquidity solutions, a category we expect to play a key role as scaling solutions become more widely adopted and liquidity gets fragmented.</span></p>
+
+            </div></div>
+  <span></span> <!-- for IntersectionObserver -->
+  
+  
+  
+  
+
+
+</body><style>body {
+      font-size:  20px;
+      font-family: Helvetica, Arial, sans-serif;
+      width: 950px;
+    }
+    .page {
+      line-height: 30.0px;
+    }
+    h1, h2, h3 {
+      line-height: initial;
+    }</style></html>
