@@ -1,0 +1,337 @@
+<html><head><title>Calendar.</title><style>
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .typography .markup table.image-wrapper img,
+  .typography.editor .markup table.image-wrapper img,
+  .typography .markup table.kindle-wrapper img,
+  .typography.editor .markup table.kindle-wrapper img {
+    max-width: 550px;
+  }
+}
+
+
+@media screen and (max-width: 540px) {
+  .typography .markup iframe.spotify-wrap,
+  .typography.editor .markup iframe.spotify-wrap,
+  .typography .markup a.spotify-wrap,
+  .typography.editor .markup a.spotify-wrap {
+    width: auto !important;
+  }
+}
+
+
+@media screen and (max-width: 540px) {
+  .typography .markup div.youtube-wrap div.youtube-screen,
+  .typography.editor .markup div.youtube-wrap div.youtube-screen,
+  .typography .markup div.vimeo-wrap div.youtube-screen,
+  .typography.editor .markup div.vimeo-wrap div.youtube-screen {
+    display: none !important;
+  }
+}
+
+
+@media screen and (max-width: 540px) {
+  .typography .markup div.embedded-publication-wrap .embedded-publication.show-subscribe,
+  .typography.editor .markup div.embedded-publication-wrap .embedded-publication.show-subscribe {
+    padding: 28px 24px;
+  }
+}
+
+
+@media print {
+  .typography .markup .button-wrapper,
+  .typography.editor .markup .button-wrapper {
+    display: none;
+  }
+}
+
+
+@media screen and (min-width: 481px) {
+  .share-button-container {
+    height: 38px;
+  }
+}
+
+
+@media screen and (min-width: 481px) {
+  .share-button-container a.comment {
+    height: 38px;
+    line-height: 38px;
+    padding-right: 10px;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .share-button-container .separator {
+    display: block;
+    margin: 0;
+    height: 8px;
+    border-left: none;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .share-button-container a.share.first img {
+    padding-left: 0;
+  }
+}
+
+
+@media screen and (min-width: 481px) {
+  .share-button-container a.mobile {
+    display: none !important;
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+  .congrats-box {
+    flex-direction: column;
+  }
+  .congrats-box .congrats-box-right {
+    margin-left: 38px;
+    margin-top: 16px;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .congrats-box {
+    display: none;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .post {
+    padding: 15px 0;
+  }
+}
+
+
+@media screen and (max-width: 540px) {
+  .post-contributor-footer .post-contributor-bio-table {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-table-row {
+    display: flex;
+    flex-direction: row;
+  }
+  .post-contributor-footer .post-contributor-bio-userhead-cell,
+  .post-contributor-footer .post-contributor-bio-body-cell {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-body-cell {
+    flex-grow: 1;
+  }
+  .post-contributor-footer .post-contributor-bio-body-table {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-body-table-row {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-copy-cell,
+  .post-contributor-footer .post-contributor-bio-controls-cell {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-copy-cell {
+    margin: 8px 0 16px 0;
+  }
+  .post-contributor-footer .post-contributor-bio-controls-cell {
+    width: auto;
+  }
+  .post-contributor-footer .post-contributor-bio-controls {
+    margin: auto;
+  }
+  .post-contributor-footer .post-contributor-bio-controls .button.primary {
+    width: 100%;
+  }
+  .post-contributor-footer .post-contributor-bio-text {
+    font-size: 14px;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .post-silhouette {
+    padding: 15px 0;
+  }
+}
+
+
+@media screen and (max-width: 540px) {
+  .post-silhouette .post-silhouette-title {
+    margin-top: 10.44225025px;
+    height: 120px;
+  }
+}
+
+
+@media screen and (max-width: 540px) {
+  .post-silhouette .post-silhouette-meta {
+    width: 75%;
+  }
+}
+
+
+@media screen and (max-width: 540px) {
+  .post-silhouette .post-silhouette-meta.with-byline-image {
+    margin: 20px 0;
+  }
+}
+
+
+@media screen and (max-width: 370px) {
+  table.post-meta tr td.post-meta-item {
+    font-size: 12px;
+  }
+}
+
+
+@media screen and (max-width: 540px) {
+  .post-preview > .post-preview-image {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 540px) {
+  .post-preview-silhouette .post-preview-silhouette-image {
+    display: none;
+  }
+}
+
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  body .markup table.image-wrapper img,
+  body .markup table.kindle-wrapper img {
+    max-width: 550px;
+  }
+}
+
+
+@media screen and (max-width: 540px) {
+  body .markup iframe.spotify-wrap,
+  body .markup a.spotify-wrap {
+    width: auto !important;
+  }
+}
+
+
+@media screen and (max-width: 540px) {
+  body .markup div.youtube-wrap div.youtube-screen,
+  body .markup div.vimeo-wrap div.youtube-screen {
+    display: none !important;
+  }
+}
+
+
+@media screen and (max-width: 540px) {
+  body .markup div.embedded-publication-wrap .embedded-publication.show-subscribe {
+    padding: 28px 24px;
+  }
+}
+
+
+@media print {
+  body .markup .button-wrapper {
+    display: none;
+  }
+}
+
+
+@media screen and (min-width: 500px) {
+  body .header a.logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 6px;
+  }
+}
+
+
+@media screen and (max-width: 420px) {
+  body .subscription-receipt table:first-of-type .subscription-amount .subscription-discount {
+    width: 72px !important;
+  }
+}
+
+
+@media screen and (min-width: 481px) {
+  body .share-button-container {
+    height: auto;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  body .share-button-container .separator {
+    display: block !important;
+    margin: 0 !important;
+    height: 8px !important;
+    border-left: none !important;
+  }
+}
+
+
+@media screen and (max-width: 540px) {
+  body .footer {
+    outline: 8px solid #f8f8f8 !important;
+  }
+}
+
+
+@media screen and (max-width: 540px) {
+  .digest .item .post-meta-item.audience {
+    display: none;
+  }
+}
+
+
+@media screen and (min-width: 500px) {
+  .digest-publication .logo img {
+    width: 42px;
+    height: 42px;
+    border-radius: 6px;
+  }
+}
+
+
+@media screen and (min-width: 541px) {
+  .user-profile-modal {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+
+@media screen and (max-width: 540px) {
+  .subscribe-widget form.form .sideBySideWrap button.rightButton {
+    padding: 10px 12px;
+    min-width: 112px;
+  }
+}
+
+
+@media screen and (min-width: 541px) {
+  .pub-icon:hover .logo-hover,
+  .feed-item-icon:hover .logo-hover {
+    display: block;
+  }
+}
+
+
+@media screen and (max-width: 540px) {
+  .audio-player-wrapper .audio-player .audio-player-progress {
+    border-left-width: 16px;
+    border-right-width: 16px;
+  }
+}
+
+
+@media screen and (max-width: 540px) {
+  .audio-player-wrapper .audio-player .audio-player-progress .audio-player-progress-bar .audio-player-progress-bar-popup {
+    top: -54px;
+  }
+}
+</style></head><body class="email-body" style="font-kerning: auto;"><img alt="" border="0" height="1" src="https://mailgun.substack.com/api/v1/email/open?token=eyJtIjoiPDIwMjEwODMxMDk1OTAyLjEuNDI0ZjJiZWVmNzkyMWI2YTdhOGE0OGIxOTQ1Yjk2ZjdAbWcxLnN1YnN0YWNrLmNvbT4iLCJ1Ijo0MDU1MDYyLCJyIjoibG9uc2FjQHpvaG9tYWlsLmNvbSIsImQiOiJtZzEuc3Vic3RhY2suY29tIiwicCI6NDA3MDA2OTUsInMiOjg2NzYsImMiOiJwb3N0IiwiZiI6ZmFsc2UsImlhdCI6MTYzMDQwMzk0NSwiaXNzIjoicHViLTAiLCJzdWIiOiJlbyJ9.J3u35Wvq7zfU5N_LIyAcpMggTN4PSt5iI6cWABFeuNk" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;" width="1"/><div class="preview" style="display:none;font-size:1px;color:#333333;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">This week's podcasts. ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌</div><table border="0" cellpadding="0" cellspacing="0" class="email-body-container" role="presentation" width="100%"><tbody><tr><td></td><td class="content" width="550"></td><td></td></tr><tr><td></td><td align="left" class="content" width="550"><div style="font-size: 16px; line-height: 26px; margin: 0 auto; max-width: 550px; overflow-wrap: break-word; width: 100%;"><div class="post typography" style="font-size: 16px; line-height: 26px; padding: 9px 0;"><div class="post-header" style="font-size: 16px; line-height: 26px;"><h1 class="post-title short published" style="-moz-osx-font-smoothing: antialiased; -webkit-font-smoothing: antialiased; color: #1a1a1a; font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 2em; font-weight: 700; line-height: 130%; margin: 0.378em 0 0 0;"><a href="https://email.mg1.substack.com/c/eJxVkt2O2jAQhZ8GXyL_JSEXvmCbBQWVIFq6lKvIdibgJXHSxCGbffo1ILWqxjOWzox0LH-jpYNz002ibXqH7iV3UwvCwthX4Bx0aOihy00hOA4CHFJUCBxRHSlk-rzsAGppKoHaQVVGS2caex9ehFGILiIuQFJCAw5hwAmjJA4UcA5RVHiN4qejHAoDVoOAG3RTYwFV4uJc28_YckZX_tyfYxzU_bwfVO-kvs51U_tG61PLCmwhuxlbueYKdsYSmDZE07fpN62u6XuDt8kvsk1O0_dvm1GxDP_T9ej1IPs5GnlcYa99ZO_bMUuWn7vDHvv5VrOt2ZnNWBxTt0tOLDNpn9qMnEwapvblptne6frtcmI_WkW5Kffz3UdCqxU9jMfb6-b1z2p7KF_WuypLM6zq23LUqrXrtTuH6oyMoJgSvGAEx0GM6ZzMOeUlVQBlFFOiQhnJheQLRWIeqDgsoxnH9Zn89xWoE1Vje6l977O5NHcoD91zyf1dD9a4KQcrVQWFcN0AyD2hPwDmZ7DQ-WUocukECRnmmHk_H09GjwWIMA7jAHnj4u5gxV8uX3buwqc" style="color: #1a1a1a; text-decoration: none;">Calendar.</a></h1><h3 class="subtitle" style="-moz-osx-font-smoothing: antialiased; -webkit-font-smoothing: antialiased; color: #757575; font-family: 'SF Compact Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 19px; font-weight: normal; line-height: 1.16em; margin: 4px 0 0;">This week's podcasts.</h3><table cellpadding="0" cellspacing="0" class="post-meta custom" style="margin: 0;"><tbody><tr><td class="post-meta-item author" style="color: #757575; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 14px; font-weight: 300; height: 20px; line-height: 20px; padding: 7px 12px 7px 0; position: relative; text-decoration: none; vertical-align: middle;"><a href="https://email.mg1.substack.com/c/eJxVkN1qxCAQhZ9mvdvgT9R44UVv-hqiZrKxNRrUtKRPX7MLhTIyR5yBz3O8bfDI5dR7rg1dzbRzB53gu0ZoDQo6KhQTZj1izrGgaNZYUi8dCtUsBWCzIWq0Hy4Gb1vI6VqehBRo1dIqz-TCgbjZCeBcdJGWq4kqxrx7Ee0xB0geNHxBOXMCFPXa2l5v7O1G3_u5vhMabHWoh6vN-s_B560Pdsh7hH5hE-bs_pHXdIcYQ0VBU0wJnhjBiitMBzKMdFyoA1ikosQJK-1kx8kRNXKnxCJvI94e5B8CFR1zqtb32U9e82X2-d79mq7bkUI7DSTrIsy6lQNQe4X5DMY8IEHpIc_GNk0EwyNmndfr5f0ZrMRYKI46eL4ISf_5_QUdgotn" style="color: #757575; display: block; text-decoration: none;">John Ellis</a></td><td class="post-meta-item post-date" style="color: #757575; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 14px; font-weight: 300; height: 20px; line-height: 20px; padding: 7px 12px 7px 0; position: relative; text-decoration: none; vertical-align: middle; white-space: nowrap;" title="2021-08-31T09:59:03.803Z"><time datetime="2021-08-31T09:59:03.803Z">Aug 31</time></td><td class="post-meta-item icon" style="color: #757575; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 14px; font-weight: 300; height: 20px; line-height: 20px; padding: 7px 12px 7px 0; position: relative; text-decoration: none; text-indent: 3px; vertical-align: middle; white-space: nowrap;"><span><a class="like-button" href="https://email.mg1.substack.com/c/eJxVUsuu2jAQ_RqyK7KdF1l4wYUicQtchaoIVpHtTMAhsVPbgYavrwN96MrWjDQzOufMQzAHZ20G2mnrgtEUbuiAKrjbBpwDE_QWTCFLGqE4RgkJSopSIlIeSFtUBqBlsqFB1_NGCuakVmPxLEmT4EIRR1WIIgI4xYLMSCiScJbFPBYpISwTL0bWlxKUAAo3MINWEDT04lxnJ-F8Qlb-j3Kkg9ZObc-tY-I6Fbr1CdZJb2_YmxHKu6eeLwaYGLVMwpXTV_B-CcO713AYjqS5rmuNtssfeLs8DZvF-52HO_Q_Lu4-Hu--36VoD5dTuO84ieSH3EjFcunru9Mxlx_1V7J9zH39Nt4tc7tum4cY1slaveGTRNGuFmQtPUZ4kB73E1aVT-fbevfzgqJu7t6Wq9N-_6sd8s1icYxioUzuiKlvtY2_lTqfkKR3bWF1bwT4Tv7O4E-8hVL27djh2HogKUEEo1mIURZniEzxNCJRRThAlWYE84SlbMaiGcdZFPMsqdJJhNoz_jTbwNBGK8uEzz30RY_Qz7hfdOF92yvphgIU4w2U1JkeAve6oqeM4gwKjL-usmCO4sRfAQo9n3-vpT8vKkUoyeLAE5cjg6L_Fv0bLMDfJw" style="color: #757575; display: block; position: relative; text-decoration: none;"><img alt="" height="20" src="https://cdn.substack.com/image/fetch/w_30,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FHeartIcon%3Fv%3D2%26height%3D40%26strokeWidth%3D2" style="border: none !important; float: left; height: 20px; max-width: 15px; vertical-align: middle; width: auto;" width="15"/></a></span></td><td class="post-meta-item icon" style="color: #757575; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 14px; font-weight: 300; height: 20px; line-height: 20px; padding: 7px 12px 7px 0; position: relative; text-decoration: none; text-indent: 3px; vertical-align: middle; white-space: nowrap;"><a href="https://email.mg1.substack.com/c/eJxVUtuOmzAQ_ZrwGPnC9cEP2bKJiBqitOmmeUK2GRJvwKZgwrJfv2bTiypfZJ2Z8Zk5M5JbuJhuYq3prTdfhZ1aYBrGvgZrofOGHrpClcxHQYBC4pUMRURGwlN9UXUADVc189pB1Epyq4yeneMwCr0rSzAnIUkSCjIpASGQFRY4iGNJIkqS-MHIh1KBlsDgDt1kNHg1u1rb9gu6WpC123M6ykLTL_tB9JbL21KaxhladySvQZe8m5-maUBbF7i25gZ6QVOYtliSl-knqW_Zq0G79Afepefp65ftKGiO_uFydHiQfx8VP62Rw97y192Yp6v3_fGAnH8r6U7t1XYsT5ndp2eaq6zPdI7PKgsz_XSX9GBl83I902-tIL6qDsv9W0rqNTmOp_vz9vnXenesnjb7Os9yJJr7apSi1ZuNvYTisiDhYJuiN0MnwWX-p9TfeAOlGpq5ollxTzGCCEYxxSgJEkSWeOkTvyICoIoSgkXIIx5zPxY48QORhFW08FFzwf9J6HWsNrrn0tnezdXMX3_irp_FrOaglZ0K0FzUUDLbDeDZx7B8plFcQEPnhqgsuGU4pMhH1PG59ejt5-BECIVJ4DnicmbQ7G8_PwCOi9cd" style="color: #757575; display: block; text-decoration: none;"><img alt="Comment" height="20" src="https://cdn.substack.com/image/fetch/w_28,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FCommentIcon%3Fv%3D2%26height%3D40%26strokeWidth%3D2" style="border: none !important; float: left; height: 20px; max-width: 14px; stroke: #757575; vertical-align: middle; width: auto;" width="14"/></a></td><td class="post-meta-item icon" style="color: #757575; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 14px; font-weight: 300; height: 20px; line-height: 20px; margin-right: 0; padding: 7px 12px 7px 0; padding-right: 0; position: relative; text-decoration: none; text-indent: 3px; vertical-align: middle; white-space: nowrap;"><span><a href="https://email.mg1.substack.com/c/eJxVktuOmzAQhp8GLiNjgwkXvsiWTUTUEKXdbporZJsh8QZsCiYs-_Q1SY_yQfI3vzTj-UdyC2fTTaw1vfXnq7BTC0zD2NdgLXT-0ENXqJKFKIoQxX7JUIxlLHzVF1UH0HBVM78dRK0kt8roWbykMfUvTAhRypLQSoZRQitR0TgQZUSTikZShOSRkQ-lAi2BwQ26yWjwa3axtu09svLw2u25HGWh6Rf9IHrL5XUhTeMCrTuS16BL3nlkPdim6M3QSfBI-lvqYTrzBko1NI7fK_4FpdEWtJ3VF96Bo1zOf_gHWHOF-Q3TNpD4dfqO62v2ZtAu_Rbs0tP0-dN2FCRHf7kcHY_yr6PixzVy7D1_2415uvrYvxyQ07eS7NRebcfymNl9eiK5yvpM58FJZTTTTzdJDlY2r5cT-dIKHKrqsNi_p7he45fxeHvePv9Y716qp82-zrMciea2GqVo9WZjz1ScfcUwwgFakgAlUYLwIliEOKywAKjiBAeC8pgvebgUQRJGwjkTeyFqzsF_7fU7Vhvdc-liH-Zi5rbdufPaNa5pBq3sVIDmooaS2W4A3z4G6d7i4gwaOjdgZcEtCyhBISIun1sP3-9DFSNEk8h3ics5g2Z_vP4JqRnh4Q" style="color: #757575; display: block; text-decoration: none;"><img alt="Share" height="14" src="https://cdn.substack.com/image/fetch/w_28,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FRecommendIcon%3Fv%3D2%26height%3D28%26stroke%3D%2523999999%26strokeWidth%3D2" style="border: none !important; float: left; height: 14px; max-width: 550px; vertical-align: middle; width: 14px;" width="14"/></a></span></td></tr></tbody></table></div></div><div class="post typography" style="font-size: 16px; line-height: 26px; padding: 9px 0;"><div class="body markup" style="font-family: Spectral,sans-serif; font-size: 16px; font-weight: 400; line-height: 26px; margin-bottom: 12px; word-break: break-word;"><p style="color: #1a1a1a; font-size: 16px; line-height: 26px; margin: 0 0 1em 0; margin-top: 0;">We recorded a number of podcast interviews last week, three of which “air” this week. The schedule is as follows:</p><p style="color: #1a1a1a; font-size: 16px; line-height: 26px; margin: 0 0 1em 0;"><strong>Tuesday, 31 August</strong>: <a href="https://email.mg1.substack.com/c/eJwlkcGOhCAMQL9muI0pKCoHDnvZ3zAgdYasgIG6xv36RSeQtikljzxmQ_hK-dRbKsSuMNG5oY54lBWJMLO9YJ680x1ICb1gTsMg5sEyX6YlIwbjV8223a5-NuRTvIbHfujZW89i5O0ouYIeOBqJMHJEjtIpGJVxH6LZncc4o8ZfzGeKyFb9JtrKo_16iO-6j-No4kk-YGnmFGpHgICaYLhqWUPZUqZSi5zsM5hYn-aeYbXPgqak2LwprMzreo_D2HJQUoFoeNOJbhEWcRmU4LY3gxlNN1quOmlVvwyPDsKLN2W3hcz8c-FZ1muKxcz17C-902Xg7lcJU81hj57OCaOxKzpNeUdGH8O3remFEXM17yZDmvctdNBWXl0fIbftAaBXklWwuwjx_hNPGMo_4YqQrA" rel="" style="color: #1a1a1a; text-decoration: underline;">Rob Manfred</a>, Commissioner of Baseball. We talk (mostly) about the business of baseball.</p><p style="color: #1a1a1a; font-size: 16px; line-height: 26px; margin: 0 0 1em 0;"><strong>Wednesday, 1 September</strong>: <a href="https://email.mg1.substack.com/c/eJwlkE2OhCAQRk_T7MYAIsqCxWzmGoSfspuMgoFyjH36QTtUiqSK8PI9bxGeuZx6yxXJ1QyeG-gER10AEQrZKxQTgxZ0GKjkJGg6cj86EquZC8Bq46LJtrsleosxp-vxJEdJXlo675SSw6yk6B134AJ3TDqhOAWp-Ido9xAhedDwB-XMCciiX4hbffTfD_7T6jiOLp0YV6idz2ubuLM1bwN8rYBvEjWnnNGpZ1QNivKOdYKLuRFhHhVnTtrRTlZMjikxOCXn8SHo-mRd3V1F63-vf0nRS07V-rZ751e-ot3zls60e91TxNNAsm6BoLHsQPCj7tZgnpCgNKXBWNRM9lTQvvHa-SS9NY6USjWQBg4XId2yI8Ja_wEDnoUI" rel="" style="color: #1a1a1a; text-decoration: underline;">Cade Metz</a>, technology correspondent for The New York Times and author of “<a href="https://email.mg1.substack.com/c/eJwlkcuOhCAQRb-m2Wl4qwsWs5nfMDxKJa1gAMfYXz9ohwpV4VZybw5WF5hjutQec0H3NZZrBxXgzCuUAgkdGdLoneJYCCwpcgp31HYG-TxOCWDTflVoP8zqrS4-hnu5l51EiyKOE8oHTPteWHCCGaYny4QRhGtg5OuoD-chWFDwB-mKAdCqllL2_GI_L_pb6zzPdocwHz4kHVzcllhjtTZuVTQxvnPtQgo59HWYIfgjN5t-Q8qNuRqrHTQblE8VkVcUU4J7RvAgarSWtJzyiRqAqRsoMVJ3ute8N2Tgwgxy6l4cbzNp82Fy0fZ9-6Kk1hiytlX7xCXeFJ73CmKsfTuCL9cIQZsVnCrpAFS-lB9iYw0JqdJ3oy6KSIY5ZtWvni-Uh3iHsRwEqsbudgjPv_gCW_4H5qWThg" rel="" style="color: #1a1a1a; text-decoration: underline;">Genius Makers</a>,” a great book about “the mavericks who brought Artificial Intelligence to Google, Facebook, and the world.” We talk about the book and where AI is taking us.</p><p style="color: #1a1a1a; font-size: 16px; line-height: 26px; margin: 0 0 1em 0;"><strong>Thursday, 2 September</strong>: Joe Klein, probably best known for his work as <a href="https://email.mg1.substack.com/c/eJwlkM1uhSAQhZ_msqsBRNQFi276GoSf8UovgoGxjX36ojdM4AQmnDmfMwjPXE6154rk2jSeO6gEvzUCIhRyVCg6eCXoMFDJiVd05G60JFS9FIDNhKjIftgYnMGQ09U8yVGSVTEjrTSLkd4y28se5gkGwZhksmfLIt-O5vABkgMFP1DOnIBEtSLu9dF_PvhXKwwbdC5vTZoD11ya-M7w8YoQUtMkKE45o1PP6DzMlHesE1ws3AIs48xZm2I0kxGTZbMY7CyX8SHo9mRdPWxF417X96SomFM1rr395TVf0e77lk63cztSwFNDMjaCV1gOIPhGd2PQT0hQGlKvDaqWkQraN7-23klvjCOlch5IM_aXQ7phB4St_gN7LYRn" rel="" style="color: #1a1a1a; text-decoration: underline;">a columnist for Time magazine</a> and his novel “<a href="https://email.mg1.substack.com/c/eJwlkUFuhSAURVfzmX0DqCADBp10G-YBTyVVMIA1dvVFfyDchAs55GCh4BzTpfeYC7mXsVw76oBnXrEUTOTImEbvdEf7ngpOnKaSW2mIz-OUEDfwqyb7YVZvofgY7sODkIIsenCTYY6ZQXGh2CAYCCupAA6tkVSxDxEO5zFY1PiL6YoByaqXUvb8ar9e_LvO8zybHcN8-JAguLgtsT6rsXGrpYnxJ9fsmBA19uQ3SNfbxjWm_DbXG0IM11Zv1JZ4zSlndGgZVb2ivGFNx7uJG8RJKs6MAAkDdINhquuNEpN8dXSbWZMPkwvYnxtLkl5jyGBr9xeXeEt49quHseZ2BF-uEQOYFZ0u6UBSPpIfYeOMAVOV70YomomWdrStvDo-Th7hklKhelLB7iaE51t8wS3_A-aLk-U" rel="" style="color: #1a1a1a; text-decoration: underline;">Primary Colors</a>.”  Joe did four “tours” of journalistic duty in Afghanistan. We talk a lot about that and then some more about Democrats, Republicans and the press.</p><p style="color: #1a1a1a; font-size: 16px; line-height: 26px; margin: 0 0 1em 0;">——————</p><div class="captioned-image-container-static" style="font-size: 16px; line-height: 26px; margin-bottom: 16px; text-align: center;"><figure style="display: inline-block; margin: 0 auto; width: 100%;"><table border="0" cellpadding="0" cellspacing="0" class="image-wrapper" style="margin: 8px auto; mso-padding-alt: 1em 0 1.6em;" width="100%"><tbody><tr><td style="text-align: center;"></td><td align="left" class="content" style="text-align: center;" width="550"><a class="image-link" href="https://email.mg1.substack.com/c/eJxVkkuO5CAMQE9T7BIB4ZcFi9ZIc42Ij5NCnUAGSNdUn75JsmqBbGODn4XtTIUl5bfeU6noFFN976AjvMoKtUJGR4E8Ba8Z5hwLirzGkjppUSjTnAE2E1aN9sOuwZkaUjwvKyEFemrhgDguZ24JEImdVE5xywR11Cog7CaawweIDjR8QX6nCGjVz1r38hg-HvRv287Hvhy2VOM-e5e25gqbWaDpGap7nrqlqelB__y7jeFjScm387xOe05LhlLCFzR_qQB7e3EjKD8h_MQ0YQ_3CS2eO8DcWqdYZ40ZOjZI6EZOVGe8HagFKUfF-jL0ZjPfKZpXuetqOe6vuMyryHKZnCpKqMQtn_Ido1Z2SiraeSmdMaD8INU0EvFfENK_wO4oaIopwWogeOQjpj3pGWVzg8MsR0qsMNIow5QlI-N2FLN8MLwt5NdXoazXFItxLfadnuls1-VvZU5Nb0cM9T1BNHYFr2s-ANV7HK7WTgtEyG1M_GSqJmLADA-N19bdvWs0JMZi5KiB_UmI1wCFClv5AS5KxVE" rel="" style="border: none; display: block; height: auto; margin: 0; padding: 0; text-decoration: none; width: auto;" target="_blank"><img alt="" class="wide-image" data-attrs='{"src":"https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/52821270-ba8d-42b7-8782-d77caae8d378_916x611.webp","height":611,"width":916,"resizeWidth":null,"bytes":106560,"alt":null,"title":null,"type":"image/webp","href":null}' src="https://cdn.substack.com/image/fetch/w_1832,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F52821270-ba8d-42b7-8782-d77caae8d378_916x611.webp" style="-ms-interpolation-mode: bicubic; border: none !important; display: block; height: auto; margin: 0 auto; margin-bottom: 0; max-width: 550px; vertical-align: middle; width: 100%;" width="550"/></a></td><td style="text-align: center;"></td></tr></tbody></table></figure></div><p style="color: #1a1a1a; font-size: 16px; line-height: 26px; margin: 0 0 1em 0; margin-bottom: 0;">The last US plane out of Afghanistan. (<em>via Getty Images</em>)</p></div></div><table cellpadding="0" cellspacing="0" class="post-meta big custom" style="margin: 0;"><tbody><tr><td class="post-meta-item icon" style="color: #757575; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 16px; font-weight: 300; height: 30px; line-height: 30px; padding: 7px 12px 7px 0; padding-right: 16px; position: relative; text-decoration: none; text-indent: 3px; vertical-align: middle; white-space: nowrap;"><span><a class="like-button" href="https://email.mg1.substack.com/c/eJxVUsuu2jAQ_RqyK7KdF1l4wYUicQtchaoIVpHtTMAhsVPbgYavrwN96MrWjDQzOufMQzAHZ20G2mnrgtEUbuiAKrjbBpwDE_QWTCFLGqE4RgkJSopSIlIeSFtUBqBlsqFB1_NGCuakVmPxLEmT4EIRR1WIIgI4xYLMSCiScJbFPBYpISwTL0bWlxKUAAo3MINWEDT04lxnJ-F8Qlb-j3Kkg9ZObc-tY-I6Fbr1CdZJb2_YmxHKu6eeLwaYGLVMwpXTV_B-CcO713AYjqS5rmuNtssfeLs8DZvF-52HO_Q_Lu4-Hu--36VoD5dTuO84ieSH3EjFcunru9Mxlx_1V7J9zH39Nt4tc7tum4cY1slaveGTRNGuFmQtPUZ4kB73E1aVT-fbevfzgqJu7t6Wq9N-_6sd8s1icYxioUzuiKlvtY2_lTqfkKR3bWF1bwT4Tv7O4E-8hVL27djh2HogKUEEo1mIURZniEzxNCJRRThAlWYE84SlbMaiGcdZFPMsqdJJhNoz_jTbwNBGK8uEzz30RY_Qz7hfdOF92yvphgIU4w2U1JkeAve6oqeM4gwKjL-usmCO4sRfAQo9n3-vpT8vKkUoyeLAE5cjg6L_Fv0bLMDfJw" style="color: #757575; display: block; position: relative; text-decoration: none;"><img alt="" height="30" src="https://cdn.substack.com/image/fetch/w_45,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FHeartIcon%3Fv%3D2%26height%3D60%26strokeWidth%3D2" style="border: none !important; float: left; height: 30px; max-width: 22.5px; vertical-align: middle; width: auto;" width="22.5"/></a></span></td><td class="post-meta-item icon" style="color: #757575; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 16px; font-weight: 300; height: 30px; line-height: 30px; padding: 7px 12px 7px 0; padding-right: 16px; position: relative; text-decoration: none; text-indent: 3px; vertical-align: middle; white-space: nowrap;"><a href="https://email.mg1.substack.com/c/eJxVUtuOmzAQ_ZrwGPnC9cEP2bKJiBqitOmmeUK2GRJvwKZgwrJfv2bTiypfZJ2Z8Zk5M5JbuJhuYq3prTdfhZ1aYBrGvgZrofOGHrpClcxHQYBC4pUMRURGwlN9UXUADVc189pB1Epyq4yeneMwCr0rSzAnIUkSCjIpASGQFRY4iGNJIkqS-MHIh1KBlsDgDt1kNHg1u1rb9gu6WpC123M6ykLTL_tB9JbL21KaxhladySvQZe8m5-maUBbF7i25gZ6QVOYtliSl-knqW_Zq0G79Afepefp65ftKGiO_uFydHiQfx8VP62Rw97y192Yp6v3_fGAnH8r6U7t1XYsT5ndp2eaq6zPdI7PKgsz_XSX9GBl83I902-tIL6qDsv9W0rqNTmOp_vz9vnXenesnjb7Os9yJJr7apSi1ZuNvYTisiDhYJuiN0MnwWX-p9TfeAOlGpq5ollxTzGCCEYxxSgJEkSWeOkTvyICoIoSgkXIIx5zPxY48QORhFW08FFzwf9J6HWsNrrn0tnezdXMX3_irp_FrOaglZ0K0FzUUDLbDeDZx7B8plFcQEPnhqgsuGU4pMhH1PG59ejt5-BECIVJ4DnicmbQ7G8_PwCOi9cd" style="color: #757575; display: block; text-decoration: none;"><img alt="Comment" height="30" src="https://cdn.substack.com/image/fetch/w_42,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FCommentIcon%3Fv%3D2%26height%3D60%26strokeWidth%3D2" style="border: none !important; float: left; height: 30px; max-width: 21px; stroke: #757575; vertical-align: middle; width: auto;" width="21"/></a></td><td class="post-meta-item icon" style="color: #757575; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 16px; font-weight: 300; height: 30px; line-height: 30px; margin-right: 0; padding: 7px 12px 7px 0; padding-right: 16px; position: relative; text-decoration: none; text-indent: 3px; vertical-align: middle; white-space: nowrap;"><span><a href="https://email.mg1.substack.com/c/eJxVktuOmzAQhp8GLiNjgwkXvsiWTUTUEKXdbporZJsh8QZsCiYs-_Q1SY_yQfI3vzTj-UdyC2fTTaw1vfXnq7BTC0zD2NdgLXT-0ENXqJKFKIoQxX7JUIxlLHzVF1UH0HBVM78dRK0kt8roWbykMfUvTAhRypLQSoZRQitR0TgQZUSTikZShOSRkQ-lAi2BwQ26yWjwa3axtu09svLw2u25HGWh6Rf9IHrL5XUhTeMCrTuS16BL3nlkPdim6M3QSfBI-lvqYTrzBko1NI7fK_4FpdEWtJ3VF96Bo1zOf_gHWHOF-Q3TNpD4dfqO62v2ZtAu_Rbs0tP0-dN2FCRHf7kcHY_yr6PixzVy7D1_2415uvrYvxyQ07eS7NRebcfymNl9eiK5yvpM58FJZTTTTzdJDlY2r5cT-dIKHKrqsNi_p7he45fxeHvePv9Y716qp82-zrMciea2GqVo9WZjz1ScfcUwwgFakgAlUYLwIliEOKywAKjiBAeC8pgvebgUQRJGwjkTeyFqzsF_7fU7Vhvdc-liH-Zi5rbdufPaNa5pBq3sVIDmooaS2W4A3z4G6d7i4gwaOjdgZcEtCyhBISIun1sP3-9DFSNEk8h3ics5g2Z_vP4JqRnh4Q" style="color: #757575; display: block; text-decoration: none;"><img alt="Share" height="21" src="https://cdn.substack.com/image/fetch/w_42,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FRecommendIcon%3Fv%3D2%26height%3D42%26stroke%3D%2523999999%26strokeWidth%3D2" style="border: none !important; float: left; height: 21px; max-width: 550px; vertical-align: middle; width: 21px;" width="21"/></a></span></td></tr></tbody></table><div class="container-border" style="border-top: 1px solid rgba(196, 196, 196, 0.6); box-sizing: border-box; font-size: 16px; line-height: 26px; margin: 32px 0 0; width: 100%;"></div><div class="post-cta" style="font-size: 16px; line-height: 26px; margin: 24px 0 40px;"><p style="color: #1a1a1a; font-size: 16px; font-style: italic; line-height: 26px; margin: 24px 0 0; margin-top: 0;"><span>Thanks for subscribing to <a href="https://email.mg1.substack.com/c/eJxVkNtqxCAQhp9mvQxqPMQLL3qzryEexl1pokFNS_r0NbtQKIrCjPjN93vb4VHqqffSOroO088ddIbvtkLvUNHRoJoUNMOcY0FR0FhSLx1KzcQKsNm0arQfbk3e9lTy9XgRUqCnJtHyID1lUXLGVHQqznO0lHEHM6XiTbRHSJA9aPiCepYMaNXP3vd2mz9u9D72NU7qsLWpHa516z8nX7bRQElTTAleZoIVV5hOZGIDRx1AlIoSJ6y0i2WLI2pQlYjyxvD2IP9-QlWvJTfrR--nPMvl9KoPLTPu7cipnwaydSsE3esBqL8ze_mbB2SoI8tgbNdEzJjhefDGeiu-8pMYC8XRAIeLkPWf1i-MQ4Ll" style="color: #1a1a1a; text-decoration: underline;">News Items</a>. This post is public, so feel free to share it.</span></p><p class="cta-box" style="color: #1a1a1a; font-size: 16px; font-style: italic; line-height: 26px; margin: 24px 0 0; text-align: center;"><a class="button primary twitter-link" href="https://email.mg1.substack.com/c/eJxVkVtqxiAQhVcTH4OXaJIHHwql2wijThJpNEFNS7r6mvxQKN7wzMD5OGOh4LKnSx97LuS-pnIdqCN-5w1LwUTOjGnyTndUSqo4cZr23PaG-DzNCTGA3zQ5TrN5C8Xv8W4eVK_Iqo0ETi0VkknTDePMhbODm53rxcgA3csRTucxWtT4henaI5JNr6UcuRFvDf-o-8bxBUNu82lyAfvZ2j3UwlGPhQ2jg9SIj7OEKaDzZ2jE-0PWcHWLFsIBfolVtgWqCPZGrd-8QkLiNaec0UEwOsqR8pa1He9mbhDnfuTMKOhhgG4wbOykGdXcNx0NC_sHRJLe9pjB1trPvu43wKPXdKb6hjP6ck0YwWzodEknkvKK_oGdFoyY6kjcBEUzJWhHRfWr65XUM4aeUjVKUo3d7RD1Xzq_C_KcCQ" role="button" style="background-color: #5abb71; border: 0px solid #5abb71; border-radius: 4px; border-width: 13px 20px 13px 18px; box-sizing: content-box; color: #ffffff !important; cursor: pointer; display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 17px; font-style: normal; font-weight: 300; height: 24px; line-height: 24px; margin: 0; opacity: 1; outline: none; padding: 0; text-align: center; text-decoration: none !important; vertical-align: middle;"><img alt="" height="21" src="https://cdn.substack.com/image/fetch/w_23.1,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FShareIcon%3Fv%3D2%26height%3D42%26stroke%3D%2523FFF%26strokeWidth%3D2" style="border: none !important; display: inline-block; height: 21px; margin-right: 8px; max-width: 11.55px; vertical-align: middle; width: 21px;" width="11.55"/><span style="color: #ffffff; text-decoration: none;">Share</span></a></p></div><div class="footer" style="background: #f8f8f8 !important; color: #bcbcbc; font-size: 16px; line-height: 26px; padding: 32px; text-align: center;"><p class="small" style="color: #bcbcbc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 13px; line-height: 26px; margin: 0 0 1em 0; margin-bottom: 0; padding-bottom: 30px;">© 2021 <span>John Ellis</span> <a href="https://email.mg1.substack.com/c/eJxVUtuO2jAQ_RryVuTYuT74AZVShS5ht9Cl7IvlyyR4SZwoNk2zX18HpFbVWDPWmZHO6JyR3EHdDRPtO-uCOTE39UANjLYB52AIbhYGphWNUByjBAeKohTLVATasmoAaLluaNDfRKMld7oz83CWpElwoTxJSQV5knAVJ6lQcUSAE8EF5JmSAA9GflMajAQKv2CYOgNBQy_O9XZBVgu88W9eRzto7dLehHVcXpeya32Dy5nRf5S2XDTA7ussyMZ1VzALsoZpG0r8Ov3EzbV479Bu_SPcrc_T0-ftKEiJ_uFy9HhcHkbNTxvksd_l-24s16uP_fEF-flekp3e6-2oToXbr8-k1IUtTBmedZEU7fde4o0WX1-rt1N44adRVy_Lwjwfxis7NOpYkvKbPY6fMGN1vVtFTcb6dHh7OnzJ88PzpQ40xQiHKCMhyuMc4WW4jHBUYQFQpTkORcJTnvEoE2EexSJPqnQRobYO_xMlGGjTGcul7310l27W4457h5iv7c1oNzEws1yKuuEGgXvYf9eO1WBg8GehGHc0TAiKEPF8Ph5u3U8hRSjJ48ATq5nB0L8O_QEl8sga" style="color: #bcbcbc; text-decoration: underline;"><span style="color: #bcbcbc; text-decoration: underline;">Unsubscribe</span></a><br/>548 Market Street PMB 72296, San Francisco, CA 94104</p><p class="small powered-by-substack" style="color: #bcbcbc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 13px; line-height: 26px; margin: 0 0 1em 0; margin-bottom: 0; padding-bottom: 0;"><a href="https://email.mg1.substack.com/c/eJxNkd1qxCAQRp8mXi5qokkuvCiUfY3gz2RXGjXo2JI-fU22haJ4cUY54zdWIzxSPtSeCpLzWPDYQUX4KhsgQia1QF68UwMVgkpOnKIjt6MhvixrBgjab4rs1WzeavQpnpcnOUryVD0FQZ2QvD11Wvdi0sYauTJrwa1av4y6Og_RgoJPyEeKQDb1RNxL1791_N52qaagth83m8JJ-nvFsJRUs4Wuf_8rd1yePIDzNTR-9fYLbYoIERtdUzr_5RWnnNGpZ3QWM-U3dhv4sHIDsI4zZ0bqUU96mAybB2FmuY7dQMOD3f53Q7LaUizattp3eqbTePEWSHOGUKPHY4GozQZOYa5A8JX21d3ygAi5TcEtGhWTPR1o33xtvcK5kh8plbMgTexOQ7zm4xFC-QHRBJha" style="color: #bcbcbc; text-decoration: none;"><img alt="Publish on Substack" src="https://cdn.substack.com/image/fetch/w_340,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Fpublish-on-substack.png" style="border: none !important; margin-top: 3px; max-width: 550px; vertical-align: middle;" width="170"/></a></p></div></div></td><td></td></tr></tbody></table><img alt="" height="1px" src="https://email.mg1.substack.com/o/eJwlUEluxSAMPU1ZRkAYkgVnQQacfNQEvhhapacvyZd39vObPDTcc7nMO9dGesViYzCCSkkVJ3hCPOyOCcvABQvNMDVTQedVyDEkGKq5147EareCD96Qd3dH9NBiTjfborQiL8O4Ch6EBJz1hoor7hEApQMuQvCe3BYs9BAxeTT4g-XKCUk0nHJGl5nRVa6UT2wSXGzcIW565cwp0LCAWBwbrtyqNv0l6LmzqXZXG_jvyeeTFHPkVMGP219-5dvps39U2_VGk_C3HtgaFtI-fYwgdmDOnmK7LCZwBwbTSsfP21OVplStkgyxcLOmhyc2POs_Ru91og" width="1px"/></body></html>
