@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+
+<title> gimme the loot</title>
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+<meta content="IE=9; IE=8; IE=7; IE=EDGE" http-equiv="X-UA-Compatible"/>
+
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+
+<meta content="light dark" name="color-scheme"/>
+
+<meta content="light dark" name="supported-color-schemes"/>
+
+<meta name="x-apple-disable-message-reformatting"/>
+
+<!--[if (gte mso 9) | (IE)]>
+
+<xml>
+
+<o:OfficeDocumentSettings>
+   
+    <o:AllowPNG/>
+   
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+   
+</o:OfficeDocumentSettings>
+ 
+</xml>
+
+<![endif]-->
+
+<!--[if (gte mso 9) | (IE)]>
+
+<style type="text/css">
+   
+	p, a {
+      font-family: 'Ubuntu', sans-serif !important;
+      color: inherit !important;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Ubuntu', sans-serif !important;
+    }
+    
+@media only screen and (max-width:480px) {
+	@-ms-viewport {
+	  width: 320;
+    }
+     
+    @viewport {
+      width: 320;
+    }
+}
+   
+</style>
+
+<![endif]-->
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+
+/* Fix bugs on certain email clients */
+
+	#outlook a {
+	  padding: 0;
+	}
+
+    .backgroundTable {
+	  margin: 0 auto;
+	  padding: 0;
+	  width: 100%; !important;
+	}
+    
+    .ReadMsgBody {
+	  width: 100%;
+	}
+    
+    .ExternalClass {
+	  width: 100%;
+	}
+
+	.ExternalClass * {
+	  line-height: 100%;
+	}
+
+/* Styles for Delphi */
+
+	body {
+	  margin: 0 auto;
+	  padding: 0;
+	  color: #fafafa;
+	  background: #fafafa;
+      width: 100% !important;
+	}
+    
+	table, td {
+	  border-collapse: collapse;
+	  border: 0;
+	  margin: 0 auto;
+	}
+
+	p {
+	  display: block;
+	  margin: 0;
+	  font-size: 17px;
+	  font-family: 'Ubuntu', sans-serif;
+	  line-height: 1.8em;
+	}
+   
+    h1 {
+      display: block;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 40px;
+      line-height: 1.2em;
+      margin: 0;
+    }
+   
+    h2 {
+      display: block;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 29px;
+      line-height: 1.3em;
+      margin: 0;
+    }
+   
+    h3, h4, h5, h6 {
+      display: block;
+      font-family: 'Ubuntu', sans-serif;
+      margin: 0;
+    }
+    
+    img {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      border: none;
+      outline: none;
+    }
+   
+    .button {
+      font-size: 16px;
+      font-family: 'Ubuntu', sans-serif;
+      font-weight: bold;
+      border: solid 2px;
+      border-radius: 3px;
+      padding: 10px 20px !important;
+      margin: 0 auto;
+      text-align: center;
+      line-height: 1em;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+    
+    .fullwidth-img {
+      width: 100%;
+      max-width: 600px;
+    }
+    
+    .borderimg {
+        border: 2px solid #164B71;
+        border-radius: 5px
+    
+        
+     }
+     
+   
+     
+    
+    .columnImage {
+      width: 100%;
+      max-width: 280px;
+    }
+    
+    .half-img {
+      width: 100%;
+      max-width: 300px;
+    }
+    
+    .countdown-image {
+      width: 100%;
+      max-width: 400px;
+    }
+    
+
+.custom-list {
+    list-style: none;
+    padding-left: 0;
+}
+.custom-list li {
+    position: relative;
+    padding-left: 40px;
+}
+.custom-list li:before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background: #ffffff;
+    background-position: center;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+    
+/* Mobile styles */
+
+@media only screen and (max-width:480px) {
+    
+    #templateColumns{
+	  width: 100% !important;
+	}
+
+	.templateColumnContainer{
+	  display: block !important;
+	  width: 100% !important;
+      max-width: 300px !important;
+	}
+	
+	.sigColumnContainer{
+      display: block !important;
+	  width: 100% !important;
+      max-width: 300px !important;
+      text-align: center !important;
+      padding: 20px 0px !important;
+	}
+    
+    .leftColumnContent{
+      margin: 0px 0px 20px !important;
+    }
+    
+    .centerColumnContent{
+      margin: 0px 0px 20px !important;
+    }
+    
+    .rightColumnContent{
+      margin: 0px 0px 20px !important;
+    }
+
+	.columnImage{
+	  height: auto !important;
+      width: 100% !important;
+      max-width: 300px !important;
+	}
+	
+	.sigImage {
+      float: none !important;
+    }
+       
+	.newsletter-left {
+	  text-align: center !important;
+	  padding: 20px 0px 0px !important;
+      width: 100% !important;
+      display: inline-block !important;
+    }
+   
+    .newsletter-right {
+      text-align: center !important;
+      width: 100% !important;
+      display: inline-block !important;
+      padding: 20px 0px !important;
+    }
+    
+    .side-by-side-button {
+      display: block !important;
+      margin: 20px auto !important;
+    }
+    
+    .side-by-side-button-spacer {
+      display: none !important;
+    }
+    
+    .extra-padding {
+      padding: 40px !important;
+    }
+    
+}
+
+
+
+/* Dark mode styles */
+
+	:root {
+	  color-scheme: light dark;g
+	  supported-color-schemes: light dark;
+	}
+    
+@media (prefers-color-scheme: dark) {
+
+	/* Dark mode font colors */
+    
+	p, a, h1, h2, h3, h4, h5, h6 {
+	  color: #000000 !important;
+	}
+       
+	[data-ogsc] p, [data-ogsc] a, [data-ogsc] h1, [data-ogsc] h2, [data-ogsc] h3, [data-ogsc] h4, [data-ogsc] h5, [data-ogsc] h6 {
+	  color: #000000 !important;
+	}
+       
+	/* Dark mode background colors */
+    
+	.light-table {
+	  background-color: #fafafa !important;
+	}
+       
+	[data-ogsc] .light-table {
+	  background-color: #fafafa !important;
+	}
+       
+	#templateColumns {
+	  background-color: #fafafa !important;
+	}
+       
+	[data-ogsc] #templateColumns {
+	  background-color: #fafafa !important;
+	}
+       
+	/* Dark mode button colors */
+    
+	.side-by-side-button {
+	  background-color: #fafafa !important;
+      border-color: #2C9BB6 !important;
+      color: #000000 !important;
+	}
+       
+	[data-ogsc] .side-by-side-button {
+	  background-color: #fafafa !important;
+      border-color: #2C9BB6 !important;
+      color:  #000000 !important;
+	}
+    
+    .side-by-side-button a:link {
+      color: #fafafa !important;
+	}
+       
+	[data-ogsc] .side-by-side-button a:link {
+      color: #fafafa !important;
+	}
+    
+    .button {
+	  background-color: #fafafa !important;
+      border-color: #2C9BB6 !important;
+      color: #000000 !important;
+	}
+       
+	[data-ogsc] .button {
+	  background-color: #fafafa !important;
+      border-color: #2C9BB6 !important;
+      color: #000000 !important;
+	}
+    
+    .button a:link {
+      color: #fafafa !important;
+	}
+       
+	[data-ogsc] .button a:link {
+      color: #fafafa !important;
+	}
+       
+	/* Shows dark mode-only images */
+    
+	.dark-img {
+	  display: inline-block !important;
+      overflow: visible !important;
+      float: none !important;
+      max-height: inherit !important;
+      max-width: inherit !important;
+      line-height: auto !important;
+      margin-top: 0px !important;
+      visibility: inherit !important;
+	}
+       
+	[data-ogsc] .dark-img {
+	  display: inline-block !important;
+      overflow: visible !important;
+      float: none !important;
+      max-height: inherit !important;
+      max-width: inherit !important;
+      line-height: auto !important;
+      margin-top: 0px !important;
+      visibility: inherit !important;
+	}
+    
+    /* Hides light mode-only images */
+    
+	.light-img {
+      display: none;
+      display: none !important;
+    }
+       
+	[data-ogsc] .light-img {
+      display: none;
+      display: none !important;
+    }
+}
+
+</style>
+ 
+
+</head>
+<body style="background-color: #fafafa;">
+<center style="background-color: #ffffff;"><!-- This section is  preview text -->
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style="max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+		<tr>
+			<td class="" height="0" style="color: rgb(247, 247, 247); padding: 0px; margin: 0px; line-height: 1px; overflow: hidden; font-size: 1px; display: none; visibility: hidden; max-height: 0px; max-width: 0px; opacity: 0;" width="0">
+			<p style="color: #f7f7f7; line-height: 1px; overflow: hidden; font-size: 1px; display: none; visibility: hidden; max-height: 0px; max-width: 0px; opacity: 0;">Preview text.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]--><!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!-- This section is a header image -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style="max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+		<tr>
+			<td class="" pardot-data="" style="background: rgb(0, 0, 0);"><img alt="" border="0" height="232" src="http://go.pardot.com/l/875501/2021-05-13/s5vh8/875501/1620918633mRCwj02f/Debrief_Header_2x.png" style="width: 600px; height: 232px; border-width: 0px; border-style: solid;" width="600"/></td>
+		</tr>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!-- This section is a section header banner with text of the date-->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style=" background-color: #000000; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+		<tr>
+			<td class="" pardot-data="" style="font-family: 'Ubuntu', sans-serif; color: rgb(0, 0, 0); font-size: 17px; padding: 40px; text-align: left; background: rgb(250, 250, 250);"><h2>Gimme the Loot</h2>
+
+<p>September 3rd, 2021</p>
+
+<p><br/>
+Viva la volatility. <br/>
+<br/>
+ETH broke out and surged more than 26% over the past 7 days. We detailed the technicals in our latest <a href="http://go.pardot.com/e/875501/-delphi-chartbook-august-2021-/22nw5c/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0">August Chartbook</a>. (Spoiler: ETH-BTC is now testing May 2021's peak.)<br/>
+<br/>
+Meanwhile, NFT mania soared to new heights. Crypto twitter went into a FOMO frenzy with the launch of Loot from Vine cofounder Dom Hofmann. Loot's NFT drop\u2014apparently part of an upcoming crypto game\u2014quickly reached a 14 ETH floor. Loot buyers were also handsomely rewarded with a 10k $ALGD airdrop, which is now trading at $5+ per coin. Quite a splash indeed.<br/>
+<br/>
+If you're feeling the FOMO too, we dropped a can't-miss <a href="http://go.pardot.com/e/875501/-hunt-for-a-metaverse-picasso-/22nw5f/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0">report on NFT project Art Blocks</a> exploring the various collections. On the podcast side, we also sat down with the founders of <a href="http://go.pardot.com/e/875501/unique-play-to-earn-metaverse-/22nw77/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0">Star Atlas</a> and <a href="http://go.pardot.com/e/875501/-differentiating-from-opensea-/22nw6k/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0">SuperRare</a>. Plenty of NFT and gaming alpha to dig through over the weekend.<br/>
+<br/>
+Stay degen,<br/>
+<br/>
+Nick<br/>
+<a href="http://go.pardot.com/e/875501/NpappaG/22nw5h/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0">@NpappaG</a></p>
+</td>
+		</tr>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!-- This section is the table image -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style="background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!--[if (gte mso 9) | (IE)]><![endif]--><!-- This section is header text-->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" class="light-table" cellspacing="0"><![endif]-->
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style=" max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+</section>
+
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style=" max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+		<tr>
+			<td class="light-table" pardot-data="" style="color: rgb(0, 0, 0); font-size: 17px; font-family: Ubuntu, sans-serif; line-height: 1.8em; margin: 0px; padding: 30px 40px; text-align: left; background: rgb(250, 250, 250);">
+			<h2><strong>Here were the highlights from this week's research:</strong></h2>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</section>
+<!-- START - BLOCK TO COPY PASTE --><!-- This section is an image with a border -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style=" background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!--[if (gte mso 9) | (IE)]><![endif]--><!-- This section is text with bullets-->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" class="light-table" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style=" max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+</section>
+<!-- END - BLOCK TO COPY PASTE --><!-- This section is an image with a border -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style=" background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!--[if (gte mso 9) | (IE)]><![endif]--><!-- This section is text with bullets-->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" class="light-table" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style=" max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+</section>
+<!-- END - BLOCK TO COPY PASTE --><!-- This section is an image with a border -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style=" background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--><!-- This section is text with bullets-->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style=" max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+</section>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--><!-- This section is text with bullets --><!-- This section is an image with a border -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style=" background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--><!-- This section is text with bullets-->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style=" max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+</section>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--><!-- This section is text with bullets -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style="background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+</section>
+<!-- This section is an image with a border -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style=" background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+		<tr>
+			<td class="" pardot-data="" style="padding: 0px 0px 0px; background: rgb(250, 250, 250);">
+			<p style="text-align:center;"><a href="http://go.pardot.com/e/875501/tocol-private-markets-part-ii-/22nw5k/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0"><img alt="" border="0" height="314" src="http://go.pardot.com/l/875501/2021-09-02/22lss5/875501/1630620512aRpvYQLz/perpetual_v2.png" style="width: 600px; height: 314px; border-width: 0px; border-style: solid;" width="600"/></a></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--><!-- This section is text with bullets -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style="background-color:#fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+		<tr>
+			<td class="" pardot-data="" style="color: rgb(0, 0, 0); font-size: 17px; font-family: Ubuntu, sans-serif; line-height: 1.8em; margin: 0px; padding: 10px 40px; text-align: left; background: rgb(250, 250, 250);">
+			<p><strong>[Proposals] <a href="http://go.pardot.com/e/875501/tocol-private-markets-part-ii-/22nw5k/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0">Perpetual Protocol Private Markets - Part II</a></strong></p>
+
+			<ul>
+				<li>
+				<p>Over the past few months we\u2019ve been working closely with Perpetual Protocol to design a framework for Private Markets for the protocol. Last week, we delivered <a href="http://go.pardot.com/e/875501/otocol-private-markets-part-i-/22nw5m/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0">the first part of this proposal</a>, which covered the high level architecture of the system and how the Public Markets would work under this new architecture.</p>
+
+				<p>In this second part, we explore the Private Markets architecture in detail. Below you will find a PDF and a video walkthrough of this last part of the proposal. If you\u2019d like to get involved in the discussion on the Perpetual Protocol governance forum you can do so <a href="http://go.pardot.com/e/875501/rivate-markets-part-ii-rfc-539/22nw5p/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0">here</a>.</p>
+				</li>
+				<li><em>Delphi Free subscribers &amp; clients can see the full brief <a href="http://go.pardot.com/e/875501/tocol-private-markets-part-ii-/22nw5k/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0">here</a>.</em></li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</section>
+<!-- This section is an image with a border -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style=" background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--><!-- This section is text with bullets -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style="background-color:#fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+</section>
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style=" background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!--[if (gte mso 9) | (IE)]><![endif]--><!-- This section is text with bullets-->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" class="light-table" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style=" max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+</section>
+<!-- END - BLOCK TO COPY PASTE --><!-- This section is an image with a border --><!-- START - BLOCK TO COPY PASTE --><!-- This section is an image with a border -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style=" background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!--[if (gte mso 9) | (IE)]><![endif]--><!-- This section is text with bullets-->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" class="light-table" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style=" max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+</section>
+<!-- END - BLOCK TO COPY PASTE --><!-- This section is an image with a border --><!-- START - BLOCK TO COPY PASTE --><!-- This section is an image with a border -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style=" background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+		<tr>
+			<td class="" pardot-data="" style="padding: 0px; background: rgb(250, 250, 250);">
+			<p><a href="http://go.pardot.com/e/875501/for-takeoff-if-breakout-holds-/22nw5r/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0"><img alt="" border="0" height="319" src="http://go.pardot.com/l/875501/2021-09-02/22lsqp/875501/1630619978fEsw0zcJ/Into_Ether_FI.jpg" style="width: 600px; height: 319px; border-width: 0px; border-style: solid;" width="600"/></a></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!--[if (gte mso 9) | (IE)]><![endif]--><!-- This section is text with bullets-->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" class="light-table" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style=" max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+		<tr>
+			<td class="light-table" pardot-data="" style="color: rgb(0, 0, 0); font-size: 17px; font-family: Ubuntu, sans-serif; line-height: 1.8em; margin: 0px; padding: 20px 40px; text-align: left; background: rgb(250, 250, 250);">
+			<p><strong>[Markets/Macro]\u200b\u200b\u200b\u200b <a href="http://go.pardot.com/e/875501/for-takeoff-if-breakout-holds-/22nw5r/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0">ETH Primed for Takeoff If Breakout Holds</a></strong></p>
+
+			<ul>
+				<li aria-level="1">ETH\u2019s place in the crypto ecosystem is pretty much set in stone as the top smart contract platform; the coin\u2019s share of the total crypto market capitalization has been on the rise since 2019 with few signs of stopping.</li>
+				<li><em>Delphi Insights and Institutional subscribers &amp; clients can see the full brief <a href="http://go.pardot.com/e/875501/for-takeoff-if-breakout-holds-/22nw5r/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0">here</a>.</em></li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</section>
+<!-- END - BLOCK TO COPY PASTE --><!-- This section is an image with a border --><!-- This section is header text-->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style=" background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!--[if (gte mso 9) | (IE)]><![endif]--><!-- This section is text with bullets-->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" class="light-table" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style=" max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+</section>
+<!-- START - BLOCK TO COPY PASTE --><!-- This section is an image with a border -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style=" background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+		<tr>
+			<td class="" pardot-data="" style="padding: 0px; background: rgb(250, 250, 250);">
+			<p style="text-align:center;"><a href="http://go.pardot.com/e/875501/liquidity-for-unsecured-loans-/22nw5t/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0"><img alt="" border="0" height="319" src="http://go.pardot.com/l/875501/2021-09-02/22lspt/875501/16306198191satZgVZ/truefi1.png" style="width: 600px; height: 319px; border-width: 0px; border-style: solid;" width="600"/></a></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!--[if (gte mso 9) | (IE)]><![endif]--><!-- This section is text with bullets-->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" class="light-table" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style=" max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+		<tr>
+			<td class="light-table" pardot-data="" style="color: rgb(0, 0, 0); font-size: 17px; font-family: Ubuntu, sans-serif; line-height: 1.8em; margin: 0px; padding: 20px 40px; text-align: left; background: rgb(250, 250, 250);"><strong>[DeFi] <a href="http://go.pardot.com/e/875501/liquidity-for-unsecured-loans-/22nw5t/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0">TrueFi Leads Liquidity For Unsecured Loans</a></strong>
+
+			<ul>
+				<li>Aave, Compound, and Maker are all popular options for DeFi users looking to take out a loan. To do so, however, requires the user to post collateral worth more than the loan amount they want to draw. Phrased another way, Aave, Compound and Maker all offer overcollateralized borrowing.</li>
+				<li><em>Delphi Institutional subscribers &amp; clients can see the full brief <a href="http://go.pardot.com/e/875501/liquidity-for-unsecured-loans-/22nw5t/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0">here</a>.</em></li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</section>
+<!-- END - BLOCK TO COPY PASTE --><!-- This section is an image with a border --><!-- START - BLOCK TO COPY PASTE --><!-- This section is an image with a border -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style=" background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+		<tr>
+			<td class="" pardot-data="" style="padding: 0px; background: rgb(250, 250, 250);">
+			<p style="text-align:center;"><a href="http://go.pardot.com/e/875501/s-and-a-silver-lining-for-btc-/22nw5w/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0"><img alt="" border="0" height="338" src="http://go.pardot.com/l/875501/2021-09-02/22lspf/875501/1630619679RTuohIuc/image_2021_08_31_22_05_56.png" style="width: 600px; height: 338px; border-width: 0px; border-style: solid;" width="600"/></a></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!--[if (gte mso 9) | (IE)]><![endif]--><!-- This section is text with bullets-->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" class="light-table" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style=" max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+		<tr>
+			<td class="light-table" pardot-data="" style="color: rgb(0, 0, 0); font-size: 17px; font-family: Ubuntu, sans-serif; line-height: 1.8em; margin: 0px; padding: 20px 40px; text-align: left; background: rgb(250, 250, 250);"><strong>[Delphi Daily] <a href="http://go.pardot.com/e/875501/s-and-a-silver-lining-for-btc-/22nw5w/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0">Fiery Incentive Programs and a Silver Lining for BTC</a></strong>
+
+			<ul>
+				<li>ETH broke out to trade above $3,400 for the first time since May at the New York open, while yesterday's outperformers in the FTM ecosystem retraced earlier gains. The market in general is looking strong today -- which is a welcome development, as always.</li>
+				<li><em>Delphi Daily subscribers &amp; clients can see the full brief <a href="http://go.pardot.com/e/875501/s-and-a-silver-lining-for-btc-/22nw5w/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0">here</a>.</em></li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</section>
+<!-- END - BLOCK TO COPY PASTE --><!-- This section is an image with a border --><!-- START - BLOCK TO COPY PASTE --><!-- This section is an image with a border -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style=" background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!--[if (gte mso 9) | (IE)]><![endif]--><!-- This section is text with bullets-->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" class="light-table" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style=" max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+</section>
+<!-- END - BLOCK TO COPY PASTE --><!-- This section is an image with a border --><!-- START - BLOCK TO COPY PASTE --><!-- This section is an image with a border -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style=" background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!--[if (gte mso 9) | (IE)]><![endif]--><!-- This section is text with bullets-->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" class="light-table" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style=" max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+</section>
+<!-- END - BLOCK TO COPY PASTE --><!-- This section is an image with a border --><!-- START - BLOCK TO COPY PASTE --><!-- This section is an image with a border -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style=" background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+		<tr>
+			<td class="" pardot-data="" style="padding: 0px; background: rgb(250, 250, 250);"><a href="http://go.pardot.com/e/875501/ports-dao-governance-digest-2-/22nw5y/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0"><img alt="" border="0" height="319" src="http://go.pardot.com/l/875501/2021-09-02/22lspc/875501/1630619545vIifj3ll/delphi_dao_digest.png" style="width: 600px; height: 319px; border-width: 0px; border-style: solid;" width="600"/></a></td>
+		</tr>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!--[if (gte mso 9) | (IE)]><![endif]--><!-- This section is text with bullets-->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" class="light-table" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style=" max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+		<tr>
+			<td class="light-table" pardot-data="" style="color: rgb(0, 0, 0); font-size: 17px; font-family: Ubuntu, sans-serif; line-height: 1.8em; margin: 0px; padding: 20px 40px; text-align: left; background: rgb(250, 250, 250);"><strong>[DAO Governance] <a href="http://go.pardot.com/e/875501/ports-dao-governance-digest-2-/22nw5y/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0">DAO Governance Digest #2</a></strong>
+
+			<ul>
+				<li>The Sushi community voted in favor (74% approval) of a Multichain Expansion Fund that would take 2% from the 5bps fee earned on non-Ethereum chains and L2s. The proceeds will be used to fund cross-chain expansion, operations and infrastructure.</li>
+				<li><em>Delphi Institutional subscribers &amp; clients can see the full brief <a href="http://go.pardot.com/e/875501/ports-dao-governance-digest-2-/22nw5y/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0">here</a>.</em></li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</section>
+<!-- END - BLOCK TO COPY PASTE --><!-- This section is an image with a border -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style=" background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!--[if (gte mso 9) | (IE)]><![endif]--><!-- This section is text with bullets-->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" class="light-table" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style=" max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+</section>
+<!-- END - BLOCK TO COPY PASTE --><!-- This section is an image with a border -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style=" background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+		<tr>
+			<td class="" pardot-data="" style="padding: 0px 0px 0px; background: rgb(250, 250, 250);">
+			<p style="text-align:center;"><a href="http://go.pardot.com/e/875501/into-this-weekends-nft-action-/22nw61/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0"><img alt="" border="0" height="319" src="http://go.pardot.com/l/875501/2021-09-02/22lsp3/875501/1630619388lEgeGBT7/Slide1_15__1_.png" style="width: 600px; height: 319px; border-width: 0px; border-style: solid;" width="600"/></a></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--><!-- This section is text with bullets-->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style=" max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+		<tr>
+			<td class="" pardot-data="" style="color: rgb(0, 0, 0); font-size: 17px; font-family: Ubuntu, sans-serif; line-height: 1.8em; margin: 0px; padding: 20px 40px; text-align: left; background: rgb(250, 250, 250);"><strong>[Delphi Daily] <a href="http://go.pardot.com/e/875501/into-this-weekends-nft-action-/22nw61/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0">A Look Into This Weekend's NFT Action</a></strong>
+
+			<ul>
+				<li>Price action for majors has been awful as of late, but there\u2019s a ray of hope with flows starting to pick up in the last couple of hours. Avalanche ecosystem coins took a beating after Fantom and Celo both announced liquidity mining programs.</li>
+				<li><em>Delphi Daily subscribers &amp; clients can see the full brief <a href="http://go.pardot.com/e/875501/into-this-weekends-nft-action-/22nw61/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0">here</a>.</em></li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</section>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--><!-- This section is text with bullets --><!-- This section is an image with a border -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style=" background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--><!-- This section is text with bullets-->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style=" max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+</section>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--><!-- This section is text with bullets -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style="background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+</section>
+<!-- This section is an image with a border -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style=" background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+		<tr>
+			<td class="" pardot-data="" style="padding: 0px 0px 0px; background: rgb(250, 250, 250);">
+			<p style="text-align:center;"><a href="http://go.pardot.com/e/875501/ly-analyst-call-aug-26th-2021-/22nw63/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0"><img alt="" border="0" height="277" src="http://go.pardot.com/l/875501/2021-09-02/22lsnk/875501/1630619239LEW8a2ly/unnamed_1024x473.jpg" style="width: 600px; height: 277px; border-width: 0px; border-style: solid;" width="600"/></a></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--><!-- This section is text with bullets -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style="background-color:#fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+		<tr>
+			<td class="" pardot-data="" style="color: rgb(0, 0, 0); font-size: 17px; font-family: Ubuntu, sans-serif; line-height: 1.8em; margin: 0px; padding: 10px 40px; text-align: left; background: rgb(250, 250, 250);">
+			<p><strong>[Analyst Calls]\u200b\u200b\u200b\u200b <a href="http://go.pardot.com/e/875501/ly-analyst-call-aug-26th-2021-/22nw63/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0">Delphi Bi-Weekly Analyst Call (Aug 26th, 2021)</a></strong></p>
+
+			<ul>
+				<li>We recently hosted our live, bi-weekly analyst call on August 26th, where we discussed our outlook for Crypto markets, NFTs and recent notes &amp; reports exclusively for our Institutional members. For any members who couldn\u2019t make it, you can find a recording of the full call below, as well as individual segments broken out by analyst and topic area.</li>
+				<li><em>Delphi Institutional subscribers &amp; clients can see the full brief <a href="http://go.pardot.com/e/875501/ly-analyst-call-aug-26th-2021-/22nw63/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0">here</a>.</em></li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</section>
+<!-- This section is an image with a border -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style=" background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--><!-- This section is text with bullets -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style="background-color:#fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+</section>
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style=" background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!--[if (gte mso 9) | (IE)]><![endif]--><!-- This section is text with bullets-->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" class="light-table" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style=" max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+</section>
+<!-- END - BLOCK TO COPY PASTE --><!-- This section is an image with a border --><!-- START - BLOCK TO COPY PASTE --><!-- This section is an image with a border -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style=" background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!--[if (gte mso 9) | (IE)]><![endif]--><!-- This section is text with bullets-->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" class="light-table" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style=" max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+</section>
+<!-- END - BLOCK TO COPY PASTE --><!-- This section is an image with a border --><!-- START - BLOCK TO COPY PASTE --><!-- This section is an image with a border -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style=" background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+		<tr>
+			<td class="" pardot-data="" style="padding: 0px; background: rgb(250, 250, 250);">
+			<p style="text-align:center;"><a href="http://go.pardot.com/e/875501/reports-yield-strats-25-/22nw65/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0"><img alt="" border="0" height="319" src="http://go.pardot.com/l/875501/2021-09-02/22lsjk/875501/1630618996vB3ahI4h/yield_strats_cover_photo.jpg" style="width: 600px; height: 319px; border-width: 0px; border-style: solid;" width="600"/></a></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!--[if (gte mso 9) | (IE)]><![endif]--><!-- This section is text with bullets-->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" class="light-table" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style=" max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+		<tr>
+			<td class="light-table" pardot-data="" style="color: rgb(0, 0, 0); font-size: 17px; font-family: Ubuntu, sans-serif; line-height: 1.8em; margin: 0px; padding: 20px 40px; text-align: left; background: rgb(250, 250, 250);"><strong>[Yield Strats] <a href="http://go.pardot.com/e/875501/reports-yield-strats-25-/22nw65/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0">Yield Strats #25</a></strong>
+
+			<ul>
+				<li>This week\u2019s yield strat focuses on yielding farming and retroactive rewards across multiple ecosystems. Avalanche is continuously booming in TVL and sustaining high yields. Money markets have appeared on Fantom. A new primitive \u2013 a protocol specifically designed to short long-tailed assets has publicly announced retroactive rewards to early participants. Let\u2019s dig in!</li>
+				<li><em>Delphi Insights and Institutional subscribers &amp; clients can see the full brief <a href="http://go.pardot.com/e/875501/reports-yield-strats-25-/22nw65/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0">here</a>.</em></li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</section>
+<!-- END - BLOCK TO COPY PASTE --><!-- This section is an image with a border --><!-- This section is header text-->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style=" background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!--[if (gte mso 9) | (IE)]><![endif]--><!-- This section is text with bullets-->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" class="light-table" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style=" max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+</section>
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style=" background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+		<tr>
+			<td class="" pardot-data="" style="font-family: 'Ubuntu', sans-serif; font-size: 17px; color: rgb(0, 0, 0); padding: 30px 40px; text-align: left; background: rgb(250, 250, 250);">
+			<h2>Delphi Daily of the Week</h2>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!-- This section is a centered image  -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style="background-color: rgba(250, 250, 250, 0.1); max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+		<tr>
+			<td class="" pardot-data="" style="background: rgb(250, 250, 250);">
+			<p style="padding: 0px 0px 0px 0px; text-align:center"><a href="http://go.pardot.com/e/875501/es-options-get-more-expensive-/22nw67/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0"><img alt="" border="0" height="319" src="http://go.pardot.com/l/875501/2021-09-02/22lsjc/875501/1630618843YN3eouFz/Slide1.png" style="width: 600px; height: 319px; border-width: 0px; border-style: solid;" width="600"/></a></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!-- This section is text with bullets -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style="background-color:#fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+		<tr>
+			<td class="" pardot-data="" style="color: rgb(0, 0, 0); font-size: 17px; font-family: Ubuntu, sans-serif; line-height: 1.8em; margin: 0px; padding: 20px 40px; text-align: left; background: rgb(250, 250, 250);"><strong>[Delphi Daily] <a href="http://go.pardot.com/e/875501/es-options-get-more-expensive-/22nw67/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0">L1 Performance, Funding Spikes, Options Get More Expensive</a></strong>
+
+			<ul>
+				<li>After Wednesday\u2019s solid price action, ETH had a slow day while BTC attempted to make up for lost ground. Layer 1 network tokens continue to lead the market, while DeFi prices continue to stagnate.</li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</section>
+<!-- This section is a centered image  -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style="background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!-- This section is text with bullets -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style="background-color:#fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+</section>
+<!-- This section is a centered image  -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style="background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!-- This section is text with bullets -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style="background-color:#fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+</section>
+<!-- This section is a centered image  -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style="background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!-- This section is text with bullets -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style="background-color:#fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+</section>
+<!-- This section is a centered image  -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style="padding: 0px 0px 0px 0px; background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!-- This section is text with bullets -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style="background-color:#fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+</section>
+<!-- This section is a standalone button on a white background -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style="background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+		<tr>
+			<td style="padding: 20px 0px 40px;">
+			<table align="center" style="border-collapse: separate;">
+				<tbody>
+					<tr>
+						<td class="button" pardot-data="" style="background: rgb(250, 250, 250); border: 2px solid #2c9bb6; border-radius: 4px; color: rgb(0, 0, 0); display: block; margin: 0px auto; padding: 10px 20px; text-align: center; white-space: nowrap;"><a href="http://go.pardot.com/e/875501/es-options-get-more-expensive-/22nw67/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0"><span style="font-size:20px;">Get The Full Daily For Free!</span></a></td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!-- This section is a section header banner with text of the date-->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style=" background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+		<tr>
+			<td class="" pardot-data="" style="font-family: 'Ubuntu', sans-serif; color: rgb(0, 0, 0); padding: 20px 40px; text-align: left; font-size: 17px; background: rgb(250, 250, 250);">
+			<h2>Featured Podcast</h2>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!-- This section is a two-column section -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style=" background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+		<tr>
+			<td class="" pardot-data="" style="padding: 0px; background: rgb(250, 250, 250);">
+			<p style="text-align:center;"><a href="http://go.pardot.com/e/875501/unique-play-to-earn-metaverse-/22nw69/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0"><img alt="" border="0" height="300" src="http://go.pardot.com/l/875501/2021-09-02/22lsj1/875501/1630618640Yr7d1C0j/SAChain_Reaction_Template.png" style="width: 600px; height: 300px; border-width: 0px; border-style: solid;" width="600"/></a></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!-- This section is text with bullets and an H2 header -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style="background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+		<tr>
+			<td class="" pardot-data="" style="color: rgb(0, 0, 0); font-size: 17px; font-family: Lato, Helvetica, Arial, sans-serif; line-height: 1.8em; margin: 0px; padding: 40px; text-align: left; background: rgb(250, 250, 250);">
+			<p>The Delphi Podcast Host <a href="http://go.pardot.com/e/875501/Jeremystormsky/22nw6c/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0">Jeremy Parris</a> is joined by <a href="http://go.pardot.com/e/875501/at-mwagner/22nw6f/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0">Michael Wagner</a>, Co-founder &amp; CEO of <a href="http://go.pardot.com/e/875501/2021-09-03/22nw6h/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0">Star Atlas</a>. In this episode we explore not only what Star Atlas hopes to achieve in the future, but what they\u2019ve already accomplished to date. We dive deep into the P2E weeds and imagine what a future looks like where someone could be a \u201cspace pirate\u201d for a living. Beyond that we touch upon their upcoming TGE (token generation event) and what to expect next from the project.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</section>
+<!-- This section is a two-column section -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style=" background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+		<tr>
+			<td class="" pardot-data="" style="padding: 0px; background: rgb(250, 250, 250);">
+			<p style="text-align:center;"><a href="http://go.pardot.com/e/875501/-differentiating-from-opensea-/22nw6k/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0"><img alt="" border="0" height="300" src="http://go.pardot.com/l/875501/2021-09-02/22lshm/875501/1630618540rFbgVCwl/Chain_Reaction_Template_SR.jpg" style="width: 600px; height: 300px; border-width: 0px; border-style: solid;" width="600"/></a></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!-- This section is text with bullets and an H2 header -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style="background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+		<tr>
+			<td class="" pardot-data="" style="color: rgb(0, 0, 0); font-size: 17px; font-family: Lato, Helvetica, Arial, sans-serif; line-height: 1.8em; margin: 0px; padding: 40px; text-align: left; background: rgb(250, 250, 250);">
+			<p>The Delphi Podcast Host and GP of Delphi Ventures <a href="http://go.pardot.com/e/875501/Shaughnessy119/22nw6m/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0">Tom Shaughnessy</a> sits down with <a href="http://go.pardot.com/e/875501/SuperRareJohn/22nw6p/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0">John Crain</a>, Founder &amp; CEO of <a href="http://go.pardot.com/e/875501/2021-09-03/22nw6r/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0">SuperRare</a>, a marketplace to collect and trade unique, single-edition digital artworks. The two discuss SuperRare, decentralizing the platform through community-driven curation and the $RARE token, differentiating from OpenSea, and much more!</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</section>
+<!-- This section is a section header banner with text of the date--><!-- This section is a standalone button on a white background -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style="background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+		<tr>
+			<td style="padding: 20px 0px 40px;">
+			<table align="center" style="border-collapse: separate;">
+				<tbody>
+					<tr>
+						<td class="button" pardot-data="" style="background: rgb(250, 250, 250); border: 2px solid #2c9bb6; border-radius: 4px; color: rgb(0, 0, 0); display: block; margin: 0px auto; padding: 10px 20px; text-align: center; white-space: nowrap;"><a href="http://go.pardot.com/e/875501/member-portal-/22nw6t/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0"><span style="font-size: 20px;">Go to Member's Portal</span></a></td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!-- This section is a section header banner with text of the date-->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style=" background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!-- This section is text -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" style="border-top-color: #fafafa; border-top-style: solid; border-top-width: 1px; background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!-- This section is text-->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" style="background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+		<tr>
+			<td class="" pardot-data="" style="color: rgb(0, 0, 0); font-size: 17px; font-family: Lato, Helvetica, Arial, sans-serif; line-height: 1.8em; margin: 0px; padding: 40px; text-align: left; background: rgb(250, 250, 250);">
+			<p style="text-align: center;"><span style="font-size:14px;"><span style="color:#000000;">Want to change how you receive these emails? You can </span><a href="http://go.pardot.com/unsubscribe/u/875501/5a06a1c95bc19d4fc2a32244e2f11c82d9ad75c8623030d791fca21d429fa8d9/315705158" style="font-size: 17px; line-height: 1.1em; font-weight: bold; font-family: Helvetica,Ubuntu,Arial,sans-serif; color: #8b8b8b; text-decoration: underline;"><span style="color:#000000;">update your preferences</span></a><span style="color:#000000;"> any time or </span><a href="http://go.pardot.com/unsubscribe/u/875501/5a06a1c95bc19d4fc2a32244e2f11c82d9ad75c8623030d791fca21d429fa8d9/315705158" rel="nofollow,noreferrer" style="text-decoration:underline;color: #8b8b8b;"><span style="color:#000000;">unsubscribe</span></a><span style="color:#000000;">.</span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!-- This section is a full-width image without a link -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style="background-color: #000000; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!-- This section is the social media links-->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style="max-width: 600px; width: 100%;">
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style="max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+		<tr>
+			<td pardot-data="" style="color: #fafafa; font-size: 17px; font-family: Lato, Helvetica, Arial, sans-serif; line-height: 1.1em; margin: 0px; padding: 40px; text-align: center; background: #fafafa;">
+			<table align="center" class="menu float-center">
+				<tbody>
+					<tr>
+						<td>
+						<table>
+							<tbody>
+								<tr>
+									<th class="menu-item float-center"> </th>
+									<th class="menu-item float-center"><a href="http://go.pardot.com/e/875501/delphi-digital/22nw6w/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0" style="text-decoration:none;"><img alt="Twitter Icon" height="42" src="http://go.pardot.com/l/875501/2021-05-11/s3lxb/875501/1620737806bwqPJ9lW/twitter.png" style="margin-left: 30px; margin-right: 30px; width: 45px; height: 42px;" title="Instagram Icon" width="45"/></a></th>
+									<th class="menu-item float-center"><a href="http://go.pardot.com/e/875501/company-delphi-digital-/22nw6y/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0" style="text-decoration:none;"><img alt="LinkedIn Icon" height="49" src="http://go.pardot.com/l/875501/2021-05-11/s3lx8/875501/1620737692ZlTWcHv5/linkedin_in.png" style="height: 49px; width: 45px;" title="Linkedin Icon" width="45"/></a></th>
+									<th class="menu-item float-center"><a href="http://go.pardot.com/e/875501/s-DelphiDigitalAlerts/22nw71/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0" style="text-decoration:none;"><img alt="Pinterest Icon" height="42" src="http://go.pardot.com/l/875501/2021-05-11/s3lxd/875501/1620737828S96Nuqi5/telegram.png" style="margin-left: 30px; margin-right: 30px; width: 45px; height: 42px;" title="Pinterest Icon" width="45"/></a></th>
+									<th class="menu-item float-center"> </th>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!-- This section is the table image -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table cellpadding="0" cellspacing="0" class="light-table" style=" padding: 0px 0px 0px 0px; background-color: #fafafa; max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+		<tr>
+			<td class="" pardot-data="" style="padding: 0px; background: rgb(250, 250, 250);">
+			<p style="text-align:center;"><img alt="Graphimage" border="0" height="366" src="http://go.pardot.com/l/875501/2021-05-06/rkrc2/875501/1620336594ji47JSZL/newcroppedfootercurve.png" style="width: 592px; height: 366px; border-radius: 4px; border-width: 0px; border-style: solid;" width="592"/></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+<!-- This section is the Delphi email footer -->
+
+<section><!--[if (gte mso 9) | (IE)]><table width="600" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+<table border="0" cellpadding="0" cellspacing="0" class="light-table" style="max-width: 600px; width: 100%;" valign="top">
+	<tbody>
+		<tr>
+			<td>
+			<table align="center" border="0" cellpadding="0" cellspacing="0">
+				<tbody>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+		<tr>
+			<td class="" pardot-data="" style="background: rgb(250, 250, 250); font-size: 17px; font-family: Lato, Helvetica, Arial, sans-serif; line-height: 1.1em; margin: 0px; padding: 40px; text-align: center;">
+			<p><span style="font-size:14px;"><a href="http://go.pardot.com/e/875501/2021-09-03/22nw73/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0" style="font-size: 15px; line-height: 1.1em; font-weight: bold; font-family: Helvetica,Ubuntu,Arial,sans-serif;   color: #8b8b8b;"><span style="color:#000000;">team@delphidigital.io</span></a></span></p>
+
+			<p> </p>
+
+			<p><span style="font-size:14px;"><a style="font-size: 15px; line-height: 1.1em; font-family: Helvetica,Ubuntu,Arial,sans-serif;  color: #8b8b8b; text-decoration: underline;"><span style="color:#000000;">85 Broad Street, New York, NY 10004</span></a></span></p>
+
+			<p> </p>
+
+			<p><a href="http://go.pardot.com/e/875501/privacy-policy-/22nw75/315705158?h=mi5jxkA8EnqMv4g5amBlkVH3zNnEBQN73LYQ_68UBp0"><span style="color:#000000;"><span style="font-size:14px;">Legal &amp; Privacy</span></span></a></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!--[if (gte mso 9) | (IE)]></table><![endif]--></section>
+</center>
+<!--[if (gte mso 9) | (IE)]></table><![endif]-->
+<img alt="" src="http://go.pardot.com/r/875501/1/315705158/open/1"/>
+
+</body></html>
